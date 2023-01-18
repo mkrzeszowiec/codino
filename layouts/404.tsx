@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Header from "../components/header";
+import Header from "../components/header/Header";
 
 type LayoutType = {
   title?: string;
   children?: React.ReactNode;
 }
 
-export default ({ children, title = 'Codino page' }: LayoutType) => {
+export default ({ children, title = 'Codino 404' }: LayoutType) => {
   const router = useRouter();
   const pathname = router.pathname;
 

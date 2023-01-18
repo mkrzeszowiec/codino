@@ -1,0 +1,74 @@
+.site-footer {
+  background-color: #0d0025;
+  padding: 50px 0 20px 0;
+  color: white;
+  background-image: url(https://codino.morito.pl/wp-content/uploads/2022/12/Graph.svg);
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  background-position: 100% 160px;
+
+  @include breakpoint(phone) {
+    padding-top: 90px;
+  }
+
+  .site-footer__top {
+    @include breakpoint(phone) {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 60px;
+    }
+    @include breakpoint(tablet-lg) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .site-footer__description {
+    font-size: 16px;
+
+    margin-right: auto;
+    margin-bottom: 70px;
+    @include breakpoint(phone) {
+      width: 400px;
+      margin-bottom: 50px;
+    }
+    @include breakpoint(tablet-lg) {
+      margin-bottom: 0;
+    }
+
+    svg {
+      margin-right: 15px;
+    }
+
+    p {
+      line-height: 120%;
+      margin-top: 10px;
+    }
+  }
+
+  .site-footer__social-networks {
+    display: flex;
+    margin-top: 20px;
+
+    li {
+      font-size: 21px;
+      margin-right: 25px;
+    }
+  }
+
+  .site-footer__links {
+    margin-bottom: 20px;
+
+    @include breakpoint(tablet-lg) {
+      width: auto;
+    }
+
+    a {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

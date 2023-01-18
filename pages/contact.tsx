@@ -1,11 +1,11 @@
 import Main from "../layouts/Main";
 
-const AboutPage = () => (
-    <Main title="Services - Codino">
+const ContactPage = () => (
+    <Main title="Contact - Codino">
         <div className="container" style={{marginTop: '50px'}}>
-            <h1>Services</h1>
+            <h1>Contact</h1>
         </div>
     </Main>
 )
 
-export default AboutPage
+export default ContactPage
