@@ -18,6 +18,7 @@ const NavItem = () => {
 		<nav className="navigation">
 			{ROUTES.map(route => (
 				<Link
+					aria-label={route.name}
 					className={`navigation__link ${getIsActive(route.slug) ? 'navigation__link--active' : ''}`}
 					href={`/${route.slug}`}
 					key={route.slug}
