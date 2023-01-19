@@ -4,7 +4,7 @@ interface ButtonProps {
 	className?: string;
 	label: string;
 	href: string;
-	type?: 'default' | 'border';
+	type?: 'default' | 'border' | 'white';
 }
 
 const Button: React.FC<ButtonProps> = ({ type = 'default', href, className, label }) => {
