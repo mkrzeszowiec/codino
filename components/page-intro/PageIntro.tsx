@@ -1,10 +1,22 @@
 import HeroAnimation from '../hero-animation/HeroAnimation';
-import Button from '../button/Button';
+import Button from 'components/button/Button';
+import { useEffect, useState } from 'react';
+import { getIsServerSide } from 'utils/utils';
 
 const PageIntro = () => {
+	const [showing, setShowing] = useState(false);
+
+	useEffect(() => {
+		setShowing(true);
+	}, []);
+
+	if (!showing) {
+		return null;
+	}
+
 	return (
 		<section className="page-intro">
-			<HeroAnimation />
+			{!getIsServerSide() && <HeroAnimation />}
 
 			<div className="container">
 				<div className="page-intro__content">
