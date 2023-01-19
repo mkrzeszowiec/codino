@@ -91,7 +91,6 @@ const IndexPage = () => {
 
 			{/*<ProductsFeatured />*/}
 			{/*<Subscribe />*/}
-			<Footer />
 		</Layout>
 	);
 };

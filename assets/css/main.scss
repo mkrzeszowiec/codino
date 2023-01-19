@@ -166,13 +166,6 @@ h5 {
 	}
 }
 
-.main-page {
-	padding-top: 65px;
-	@include breakpoint(phone) {
-		padding-top: 100px;
-	}
-}
-
 .block {
 	.block__title {
 		font-size: 14px;

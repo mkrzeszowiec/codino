@@ -1,6 +1,4 @@
 import React, { Fragment } from 'react';
-
-// types
 import type { AppProps } from 'next/app';
 
 // global styles

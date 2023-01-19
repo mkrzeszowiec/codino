@@ -2,7 +2,7 @@ import Main from '../layouts/Main';
 
 const ContactPage = () => (
 	<Main title="Contact - Codino">
-		<div className="container" style={{ marginTop: '50px' }}>
+		<div className="container">
 			<h1>Contact</h1>
 		</div>
 	</Main>
