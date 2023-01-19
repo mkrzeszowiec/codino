@@ -3,7 +3,7 @@
 }
 
 .main-container {
-	margin-top: 150px;
+	margin-top: 100px;
 	min-height: 60vh;
 
 	&--homepage {
@@ -11,32 +11,14 @@
 	}
 }
 
+.products-wrapper {
+	margin-bottom: 80px;
+}
+
 .container {
-	max-width: 380px;
-	margin-left: auto;
+	max-width: var(--max-container-width);
+	padding-left: var(--container-horizontal-padding);
+	padding-right: var(--container-horizontal-padding);
 	margin-right: auto;
-	padding-left: 16px;
-	padding-right: 16px;
-
-	@include breakpoint(phone-sm) {
-		max-width: 450px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	@include breakpoint(phone) {
-		max-width: 650px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	@include breakpoint(tablet-lg) {
-		max-width: 980px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	@include breakpoint(desktop-lg) {
-		max-width: 1280px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+	margin-left: auto;
 }

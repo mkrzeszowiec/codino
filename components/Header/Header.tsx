@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import useOnClickOutside from 'use-onclickoutside';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import Button from '../button/Button';
-import NavItem from './NavItem';
-import Logo from '../icons/Logo';
+import Button from 'components/Button/Button';
+import NavItem from 'components/Header/NavItem';
+import Logo from 'components/icons/Logo';
 
 type HeaderType = {
 	isErrorPage?: Boolean;
@@ -41,7 +41,6 @@ const Header = ({ isErrorPage }: HeaderType) => {
 		setMenuOpen(false);
 	};
 
-	// on click outside
 	useOnClickOutside(navRef, closeMenu);
 
 	return (
@@ -56,7 +55,7 @@ const Header = ({ isErrorPage }: HeaderType) => {
 					<NavItem />
 				</nav>
 
-				<Button className="site-header__hire-button" label="Get hired" href={'/dsa'} />
+				<Button className="site-header__hire-button" label="Get hired" href={'/career'} />
 
 				<div className="site-header__actions">
 					<button onClick={() => setMenuOpen(true)} className="site-header__btn-menu">

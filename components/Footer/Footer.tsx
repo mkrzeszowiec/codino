@@ -1,4 +1,4 @@
-import NavItem from 'components/header/NavItem';
+import NavItem from 'components/Header/NavItem';
 import Logo from 'components/icons/Logo';
 
 const Footer = () => {

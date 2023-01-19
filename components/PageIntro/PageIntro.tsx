@@ -16,7 +16,7 @@ const PageIntro = () => {
 
 	return (
 		<section className="page-intro">
-			{!getIsServerSide() && <HeroAnimation />}
+			{/*{!getIsServerSide() && <HeroAnimation />}*/}
 
 			<div className="container">
 				<div className="page-intro__content">

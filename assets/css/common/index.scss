@@ -1,4 +1,7 @@
-@import './variables.scss';
+@import 'mixins';
+@import 'animations';
+@import 'variables';
 @import 'breakpoints';
 @import 'reset';
 @import 'common';
+@import 'subpageIntro';

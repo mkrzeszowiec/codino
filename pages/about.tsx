@@ -1,9 +1,13 @@
 import Main from 'layouts/Main';
+import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
 
 const AboutPage = () => (
 	<Main title="About us - Codino">
 		<div className="container">
-			<h1>About us</h1>
+			<SubpageIntro
+				title="About us"
+				description="Lorem ipsum"
+			/>
 		</div>
 	</Main>
 );

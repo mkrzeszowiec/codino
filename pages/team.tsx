@@ -1,9 +1,10 @@
-import Main from '../layouts/Main';
+import Main from 'layouts/Main';
+import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
 
 const TeamPage = () => (
 	<Main title="Team - Codino">
 		<div className="container">
-			<h1>Team</h1>
+			<SubpageIntro title="Team" description="Lorem ipsum dolor sit amet." />
 		</div>
 	</Main>
 );
