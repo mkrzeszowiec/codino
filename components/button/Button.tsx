@@ -1,18 +1,18 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 interface ButtonProps {
-    className?: string;
-    label: string;
-    href: string;
-    type?: 'default' | 'border';
+	className?: string;
+	label: string;
+	href: string;
+	type?: 'default' | 'border';
 }
 
-const Button: React.FC<ButtonProps> = ({type = 'default', href, className, label}) => {
-    return (
-        <Link href={href} className={`button ${className} button--${type}`}>
-            {label}
-        </Link>
-    )
-}
+const Button: React.FC<ButtonProps> = ({ type = 'default', href, className, label }) => {
+	return (
+		<Link href={href} className={`button ${className} button--${type}`}>
+			{label}
+		</Link>
+	);
+};
 
 export default Button;

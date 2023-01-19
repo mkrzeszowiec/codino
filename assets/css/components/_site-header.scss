@@ -1,156 +1,161 @@
 .site-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  height: 65px;
-  color: #FFF;
-  box-shadow: none;
-  transition: all .3s ease;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	height: 65px;
+	color: #fff;
+	box-shadow: none;
+	transition: all 0.3s ease;
 
-  @include breakpoint(phone) {
-    height: 100px;
-  }
+	@include breakpoint(phone) {
+		height: 100px;
+	}
 
-  &__hire-button {
-    display: none;
+	&__hire-button {
+		display: none;
 
-    @include breakpoint(tablet-lg) {
-      display: block;
-    }
-  }
+		@include breakpoint(tablet-lg) {
+			display: block;
+		}
+	}
 
-  .btn-hamburger {
-    &:before, &:after, span {
-      background-color: #FFF;
-    }
-  }
+	.btn-hamburger {
+		&:before,
+		&:after,
+		span {
+			background-color: #fff;
+		}
+	}
 
-  .container {
-    display: flex;
-    height: 100%;
-    align-items: center;
-  }
+	.container {
+		display: flex;
+		height: 100%;
+		align-items: center;
+	}
 
-  .site-logo path {
-    fill: #FFF;
-  }
+	.site-logo path {
+		fill: #fff;
+	}
 
-  .site-header__btn-menu {
-    @include breakpoint(tablet-lg) {
-      display: none;
-    }
-  }
+	.site-header__btn-menu {
+		@include breakpoint(tablet-lg) {
+			display: none;
+		}
+	}
 
-  .site-header__actions {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    @include breakpoint(tablet-lg) {
-      margin-left: 0;
-    }
+	.site-header__actions {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		@include breakpoint(tablet-lg) {
+			margin-left: 0;
+		}
 
-    button {
-      margin-left: 15px;
-      @include breakpoint(tablet-lg) {
-        margin-left: 25px;
-      }
-    }
+		button {
+			margin-left: 15px;
+			@include breakpoint(tablet-lg) {
+				margin-left: 25px;
+			}
+		}
 
-    i {
-      color: #FFF;
-      z-index: 10;
-      transition: all .3s ease;
-      position: relative;
-      font-size: 18px;
-    }
-  }
+		i {
+			color: #fff;
+			z-index: 10;
+			transition: all 0.3s ease;
+			position: relative;
+			font-size: 18px;
+		}
+	}
 
-  .site-nav {
-    top: 0;
-    right: -250px;
-    width: 250px;
-    z-index: 9999;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-    position: fixed;
-    background-color: #FFF;
-    transition: all .3s ease;
-    border-left: 1px solid #E5E5E5;
-    @include breakpoint(tablet-lg) {
-      position: relative;
-      height: auto;
-      right: 0;
-      width: auto;
-      border: none;
-      background-color: transparent;
-    }
+	.site-nav {
+		top: 0;
+		right: -250px;
+		width: 250px;
+		z-index: 9999;
+		height: 100vh;
+		margin-left: auto;
+		margin-right: auto;
+		position: fixed;
+		background-color: #fff;
+		transition: all 0.3s ease;
+		border-left: 1px solid #e5e5e5;
+		@include breakpoint(tablet-lg) {
+			position: relative;
+			height: auto;
+			right: 0;
+			width: auto;
+			border: none;
+			background-color: transparent;
+		}
 
-    &.site-nav--open {
-      right: 0;
-    }
+		&.site-nav--open {
+			right: 0;
+		}
 
-    a {
-      font-size: 16px;
-      font-weight: 500;
-      width: 100%;
-      color: #000;
-      display: block;
-      text-align: left;
-      padding: 15px 18px;
-      @include breakpoint(tablet-lg) {
-        width: auto;
-        padding: 0;
-        color: #FFF;
-        margin-right: 50px;
-        display: inline-block;
+		a {
+			font-size: 16px;
+			font-weight: 500;
+			width: 100%;
+			color: #000;
+			display: block;
+			text-align: left;
+			padding: 15px 18px;
+			@include breakpoint(tablet-lg) {
+				width: auto;
+				padding: 0;
+				color: #fff;
+				margin-right: 50px;
+				display: inline-block;
 
-        &:nth-last-child(1) {
-          margin-right: 0;
-        }
-      }
-    }
-  }
+				&:nth-last-child(1) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
 
-  &.site-header--fixed {
-    border-bottom: 1px solid #E5E5E5;
-    background-color: #FFF;
+	&.site-header--fixed {
+		border-bottom: 1px solid #e5e5e5;
+		background-color: #fff;
 
-    .btn-hamburger {
-      &:before, &:after, span {
-        background-color: #000;
-      }
-    }
+		.btn-hamburger {
+			&:before,
+			&:after,
+			span {
+				background-color: #000;
+			}
+		}
 
-    a, i {
-      color: #000;
-    }
+		a,
+		i {
+			color: #000;
+		}
 
-    button {
-      color: #000;
+		button {
+			color: #000;
 
-      i {
-        color: #000;
-      }
-    }
+			i {
+				color: #000;
+			}
+		}
 
-    .site-logo path {
-      fill: #000;
-    }
-  }
+		.site-logo path {
+			fill: #000;
+		}
+	}
 }
 
 .site-logo {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 
-  svg {
-    width: 95px;
-    height: 40px;
-    fill: currentColor;
-    object-fit: contain;
-    margin-right: 15px;
-  }
+	svg {
+		width: 95px;
+		height: 40px;
+		fill: currentColor;
+		object-fit: contain;
+		margin-right: 15px;
+	}
 }

@@ -9,13 +9,12 @@ import type { AppProps } from 'next/app';
 // import 'react-rater/lib/react-rater.css';
 import '../assets/css/styles.scss';
 
-
 const MyApp = ({ Component, pageProps }: AppProps) => {
-    return (
-        <Fragment>
-            <Component {...pageProps} />
-        </Fragment>
-    );
+	return (
+		<Fragment>
+			<Component {...pageProps} />
+		</Fragment>
+	);
 };
 
 export default MyApp;
