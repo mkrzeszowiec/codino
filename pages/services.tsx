@@ -4,6 +4,7 @@ import WhatWeDo from 'components/WhatWeDo/WhatWeDo';
 import PositionDetails from 'components/WhatWeDo/PositionDetails';
 import { CODINO_POSITIONS } from 'contants/content';
 import { getIsEven } from 'utils/utils';
+import StartWork from '../components/StartWork/StartWork';
 
 const ServicesPage = () => (
 	<Main title="Services - Codino">
@@ -17,6 +18,8 @@ const ServicesPage = () => (
 				<PositionDetails position={position} index={index + 1} />
 			</div>
 		))}
+
+		<StartWork />
 	</Main>
 );
 
