@@ -5,3 +5,11 @@ export interface Product {
 	url: string;
 	color: string;
 }
+
+export interface Position {
+	title: string;
+	description: string;
+	shortDescription: string;
+	scope: string;
+	slug: string;
+}

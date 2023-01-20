@@ -1,6 +1,6 @@
 import Main from 'layouts/Main';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
-import { CODINO_PRODUCTS } from 'contants/common';
+import { CODINO_PRODUCTS } from 'contants/content';
 import { getIsEven } from 'utils/utils';
 import Product from 'components/Product/Product';
 

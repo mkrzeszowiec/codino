@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Position from './Position';
+import { CODINO_POSITIONS } from '../../contants/content';
 
 const WhatWeDo = () => {
 	return (
@@ -23,9 +24,9 @@ const WhatWeDo = () => {
 			</div>
 
 			<div className="whatWeDo__positions">
-				<Position title="Backend developer" description="Lorem ipsum dolor sit amet." />
-				<Position title="DevOps engineer" description="Lorem ipsum dolor sit amet." />
-				<Position title="Frontend developer" description="Lorem ipsum dolor sit amet." />
+				{CODINO_POSITIONS.map(position => (
+					<Position position={position} key={position.slug} />
+				))}
 			</div>
 		</section>
 	);

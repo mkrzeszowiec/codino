@@ -1,5 +1,4 @@
-import 'aos/dist/aos.css';
-import { CODINO_PRODUCTS } from 'contants/common';
+import { CODINO_PRODUCTS } from 'contants/content';
 import Product from 'components/Product/Product';
 import { getIsEven } from 'utils/utils';
 
