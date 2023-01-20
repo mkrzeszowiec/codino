@@ -3,47 +3,19 @@ import Logo from 'components/icons/Logo';
 
 const Footer = () => {
 	return (
-		<footer className="site-footer">
+		<footer className="siteFooter">
 			<div className="container">
-				<div className="site-footer__top">
-					<div className="site-footer__description">
+				<div className="siteFooter__top">
+					<div className="siteFooter__description">
 						<Logo />
 
 						<p>
 							<span className="highlighted-text">Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. In,
 							recusandae!
 						</p>
-
-						<ul className="site-footer__social-networks">
-							<li>
-								<a href="#">
-									<i className="icon-facebook"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i className="icon-twitter"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i className="icon-linkedin"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i className="icon-instagram"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i className="icon-youtube-play"></i>
-								</a>
-							</li>
-						</ul>
 					</div>
 
-					<div className="site-footer__links">
+					<div className="siteFooter__links">
 						<NavItem />
 					</div>
 				</div>

@@ -5,15 +5,15 @@ import { useRouter } from 'next/router';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import JoinUs from 'components/JoinUs/JoinUs';
+import { getIsHomePage } from 'utils/utils';
 
-type LayoutType = {
+interface MainLayoutProps {
 	title?: string;
 	children?: React.ReactNode;
-};
+}
 
-export default ({ children, title = 'Codino' }: LayoutType) => {
+const MainLayout = ({ children, title = 'Codino' }: MainLayoutProps) => {
 	const router = useRouter();
-	const isHomePage = router.pathname == '/';
 
 	useEffect(() => {
 		AOS.init();
@@ -29,10 +29,14 @@ export default ({ children, title = 'Codino' }: LayoutType) => {
 
 			<Header />
 
-			<main className={`main-container ${isHomePage ? 'main-container--homepage' : ''} `}>{children}</main>
+			<main className={`main-container ${getIsHomePage(router.pathname) ? 'main-container--homepage' : ''} `}>
+				{children}
+			</main>
 
 			<JoinUs />
 			<Footer />
 		</div>
 	);
 };
+
+export default MainLayout;

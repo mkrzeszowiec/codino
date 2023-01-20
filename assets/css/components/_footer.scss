@@ -1,4 +1,4 @@
-.site-footer {
+.siteFooter {
 	background-color: var(--color-dark-background);
 	padding: 50px 0 20px 0;
 	color: white;
@@ -11,7 +11,7 @@
 		padding-top: 90px;
 	}
 
-	.site-footer__top {
+	.siteFooter__top {
 		@include breakpoint(phone) {
 			display: flex;
 			flex-wrap: wrap;
@@ -22,11 +22,10 @@
 		}
 	}
 
-	.site-footer__description {
-		font-size: 16px;
-
+	.siteFooter__description {
 		margin-right: auto;
 		margin-bottom: 70px;
+
 		@include breakpoint(phone) {
 			width: 400px;
 			margin-bottom: 50px;
@@ -35,27 +34,13 @@
 			margin-bottom: 0;
 		}
 
-		svg {
-			margin-right: 15px;
-		}
-
 		p {
 			line-height: 120%;
 			margin-top: 10px;
 		}
 	}
 
-	.site-footer__social-networks {
-		display: flex;
-		margin-top: 20px;
-
-		li {
-			font-size: 21px;
-			margin-right: 25px;
-		}
-	}
-
-	.site-footer__links {
+	.siteFooter__links {
 		margin-bottom: 20px;
 
 		@include breakpoint(tablet-lg) {

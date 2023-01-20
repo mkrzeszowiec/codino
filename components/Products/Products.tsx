@@ -1,7 +1,7 @@
 import 'aos/dist/aos.css';
 import { CODINO_PRODUCTS } from 'contants/common';
 import Product from 'components/Product/Product';
-import { isEven } from 'utils/utils';
+import { getIsEven } from 'utils/utils';
 
 const Products: React.FC = () => (
 	<section className="products">
@@ -15,7 +15,7 @@ const Products: React.FC = () => (
 		</div>
 
 		{CODINO_PRODUCTS.map((product, index) => (
-			<div key={product.title} data-aos={`${isEven(index) ? 'fade-left' : 'fade-right'}`}>
+			<div key={product.title} data-aos={`${getIsEven(index) ? 'fade-left' : 'fade-right'}`}>
 				<Product product={product} />
 			</div>
 		))}

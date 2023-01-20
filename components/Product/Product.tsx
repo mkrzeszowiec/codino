@@ -1,12 +1,5 @@
 import Button from 'components/Button/Button';
-
-interface Product {
-	title: string;
-	description: string;
-	imageSource: string;
-	url: string;
-	color: string;
-}
+import { Product } from 'types/common';
 
 interface ProductProps {
 	product: Product;

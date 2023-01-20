@@ -1,4 +1,4 @@
-import Product from '../components/Product/Product';
+import { Product } from 'types/common';
 
 export const CODINO_PRODUCTS: Product[] = [
 	{

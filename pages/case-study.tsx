@@ -1,7 +1,7 @@
 import Main from 'layouts/Main';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
 import { CODINO_PRODUCTS } from 'contants/common';
-import { isEven } from 'utils/utils';
+import { getIsEven } from 'utils/utils';
 import Product from 'components/Product/Product';
 
 const CaseStudyPage = () => (
@@ -13,7 +13,7 @@ const CaseStudyPage = () => (
 			/>
 
 			{CODINO_PRODUCTS.map((product, index) => (
-				<div key={product.title} data-aos={`${isEven(index) ? 'fade-left' : 'fade-right'}`}>
+				<div key={product.title} data-aos={`${getIsEven(index) ? 'fade-left' : 'fade-right'}`}>
 					<Product product={product} />
 				</div>
 			))}

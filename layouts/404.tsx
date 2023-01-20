@@ -1,25 +1,21 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import Header from 'components/Header/Header';
 
-type LayoutType = {
+interface NotFoundLayoutProps {
 	title?: string;
 	children?: React.ReactNode;
-};
+}
 
-export default ({ children, title = 'Codino 404' }: LayoutType) => {
-	const router = useRouter();
-	const pathname = router.pathname;
+const NotFoundLayout = ({ children, title = 'Codino 404' }: NotFoundLayoutProps) => (
+	<div className="app-main">
+		<Head>
+			<title>Page not found &mdash; {title}</title>
+		</Head>
 
-	return (
-		<div className="app-main">
-			<Head>
-				<title>Page not found &mdash; {title}</title>
-			</Head>
+		<Header isErrorPage />
 
-			<Header isErrorPage />
+		<main>{children}</main>
+	</div>
+);
 
-			<main className={pathname !== '/' ? 'main-page' : ''}>{children}</main>
-		</div>
-	);
-};
+export default NotFoundLayout;
