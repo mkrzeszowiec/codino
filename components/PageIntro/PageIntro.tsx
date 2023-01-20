@@ -30,7 +30,7 @@ const PageIntro = () => {
 						quis soluta sunt temporibus ut, veniam? Accusantium dolorem exercitationem expedita explicabo fugiat.
 					</h3>
 
-					<Button label="Contact" href="/contact" type="border" />
+					<Button label="Contact" href="/contact" type="border-white" />
 				</div>
 			</div>
 		</section>

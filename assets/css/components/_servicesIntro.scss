@@ -1,0 +1,36 @@
+.servicesIntro {
+	padding-top: 40px;
+	flex-direction: column;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	min-height: 50vh;
+	background: var(--section-background-gradient);
+
+	&__infoWrapper {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__title {
+		font-size: 4rem;
+		font-weight: 600;
+	}
+
+	&__image {
+		height: 100%;
+		width: auto;
+		max-width: 100%;
+
+		@include breakpoint(tablet-lg) {
+			max-width: initial;
+		}
+	}
+
+	@include breakpoint(tablet-lg) {
+		flex-direction: row;
+	}
+}
