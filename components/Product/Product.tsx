@@ -1,5 +1,6 @@
 import Button from 'components/Button/Button';
 import { Product } from 'types/common';
+import HtmlLogo from 'components/icons/HtmlLogo';
 
 interface ProductProps {
 	product: Product;
@@ -16,7 +17,10 @@ const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
 
 				<p className="product__description">{description}</p>
 
-				<p className="product__technology">Technology:</p>
+				<p className="product__technology">
+					Technology:
+					<HtmlLogo />
+				</p>
 
 				<Button type="white" className="product__button" label="Show me" href={url} />
 			</div>

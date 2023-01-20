@@ -53,10 +53,14 @@
 		color: var(--color-white);
 	}
 
-	&__description {
-	}
-
 	&__technology {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		svg {
+			margin-left: 5px;
+		}
 	}
 
 	&__image {

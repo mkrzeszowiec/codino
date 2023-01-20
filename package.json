@@ -9,6 +9,8 @@
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "5.48.2",
 		"aos": "3.0.0-beta.6",
+		"embla-carousel-autoplay": "7.0.6",
+		"embla-carousel-react": "7.0.6",
 		"eslint-config-prettier": "8.6.0",
 		"next": "13.1.2",
 		"prettier": "2.8.3",
