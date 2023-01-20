@@ -1,6 +1,6 @@
-import HeroAnimation from '../hero-animation/HeroAnimation';
-import Button from 'components/button/Button';
 import { useEffect, useState } from 'react';
+import Button from 'components/Button/Button';
+import HeroAnimation from 'components/HeroAnimation/HeroAnimation';
 import { getIsServerSide } from 'utils/utils';
 
 const PageIntro = () => {
@@ -16,7 +16,7 @@ const PageIntro = () => {
 
 	return (
 		<section className="page-intro">
-			{/*{!getIsServerSide() && <HeroAnimation />}*/}
+			{!getIsServerSide() && <HeroAnimation />}
 
 			<div className="container">
 				<div className="page-intro__content">

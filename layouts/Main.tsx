@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import { useEffect } from 'react';
+import AOS from 'aos';
 import { useRouter } from 'next/router';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
@@ -12,6 +14,10 @@ type LayoutType = {
 export default ({ children, title = 'Codino' }: LayoutType) => {
 	const router = useRouter();
 	const isHomePage = router.pathname == '/';
+
+	useEffect(() => {
+		AOS.init();
+	}, []);
 
 	return (
 		<div className="app-main">

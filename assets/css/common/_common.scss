@@ -3,8 +3,12 @@
 }
 
 .main-container {
-	margin-top: 100px;
 	min-height: 60vh;
+	margin-top: 55px;
+
+	@include breakpoint(tablet-lg) {
+		margin-top: 100px;
+	}
 
 	&--homepage {
 		margin-top: 0;
@@ -21,4 +25,8 @@
 	padding-right: var(--container-horizontal-padding);
 	margin-right: auto;
 	margin-left: auto;
+}
+
+a:hover {
+	opacity: 0.8;
 }

@@ -1,0 +1,89 @@
+.whatWeDo {
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
+	padding: var(--section-padding);
+
+	@include breakpoint(tablet-lg) {
+		flex-direction: row;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+
+		@include breakpoint(tablet-lg) {
+			width: 30%;
+		}
+	}
+
+	&__title {
+		font-size: var(--section-font-size);
+	}
+
+	&__description {
+		margin-top: 10px;
+	}
+
+	&__positions {
+		flex-direction: column;
+		display: flex;
+		gap: 25px;
+		width: 100%;
+		justify-content: center;
+
+		@include breakpoint(tablet-lg) {
+			width: 70%;
+		}
+	}
+
+	&__highlight {
+		border-radius: 8px;
+		margin-top: 24px;
+		padding: 16px 24px;
+		font-size: 1.4rem;
+		font-weight: bold;
+		background-color: var(--color-dark-background);
+		color: var(--color-white);
+		line-height: 24px;
+	}
+}
+
+.position {
+	@include flex-center;
+	background: radial-gradient(29.37% 384.54% at 50% 47.36%, #f2f7fa 0%, rgba(242, 247, 250, 0) 100%);
+	width: 100%;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding: 32px 16px;
+	gap: 32px;
+
+	&__title {
+		font-size: 2.4rem;
+		font-weight: 600;
+	}
+
+	&__button {
+		@include flex-center;
+		border: 1px solid black;
+		padding: 8px;
+		border-radius: 50%;
+	}
+
+	&:hover {
+		opacity: 0.8;
+
+		.position__button {
+			background-color: var(--color-primary);
+			border-color: var(--color-primary);
+			transition: all 300ms;
+
+			path {
+				fill: white;
+			}
+		}
+	}
+}
