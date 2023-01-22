@@ -1,0 +1,89 @@
+.availableJobs {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	padding: var(--section-padding);
+
+	@include breakpoint(tablet) {
+		flex-direction: row;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 8px;
+
+		@include breakpoint(tablet) {
+			width: 30%;
+		}
+	}
+
+	&__title {
+		font-size: var(--section-font-size);
+	}
+
+	&__list {
+		flex-direction: column;
+		display: flex;
+		gap: 25px;
+		width: 100%;
+		justify-content: center;
+
+		@include breakpoint(tablet) {
+			width: 70%;
+		}
+	}
+}
+
+.job {
+	background: radial-gradient(29.37% 384.54% at 50% 47.36%, #f2f7fa 0%, rgba(242, 247, 250, 0) 100%);
+	width: 100%;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	padding: 32px 16px;
+	gap: 32px;
+	position: relative;
+
+	&__description {
+		display: flex;
+		align-items: center;
+		font-size: 1.4rem;
+		margin-top: 5px;
+	}
+
+	&__dot {
+		color: var(--color-primary);
+		margin: 0 5px;
+	}
+
+	&__title {
+		font-size: 2.4rem;
+		font-weight: 600;
+	}
+
+	&__button {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		@include flex-center;
+		border: 1px solid black;
+		padding: 8px;
+		border-radius: 50%;
+	}
+
+	&:hover {
+		opacity: 0.8;
+
+		.job__button {
+			background-color: var(--color-primary);
+			border-color: var(--color-primary);
+			transition: all 300ms;
+
+			path {
+				fill: white;
+			}
+		}
+	}
+}

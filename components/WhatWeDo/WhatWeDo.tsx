@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Position from './Position';
-import { CODINO_POSITIONS } from '../../contants/content';
+import Position from 'components/WhatWeDo/Position';
+import { CURRENT_POSITIONS } from 'content/currentPositions';
 
 const WhatWeDo = () => {
 	return (
@@ -24,7 +24,7 @@ const WhatWeDo = () => {
 			</div>
 
 			<div className="whatWeDo__positions">
-				{CODINO_POSITIONS.map(position => (
+				{CURRENT_POSITIONS.map(position => (
 					<Position position={position} key={position.slug} />
 				))}
 			</div>

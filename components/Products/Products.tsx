@@ -1,4 +1,4 @@
-import { CODINO_PRODUCTS } from 'contants/content';
+import { OUR_PRODUCTS } from 'content/ourProducts';
 import Product from 'components/Product/Product';
 import { getIsEven } from 'utils/utils';
 
@@ -13,7 +13,7 @@ const Products: React.FC = () => (
 			</p>
 		</div>
 
-		{CODINO_PRODUCTS.map((product, index) => (
+		{OUR_PRODUCTS.map((product, index) => (
 			<div key={product.title} data-aos={`${getIsEven(index) ? 'fade-left' : 'fade-right'}`}>
 				<Product product={product} />
 			</div>

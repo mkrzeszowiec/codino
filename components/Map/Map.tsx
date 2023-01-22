@@ -1,3 +1,4 @@
+//todo
 import React, { useEffect } from 'react';
 import { getIsServerSide } from 'utils/utils';
 
@@ -8,6 +9,7 @@ const mapProps = {
 		zoom: 17
 	},
 	onMount: map => {
+		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 		// @ts-ignore
 		new window.google.maps.Marker({
 			position: center,
@@ -23,6 +25,7 @@ const Map = () => {
 	useEffect(() => {
 		if (getIsServerSide()) return;
 
+		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 		// @ts-ignore
 		if (!window.google) {
 			const script = document.createElement('script');
@@ -39,6 +42,7 @@ const Map = () => {
 	}, []);
 
 	const onLoad = () => {
+		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 		// @ts-ignore
 		const map = new window.google.maps.Map(document.getElementById(MAP_ID), mapProps.options);
 		mapProps.onMount(map);

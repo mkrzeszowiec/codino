@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import type { AppProps } from 'next/app';
-import '../assets/css/styles.scss';
+import 'assets/css/styles.scss';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 	return (

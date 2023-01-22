@@ -1,10 +1,11 @@
 import Button from 'components/Button/Button';
+import SectionTitle from 'components/SectionTitle/SectionTitle';
 
 const ServicesIntro = () => {
 	return (
 		<section className="servicesIntro">
 			<div className="servicesIntro__infoWrapper">
-				<h3 className="servicesIntro__title">Services</h3>
+				<SectionTitle className="servicesIntro__title">Services</SectionTitle>
 				<p className="servicesIntro__description">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dicta eaque, eos esse eveniet fuga, illum magnam
 					minus natus repellat sequi, similique sint unde veniam.

@@ -1,0 +1,41 @@
+.teamHeader {
+	display: flex;
+	flex-direction: column;
+	padding: 40px 0 40px 0;
+	background: var(--section-background-gradient);
+
+	@include breakpoint(tablet) {
+		gap: 80px;
+		min-height: 60vh;
+		padding: 40px 0;
+		flex-direction: row;
+		@include flex-center;
+	}
+
+	&__texts {
+		gap: 10px;
+		display: flex;
+		flex-direction: column;
+
+		@include breakpoint(tablet) {
+			width: 40%;
+		}
+	}
+
+	&__imageWrapper {
+		text-align: center;
+		padding-top: 70px;
+
+		@include breakpoint(tablet) {
+			width: 60%;
+			padding-top: 0;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		max-height: 100%;
+		height: auto;
+		object-fit: contain;
+	}
+}

@@ -1,6 +1,6 @@
 .siteFooter {
 	background-color: var(--color-dark-background);
-	padding: 50px 0 20px 0;
+	padding: 50px 0 50px 0;
 	color: white;
 	background-image: url('/images/footer-background.svg');
 	background-size: auto auto;
@@ -11,39 +11,39 @@
 		padding-top: 90px;
 	}
 
-	.siteFooter__top {
+	&__top {
 		@include breakpoint(phone) {
 			display: flex;
 			flex-wrap: wrap;
-			padding-bottom: 60px;
+			padding-bottom: 30px;
 		}
-		@include breakpoint(tablet-lg) {
+		@include breakpoint(tablet) {
 			flex-wrap: nowrap;
 		}
 	}
 
-	.siteFooter__description {
+	&__description {
 		margin-right: auto;
-		margin-bottom: 70px;
 
 		@include breakpoint(phone) {
 			width: 400px;
-			margin-bottom: 50px;
-		}
-		@include breakpoint(tablet-lg) {
-			margin-bottom: 0;
-		}
-
-		p {
-			line-height: 120%;
-			margin-top: 10px;
 		}
 	}
 
-	.siteFooter__links {
-		margin-bottom: 20px;
+	&__subtitle {
+		font-size: 2.4rem;
+		font-weight: 600;
+		line-height: 120%;
+		margin-top: 10px;
+	}
 
-		@include breakpoint(tablet-lg) {
+	&__links {
+		font-weight: 500;
+		margin-bottom: 20px;
+		display: none;
+
+		@include breakpoint(tablet) {
+			display: block;
 			width: auto;
 		}
 
@@ -51,9 +51,9 @@
 			margin-right: 10px;
 			margin-bottom: 10px;
 		}
+	}
 
-		&:last-of-type {
-			margin-right: 0;
-		}
+	&__copyright {
+		margin-top: 20px;
 	}
 }

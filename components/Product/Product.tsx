@@ -1,6 +1,7 @@
 import Button from 'components/Button/Button';
 import { Product } from 'types/common';
 import HtmlLogo from 'components/icons/HtmlLogo';
+import Image from 'next/image';
 
 interface ProductProps {
 	product: Product;
@@ -26,7 +27,7 @@ const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
 			</div>
 
 			<div className="product__imageSection">
-				<img className="product__image" src={imageSource} alt="" />
+				<Image className="product__image" src={imageSource} alt="" width={600} height={600} />
 			</div>
 		</div>
 	);

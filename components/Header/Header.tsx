@@ -7,7 +7,7 @@ import NavItem from 'components/Header/NavItem';
 import Logo from 'components/icons/Logo';
 
 type HeaderType = {
-	isErrorPage?: Boolean;
+	isErrorPage?: boolean;
 };
 
 const Header = ({ isErrorPage }: HeaderType) => {
@@ -58,8 +58,8 @@ const Header = ({ isErrorPage }: HeaderType) => {
 				<Button className="site-header__hire-button" label="Get hired" href={'/career'} />
 
 				<div className="site-header__actions">
-					<button onClick={() => setMenuOpen(true)} className="site-header__btn-menu">
-						<i className="btn-hamburger">
+					<button onClick={() => setMenuOpen(true)} className="site-header__btn-menu" aria-label="Open the menu">
+						<i className="btn-hamburger" aria-hidden="true">
 							<span></span>
 						</i>
 					</button>

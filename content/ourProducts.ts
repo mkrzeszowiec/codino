@@ -1,6 +1,6 @@
-import { Position, Product } from 'types/common';
+import { Product } from 'types/common';
 
-export const CODINO_PRODUCTS: Product[] = [
+export const OUR_PRODUCTS: Product[] = [
 	{
 		title: 'Aplikacja mobilna Zipzero',
 		description:
@@ -56,32 +56,5 @@ export const CODINO_PRODUCTS: Product[] = [
 		imageSource: '/images/portfolio/recast.png',
 		url: '/#',
 		color: '#001021'
-	}
-];
-
-export const CODINO_POSITIONS: Position[] = [
-	{
-		title: 'Backend Developer',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque mauris ut risus efficitur, sed molestie purus rutrum. Suspendisse varius lorem ac dictum facilisis.',
-		shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		slug: 'backend',
-		scope: 'Lorem ipsum, lorem ipsum, lorem ipsum'
-	},
-	{
-		title: 'Devops Engineer',
-		description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		slug: 'devops',
-		scope: 'Lorem ipsum'
-	},
-	{
-		title: 'Frontend Developer',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque mauris ut risus efficitur, sed molestie purus rutrum. Suspendisse varius lorem ac dictum facilisis.',
-		shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		slug: 'frontend',
-		scope:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque mauris ut risus efficitur, sed molestie purus rutrum. Suspendisse varius lorem ac dictum facilisis.'
 	}
 ];
