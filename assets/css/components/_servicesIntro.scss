@@ -25,12 +25,12 @@
 		width: auto;
 		max-width: 100%;
 
-		@include breakpoint(tablet-lg) {
+		@include breakpoint(tablet) {
 			max-width: initial;
 		}
 	}
 
-	@include breakpoint(tablet-lg) {
+	@include breakpoint(tablet) {
 		flex-direction: row;
 	}
 }

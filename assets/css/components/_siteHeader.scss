@@ -5,18 +5,17 @@
 	left: 0;
 	z-index: 999;
 	height: 65px;
-	color: #fff;
-	box-shadow: none;
+	color: white;
 	transition: all 0.3s ease;
 
-	@include breakpoint(phone) {
+	@include breakpoint(tablet) {
 		height: 100px;
 	}
 
 	&__hire-button {
 		display: none;
 
-		@include breakpoint(tablet-lg) {
+		@include breakpoint(tablet) {
 			display: block;
 		}
 	}
@@ -25,7 +24,7 @@
 		&:before,
 		&:after,
 		span {
-			background-color: #fff;
+			background-color: white;
 		}
 	}
 
@@ -40,33 +39,14 @@
 	}
 
 	.site-header__btn-menu {
-		@include breakpoint(tablet-lg) {
+		@include breakpoint(tablet) {
 			display: none;
 		}
 	}
 
 	.site-header__actions {
 		margin-left: auto;
-		display: flex;
-		align-items: center;
-		@include breakpoint(tablet-lg) {
-			margin-left: 0;
-		}
-
-		button {
-			margin-left: 15px;
-			@include breakpoint(tablet-lg) {
-				margin-left: 25px;
-			}
-		}
-
-		i {
-			color: #fff;
-			z-index: 10;
-			transition: all 0.3s ease;
-			position: relative;
-			font-size: 18px;
-		}
+		@include flex-center;
 	}
 
 	.site-nav {
@@ -81,7 +61,7 @@
 		background-color: #fff;
 		transition: all 0.3s ease;
 		border-left: 1px solid #e5e5e5;
-		@include breakpoint(tablet-lg) {
+		@include breakpoint(tablet) {
 			position: relative;
 			height: auto;
 			right: 0;
@@ -95,14 +75,13 @@
 		}
 
 		a {
-			font-size: 16px;
-			font-weight: 500;
 			width: 100%;
-			color: #000;
+			color: black;
 			display: block;
 			text-align: left;
 			padding: 15px 18px;
-			@include breakpoint(tablet-lg) {
+
+			@include breakpoint(tablet) {
 				width: auto;
 				padding: 0;
 				color: #fff;
@@ -124,25 +103,25 @@
 			&:before,
 			&:after,
 			span {
-				background-color: #000;
+				background-color: black;
 			}
 		}
 
 		a,
 		i {
-			color: #000;
+			color: black;
 		}
 
 		button {
-			color: #000;
+			color: black;
 
 			i {
-				color: #000;
+				color: black;
 			}
 		}
 
 		.site-logo path {
-			fill: #000;
+			fill: black;
 		}
 	}
 }
@@ -154,7 +133,6 @@
 	svg {
 		width: 95px;
 		height: 40px;
-		fill: currentColor;
 		object-fit: contain;
 		margin-right: 15px;
 	}

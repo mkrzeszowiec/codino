@@ -1,6 +1,6 @@
 import Main from 'layouts/Main';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
-import { CODINO_PRODUCTS } from 'contants/content';
+import { OUR_PRODUCTS } from 'content/ourProducts';
 import { getIsEven } from 'utils/utils';
 import Product from 'components/Product/Product';
 
@@ -12,7 +12,7 @@ const CaseStudyPage = () => (
 				description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cupiditate delectus dolor, fugiat id, nostrum numquam omnis quo repellendus rerum sunt suscipit, totam voluptate! Aperiam deleniti dignissimos magni optio porro!"
 			/>
 
-			{CODINO_PRODUCTS.map((product, index) => (
+			{OUR_PRODUCTS.map((product, index) => (
 				<div key={product.title} data-aos={`${getIsEven(index) ? 'fade-left' : 'fade-right'}`}>
 					<Product product={product} />
 				</div>

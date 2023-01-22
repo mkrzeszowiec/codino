@@ -8,7 +8,7 @@
 		flex-direction: column;
 		margin-bottom: 40px;
 
-		@include breakpoint(tablet-lg) {
+		@include breakpoint(tablet) {
 			flex-direction: row;
 			gap: 50px;
 		}
@@ -22,7 +22,7 @@
 		z-index: -1;
 		top: -40px;
 
-		@include breakpoint(tablet-lg) {
+		@include breakpoint(tablet) {
 			font-size: 5.6rem;
 			top: -40px;
 			left: -16px;
@@ -34,13 +34,13 @@
 		margin-bottom: 10px;
 		position: relative;
 
-		@include breakpoint(tablet-lg) {
+		@include breakpoint(tablet) {
 			width: 40%;
 		}
 	}
 
 	&__description {
-		@include breakpoint(tablet-lg) {
+		@include breakpoint(tablet) {
 			width: 60%;
 		}
 	}

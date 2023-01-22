@@ -13,3 +13,14 @@ export interface Position {
 	scope: string;
 	slug: string;
 }
+
+export interface JobOffer {
+	title: string;
+	description: string;
+	payRanges: string;
+	slug: string;
+	roleAndResponsibilities: string[];
+	requirements: string[];
+	experienceLevel: 'junior' | 'mid' | 'senior';
+	mode: 'remote' | 'office' | 'hybrid';
+}

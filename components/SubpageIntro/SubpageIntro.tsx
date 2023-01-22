@@ -1,3 +1,5 @@
+import SectionTitle from 'components/SectionTitle/SectionTitle';
+
 interface SubPageIntroProps {
 	title: string;
 	description: string;
@@ -5,7 +7,7 @@ interface SubPageIntroProps {
 
 const SubpageIntro: React.FC<SubPageIntroProps> = ({ title, description = '' }) => (
 	<div className="subpageIntro">
-		<h3 className="subpageIntro__title">{title}</h3>
+		<SectionTitle className="subpageIntro__title">{title}</SectionTitle>
 		<p className="subpageIntro__description">{description}</p>
 	</div>
 );

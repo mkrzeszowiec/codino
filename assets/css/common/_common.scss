@@ -6,7 +6,7 @@
 	min-height: 60vh;
 	margin-top: 55px;
 
-	@include breakpoint(tablet-lg) {
+	@include breakpoint(tablet) {
 		margin-top: 100px;
 	}
 
