@@ -1,4 +1,4 @@
-import Main from 'layouts/Main';
+import Main from 'layouts/MainLayout';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
 import MeetCodino from 'components/MeetCodino/MeetCodino';
 

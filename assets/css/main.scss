@@ -19,13 +19,6 @@ body {
 	box-sizing: border-box;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-	/* display: none; <- Crashes Chrome on hover */
-	-webkit-appearance: none;
-	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-
 input[type='number'] {
 	-moz-appearance: textfield; /* Firefox */
 }
@@ -38,9 +31,6 @@ select {
 	background: none;
 	outline: none;
 	border-radius: 0;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
 	font-family: var(--main-font);
 }
 

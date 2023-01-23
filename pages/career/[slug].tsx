@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import { JobOffer } from 'types/common';
 import { JOB_OFFERS } from 'content/jobOffers';
-import Main from 'layouts/Main';
+import Main from 'layouts/MainLayout';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {

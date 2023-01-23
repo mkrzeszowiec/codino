@@ -2,16 +2,12 @@
 	color: var(--color-primary);
 }
 
-.main-container {
+.mainContainer {
 	min-height: 60vh;
 	margin-top: 65px;
 
 	@include breakpoint(tablet) {
 		margin-top: 100px;
-	}
-
-	&--homepage {
-		margin-top: 0;
 	}
 }
 

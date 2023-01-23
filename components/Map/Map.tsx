@@ -1,54 +1,20 @@
-//todo
-import React, { useEffect } from 'react';
-import { getIsServerSide } from 'utils/utils';
+import React from 'react';
+import SectionTitle from 'components/SectionTitle/SectionTitle';
 
-const center = { lat: 51.267164, lng: 20.948894 };
-const mapProps = {
-	options: {
-		center,
-		zoom: 17
-	},
-	onMount: map => {
-		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-		// @ts-ignore
-		new window.google.maps.Marker({
-			position: center,
-			map,
-			title: 'LiteraCafe'
-		});
-	}
-};
+const Map = () => (
+	<section className="map">
+		<SectionTitle className="map__title">Skontaktuj się z naszym zespołem</SectionTitle>
 
-const MAP_ID = 'codino-map';
-
-const Map = () => {
-	useEffect(() => {
-		if (getIsServerSide()) return;
-
-		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-		// @ts-ignore
-		if (!window.google) {
-			const script = document.createElement('script');
-			script.type = 'text/javascript';
-			script.src = `https://maps.google.com/maps/api/js?key=AIzaSyDljx8vYfkFaB0rIaBs0VBU1X3vRehoFXc`;
-			const headScript = document.getElementsByTagName('script')[0];
-			headScript.parentNode.insertBefore(script, headScript);
-			script.addEventListener('load', () => {
-				onLoad();
-			});
-		} else {
-			onLoad();
-		}
-	}, []);
-
-	const onLoad = () => {
-		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-		// @ts-ignore
-		const map = new window.google.maps.Map(document.getElementById(MAP_ID), mapProps.options);
-		mapProps.onMount(map);
-	};
-
-	return <div style={{ height: `50vh` }} id={MAP_ID} />;
-};
+	<iframe
+		className="map_iframe"
+		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2445.121264207682!2d21.008501315663704!3d52.204843779755834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccda774ae93d%3A0xb378a3ef4ea21cda!2sLudwika%20Narbutta%2053%2C%2002-529%20Warszawa!5e0!3m2!1spl!2spl!4v1674555221905!5m2!1spl!2spl"
+		height="470"
+		style={{ border: 0, width: '100%' }}
+		allowFullScreen={true}
+		loading="lazy"
+		referrerPolicy="no-referrer-when-downgrade"
+	></iframe>
+	</section>
+);
 
 export default Map;

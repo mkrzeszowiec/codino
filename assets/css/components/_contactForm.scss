@@ -1,0 +1,64 @@
+.contactFormWrapper {
+	background-color: #ffffff;
+	border-radius: 8px;
+	border: 1px solid #d9d9dd;
+	padding: 32px;
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 2rem;
+	}
+}
+
+.contactForm {
+	display: flex;
+	flex-direction: column;
+
+	&__input {
+		border: 1px solid #d9d9dd;
+		padding: 8px 16px;
+		font-size: 1.8rem;
+		margin-bottom: 20px;
+		border-radius: 8px;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	&__input--text-area {
+		min-width: 100%;
+	}
+
+	&__nameWrapper {
+		display: flex;
+		gap: 20px;
+	}
+
+	&__label {
+		font-weight: 600;
+		margin-bottom: 5px;
+
+		&:after {
+			color: var(--color-red);
+			content: ' *';
+			margin-left: 3px;
+		}
+	}
+
+	&__checkBoxLabel {
+		line-height: 100%;
+	}
+
+	&_formWrapper {
+		width: 50%;
+	}
+
+	&__submitButton {
+		padding: 12px 24px;
+		font-weight: 600;
+		background-color: var(--color-primary);
+		border-radius: 8px;
+		width: 100%;
+		color: white;
+		margin-top: 20px;
+	}
+}

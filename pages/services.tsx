@@ -1,4 +1,4 @@
-import Main from 'layouts/Main';
+import Main from 'layouts/MainLayout';
 import ServicesIntro from 'components/ServicesIntro/ServicesIntro';
 import WhatWeDo from 'components/WhatWeDo/WhatWeDo';
 import PositionDetails from 'components/WhatWeDo/PositionDetails';

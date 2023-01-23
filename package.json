@@ -16,6 +16,7 @@
 		"prettier": "2.8.3",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
+		"react-hook-form": "7.42.1",
 		"use-onclickoutside": "0.4.1"
 	},
 	"devDependencies": {

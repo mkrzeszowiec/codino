@@ -1,0 +1,39 @@
+.contact {
+	display: flex;
+	padding: var(--section-padding);
+	min-height: 50vh;
+	flex-direction: column;
+	gap: 40px;
+
+	@include breakpoint(tablet) {
+		flex-direction: row;
+	}
+
+	&__infoWrapper,
+	&__form {
+		width: 100%;
+
+		@include breakpoint(tablet) {
+			width: 50%;
+		}
+	}
+
+	&__description {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+
+	&__emailContact,
+	&__recruitmentContact {
+		font-size: 1.2rem;
+		margin-top: 25px;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	&__url {
+		color: var(--color-primary);
+		display: block;
+		font-size: 1.8rem;
+	}
+}

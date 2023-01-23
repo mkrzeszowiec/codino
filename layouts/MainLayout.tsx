@@ -2,26 +2,23 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Head from 'next/head';
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import JoinUs from 'components/JoinUs/JoinUs';
-import { getIsHomePage } from 'utils/utils';
 
 interface MainLayoutProps {
 	title?: string;
+	containerClassName?: string;
 	children?: React.ReactNode;
 }
 
-const MainLayout = ({ children, title = 'Codino' }: MainLayoutProps) => {
-	const router = useRouter();
-
+const MainLayout = ({ children, title = 'Codino', containerClassName = '' }: MainLayoutProps) => {
 	useEffect(() => {
 		AOS.init();
 	}, []);
 
 	return (
-		<div className="app-main">
+		<div className={containerClassName}>
 			<Head>
 				<title>{title}</title>
 				<meta charSet="utf-8" />
@@ -30,9 +27,7 @@ const MainLayout = ({ children, title = 'Codino' }: MainLayoutProps) => {
 
 			<Header />
 
-			<main className={`main-container ${getIsHomePage(router.pathname) ? 'main-container--homepage' : ''} `}>
-				{children}
-			</main>
+			<main className={`mainContainer`}>{children}</main>
 
 			<JoinUs />
 			<Footer />

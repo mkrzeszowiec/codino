@@ -1,4 +1,4 @@
-import Main from 'layouts/Main';
+import Main from 'layouts/MainLayout';
 import TeamHeader from 'components/TeamHeader/TeamHeader';
 
 const TeamPage = () => (

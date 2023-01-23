@@ -1,4 +1,4 @@
-import Layout from 'layouts/Main';
+import MainLayout from 'layouts/MainLayout';
 import PageIntro from 'components/PageIntro/PageIntro';
 import Products from 'components/Products/Products';
 import WhatWeDo from 'components/WhatWeDo/WhatWeDo';
@@ -8,7 +8,7 @@ import MeetCodino from 'components/MeetCodino/MeetCodino';
 
 const IndexPage = () => {
 	return (
-		<Layout>
+		<MainLayout containerClassName="homepagePage">
 			<PageIntro />
 			<div className="container">
 				<WhatWeDo />
@@ -21,7 +21,7 @@ const IndexPage = () => {
 				<StartWork />
 				<MeetCodino />
 			</div>
-		</Layout>
+		</MainLayout>
 	);
 };
 

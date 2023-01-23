@@ -1,15 +1,12 @@
-import Main from 'layouts/Main';
-import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
+import Main from 'layouts/MainLayout';
 import Map from 'components/Map/Map';
+import Contact from 'components/Contact/Contact';
 
 const ContactPage = () => {
 	return (
-		<Main title="Contact - Codino">
+		<Main containerClassName="contactPage" title="Contact - Codino">
 			<div className="container">
-				<SubpageIntro
-					title="Contact"
-					description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cupiditate delectus dolor, fugiat id"
-				/>
+				<Contact />
 			</div>
 
 			<Map />
