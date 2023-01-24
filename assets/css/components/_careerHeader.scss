@@ -3,7 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	padding: 40px 0 40px 0;
-	background: var(--section-background-gradient);
+	background: var(--background-gradient);
 
 	@include breakpoint(tablet) {
 		padding: 20px 0 40px 0;

@@ -1,6 +1,7 @@
 .contact {
 	display: flex;
-	padding: var(--section-padding);
+	padding: var(--container-vertical-padding) 0;
+
 	min-height: 50vh;
 	flex-direction: column;
 	gap: 40px;

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import ArrowRight from 'components/icons/ArrowRight';
+import ArrowRightIcon from 'components/icons/ArrowRight';
 import { JobOffer } from 'types/common';
 import Dot from 'components/icons/Dot';
 
@@ -23,7 +23,7 @@ const Job: React.FC<JobProps> = ({ job }) => {
 			</div>
 
 			<div className="job__button">
-				<ArrowRight />
+				<ArrowRightIcon />
 			</div>
 		</Link>
 	);

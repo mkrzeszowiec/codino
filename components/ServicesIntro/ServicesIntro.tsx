@@ -1,5 +1,6 @@
 import Button from 'components/Button/Button';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
+import Image from 'next/image';
 
 const ServicesIntro = () => {
 	return (
@@ -15,7 +16,7 @@ const ServicesIntro = () => {
 			</div>
 
 			<div className="servicesIntro__imageWrapper">
-				<img className="servicesIntro__image" src="/images/services-header.png" alt="" />
+				<Image className="servicesIntro__image" src="/images/services-header.png" width={600} height={600} alt="" />
 			</div>
 		</section>
 	);

@@ -9,6 +9,7 @@
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "5.48.2",
 		"aos": "3.0.0-beta.6",
+		"emailjs-com": "3.2.0",
 		"embla-carousel-autoplay": "7.0.6",
 		"embla-carousel-react": "7.0.6",
 		"eslint-config-prettier": "8.6.0",
@@ -16,7 +17,6 @@
 		"prettier": "2.8.3",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"react-hook-form": "7.42.1",
 		"use-onclickoutside": "0.4.1"
 	},
 	"devDependencies": {

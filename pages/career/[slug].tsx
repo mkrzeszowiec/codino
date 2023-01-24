@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import { JobOffer } from 'types/common';
+import JobDetails from 'components/JobDetails/JobDetails';
 import { JOB_OFFERS } from 'content/jobOffers';
 import Main from 'layouts/MainLayout';
 import { getPageTitle } from 'utils/utils';
@@ -37,7 +38,13 @@ export const getStaticProps: GetStaticProps = async context => {
 const JobPage = ({ job }: Props) => {
 	if (!job) return null;
 
-	return <Main title={getPageTitle(job.title)}>{JSON.stringify(job, null, 2)}</Main>;
+	return (
+		<Main title={getPageTitle(job.title)}>
+			<div className="container">
+				<JobDetails job={job} />
+			</div>
+		</Main>
+	);
 };
 
 export default JobPage;

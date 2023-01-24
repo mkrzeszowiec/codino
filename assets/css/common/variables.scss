@@ -1,29 +1,27 @@
 :root {
-	// fonts
 	--main-font: 'Inter';
 	--font-title: 'Inter';
 
-	// colors
 	--color-orange: #fbb03b;
 	--color-primary: #15a99b;
+	--color-primary-darker: #0e726a;
 	--color-black: #333333;
 	--color-gray: #3a394c;
 	--color-text: #3a394c;
 	--color-white: #ffffff;
 	--color-red: #f56c6c;
-
 	--color-primary-background: #ffffff;
 	--color-light-background: #f2f7fa;
 	--color-dark-background: #0d0025;
 
-	--max-container-width: 1280px;
-
 	--border-color: #d9d9dd;
+	--background-gradient: radial-gradient(29.37% 384.54% at 50% 47.36%, #f2f7fa 0%, rgba(242, 247, 250, 0) 100%);
+
+	--max-container-width: 1280px;
 
 	--container-horizontal-padding: 16px;
 	--container-vertical-padding: 64px;
-	--section-padding: 64px 16px;
+	--section-padding: var(--container-vertical-padding) var(--container-horizontal-padding);
 
 	--section-font-size: 3.2rem;
-	--section-background-gradient: radial-gradient(29.37% 384.54% at 50% 47.36%, #f2f7fa 0%, rgba(242, 247, 250, 0) 100%);
 }

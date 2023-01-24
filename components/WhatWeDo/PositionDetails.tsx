@@ -1,4 +1,4 @@
-import CheckCircle from 'components/icons/CheckCircle';
+import CheckCircleIcon from 'components/icons/CheckCircle';
 import { Position } from 'types/common';
 import { getNumberWithLeadingZero } from 'utils/utils';
 import HtmlLogo from '../icons/HtmlLogo';
@@ -31,7 +31,7 @@ const PositionDetails: React.FC<PositionDetailsProps> = ({ position, index }) =>
 
 				<div className="positionDetails__scope">
 					<span className="positionDetails__scopeIcon">
-						<CheckCircle />
+						<CheckCircleIcon />
 					</span>
 					<h5 className="positionDetails__scopeTitle">Zakres</h5>
 					<p className="positionDetails__scopeDescription">{scope}</p>

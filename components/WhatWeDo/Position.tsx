@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import ArrowRight from 'components/icons/ArrowRight';
+import ArrowRightIcon from 'components/icons/ArrowRight';
 import { Position } from 'types/common';
 
 interface PositionProps {
@@ -13,7 +13,7 @@ const Position: React.FC<PositionProps> = ({ position }) => {
 			<h4 className="position__title">{title}</h4>
 			<p className="position__description">{shortDescription}</p>
 			<div className="position__button">
-				<ArrowRight />
+				<ArrowRightIcon />
 			</div>
 		</Link>
 	);

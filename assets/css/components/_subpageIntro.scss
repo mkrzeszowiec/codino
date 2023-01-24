@@ -1,10 +1,10 @@
 .subpageIntro {
 	text-align: center;
-	min-height: 35vh;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	background: var(--section-background-gradient);
+	background: var(--background-gradient);
+	padding: var(--container-vertical-padding) 0;
 
 	&__title {
 		margin-bottom: 20px;

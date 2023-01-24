@@ -1,82 +1,74 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
+import { EMAIL_JS_CONTACT_FORM_TEMPLATE_ID, EMAIL_JS_SERVICE_ID, EMAIL_JS_USER_ID } from 'utils/constants';
 
 const ContactForm = () => {
-	const {
-		register,
-		handleSubmit,
-		formState: { errors }
-	} = useForm();
+	const form = useRef();
 
-	const onSubmit = data => {
-		console.log(data);
+	const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+
+		emailjs.sendForm(EMAIL_JS_SERVICE_ID, EMAIL_JS_CONTACT_FORM_TEMPLATE_ID, form.current, EMAIL_JS_USER_ID).then(
+			result => {
+				//todo
+				console.log('ok', result.text);
+			},
+			error => {
+				//todo
+				console.log('error', error.text);
+			}
+		);
 	};
-
-	console.log(errors);
 
 	return (
 		<div className="contactFormWrapper">
 			<h2 className="contactFormWrapper__title">Jak możemy Ci pomóc?</h2>
-			<form className="contactForm" onSubmit={handleSubmit(onSubmit)}>
+			<form className="contactForm" onSubmit={onSubmit} ref={form}>
 				<div className="contactForm__nameWrapper">
 					<div className="contactForm__name">
 						<label className="contactForm__label" htmlFor="name">
-							Name
+							Imię
 						</label>
-						<input
-							id="name"
-							className="contactForm__input"
-							type="text"
-							{...register('Name', { required: true, maxLength: 80 })}
-						/>
+						<input className="contactForm__input" required id="name" name="name" type="text" />
 					</div>
 
 					<div className="contactForm__surname">
 						<label className="contactForm__label" htmlFor="surname">
-							Surname
+							Nazwisko
 						</label>
-						<input
-							className="contactForm__input"
-							id="surname"
-							type="text"
-							{...register('Surname', { required: true, maxLength: 100 })}
-						/>
+						<input className="contactForm__input" required id="surname" name="surname" type="text" />
 					</div>
 				</div>
 
 				<label className="contactForm__label" htmlFor="email">
 					Email
 				</label>
-				<input
-					className="contactForm__input"
-					id="email"
-					type="email"
-					{...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
-				/>
+				<input className="contactForm__input" required id="email" name="email" type="email" />
 
 				<label className="contactForm__label" htmlFor="message">
-					Message
+					Wiadomość
 				</label>
 				<textarea
 					className="contactForm__input contactForm__input--text-area"
+					required
+					name="message"
 					id="message"
 					rows={5}
 					cols={1}
-					{...register('Message', { required: true })}
 				/>
 
 				<div>
-					<input id="agreement" type="checkbox" {...register('agreement', { required: true })} />
+					<input required id="agreement" type="checkbox" name="agreement" />
 					<label className="contactForm__checkBoxLabel" htmlFor="agreement">
-						I accept{' '}
+						Akceptuje{' '}
 						<a className="highlighted-text" href="#">
-							Contact Form Personal Data Processing Information
+							jakiś regulamin todo
 						</a>
 					</label>
 				</div>
 
 				<button className="contactForm__submitButton" type="submit">
-					Send
+					Wyślij
 				</button>
 			</form>
 		</div>
