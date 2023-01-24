@@ -1,11 +1,11 @@
 import Main from 'layouts/MainLayout';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
 import { OUR_PRODUCTS } from 'content/ourProducts';
-import { getIsEven } from 'utils/utils';
+import { getIsEven, getPageTitle } from 'utils/utils';
 import Product from 'components/Product/Product';
 
 const CaseStudyPage = () => (
-	<Main title="Case study - Codino">
+	<Main title={getPageTitle('Case study')}>
 		<div className="container">
 			<SubpageIntro
 				title="Case study"

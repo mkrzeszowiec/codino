@@ -1,9 +1,10 @@
 import Main from 'layouts/MainLayout';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
 import MeetCodino from 'components/MeetCodino/MeetCodino';
+import { getPageTitle } from 'utils/utils';
 
 const AboutPage = () => (
-	<Main title="About us - Codino">
+	<Main title={getPageTitle('About us')}>
 		<div className="container">
 			<SubpageIntro
 				title="About us"

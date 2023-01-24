@@ -3,11 +3,11 @@ import ServicesIntro from 'components/ServicesIntro/ServicesIntro';
 import WhatWeDo from 'components/WhatWeDo/WhatWeDo';
 import PositionDetails from 'components/WhatWeDo/PositionDetails';
 import { CURRENT_POSITIONS } from 'content/currentPositions';
-import { getIsEven } from 'utils/utils';
+import { getIsEven, getPageTitle } from 'utils/utils';
 import StartWork from '../components/StartWork/StartWork';
 
 const ServicesPage = () => (
-	<Main title="Services - Codino">
+	<Main title={getPageTitle('Services')}>
 		<div className="container">
 			<ServicesIntro />
 			<WhatWeDo />
