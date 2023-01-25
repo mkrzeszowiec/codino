@@ -13,10 +13,13 @@
 		"embla-carousel-autoplay": "7.0.6",
 		"embla-carousel-react": "7.0.6",
 		"eslint-config-prettier": "8.6.0",
+		"i18next": "22.4.9",
 		"next": "13.1.2",
+		"next-i18next": "13.0.3",
 		"prettier": "2.8.3",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
+		"react-i18next": "12.1.4",
 		"use-onclickoutside": "0.4.1"
 	},
 	"devDependencies": {

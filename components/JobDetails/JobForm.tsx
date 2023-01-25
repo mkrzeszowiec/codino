@@ -13,9 +13,8 @@ const JobForm: React.FC<JobFormProps> = ({ position }) => {
 		event.preventDefault();
 
 		emailjs.sendForm(EMAIL_JS_SERVICE_ID, EMAIL_JS_JOB_FORM_TEMPLATE_ID, form.current, EMAIL_JS_USER_ID).then(
-			result => {
-				//todo
-				console.log('result.text', result.text);
+			() => {
+				alert('wysłano');
 			},
 			error => {
 				//todo

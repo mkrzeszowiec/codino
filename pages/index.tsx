@@ -5,6 +5,8 @@ import WhatWeDo from 'components/WhatWeDo/WhatWeDo';
 import TechnologiesCarousel from 'components/TechnologiesCarousel/TechnologiesCarousel';
 import StartWork from 'components/StartWork/StartWork';
 import MeetCodino from 'components/MeetCodino/MeetCodino';
+import { GetStaticProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const IndexPage = () => {
 	return (
@@ -24,5 +26,11 @@ const IndexPage = () => {
 		</MainLayout>
 	);
 };
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+	props: {
+		...(await serverSideTranslations(locale ?? 'en', ['common']))
+	}
+});
 
 export default IndexPage;

@@ -1,0 +1,25 @@
+{
+	"common": {
+		"send": "Wyślij",
+		"contact": "Kontakt",
+		"getHired": "Aplikuj",
+		"subpages": {
+			"services": "Usługi",
+			"about": "O nas",
+			"caseStudy": "Wdrożenia",
+			"team": "Zespół",
+			"career": "Kariera",
+			"contact": "Kontakt"
+		}
+	},
+	"components": {
+		"whatWeDo": {
+			"title": "Czym zajmujemy się w <strong>Codino</strong>?",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nobis optio perferendis quis. Blanditiis, fuga."
+		},
+		"pageIntro": {
+			"header": "<strong>Jakiś slogan</strong> część dalsza sloganu",
+			"subheader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+		}
+	}
+}

@@ -2,7 +2,8 @@
 	position: fixed;
 	width: 100%;
 	top: 0;
-	left: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	z-index: 999;
 	height: 65px;
 	color: white;
@@ -12,11 +13,33 @@
 		height: 100px;
 	}
 
+	&__languageButton {
+		text-transform: uppercase;
+		padding: 12px;
+		position: absolute;
+		right: 5px;
+		color: white;
+		font-size: 1.6rem;
+		overflow: hidden;
+		display: none;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: var(--color-primary) !important;
+		}
+
+		@include breakpoint(tablet) {
+			display: block;
+		}
+	}
+
 	&__hire-button {
 		display: none;
 
 		@include breakpoint(tablet) {
 			display: block;
+			position: absolute;
+			right: 5rem;
 		}
 	}
 
@@ -28,10 +51,16 @@
 		}
 	}
 
-	.container {
+	&__wrapper {
 		display: flex;
 		height: 100%;
 		align-items: center;
+		max-width: var(--max-container-width);
+		padding-left: var(--container-horizontal-padding);
+		padding-right: var(--container-horizontal-padding);
+		margin-right: auto;
+		margin-left: auto;
+		position: relative;
 	}
 
 	.site-logo path {

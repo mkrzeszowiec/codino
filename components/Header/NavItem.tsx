@@ -1,29 +1,28 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
+import { getCamelCased } from 'utils/utils';
 
-const ROUTES = [
-	{ name: 'Services', slug: 'services' },
-	{ name: 'About Us', slug: 'about' },
-	{ name: 'Case Study', slug: 'case-study' },
-	{ name: 'Team', slug: 'team' },
-	{ name: 'Career', slug: 'career' },
-	{ name: 'Contact', slug: 'contact' }
-];
+const ROUTES = ['services', 'about', 'case-study', 'team', 'career', 'contact'];
 
 const NavItem = () => {
 	const router = useRouter();
+	const { t } = useTranslation();
+
 	const getIsActive = (slug: string): boolean => router.pathname.includes(slug);
+	// @ts-ignore
+	const getTranslateKey = (route: string): any => `common.subpages.${getCamelCased(route)}`;
 
 	return (
 		<nav className="navigation">
 			{ROUTES.map(route => (
 				<Link
-					aria-label={route.name}
-					className={`navigation__link ${getIsActive(route.slug) ? 'navigation__link--active' : ''}`}
-					href={`/${route.slug}`}
-					key={route.slug}
+					aria-label={route}
+					className={`navigation__link ${getIsActive(route) ? 'navigation__link--active' : ''}`}
+					href={`/${route}`}
+					key={route}
 				>
-					{route.name}
+					{t(getTranslateKey(route))}
 				</Link>
 			))}
 		</nav>

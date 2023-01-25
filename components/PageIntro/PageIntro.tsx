@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 import Button from 'components/Button/Button';
 import HeroAnimation from 'components/HeroAnimation/HeroAnimation';
 import { getIsServerSide } from 'utils/utils';
+import { Trans, useTranslation } from 'next-i18next';
 
 const PageIntro = () => {
+	const { t } = useTranslation();
 	const [showing, setShowing] = useState(false);
 
 	useEffect(() => {
@@ -21,16 +23,10 @@ const PageIntro = () => {
 			<div className="container">
 				<div className="pageIntro__content">
 					<h2 className="pageIntro__title">
-						<span className="highlighted-text">Trusted by </span>
-						customers, partners and the industry
+						<Trans i18nKey={'components.pageIntro.header'} />
 					</h2>
-
-					<h3 className="pageIntro__subtitle">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda dignissimos dolorum pariatur
-						quis soluta sunt temporibus ut, veniam? Accusantium dolorem exercitationem expedita explicabo fugiat.
-					</h3>
-
-					<Button label="Contact" href="/contact" type="border-white" />
+					<h3 className="pageIntro__subtitle">{t('components.pageIntro.subheader')}</h3>
+					<Button label={t('common.contact')} href="/contact" type="border-white" />
 				</div>
 			</div>
 		</section>

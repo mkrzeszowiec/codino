@@ -5,12 +5,15 @@ import { useRouter } from 'next/router';
 import Button from 'components/Button/Button';
 import NavItem from 'components/Header/NavItem';
 import Logo from 'components/icons/Logo';
+import { useTranslation } from 'next-i18next';
 
-type HeaderType = {
+interface HeaderProps {
 	isErrorPage?: boolean;
-};
+}
 
-const Header = ({ isErrorPage }: HeaderType) => {
+const Header = ({ isErrorPage }: HeaderProps) => {
+	const { t } = useTranslation();
+
 	const router = useRouter();
 	const arrayPaths = ['/'];
 
@@ -19,11 +22,7 @@ const Header = ({ isErrorPage }: HeaderType) => {
 	const navRef = useRef(null);
 
 	const headerClass = () => {
-		if (window.pageYOffset === 0) {
-			setOnTop(true);
-		} else {
-			setOnTop(false);
-		}
+		setOnTop(window.pageYOffset === 0);
 	};
 
 	useEffect(() => {
@@ -32,33 +31,46 @@ const Header = ({ isErrorPage }: HeaderType) => {
 		}
 
 		headerClass();
-		window.onscroll = function () {
-			headerClass();
-		};
+		window.onscroll = () => headerClass();
 	}, []);
 
 	const closeMenu = () => {
 		setMenuOpen(false);
 	};
 
+	const onClickHamburgerButton = () => {
+		setMenuOpen(true);
+	};
+
+	const getNextAvailableLocale = (): string => (router.locale == 'pl' ? 'en' : 'pl');
+
+	const handleLocaleChange = () => {
+		router.replace(router.pathname, router.pathname, { locale: getNextAvailableLocale() });
+	};
+
 	useOnClickOutside(navRef, closeMenu);
 
 	return (
 		<header className={`site-header ${!onTop ? 'site-header--fixed' : ''}`}>
-			<div className="container">
+			<div className="site-header__wrapper">
 				<Link href="/">
 					<h1 className="site-logo">
 						<Logo />
 					</h1>
 				</Link>
+
 				<nav ref={navRef} className={`site-nav ${menuOpen ? 'site-nav--open' : ''}`}>
 					<NavItem />
 				</nav>
 
-				<Button className="site-header__hire-button" label="Get hired" href={'/career'} />
+				<Button className="site-header__hire-button" label={t('common.getHired')} href={'/career'} />
+
+				<button className="site-header__languageButton" onClick={handleLocaleChange}>
+					{getNextAvailableLocale()}
+				</button>
 
 				<div className="site-header__actions">
-					<button onClick={() => setMenuOpen(true)} className="site-header__btn-menu" aria-label="Open the menu">
+					<button onClick={onClickHamburgerButton} className="site-header__btn-menu" aria-label="Open the menu">
 						<i className="btn-hamburger" aria-hidden="true">
 							<span></span>
 						</i>

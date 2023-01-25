@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import Button from 'components/Button/Button';
+import { useTranslation } from 'next-i18next';
 
 const MeetCodino = () => {
+	const { t } = useTranslation();
+
 	return (
 		<section className="meetCodino" data-aos="fade-down">
 			<Image
@@ -21,7 +24,7 @@ const MeetCodino = () => {
 					Praesent nibh est, maximus sed maximus ac,
 				</h4>
 
-				<Button label="Get hired" href="/career" />
+				<Button label={t('common.getHired')} href="/career" />
 			</div>
 
 			<Image

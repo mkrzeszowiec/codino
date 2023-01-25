@@ -3,6 +3,8 @@ import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
 import { OUR_PRODUCTS } from 'content/ourProducts';
 import { getIsEven, getPageTitle } from 'utils/utils';
 import Product from 'components/Product/Product';
+import { GetStaticProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const CaseStudyPage = () => (
 	<Main title={getPageTitle('Case study')}>
@@ -20,5 +22,11 @@ const CaseStudyPage = () => (
 		</div>
 	</Main>
 );
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+	props: {
+		...(await serverSideTranslations(locale ?? 'en', ['common']))
+	}
+});
 
 export default CaseStudyPage;

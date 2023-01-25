@@ -1,13 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import type { AppProps } from 'next/app';
+import { appWithTranslation } from 'next-i18next';
 import 'assets/css/styles.scss';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-	return (
-		<Fragment>
-			<Component {...pageProps} />
-		</Fragment>
-	);
+	return <Component {...pageProps} />;
 };
 
-export default MyApp;
+export default appWithTranslation(MyApp);

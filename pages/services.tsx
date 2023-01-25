@@ -5,6 +5,8 @@ import PositionDetails from 'components/WhatWeDo/PositionDetails';
 import { CURRENT_POSITIONS } from 'content/currentPositions';
 import { getIsEven, getPageTitle } from 'utils/utils';
 import StartWork from '../components/StartWork/StartWork';
+import { GetStaticProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const ServicesPage = () => (
 	<Main title={getPageTitle('Services')}>
@@ -22,5 +24,11 @@ const ServicesPage = () => (
 		<StartWork />
 	</Main>
 );
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+	props: {
+		...(await serverSideTranslations(locale ?? 'en', ['common']))
+	}
+});
 
 export default ServicesPage;

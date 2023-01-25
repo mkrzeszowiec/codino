@@ -1,18 +1,19 @@
 import Link from 'next/link';
 import Position from 'components/WhatWeDo/Position';
 import { CURRENT_POSITIONS } from 'content/currentPositions';
+import { Trans, useTranslation } from 'next-i18next';
 
 const WhatWeDo = () => {
+	const { t } = useTranslation();
+
 	return (
 		<section className="whatWeDo" data-aos="fade-down">
 			<div className="whatWeDo__info">
 				<h3 className="whatWeDo__title">
-					Czym zajmujemy się w <span className="highlighted-text">Codino?</span>
+					<Trans i18nKey={'components.whatWeDo.title'} />
 				</h3>
-				<p className="whatWeDo__description">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nobis optio perferendis quis.
-					Blanditiis, fuga.
-				</p>
+
+				<p className="whatWeDo__description">{t('components.whatWeDo.description')}</p>
 
 				<div className="whatWeDo__highlight">
 					Rozwijaj biznesy online przy pomocy najnowszych technologii{' '}

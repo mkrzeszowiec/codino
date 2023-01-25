@@ -1,0 +1,25 @@
+{
+	"common": {
+		"send": "Send",
+		"contact": "Contact",
+		"getHired": "Get hired",
+		"subpages": {
+			"services": "Services",
+			"about": "About us",
+			"caseStudy": "Case study",
+			"team": "Team",
+			"career": "Career",
+			"contact": "Contact"
+		}
+	},
+	"components": {
+		"whatWeDo": {
+			"title": "What we do in <strong>Codino</strong>?",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nobis optio perferendis quis. Blanditiis, fuga."
+		},
+		"pageIntro": {
+			"header": "<strong>Trusted by customers</strong>, partners and the industry",
+			"subheader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+		}
+	}
+}

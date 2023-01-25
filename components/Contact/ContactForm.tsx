@@ -9,9 +9,8 @@ const ContactForm = () => {
 		event.preventDefault();
 
 		emailjs.sendForm(EMAIL_JS_SERVICE_ID, EMAIL_JS_CONTACT_FORM_TEMPLATE_ID, form.current, EMAIL_JS_USER_ID).then(
-			result => {
-				//todo
-				console.log('ok', result.text);
+			() => {
+				alert('wysłano');
 			},
 			error => {
 				//todo

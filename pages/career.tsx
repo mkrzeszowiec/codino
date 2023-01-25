@@ -3,6 +3,8 @@ import TechnologiesCarousel from 'components/TechnologiesCarousel/TechnologiesCa
 import CareerHeader from 'components/CareerHeader/CareerHeader';
 import AvailableJobs from 'components/AvailableJobs/AvailableJobs';
 import { getPageTitle } from 'utils/utils';
+import { GetStaticProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const CareerPage = () => (
 	<Main title={getPageTitle('Career')}>
@@ -15,4 +17,9 @@ const CareerPage = () => (
 	</Main>
 );
 
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+	props: {
+		...(await serverSideTranslations(locale ?? 'en', ['common']))
+	}
+});
 export default CareerPage;

@@ -2,6 +2,8 @@ import Main from 'layouts/MainLayout';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
 import MeetCodino from 'components/MeetCodino/MeetCodino';
 import { getPageTitle } from 'utils/utils';
+import { GetStaticProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const AboutPage = () => (
 	<Main title={getPageTitle('About us')}>
@@ -15,5 +17,11 @@ const AboutPage = () => (
 		</div>
 	</Main>
 );
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+	props: {
+		...(await serverSideTranslations(locale ?? 'en', ['common']))
+	}
+});
 
 export default AboutPage;

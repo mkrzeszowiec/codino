@@ -1,13 +1,18 @@
 import Button from 'components/Button/Button';
+import { useTranslation } from 'next-i18next';
 
-const JoinUs = () => (
-	<section className="joinUs">
-		<h3 className="joinUs__title">Dołącz do nas</h3>
+const JoinUs = () => {
+	const { t } = useTranslation();
 
-		<p className="joinUs__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, nisi?</p>
+	return (
+		<section className="joinUs">
+			<h3 className="joinUs__title">Dołącz do nas</h3>
 
-		<Button className="joinUs__button" label="Get hired" href="/career" />
-	</section>
-);
+			<p className="joinUs__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, nisi?</p>
+
+			<Button className="joinUs__button" label={t('common.getHired')} href="/career" />
+		</section>
+	);
+};
 
 export default JoinUs;
