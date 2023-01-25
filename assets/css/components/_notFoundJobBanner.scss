@@ -1,0 +1,15 @@
+.notFoundJobBanner {
+	background-color: var(--color-dark-background);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 48px 72px;
+	width: 100%;
+	border-radius: var(--border-radius);
+
+	&__header {
+		font-weight: 600;
+		color: white;
+		font-size: 2rem;
+	}
+}

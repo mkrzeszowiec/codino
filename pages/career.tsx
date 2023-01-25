@@ -5,12 +5,14 @@ import AvailableJobs from 'components/AvailableJobs/AvailableJobs';
 import { getPageTitle } from 'utils/utils';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { NotFoundJobBanner } from 'components/NotFoundJobBanner/NotFoundJobBanner';
 
 const CareerPage = () => (
 	<Main title={getPageTitle('Career')}>
 		<div className="container">
 			<CareerHeader />
 			<AvailableJobs />
+			<NotFoundJobBanner />
 		</div>
 
 		<TechnologiesCarousel />
