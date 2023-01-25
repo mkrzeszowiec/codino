@@ -5,6 +5,8 @@ import JobDetails from 'components/JobDetails/JobDetails';
 import { JOB_OFFERS } from 'content/jobOffers';
 import Main from 'layouts/MainLayout';
 import { getPageTitle } from 'utils/utils';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {
@@ -31,7 +33,10 @@ export const getStaticProps: GetStaticProps = async context => {
 	const job = JOB_OFFERS.find(job => job.slug === slug);
 
 	return {
-		props: { job }
+		props: {
+			job,
+			...(await serverSideTranslations(context.locale ?? DEFAULT_LOCALE, [DEFAULT_TRANSLATE_NAMESPACE]))
+		}
 	};
 };
 

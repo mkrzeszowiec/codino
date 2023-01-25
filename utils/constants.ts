@@ -1,5 +1,7 @@
 export const CONTACT_EMAIL = 'kontakt@codino.pl';
 export const RECRUITMENT_EMAIL = 'rekrutacja@codino.pl';
+export const DEFAULT_LOCALE = 'PL';
+export const DEFAULT_TRANSLATE_NAMESPACE = 'common';
 
 //todo move to environments variable
 export const EMAIL_JS_SERVICE_ID = 'service_i4jduna';
