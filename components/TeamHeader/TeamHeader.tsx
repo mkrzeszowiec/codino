@@ -15,7 +15,7 @@ const TeamHeader = () => (
 		</div>
 
 		<div className="teamHeader__imageWrapper">
-			<Image className="teamHeader__image" src={'/images/team-header.png'} width={400} height={450} alt="" />
+			<Image className="teamHeader__image" src={'/images/team.png'} width={400} height={450} alt="" />
 		</div>
 	</section>
 );

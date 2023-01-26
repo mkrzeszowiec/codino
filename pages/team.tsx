@@ -5,15 +5,18 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { getPageTitle } from 'utils/utils';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 import { useTranslation } from 'next-i18next';
+import TeamStats from 'components/TeamStats/TeamStats';
 
 const TeamPage = () => {
 	const { t } = useTranslation();
 
 	return (
 		<Main title={getPageTitle(t('common.subpages.team'))}>
-			<div className='container'>
+			<div className="container">
 				<TeamHeader />
 			</div>
+
+			<TeamStats />
 		</Main>
 	);
 };
