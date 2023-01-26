@@ -1,8 +1,11 @@
 {
 	"common": {
 		"send": "Send",
+		"sent": "Sent",
+		"error": "Something's gone wrong, please try again",
 		"contact": "Contact",
 		"getHired": "Get hired",
+		"cooperation": "Cooperation",
 		"subpages": {
 			"services": "Services",
 			"about": "About us",
@@ -20,6 +23,10 @@
 		"pageIntro": {
 			"header": "<strong>Trusted by customers</strong>, partners and the industry",
 			"subheader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+		},
+		"contact": {
+			"header": "Skontaktuj się",
+			"description": "Skontaktuj się z nami i dowiedz się jak możemy pomóc w realizacji Twojego projektu"
 		}
 	}
 }

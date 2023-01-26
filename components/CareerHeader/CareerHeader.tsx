@@ -7,9 +7,9 @@ const CareerHeader = () => (
 			<SectionTitle className="careerHeader__title">Kariera w Codino</SectionTitle>
 
 			<p className="careerHeader__description">
-				Krótki ogólny opis firmy Codino. consectetur adipiscing elit. Nam scelerisque mauris ut risus efficitur, sed
-				molestie purus rutrum. Suspendisse varius lorem ac dictum facilisis. Nunc vel ex et ante sollicitudin pharetra.
-				Nunc quis interdum nisi. Vestibulum bibendum, tellus sed ultrices sodales,
+				W Codino szukamy ambitnych programistów, którzy chcą rozwijać swoje umiejętności i karierę w
+				dynamicznie rozwijającej się branży IT. Oferujemy możliwość pracy przy interesujących projektach dla różnych
+				branż oraz przy wykorzystaniu najnowszych technologii.
 			</p>
 		</div>
 

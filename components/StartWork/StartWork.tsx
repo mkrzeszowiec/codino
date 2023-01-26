@@ -1,6 +1,9 @@
 import Button from 'components/Button/Button';
+import { useTranslation } from 'next-i18next';
 
 const StartWork = () => {
+	const { t } = useTranslation();
+
 	return (
 		<div className="startWorkWrapper">
 			<section className="startWork">
@@ -9,7 +12,7 @@ const StartWork = () => {
 					Rozwijaj biznesy online przy pomocy najnowszych technologii razem z nami.
 				</p>
 
-				<Button label="Contact" href="/contact" type="border-white" />
+				<Button label={t('common.contact')} href="/contact" type="border-white" />
 			</section>
 		</div>
 	);

@@ -1,8 +1,11 @@
 {
 	"common": {
 		"send": "Wyślij",
+		"sent": "Wysłano",
+		"error": "Wystąpił błąd, spróbuj ponownie",
 		"contact": "Kontakt",
 		"getHired": "Aplikuj",
+		"cooperation": "Współpraca",
 		"subpages": {
 			"services": "Oferta",
 			"about": "O nas",
@@ -15,11 +18,15 @@
 	"components": {
 		"whatWeDo": {
 			"title": "Czym zajmujemy się w <strong>Codino</strong>?",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nobis optio perferendis quis. Blanditiis, fuga."
+			"description": "Specjalizujemy się w projektowaniu, tworzeniu i utrzymaniu aplikacji mobilnych i webowych, a także wsparciu technicznym dla systemów IT"
 		},
 		"pageIntro": {
 			"header": "<strong>Jakiś slogan</strong> część dalsza sloganu",
 			"subheader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+		},
+		"contact": {
+			"header": "Skontaktuj się",
+			"description": "Skontaktuj się z nami i dowiedz się jak możemy pomóc w realizacji Twojego projektu"
 		}
 	}
 }

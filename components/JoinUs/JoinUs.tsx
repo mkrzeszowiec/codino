@@ -8,7 +8,7 @@ const JoinUs = () => {
 		<section className="joinUs">
 			<h3 className="joinUs__title">Dołącz do nas</h3>
 
-			<p className="joinUs__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, nisi?</p>
+			<p className="joinUs__description">Dołącz do nas i rozwijaj swoje umiejętności w branży IT</p>
 
 			<Button className="joinUs__button" label={t('common.getHired')} href="/career" />
 		</section>

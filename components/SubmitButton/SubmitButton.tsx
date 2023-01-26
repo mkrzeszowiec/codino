@@ -1,5 +1,6 @@
 import React from 'react';
 import { STATE } from 'utils/constants';
+import { useTranslation } from 'next-i18next';
 
 interface SubmitButtonProps {
 	classNamespace?: string;
@@ -7,15 +8,17 @@ interface SubmitButtonProps {
 }
 
 export const SubmitButton: React.FC<SubmitButtonProps> = ({ classNamespace = 'submitButton__', state }) => {
+	const { t } = useTranslation();
+
 	const containerClass = classNamespace + 'container ' + state + ' ';
 	const getButtonLabel = (): string => {
 		switch (state) {
 			case STATE.SUCCESS:
-				return 'Wysłano';
+				return t('common.sent');
 			case STATE.ERROR:
-				return 'Wystąpił błąd, spróbuj ponownie';
+				return t('common.error');
 			default:
-				return 'Wyślij';
+				return t('common.send');
 		}
 	};
 

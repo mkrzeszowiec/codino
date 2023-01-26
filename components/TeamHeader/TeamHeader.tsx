@@ -7,10 +7,10 @@ const TeamHeader = () => (
 			<SectionTitle className="teamHeader__title">Zespół</SectionTitle>
 
 			<p className="teamHeader__description">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae porttitor enim. Fusce ultrices varius
-				lectus, id aliquet libero posuere a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin placerat
-				lectus, id aliquet libero posuere a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin placerat
-				sodales tellus vel rhoncus.
+				Nasi programiści to prawdziwi pasjonaci swojego zawodu, którzy łączą wiedzę, doświadczenie i kreatywność, aby
+				tworzyć innowacyjne rozwiązania dla naszych klientów. Składamy się z doświadczonych specjalistów
+				specjalizujących się w różnych technologiach, którzy zawsze służą pomocą i dostosowują się do indywidualnych
+				potrzeb każdego projektu
 			</p>
 		</div>
 

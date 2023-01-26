@@ -2,17 +2,17 @@ import React from 'react';
 import ContactForm from 'components/Contact/ContactForm';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
 import { CONTACT_EMAIL, RECRUITMENT_EMAIL } from 'utils/constants';
+import { useTranslation } from 'next-i18next';
 
 const Contact = () => {
+	const { t } = useTranslation();
+
 	return (
 		<section className="contact">
 			<div className="contact__infoWrapper">
-				<SectionTitle>Skontaktuj się</SectionTitle>
+				<SectionTitle>{t('components.contact.header')}</SectionTitle>
 
-				<p className="contact__description">
-					Nasz zespół jest tutaj, aby pomóc Ci wybrać odpowiednie usługi tellus sed ultrices sodales, nisl orci euismod
-					tortor, non maximus erat libero eu mi. Donec in congue justo. Donec ac lobortis mi.
-				</p>
+				<p className="contact__description">{t('components.contact.description')}</p>
 
 				<p className="contact__emailContact">Dołącz do nas</p>
 
@@ -20,7 +20,7 @@ const Contact = () => {
 					{CONTACT_EMAIL}
 				</a>
 
-				<p className="contact__recruitmentContact">Współpraca</p>
+				<p className="contact__recruitmentContact">{t('common.cooperation')}</p>
 
 				<a className="contact__url" href={`mailto:${RECRUITMENT_EMAIL}`} target="_self">
 					{RECRUITMENT_EMAIL}

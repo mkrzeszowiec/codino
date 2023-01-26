@@ -13,7 +13,7 @@ const CaseStudyPage = () => {
 			<div className='container'>
 				<SubpageIntro
 					title='Case study'
-					description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cupiditate delectus dolor, fugiat id, nostrum numquam omnis quo repellendus rerum sunt suscipit, totam voluptate! Aperiam deleniti dignissimos magni optio porro!'
+					description='Przejrzyj nasze case study i przekonaj się sam, jakie korzyści możemy przynieść Twojemu biznesowi.'
 				/>
 
 				{OUR_PRODUCTS.map((product, index) => (

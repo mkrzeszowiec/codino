@@ -23,7 +23,7 @@ const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
 					<HtmlLogo />
 				</p>
 
-				<Button type="white" className="product__button" label="Show me" href={url} />
+				<Button type="white" className="product__button" label="Zobacz szczegóły" href={url} />
 			</div>
 
 			<div className="product__imageSection">
