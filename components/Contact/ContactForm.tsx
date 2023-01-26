@@ -1,28 +1,28 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
-import { EMAIL_JS_CONTACT_FORM_TEMPLATE_ID, EMAIL_JS_SERVICE_ID, EMAIL_JS_USER_ID } from 'utils/constants';
+import SubmitButton from 'components/SubmitButton/SubmitButton';
+import { EMAIL_JS_CONTACT_FORM_TEMPLATE_ID, EMAIL_JS_SERVICE_ID, EMAIL_JS_USER_ID, STATE } from 'utils/constants';
 
 const ContactForm = () => {
 	const form = useRef();
+	const [currentState, setState] = useState(STATE.NOTHING);
 
-	const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+	const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 
-		emailjs.sendForm(EMAIL_JS_SERVICE_ID, EMAIL_JS_CONTACT_FORM_TEMPLATE_ID, form.current, EMAIL_JS_USER_ID).then(
-			() => {
-				alert('wysłano');
-			},
-			error => {
-				//todo
-				console.log('error', error.text);
-			}
-		);
+		try {
+			setState(STATE.LOADING);
+			await emailjs.sendForm(EMAIL_JS_SERVICE_ID, EMAIL_JS_CONTACT_FORM_TEMPLATE_ID, form.current, EMAIL_JS_USER_ID);
+			setState(STATE.SUCCESS);
+		} catch {
+			setState(STATE.ERROR);
+		}
 	};
 
 	return (
 		<div className="contactFormWrapper">
 			<h2 className="contactFormWrapper__title">Jak możemy Ci pomóc?</h2>
-			<form className="contactForm" onSubmit={onSubmit} ref={form}>
+			<form id={'contactForm'} className="contactForm" onSubmit={onSubmit} ref={form}>
 				<div className="contactForm__nameWrapper">
 					<div className="contactForm__name">
 						<label className="contactForm__label" htmlFor="name">
@@ -66,9 +66,7 @@ const ContactForm = () => {
 					</label>
 				</div>
 
-				<button className="contactForm__submitButton" type="submit">
-					Wyślij
-				</button>
+				<SubmitButton state={currentState} />
 			</form>
 		</div>
 	);

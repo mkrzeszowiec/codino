@@ -1,0 +1,124 @@
+.submitButton__container {
+	margin: 40px 0 0 0;
+	text-align: center;
+	overflow: hidden;
+
+	& .submitButton__button {
+		background: var(--color-primary);
+		border: 2px solid var(--color-primary);
+		font-size: 1.6rem;
+		border-radius: 8px;
+		color: white;
+		font-weight: 600;
+		padding: 0.7em 1em;
+		text-decoration: none;
+		text-align: center;
+		height: 45px;
+		width: 100%;
+		position: relative;
+		-webkit-tap-highlight-color: transparent;
+		outline: none;
+		transition: background-color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s, border-radius 0.3s,
+			opacity 0.3s;
+
+		&:hover {
+			background: var(--color-primary-darker);
+		}
+
+		& span {
+			display: inherit;
+			transition: opacity 0.3s 0.1s;
+		}
+
+		& svg {
+			height: 45px;
+			width: 45px;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			top: 50%;
+			pointer-events: none;
+
+			& path {
+				opacity: 0;
+				fill: none;
+			}
+
+			&.submitButton__progress-circle {
+				animation: spin 0.9s infinite cubic-bezier(0.085, 0.26, 0.935, 0.71);
+
+				& path {
+					stroke: white;
+					stroke-width: 10;
+				}
+			}
+
+			&.submitButton__checkmark path,
+			&.submitButton__cross path {
+				stroke: white;
+				stroke-linecap: round;
+				stroke-width: 4;
+			}
+		}
+	}
+
+	&.disabled {
+		& .submitButton__button {
+			cursor: not-allowed;
+		}
+	}
+
+	&.loading {
+		& .submitButton__button {
+			width: 40px;
+			border-radius: 27px;
+			border-width: 6.5px;
+			border-color: #ddd;
+			cursor: wait;
+			background-color: transparent;
+			padding: 0;
+
+			& span {
+				transition: all 0.15s;
+				opacity: 0;
+				display: none;
+			}
+
+			& .submitButton__progress-circle > path {
+				transition: opacity 0.15s 0.3s;
+				opacity: 1;
+			}
+		}
+	}
+
+	&.success {
+		& .submitButton__button {
+			touch-action: none;
+			pointer-events: none;
+			cursor: not-allowed;
+
+			& span {
+				margin-right: 20px;
+				transition: all 0.15s;
+			}
+
+			& .submitButton__checkmark > path {
+				opacity: 1;
+			}
+		}
+	}
+	&.error {
+		& .submitButton__button {
+			border-color: var(--color-red);
+			background-color: var(--color-red);
+
+			& span {
+				margin-right: 20px;
+				transition: all 0.15s;
+			}
+
+			& .submitButton__cross > path {
+				opacity: 1;
+			}
+		}
+	}
+}

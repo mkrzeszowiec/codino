@@ -53,20 +53,4 @@
 	&_formWrapper {
 		width: 50%;
 	}
-
-	&__submitButton {
-		padding: 12px 24px;
-		font-weight: 600;
-		background-color: var(--color-primary);
-		border-radius: 8px;
-		font-size: 1.6rem;
-		width: 100%;
-		color: white;
-		margin-top: 20px;
-		transition: background-color 300ms;
-
-		&:hover {
-			background-color: var(--color-primary-darker);
-		}
-	}
 }

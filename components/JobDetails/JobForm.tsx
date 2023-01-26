@@ -1,6 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
-import { EMAIL_JS_JOB_FORM_TEMPLATE_ID, EMAIL_JS_SERVICE_ID, EMAIL_JS_USER_ID } from 'utils/constants';
+import { EMAIL_JS_JOB_FORM_TEMPLATE_ID, EMAIL_JS_SERVICE_ID, EMAIL_JS_USER_ID, STATE } from 'utils/constants';
+import SubmitButton from 'components/SubmitButton/SubmitButton';
 
 interface JobFormProps {
 	position: string;
@@ -8,19 +9,18 @@ interface JobFormProps {
 
 const JobForm: React.FC<JobFormProps> = ({ position }) => {
 	const form = useRef();
+	const [currentState, setState] = useState(STATE.NOTHING);
 
-	const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+	const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 
-		emailjs.sendForm(EMAIL_JS_SERVICE_ID, EMAIL_JS_JOB_FORM_TEMPLATE_ID, form.current, EMAIL_JS_USER_ID).then(
-			() => {
-				alert('wysłano');
-			},
-			error => {
-				//todo
-				console.log('error.text', error.text);
-			}
-		);
+		try {
+			setState(STATE.LOADING);
+			await emailjs.sendForm(EMAIL_JS_SERVICE_ID, EMAIL_JS_JOB_FORM_TEMPLATE_ID, form.current, EMAIL_JS_USER_ID);
+			setState(STATE.SUCCESS);
+		} catch {
+			setState(STATE.ERROR);
+		}
 	};
 
 	return (
@@ -82,9 +82,7 @@ const JobForm: React.FC<JobFormProps> = ({ position }) => {
 					</label>
 				</div>
 
-				<button className="jobDetailsForm__submitButton" type="submit">
-					Wyślij
-				</button>
+				<SubmitButton state={currentState} />
 			</form>
 		</div>
 	);
