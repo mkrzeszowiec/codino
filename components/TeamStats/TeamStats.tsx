@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import CountUp from 'react-countup';
 
 const TeamStats = () => (
 	<section className="teamStats">
@@ -6,17 +7,23 @@ const TeamStats = () => (
 
 		<div className="teamStats__wrapper">
 			<div className="teamStats__info">
-				<h3 className="teamStats__header">4+</h3>
+				<h3 className="teamStats__header">
+					<CountUp end={4} duration={2} enableScrollSpy />+
+				</h3>
 				<p className="teamStats__description">Lat w branży</p>
 			</div>
 
 			<div className="teamStats__info">
-				<h3 className="teamStats__header">340</h3>
+				<h3 className="teamStats__header">
+					<CountUp end={25} duration={2} enableScrollSpy />+
+				</h3>
 				<p className="teamStats__description">Wykonanych projektów</p>
 			</div>
 
 			<div className="teamStats__info">
-				<h3 className="teamStats__header">8+</h3>
+				<h3 className="teamStats__header">
+					<CountUp end={20} duration={2} enableScrollSpy />+
+				</h3>
 				<p className="teamStats__description">Czegoś tam</p>
 			</div>
 		</div>
