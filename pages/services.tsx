@@ -1,4 +1,5 @@
 import Main from 'layouts/MainLayout';
+import { useTranslation } from 'next-i18next';
 import ServicesIntro from 'components/ServicesIntro/ServicesIntro';
 import WhatWeDo from 'components/WhatWeDo/WhatWeDo';
 import PositionDetails from 'components/WhatWeDo/PositionDetails';
@@ -8,7 +9,6 @@ import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 import { getIsEven, getPageTitle } from 'utils/utils';
-import { useTranslation } from 'next-i18next';
 
 const ServicesPage = () => {
 	const { t } = useTranslation();
