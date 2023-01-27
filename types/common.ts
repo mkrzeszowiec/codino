@@ -2,8 +2,11 @@ export interface Product {
 	title: string;
 	description: string;
 	imageSource: string;
-	url: string;
+	slug: string;
 	color: string;
+	date: string;
+	scope: string;
+	industry: string;
 }
 
 export interface Position {

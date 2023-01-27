@@ -2,6 +2,7 @@ import Button from 'components/Button/Button';
 import { Product } from 'types/common';
 import HtmlLogo from 'components/icons/HtmlLogo';
 import Image from 'next/image';
+import ArrowRightIcon from 'components/icons/ArrowRight';
 
 interface ProductProps {
 	product: Product;
@@ -9,7 +10,7 @@ interface ProductProps {
 }
 
 const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
-	const { description, imageSource, title, url, color } = product;
+	const { description, imageSource, title, slug, color } = product;
 
 	return (
 		<div className={`product ${className}`} style={{ backgroundColor: color }}>
@@ -23,7 +24,13 @@ const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
 					<HtmlLogo />
 				</p>
 
-				<Button type="white" className="product__button" label="Zobacz szczegóły" href={url} />
+				<Button
+					type="white"
+					className="product__button"
+					label="Zobacz szczegóły"
+					href={`/case-study/${slug}`}
+					icon={<ArrowRightIcon />}
+				/>
 			</div>
 
 			<div className="product__imageSection">
