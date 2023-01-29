@@ -17,3 +17,16 @@ export const NextButton: React.FC<PrevNextButtonPropType> = ({ onClick }) => (
 		<ArrowRightIcon />
 	</button>
 );
+
+type DotButtonPropType = {
+	selected: boolean;
+	onClick: () => void;
+};
+
+export const DotButton: React.FC<DotButtonPropType> = ({ selected, onClick }) => (
+	<button
+		className={`useCasesCarousel__dot ${selected ? ' useCasesCarousel__dot--selected' : ''}`}
+		type="button"
+		onClick={onClick}
+	/>
+);

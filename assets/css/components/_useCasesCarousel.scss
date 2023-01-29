@@ -1,9 +1,27 @@
 .useCasesCarousel {
 	--slide-spacing: 4rem;
-	--slide-size: 50%;
-	--slide-height: 40rem;
-	padding: 5rem 0;
+	--slide-size: 80vw;
+	--slide-height: 70rem;
+	padding: 2rem 0 4rem;
 	position: relative;
+
+	@include breakpoint(tablet) {
+		--slide-size: 45vw;
+		--slide-height: 50rem;
+	}
+
+	@include breakpoint(desktop-large) {
+		--slide-size: 40vw;
+	}
+
+	&__title {
+		font-size: 3.2rem;
+		margin-bottom: 2.5rem;
+	}
+
+	&__allButton {
+		display: inline-block;
+	}
 
 	.product {
 		height: var(--slide-height);
@@ -13,51 +31,47 @@
 		display: flex;
 		flex-direction: row;
 		height: auto;
-		margin-left: calc(var(--slide-spacing) * -1);
 	}
 
 	&__slide {
 		flex: 0 0 var(--slide-size);
 		min-width: 0;
-		padding-left: var(--slide-spacing);
+		padding: 0 10px;
 		position: relative;
 	}
 
 	&__slide__img {
 		display: block;
-		height: var(--slide-height);
+		height: auto;
 		width: 100%;
 		object-fit: cover;
 	}
 
 	&__button {
-		-webkit-appearance: none;
-		background-color: transparent;
-		touch-action: manipulation;
-		display: inline-flex;
-		text-decoration: none;
-		cursor: pointer;
-		border: 0;
-		padding: 0;
-		margin: 0;
-	}
-
-	&__button {
-		z-index: 1;
 		color: black;
+		border: 1px solid black;
+		padding: 8px;
+		border-radius: 50%;
 		position: absolute;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		top: 0;
-		transform: translateY(-50%);
+		bottom: 0;
 		cursor: pointer;
-		width: 4rem;
-		height: 4rem;
+
+		&:hover {
+			background-color: var(--color-primary);
+			border-color: var(--color-primary);
+			transition: all 300ms;
+
+			path {
+				fill: white;
+			}
+		}
 	}
 
 	&__button--prev {
-		right: 4.6rem;
+		right: 7.6rem;
 	}
 
 	&__button--next {
@@ -67,5 +81,26 @@
 	&__button__svg {
 		width: 65%;
 		height: 65%;
+	}
+
+	&__dots {
+		bottom: 1.2rem;
+		position: absolute;
+		left: 0;
+		right: 0;
+		@include flex-center;
+	}
+
+	&__dot {
+		width: 10px;
+		height: 10px;
+		background: var(--color-gray);
+		border-radius: 50%;
+		margin: 0 8px;
+		opacity: 0.4;
+
+		&--selected {
+			opacity: 1;
+		}
 	}
 }

@@ -9,6 +9,7 @@ import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 import { getIsEven, getPageTitle } from 'utils/utils';
+import UseCasesCarousel from 'components/UseCasesCarousel/UseCasesCarousel';
 
 const ServicesPage = () => {
 	const { t } = useTranslation();
@@ -27,6 +28,7 @@ const ServicesPage = () => {
 			))}
 
 			<StartWork />
+			<UseCasesCarousel />
 		</Main>
 	);
 };
