@@ -3,6 +3,7 @@ import Button from 'components/Button/Button';
 import { Product } from 'types/common';
 import Image from 'next/image';
 import ArrowRightIcon from 'components/icons/ArrowRight';
+import { useTranslation } from 'next-i18next';
 
 interface ProductProps {
 	product: Product;
@@ -12,6 +13,7 @@ interface ProductProps {
 const VISIBLE_TECHNOLOGIES_NUMBER = 4;
 
 const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
+	const { t } = useTranslation();
 	const { description, imageSource, title, slug, color, technologies } = product;
 	const visibleTechnologies = technologies?.slice(0, VISIBLE_TECHNOLOGIES_NUMBER);
 
@@ -25,7 +27,7 @@ const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
 				</p>
 
 				<p className="product__technology">
-					Technologie:
+					{t('components.caseStudy.technologies')}:
 					{visibleTechnologies?.map(technology => (
 						<Image
 							key={technology}
@@ -41,7 +43,7 @@ const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
 				<Button
 					type="white"
 					className="product__button"
-					label="Zobacz szczegóły"
+					label={t('common.seeDetails')}
 					href={`/case-study/${slug}`}
 					icon={<ArrowRightIcon />}
 				/>

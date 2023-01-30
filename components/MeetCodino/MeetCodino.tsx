@@ -16,15 +16,8 @@ const MeetCodino = () => {
 			/>
 
 			<div className="meetCodino__infoWrapper">
-				<h3 className="meetCodino__title">Poznaj Codino</h3>
-
-				<h4 className="meetCodino__description">
-					Firma Codino powstała z inicjatywy grupy entuzjastów technologii, którzy postanowili połączyć swoje
-					doświadczenie i zaangażowanie, aby tworzyć innowacyjne rozwiązania dla rynku IT. Od początku działalności
-					skupiamy się na dostarczaniu najwyższej jakości usług i produktów, dzięki czemu zyskaliśmy zaufanie wielu
-					zadowolonych klientów.
-				</h4>
-
+				<h3 className="meetCodino__title">{t('components.meetCodino.header')}</h3>
+				<p className="meetCodino__description">{t('components.meetCodino.description')}</p>
 				<Button label={t('common.getHired')} href="/career" />
 			</div>
 

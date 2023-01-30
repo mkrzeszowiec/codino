@@ -5,7 +5,16 @@
 		"error": "Wystąpił błąd, spróbuj ponownie",
 		"contact": "Kontakt",
 		"getHired": "Aplikuj",
+		"showAll": "Pokaż wszystkie",
+		"seeDetails": "Pokaż szczegóły",
 		"cooperation": "Współpraca",
+		"name": "Imię",
+		"surname": "Nazwisko",
+		"message": "Wiadomość",
+		"email": "Email",
+		"cvUrl": "Link do CV",
+		"siteUrl": "Link do strony/GitHuba",
+		"accept": "Akceptuje",
 		"subpages": {
 			"services": "Oferta",
 			"about": "O nas",
@@ -18,7 +27,9 @@
 	"components": {
 		"whatWeDo": {
 			"title": "Czym zajmujemy się w <strong>Codino</strong>?",
-			"description": "Specjalizujemy się w projektowaniu, tworzeniu i utrzymaniu aplikacji mobilnych i webowych, a także wsparciu technicznym dla systemów IT"
+			"description": "Specjalizujemy się w projektowaniu, tworzeniu i utrzymaniu aplikacji mobilnych i webowych, jak również rozwiązań sieciowych i chmurowych.",
+			"highlight1": "Rozwijaj biznesy online przy pomocy najnowszych technologii",
+			"highlight2": "razem z nami"
 		},
 		"pageIntro": {
 			"header": "<strong>Jakiś slogan</strong> część dalsza sloganu",
@@ -26,7 +37,55 @@
 		},
 		"contact": {
 			"header": "Skontaktuj się",
-			"description": "Skontaktuj się z nami i dowiedz się jak możemy pomóc w realizacji Twojego projektu"
+			"description": "Skontaktuj się z nami i dowiedz się jak możemy pomóc w realizacji Twojego projektu",
+			"urlTitle1": "Dołącz do nas",
+			"urlTitle2": "Współpraca",
+			"formHeader": "Jak możemy Ci pomóc?",
+			"mapHeader": "Skontaktuj się z naszym zespołem"
+		},
+		"joinUs": {
+			"header": "Dołącz do nas",
+			"description": "Dołącz do nas i rozwijaj swoje umiejętności w branży IT"
+		},
+		"about": {
+			"header": "O nas",
+			"description": "Firma Codino powstała z inicjatywy grupy entuzjastów technologii, którzy postanowili połączyć swoje doświadczenie i zaangażowanie, aby tworzyć innowacyjne rozwiązania dla rynku IT. Od początku działalności skupiamy się na dostarczaniu najwyższej jakości usług i produktów, dzięki czemu zyskaliśmy zaufanie wielu zadowolonych klientów."
+		},
+		"team": {
+			"header": "Zespół",
+			"headerDescription": "Nasi programiści to prawdziwi pasjonaci swojego zawodu, którzy łączą wiedzę, doświadczenie i kreatywność, aby tworzyć innowacyjne rozwiązania dla naszych klientów. Składamy się z doświadczonych specjalistów specjalizujących się w różnych technologiach, którzy zawsze służą pomocą i dostosowują się do indywidualnych potrzeb każdego projektu"
+		},
+		"career": {
+			"header": "Kariera",
+			"headerDescription": "W Codino szukamy ambitnych programistów, którzy chcą rozwijać swoje umiejętności i karierę w dynamicznie rozwijającej się branży IT. Oferujemy możliwość pracy przy interesujących projektach dla różnych branż oraz przy wykorzystaniu najnowszych technologii.",
+			"jobsTitle": "Dostępne oferty pracy",
+			"jobsNotFoundTitle": "Nie widzisz odpowiedniej oferty dla siebie?",
+			"jobsNotFoundTitle2": "Napisz do nas!",
+			"formHeader": "Dołącz do nas"
+		},
+		"caseStudy": {
+			"header": "Case study",
+			"description": "Przejrzyj efekty współpracy z naszymi klientami i przekonaj się sam, jakie korzyści możemy przynieść Twojemu biznesowi.",
+			"technologies": "Technologie"
+		},
+		"services": {
+			"header": "Oferta",
+			"description": "Nasza oferta skierowana jest do firm, które poszukują nowoczesnych i skutecznych rozwiązań programistycznych. Oferujemy szeroki wachlarz usług, od projektowania i tworzenia aplikacji mobilnych i webowych po wsparcie techniczne i utrzymanie systemów. Nasz zespół składa się z doświadczonych programistów, dzięki czemu możemy zapewnić najwyższą jakość i skuteczność naszych rozwiązań."
+		},
+		"startWork": {
+			"header": "Rozpocznij pracę z Codino",
+			"description": "Rozwijaj biznesy online przy pomocy najnowszych technologii razem z nami."
+		},
+		"meetCodino": {
+			"header": "Meet codino",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem facilis iusto minima sint voluptates."
+		},
+		"notFoundJobBanner": {
+			"header": "Nie znalazłeś oferty dla siebie? <strong>Napisz do nas</strong>"
+		},
+		"teamStats": {
+			"first": "Lat w branży",
+			"second": "Wykonanych projektów"
 		}
 	}
 }

@@ -1,22 +1,24 @@
 import Main from 'layouts/MainLayout';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
-import { OUR_PRODUCTS } from 'content/ourProducts';
+import { getOurProductsTranslated } from 'content/ourProducts';
 import { getIsEven, getPageTitle } from 'utils/utils';
 import Product from 'components/Product/Product';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 const CaseStudyPage = () => {
+	const { t } = useTranslation();
+	const router = useRouter();
+
 	return (
 		<Main title={getPageTitle('Case study')}>
 			<div className="container">
-				<SubpageIntro
-					title="Case study"
-					description="Przejrzyj efekty współpracy z naszymi klientami i przekonaj się sam, jakie korzyści możemy przynieść Twojemu biznesowi. (todo)"
-				/>
+				<SubpageIntro title={t('components.caseStudy.header')} description={t('components.caseStudy.description')} />
 
-				{OUR_PRODUCTS.map((product, index) => (
+				{getOurProductsTranslated(router.locale).map((product, index) => (
 					<div key={product.title} data-aos={`${getIsEven(index) ? 'fade-left' : 'fade-right'}`}>
 						<Product product={product} />
 					</div>

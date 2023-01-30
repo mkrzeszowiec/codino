@@ -1,11 +1,16 @@
 import React, { useEffect, useCallback, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { DotButton, NextButton, PrevButton } from 'components/UseCasesCarousel/UseCasesArrowsAndDots';
-import { OUR_PRODUCTS } from 'content/ourProducts';
 import Product from 'components/Product/Product';
 import Button from 'components/Button/Button';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { getOurProductsTranslated } from 'content/ourProducts';
 
 const UseCasesCarousel: React.FC = () => {
+	const { t } = useTranslation();
+	const router = useRouter();
+
 	const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' });
 
 	const [selectedIndex, setSelectedIndex] = useState(0);
@@ -31,11 +36,11 @@ const UseCasesCarousel: React.FC = () => {
 	return (
 		<>
 			<div className="container position-relative">
-				<h3 className="useCasesCarousel__title">Case study</h3>
+				<h3 className="useCasesCarousel__title">{t('components.caseStudy.header')}</h3>
 				<Button
 					className="useCasesCarousel__allButton"
 					type="border-black"
-					label="Pokaż wszystkie"
+					label={t('common.showAll')}
 					href="/case-study"
 				/>
 
@@ -46,7 +51,7 @@ const UseCasesCarousel: React.FC = () => {
 			<div className="useCasesCarousel">
 				<div className="useCasesCarousel__viewport" ref={emblaRef}>
 					<div className="useCasesCarousel__container">
-						{OUR_PRODUCTS.map((product, index) => (
+						{getOurProductsTranslated(router.locale).map((product, index) => (
 							<div className="useCasesCarousel__slide" key={index}>
 								<Product product={product} key={product.title} />
 							</div>

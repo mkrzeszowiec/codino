@@ -9,14 +9,8 @@ const ServicesIntro = () => {
 	return (
 		<section className="servicesIntro">
 			<div className="servicesIntro__infoWrapper">
-				<SectionTitle className="servicesIntro__title">Oferta</SectionTitle>
-				<p className="servicesIntro__description">
-					Nasza oferta skierowana jest do firm, które poszukują nowoczesnych i skutecznych rozwiązań programistycznych.
-					Oferujemy szeroki wachlarz usług, od projektowania i tworzenia aplikacji mobilnych i webowych po wsparcie
-					techniczne i utrzymanie systemów. Nasz zespół składa się z doświadczonych programistów, dzięki czemu możemy
-					zapewnić najwyższą jakość i skuteczność naszych rozwiązań.
-				</p>
-
+				<SectionTitle className="servicesIntro__title">{t('components.services.header')}</SectionTitle>
+				<p className="servicesIntro__description">{t('components.services.description')}</p>
 				<Button label={t('common.contact')} type="border-black" href="/contact" />
 			</div>
 

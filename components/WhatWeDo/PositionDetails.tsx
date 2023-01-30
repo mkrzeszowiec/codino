@@ -1,7 +1,6 @@
 import CheckCircleIcon from 'components/icons/CheckCircle';
 import { Position } from 'types/common';
 import { getNumberWithLeadingZero } from 'utils/utils';
-import HtmlLogo from '../icons/HtmlLogo';
 import Image from 'next/image';
 
 interface PositionDetailsProps {

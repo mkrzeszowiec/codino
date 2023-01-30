@@ -13,11 +13,7 @@ const AboutPage = () => {
 	return (
 		<Main title={getPageTitle(t('common.subpages.about'))}>
 			<div className="container">
-				<SubpageIntro
-					title="About us"
-					description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at atque, aut blanditiis commodi consequuntur cupiditate dolore dolorem, ducimus earum est et facilis ipsam maiores natus nostrum obcaecati odit pariatur rem repellendus, reprehenderit velit voluptate voluptates! Accusamus alias, blanditiis deserunt eaque eum expedita inventore necessitatibus obcaecati perspiciatis sequi, ut voluptate."
-				/>
-
+				<SubpageIntro title={t('components.about.header')} description={t('components.about.description')} />
 				<MeetCodino />
 			</div>
 		</Main>

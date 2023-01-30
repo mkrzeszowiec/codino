@@ -14,13 +14,13 @@ const Contact = () => {
 
 				<p className="contact__description">{t('components.contact.description')}</p>
 
-				<p className="contact__emailContact">Dołącz do nas</p>
+				<p className="contact__emailContact">{t('components.contact.urlTitle1')}</p>
 
 				<a className="contact__url" href={`mailto:${CONTACT_EMAIL}`} target="_self">
 					{CONTACT_EMAIL}
 				</a>
 
-				<p className="contact__recruitmentContact">{t('common.cooperation')}</p>
+				<p className="contact__recruitmentContact">{t('components.contact.urlTitle2')}</p>
 
 				<a className="contact__url" href={`mailto:${RECRUITMENT_EMAIL}`} target="_self">
 					{RECRUITMENT_EMAIL}

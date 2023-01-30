@@ -1,16 +1,20 @@
 import Link from 'next/link';
 import { JOB_OFFERS } from 'content/jobOffers';
 import Job from 'components/AvailableJobs/Job';
+import { useTranslation } from 'next-i18next';
 
 const AvailableJobs = () => {
+	const { t } = useTranslation();
+
 	return (
 		<section className="availableJobs" data-aos="fade-down">
 			<div className="availableJobs__info">
-				<h3 className="availableJobs__title">Dostępne oferty pracy</h3>
+				<h3 className="availableJobs__title">{t('components.career.header')}</h3>
 				<p className="availableJobs__description">
-					Nie widzisz odpowiedniej oferty dla siebie? {` `}
+					{t('components.career.jobsNotFoundTitle')}
+					{` `}
 					<Link className="highlighted-text" href="/contact">
-						Napisz do nas!
+						{t('components.career.jobsNotFoundTitle2')}
 					</Link>
 				</p>
 			</div>

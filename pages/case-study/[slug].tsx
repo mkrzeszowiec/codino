@@ -1,12 +1,12 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import { Product } from 'types/common';
-import { OUR_PRODUCTS } from 'content/ourProducts';
 import Main from 'layouts/MainLayout';
 import { getPageTitle } from 'utils/utils';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 import CaseStudy from 'components/CaseStudy/CaseStudy';
+import { getOurProductsTranslated } from 'content/ourProducts';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {
@@ -30,7 +30,7 @@ export const getStaticProps: GetStaticProps = async context => {
 		throw Error('Product not found');
 	}
 
-	const product = OUR_PRODUCTS.find(product => product.slug === slug);
+	const product = getOurProductsTranslated(DEFAULT_LOCALE).find(product => product.slug === slug);
 
 	return {
 		props: {

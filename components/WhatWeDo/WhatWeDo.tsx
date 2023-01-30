@@ -16,9 +16,9 @@ const WhatWeDo = () => {
 				<p className="whatWeDo__description">{t('components.whatWeDo.description')}</p>
 
 				<div className="whatWeDo__highlight">
-					Rozwijaj biznesy online przy pomocy najnowszych technologii{' '}
+					{t('components.whatWeDo.highlight1')}{' '}
 					<Link className="highlighted-text" href="/contact">
-						razem z nami
+						{t('components.whatWeDo.highlight2')}
 					</Link>
 					.
 				</div>

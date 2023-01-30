@@ -1,24 +1,28 @@
-import { OUR_PRODUCTS } from 'content/ourProducts';
+import { getOurProductsTranslated } from 'content/ourProducts';
 import Product from 'components/Product/Product';
 import { getIsEven } from 'utils/utils';
+import { useTranslation } from 'next-i18next';
+import SectionTitle from 'components/SectionTitle/SectionTitle';
+import { useRouter } from 'next/router';
 
-const Products: React.FC = () => (
-	<section className="products">
-		<div className="container">
-			<h3 className="products__title">Zobacz nasze realizacje</h3>
+const Products: React.FC = () => {
+	const { t } = useTranslation();
+	const router = useRouter();
 
-			<p className="products__description">
-				Przejrzyj efekty współpracy z naszymi klientami i przekonaj się sam, jakie korzyści możemy przynieść Twojemu
-				biznesowi.
-			</p>
-		</div>
-
-		{OUR_PRODUCTS.map((product, index) => (
-			<div key={product.title} data-aos={`${getIsEven(index) ? 'fade-left' : 'fade-right'}`}>
-				<Product product={product} />
+	return (
+		<section className="products">
+			<div className="container">
+				<SectionTitle className="products__title">{t('components.caseStudy.header')}</SectionTitle>
+				<p className="products__description">{t('components.caseStudy.description')}</p>
 			</div>
-		))}
-	</section>
-);
+
+			{getOurProductsTranslated(router.locale).map((product, index) => (
+				<div key={product.title} data-aos={`${getIsEven(index) ? 'fade-left' : 'fade-right'}`}>
+					<Product product={product} />
+				</div>
+			))}
+		</section>
+	);
+};
 
 export default Products;

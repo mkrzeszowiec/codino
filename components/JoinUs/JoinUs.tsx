@@ -6,9 +6,9 @@ const JoinUs = () => {
 
 	return (
 		<section className="joinUs">
-			<h3 className="joinUs__title">Dołącz do nas</h3>
+			<h3 className="joinUs__title">{t('components.joinUs.header')}</h3>
 
-			<p className="joinUs__description">Dołącz do nas i rozwijaj swoje umiejętności w branży IT</p>
+			<p className="joinUs__description">{t('components.joinUs.description')}</p>
 
 			<Button className="joinUs__button" label={t('common.getHired')} href="/career" />
 		</section>

@@ -1,23 +1,22 @@
 import Image from 'next/image';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
+import { useTranslation } from 'next-i18next';
 
-const TeamHeader = () => (
-	<section className="teamHeader">
-		<div className="teamHeader__texts">
-			<SectionTitle className="teamHeader__title">Zespół</SectionTitle>
+const TeamHeader = () => {
+	const { t } = useTranslation();
 
-			<p className="teamHeader__description">
-				Nasi programiści to prawdziwi pasjonaci swojego zawodu, którzy łączą wiedzę, doświadczenie i kreatywność, aby
-				tworzyć innowacyjne rozwiązania dla naszych klientów. Składamy się z doświadczonych specjalistów
-				specjalizujących się w różnych technologiach, którzy zawsze służą pomocą i dostosowują się do indywidualnych
-				potrzeb każdego projektu
-			</p>
-		</div>
+	return (
+		<section className="teamHeader">
+			<div className="teamHeader__texts">
+				<SectionTitle className="teamHeader__title">{t('components.team.header')}</SectionTitle>
+				<p className="teamHeader__description">{t('components.team.headerDescription')}</p>
+			</div>
 
-		<div className="teamHeader__imageWrapper">
-			<Image className="teamHeader__image" src={'/images/team.png'} width={400} height={450} alt="" />
-		</div>
-	</section>
-);
+			<div className="teamHeader__imageWrapper">
+				<Image className="teamHeader__image" src={'/images/team.png'} width={400} height={450} alt="" />
+			</div>
+		</section>
+	);
+};
 
 export default TeamHeader;

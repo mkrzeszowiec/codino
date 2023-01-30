@@ -1,14 +1,14 @@
 import { Product } from 'types/common';
 
 const ZIPZERO: Product = {
-	title: 'Aplikacja mobilna Zipzero',
-	description: 'Aplikacja typu cashback do opłacania domowych rachunków',
+	title: 'Zipzero mobile app',
+	description: 'Cashback app to pay household bills',
 	imageSource: '/images/portfolio/zipzero.png',
 	slug: 'zipzero',
 	color: '#2c368a',
-	date: '2019 - teraz',
-	scopeOfTechnology: 'achitektura, backend, aplikacja mobilna, ML do wykrywania fraudów, panel backoffice',
-	industry: 'system cashback',
+	date: '2019 - now',
+	scopeOfTechnology: 'achitecture, backend, mobile app, ML for fraud detection, backoffice panel',
+	industry: 'cashback',
 	scopeOfWork: {
 		description:
 			'System postawiony od zera w 100% przez nas zespół. Stworzenie backendu, aplikacji mobilnej, ML do wykrywania fraudów, panelu backoffice',

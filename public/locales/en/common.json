@@ -5,7 +5,16 @@
 		"error": "Something's gone wrong, please try again",
 		"contact": "Contact",
 		"getHired": "Get hired",
+		"showAll": "Show all",
+		"seeDetails": "See details",
 		"cooperation": "Cooperation",
+		"name": "Name",
+		"surname": "Surname",
+		"message": "Message",
+		"email": "Email",
+		"cvUrl": "Url to resume",
+		"siteUrl": "Url to site/GitHub",
+		"accept": "I accept",
 		"subpages": {
 			"services": "Services",
 			"about": "About us",
@@ -18,15 +27,65 @@
 	"components": {
 		"whatWeDo": {
 			"title": "What we do in <strong>Codino</strong>?",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur nobis optio perferendis quis. Blanditiis, fuga."
+			"description": "We specialize in the design, development and maintenance of mobile and web applications, as well as network and cloud solutions.",
+			"highlight1": "Develop online businesses with the latest technology",
+			"highlight2": "together with us"
 		},
 		"pageIntro": {
 			"header": "<strong>Trusted by customers</strong>, partners and the industry",
 			"subheader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
 		},
 		"contact": {
-			"header": "Skontaktuj się",
-			"description": "Skontaktuj się z nami i dowiedz się jak możemy pomóc w realizacji Twojego projektu"
+			"header": "Contact",
+			"description": "Contact us to find out how we can help with your project",
+			"urlTitle1": "Join us",
+			"urlTitle2": "Cooperation",
+			"formHeader": "How can we help you?",
+			"mapHeader": "Contact our team"
+		},
+		"joinUs": {
+			"header": "Join us",
+			"description": "Join us and develop your skills in the IT industry"
+		},
+		"about": {
+			"header": "About us",
+			"description": "Codino was founded by a group of technology enthusiasts who decided to combine their experience and commitment to create innovative solutions for the IT market. Since the beginning, we have focused on providing the highest quality services and products, which has earned us the trust of many satisfied customers."
+		},
+		"team": {
+			"header": "Team",
+			"headerDescription": "Our developers are truly passionate about their profession, combining knowledge, experience and creativity to create innovative solutions for our clients. We consist of experienced specialists specializing in various technologies, who are always there to help and adapt to the individual needs of each project"
+		},
+		"career": {
+			"header": "Career",
+			"headerDescription": "At Codino, we are looking for ambitious developers who want to develop their skills and careers in the fast-growing IT industry. We offer the opportunity to work on interesting projects for various industries and using the latest technologies.",
+			"jobsTitle": "Available jobs",
+			"jobsNotFoundTitle": "Don't see the right job offer for you?",
+			"jobsNotFoundTitle2": "Write to us!",
+			"formHeader": "Join us"
+		},
+		"caseStudy": {
+			"header": "Case study",
+			"description": "See the results of working with our clients and see for yourself the benefits we can bring to your business.",
+			"technologies": "Technologies"
+		},
+		"services": {
+			"header": "Services",
+			"description": "Our offer is aimed at companies that are looking for modern and effective software solutions. We offer a wide range of services, from designing and developing mobile and web applications to technical support and system maintenance. Our team consists of experienced developers, so we can ensure the highest quality and effectiveness of our solutions."
+		},
+		"startWork": {
+			"header": "Get started with Codino",
+			"description": "Develop businesses with the latest technology together with us."
+		},
+		"meetCodino": {
+			"header": "Meet codino",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem facilis iusto minima sint voluptates."
+		},
+		"notFoundJobBanner": {
+			"header": "Didn't find an offer for you? <strong>Write to us</strong>"
+		},
+		"teamStats": {
+			"first": "Years in the industry",
+			"second": "Projects completed"
 		}
 	}
 }

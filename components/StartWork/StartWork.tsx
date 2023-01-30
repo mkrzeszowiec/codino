@@ -7,11 +7,8 @@ const StartWork = () => {
 	return (
 		<div className="startWorkWrapper">
 			<section className="startWork">
-				<h3 className="startWork__title">Rozpocznij pracę z Codino</h3>
-				<p className="startWork__description">
-					Rozwijaj biznesy online przy pomocy najnowszych technologii razem z nami.
-				</p>
-
+				<h3 className="startWork__title">{t('components.startWork.header')}</h3>
+				<p className="startWork__description">{t('components.startWork.description')}</p>
 				<Button label={t('common.contact')} href="/contact" type="border-white" />
 			</section>
 		</div>
