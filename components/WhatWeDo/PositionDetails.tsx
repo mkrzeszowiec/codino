@@ -2,6 +2,7 @@ import CheckCircleIcon from 'components/icons/CheckCircle';
 import { Position } from 'types/common';
 import { getNumberWithLeadingZero } from 'utils/utils';
 import HtmlLogo from '../icons/HtmlLogo';
+import Image from 'next/image';
 
 interface PositionDetailsProps {
 	position: Position;
@@ -9,7 +10,7 @@ interface PositionDetailsProps {
 }
 
 const PositionDetails: React.FC<PositionDetailsProps> = ({ position, index }) => {
-	const { title, description, slug, scope } = position;
+	const { title, description, slug, scope, technologies } = position;
 
 	return (
 		<div className="positionDetails" id={slug}>
@@ -23,9 +24,17 @@ const PositionDetails: React.FC<PositionDetailsProps> = ({ position, index }) =>
 					<p className="positionDetails__description">
 						{description}
 						<br /> <br />
-						<HtmlLogo />
-						<HtmlLogo />
-						<HtmlLogo />
+						{technologies?.map(technology => (
+							<Image
+								key={technology}
+								className="positionDetails__technology"
+								src={`/images/technologies/icons/${technology}.svg`}
+								width={50}
+								height={50}
+								title={technology}
+								alt={technology}
+							/>
+						))}
 					</p>
 				</div>
 

@@ -1,3 +1,4 @@
+import Linkify from 'react-linkify';
 import { Product } from 'types/common';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
 import Image from 'next/image';
@@ -18,7 +19,9 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ product }) => {
 			<div className="container">
 				<SectionTitle className="caseStudy__title">{product.title}</SectionTitle>
 
-				<p className="caseStudy__description">{product.description}</p>
+				<p className="caseStudy__description">
+					<Linkify>{product.description}</Linkify>
+				</p>
 
 				<CaseStudyInNutshell product={product} />
 			</div>

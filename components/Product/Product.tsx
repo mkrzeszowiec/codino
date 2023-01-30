@@ -1,3 +1,4 @@
+import Linkify from 'react-linkify';
 import Button from 'components/Button/Button';
 import { Product } from 'types/common';
 import Image from 'next/image';
@@ -19,7 +20,9 @@ const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
 			<div className="product__infoSection">
 				<h3 className="product__title">{title}</h3>
 
-				<p className="product__description">{description}</p>
+				<p className="product__description">
+					<Linkify>{description}</Linkify>
+				</p>
 
 				<p className="product__technology">
 					Technologie:

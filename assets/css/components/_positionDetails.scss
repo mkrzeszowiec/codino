@@ -46,6 +46,10 @@
 	}
 
 	&__technology {
+		filter: invert(1);
+		height: 40px;
+		width: auto;
+		margin-right: 2rem;
 	}
 
 	&__scope {

@@ -49,6 +49,7 @@ export interface Position {
 	shortDescription: string;
 	scope: string;
 	slug: string;
+	technologies?: technology[];
 }
 
 export interface JobOffer {

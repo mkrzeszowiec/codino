@@ -73,6 +73,12 @@
 		height: 100%;
 	}
 
+	&__description {
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+
 	&__imageSection {
 		@include breakpoint(tablet) {
 			width: 50%;
