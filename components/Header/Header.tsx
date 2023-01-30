@@ -6,6 +6,7 @@ import Button from 'components/Button/Button';
 import NavItem from 'components/Header/NavItem';
 import Logo from 'components/icons/Logo';
 import { useTranslation } from 'next-i18next';
+import LanguageButton from 'components/LanguageButton/LanguageButton';
 
 interface HeaderProps {
 	isErrorPage?: boolean;
@@ -42,12 +43,6 @@ const Header = ({ isErrorPage }: HeaderProps) => {
 		setMenuOpen(true);
 	};
 
-	const getNextAvailableLocale = (): string => (router.locale == 'pl' ? 'en' : 'pl');
-
-	const handleLocaleChange = () => {
-		router.replace(router.pathname, router.pathname, { locale: getNextAvailableLocale() });
-	};
-
 	useOnClickOutside(navRef, closeMenu);
 
 	return (
@@ -65,9 +60,7 @@ const Header = ({ isErrorPage }: HeaderProps) => {
 
 				<Button className="site-header__hire-button" label={t('common.getHired')} href={'/career'} />
 
-				<button className="site-header__languageButton" onClick={handleLocaleChange}>
-					{getNextAvailableLocale()}
-				</button>
+				<LanguageButton className="site-header__languageButton" />
 
 				<div className="site-header__actions">
 					<button onClick={onClickHamburgerButton} className="site-header__btn-menu" aria-label="Open the menu">
