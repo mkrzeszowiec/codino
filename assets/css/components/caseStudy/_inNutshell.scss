@@ -1,0 +1,19 @@
+.caseStudyInNutshell {
+	display: flex;
+	align-items: center;
+	margin-bottom: 50px;
+
+	&__point {
+		display: flex;
+		gap: 5px;
+		margin-right: 20px;
+		font-size: 1.4rem;
+		max-width: 400px;
+	}
+
+	svg {
+		width: 2rem;
+		height: 2rem;
+		margin-right: 5px;
+	}
+}

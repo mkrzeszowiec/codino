@@ -10,10 +10,10 @@ import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 const CaseStudyPage = () => {
 	return (
 		<Main title={getPageTitle('Case study')}>
-			<div className='container'>
+			<div className="container">
 				<SubpageIntro
-					title='Case study'
-					description='Przejrzyj nasze case study i przekonaj się sam, jakie korzyści możemy przynieść Twojemu biznesowi.'
+					title="Case study"
+					description="Przejrzyj efekty współpracy z naszymi klientami i przekonaj się sam, jakie korzyści możemy przynieść Twojemu biznesowi. (todo)"
 				/>
 
 				{OUR_PRODUCTS.map((product, index) => (

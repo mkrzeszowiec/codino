@@ -27,6 +27,7 @@
 	background-color: rgb(44, 54, 138);
 	margin: 25px auto;
 	color: var(--color-white);
+	overflow: hidden;
 
 	@include breakpoint(tablet) {
 		flex-direction: row;

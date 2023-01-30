@@ -1,3 +1,25 @@
+export type technology =
+	| 'java'
+	| 'docker'
+	| 'spring'
+	| 'hibernate'
+	| 'kafka'
+	| 'kubernetes'
+	| 'redis'
+	| 'elastic'
+	| 'node'
+	| 'html'
+	| 'angular'
+	| 'react'
+	| 'ts'
+	| 'android'
+	| 'ios'
+	| 'python'
+	| 'kotlin'
+	| 'scala'
+	| 'mysql'
+	| 'postgresql';
+
 export interface Product {
 	title: string;
 	description: string;
@@ -5,8 +27,18 @@ export interface Product {
 	slug: string;
 	color: string;
 	date: string;
-	scope: string;
+	scopeOfTechnology?: string;
 	industry: string;
+	scopeOfWork?: {
+		description: string;
+		points: {
+			index: number;
+			title?: string;
+			description: string;
+		}[];
+	};
+	goals?: string;
+	technologies?: technology[];
 }
 
 export interface Position {

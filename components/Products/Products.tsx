@@ -8,8 +8,8 @@ const Products: React.FC = () => (
 			<h3 className="products__title">Zobacz nasze realizacje</h3>
 
 			<p className="products__description">
-				Krótki opis przedstawionej oferty. Praesent viverra commodo nisl ac feugiat.Vestibulum nec vulputate neque.
-				Nullam gravida rutrum tortor,
+				Przejrzyj efekty współpracy z naszymi klientami i przekonaj się sam, jakie korzyści możemy przynieść Twojemu
+				biznesowi.
 			</p>
 		</div>
 

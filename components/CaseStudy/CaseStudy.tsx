@@ -1,16 +1,18 @@
 import { Product } from 'types/common';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
-import BuildIcon from 'components/icons/Build';
-import HeartIcon from 'components/icons/Heart';
-import CalendarIcon from 'components/icons/Calendar';
 import Image from 'next/image';
+import CaseStudyInNutshell from 'components/CaseStudy/CaseStudyInNutshell';
+import UseCasesCarousel from 'components/UseCasesCarousel/UseCasesCarousel';
+import CaseStudyScopeOfWork from 'components/CaseStudy/CaseStudyScopeOfWork';
+import CaseStudyGoals from 'components/CaseStudy/CaseStudyGoals';
+import CaseStudyTechnologies from 'components/CaseStudy/CaseStudyTechnologies';
 
 interface CaseStudyProps {
 	product: Product;
 }
 
 const CaseStudy: React.FC<CaseStudyProps> = ({ product }) => {
-	const { industry, date, scope, slug } = product;
+	const { slug } = product;
 	return (
 		<section className="caseStudy">
 			<div className="container">
@@ -18,31 +20,24 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ product }) => {
 
 				<p className="caseStudy__description">{product.description}</p>
 
-				<div className="caseStudy__inNutshell">
-					<p className="caseStudy__inNutshellPoint">
-						<BuildIcon />
-						{industry}
-					</p>
-
-					<p className="caseStudy__inNutshellPoint">
-						<HeartIcon />
-						{scope}
-					</p>
-
-					<p className="caseStudy__inNutshellPoint">
-						<CalendarIcon />
-						{date}
-					</p>
-				</div>
+				<CaseStudyInNutshell product={product} />
 			</div>
 
 			<Image
 				src={`/images/case-study/${slug}/banner.jpg`}
 				className="caseStudy__banner"
 				alt=""
-				width={2000}
-				height={2000}
+				width={4000}
+				height={500}
 			/>
+
+			<div className="container">
+				<CaseStudyScopeOfWork product={product} />
+				<CaseStudyGoals product={product} />
+			</div>
+
+			<CaseStudyTechnologies product={product} />
+			<UseCasesCarousel />
 		</section>
 	);
 };
