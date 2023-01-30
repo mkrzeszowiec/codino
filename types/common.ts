@@ -18,7 +18,9 @@ export type technology =
 	| 'kotlin'
 	| 'scala'
 	| 'mysql'
-	| 'postgresql';
+	| 'postgresql'
+	| 'aws'
+	| 'meilisearch';
 
 export interface Product {
 	title: string;

@@ -8,7 +8,7 @@ export const ZIPZERO: Product = {
 	color: '#2c368a',
 	date: '2019 - teraz',
 	scopeOfTechnology: 'achitektura, backend, aplikacja mobilna, ML do wykrywania fraudów, panel backoffice',
-	industry: ' System cashback, aplikacje webowe',
+	industry: 'system cashback',
 	scopeOfWork: {
 		description:
 			'System postawiony od zera w 100% przez nas zespół. Stworzenie backendu, aplikacji mobilnej, ML do wykrywania fraudów, panelu backoffice',
@@ -22,5 +22,6 @@ export const ZIPZERO: Product = {
 			{ index: 7, description: 'Panel administracyjny do zarządzania systemem' },
 			{ index: 8, description: 'Panel B2B' }
 		]
-	}
+	},
+	technologies: ['java', 'kotlin']
 };

@@ -58,10 +58,12 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
 
-		svg {
-			margin-left: 5px;
-		}
+	&__technologyImage {
+		height: 30px;
+		width: auto;
+		margin-left: 15px;
 	}
 
 	&__image {

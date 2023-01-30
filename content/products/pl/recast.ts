@@ -1,14 +1,14 @@
 import { Product } from 'types/common';
 
 export const RECAST: Product = {
-	title: 'Aplikacja Webowa Recast',
+	title: 'Aplikacja Recast',
 	description:
 		'Recast to platforma umożliwiająca oglądanie i transmisję video i live streamów z wydarzeń sportowych, koncertów itp,  oparta o mikrotraksakcje. Większość kwoty zapłaconej przez widza trafia bezpośrednio do nadawcy. W projekt zaangażowane sa duże firmy jak topowe kluby piłkarskie Inter, Manchester City.',
 	imageSource: '/images/portfolio/recast.png',
 	slug: 'recast',
 	color: '#001021',
 	date: '04.2022 - 03.2023',
-	scopeOfTechnology: 'Fintech',
+	scopeOfTechnology: 'media',
 	industry: 'Backend & Frontend',
 	scopeOfWork: {
 		description:
@@ -37,5 +37,5 @@ export const RECAST: Product = {
 		'Nieustanny rozwój aplikacji frontendu oraz backendu mają jeden cel - stale ulepszać wysokoskalowalny system do transmisji video z potencjalnym milionem widzów w piku. Odpowiednie projektowanie architektury systemu zapewnia jego skalowalność, co jest szczególnie istotne w przypadku streamingu - bursty traffic.\n\n' +
 		'Stale pracujemy nad wiarygodnymi testami wydajności systemu, aby każdy update zapewniał jeszcze wyższą jakość. Opracowujemy także rozwiązania pod hurtownie danych. Praca w międzynarodowym teamie sprawia, że każdy z członków naszego zespołu ma swoje własne spojrzenie na projekt - dzięki temu Recast nieustannie się rozwija i ewoluuje.\n\n' +
 		'Warto zaznaczyć w tym miejscu, że w projekt zaangażowane są topowe kluby piłkarskie, takie jak Manchester City, czy Inter Mediolan. Skalowalność Recast’a  pozwala obsługiwać duże piki ruchu  w trakcie topowych wydarzeń sportowych.\n',
-	technologies: ['ts', 'node', 'react', 'kubernetes', 'postgresql', 'redis']
+	technologies: ['react', 'node', 'aws', 'kubernetes', 'ts', 'postgresql', 'redis', 'meilisearch']
 };

@@ -7,4 +7,4 @@ import { INSIGHTS } from 'content/products/pl/insights';
 import { AXISROOMS } from 'content/products/pl/axisrooms';
 import { ZIPZERO } from 'content/products/pl/zipzero';
 
-export const OUR_PRODUCTS: Product[] = [ZIPZERO, AXISROOMS, INSIGHTS, DATABASES, NEXTBIKE, GIVEO, RECAST];
+export const OUR_PRODUCTS: Product[] = [ZIPZERO, RECAST, AXISROOMS, INSIGHTS, DATABASES, NEXTBIKE, GIVEO];

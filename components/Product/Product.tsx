@@ -1,6 +1,5 @@
 import Button from 'components/Button/Button';
 import { Product } from 'types/common';
-import HtmlLogo from 'components/icons/HtmlLogo';
 import Image from 'next/image';
 import ArrowRightIcon from 'components/icons/ArrowRight';
 
@@ -9,8 +8,11 @@ interface ProductProps {
 	className?: string;
 }
 
+const VISIBLE_TECHNOLOGIES_NUMBER = 4;
+
 const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
-	const { description, imageSource, title, slug, color } = product;
+	const { description, imageSource, title, slug, color, technologies } = product;
+	const visibleTechnologies = technologies?.slice(0, VISIBLE_TECHNOLOGIES_NUMBER);
 
 	return (
 		<div className={`product ${className}`} style={{ backgroundColor: color }}>
@@ -20,8 +22,17 @@ const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
 				<p className="product__description">{description}</p>
 
 				<p className="product__technology">
-					Technology:
-					<HtmlLogo />
+					Technologie:
+					{visibleTechnologies?.map(technology => (
+						<Image
+							key={technology}
+							className="product__technologyImage"
+							src={`/images/technologies/icons/${technology}.svg`}
+							width={50}
+							height={50}
+							alt=""
+						/>
+					))}
 				</p>
 
 				<Button

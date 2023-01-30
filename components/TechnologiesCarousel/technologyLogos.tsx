@@ -20,6 +20,8 @@ import android from 'public/images/technologies/android.svg';
 import ios from 'public/images/technologies/ios.svg';
 import mysql from 'public/images/technologies/mysql.svg';
 import postgresql from 'public/images/technologies/postgresql.svg';
+import aws from 'public/images/technologies/aws.svg';
+import meilisearch from 'public/images/technologies/meilisearch.svg';
 
 export const technologyLogos: StaticImageData[] = [
 	java,
@@ -41,5 +43,7 @@ export const technologyLogos: StaticImageData[] = [
 	kotlin,
 	scala,
 	mysql,
-	postgresql
+	postgresql,
+	aws,
+	meilisearch
 ];
