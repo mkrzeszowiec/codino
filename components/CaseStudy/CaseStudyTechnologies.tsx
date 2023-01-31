@@ -7,8 +7,8 @@ const CaseStudyTechnologies = ({ product }: { product: Product }) => {
 	const { t } = useTranslation();
 
 	return (
-		<div className='caseStudyGoals'>
-			<SectionTitle className='caseStudyGoals__technologies'>{t('components.caseStudy.technologies')}</SectionTitle>
+		<div className="caseStudyTechnologies">
+			<SectionTitle className="caseStudyTechnologies__title">{t('components.caseStudy.technologies')}</SectionTitle>
 			<TechnologiesCarousel technologies={product.technologies} />
 		</div>
 	);

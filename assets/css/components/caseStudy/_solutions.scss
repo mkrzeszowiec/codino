@@ -1,0 +1,44 @@
+.caseStudySolutionWrapper {
+	padding: 5rem 0;
+}
+
+.caseStudySolution {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+
+	@include breakpoint(tablet) {
+		gap: 30px;
+		flex-direction: row;
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&__infoWrapper {
+		display: flex;
+		gap: 20px;
+		justify-content: center;
+		flex-direction: column;
+		text-align: left;
+
+		@include breakpoint(tablet) {
+			width: 50%;
+		}
+	}
+
+	&__imageWrapper {
+		text-align: center;
+
+		@include breakpoint(tablet) {
+			width: 50%;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: auto;
+	}
+}

@@ -37,7 +37,24 @@ const RECAST: Product = {
 		'Nieustanny rozwój aplikacji frontendu oraz backendu mają jeden cel - stale ulepszać wysokoskalowalny system do transmisji video z potencjalnym milionem widzów w piku. Odpowiednie projektowanie architektury systemu zapewnia jego skalowalność, co jest szczególnie istotne w przypadku streamingu - bursty traffic.\n\n' +
 		'Stale pracujemy nad wiarygodnymi testami wydajności systemu, aby każdy update zapewniał jeszcze wyższą jakość. Opracowujemy także rozwiązania pod hurtownie danych. Praca w międzynarodowym teamie sprawia, że każdy z członków naszego zespołu ma swoje własne spojrzenie na projekt - dzięki temu Recast nieustannie się rozwija i ewoluuje.\n\n' +
 		'Warto zaznaczyć w tym miejscu, że w projekt zaangażowane są topowe kluby piłkarskie, takie jak Manchester City, czy Inter Mediolan. Skalowalność Recast’a  pozwala obsługiwać duże piki ruchu  w trakcie topowych wydarzeń sportowych.\n',
-	technologies: ['react', 'node', 'aws', 'kubernetes', 'postgresql', 'ts', 'redis', 'meilisearch']
+	technologies: ['react', 'node', 'aws', 'kubernetes', 'postgresql', 'ts', 'redis', 'meilisearch'],
+	solutions: [
+		{
+			description:
+				'Obecnie skupiamy się na wielu nowych rozwiązaniach, które mają jeszcze bardziej udoskonalić nasz projekt. Tworzymy mechanizm indeksowania video i livestreamów, aby zoptymalizować działanie całego systemu. Jest on  przystępny dla użytkownika oraz maksymalnie praktyczny dla twórcy.',
+			imageSrc: '/images/case-study/recast/1.png'
+		},
+		{
+			description:
+				'Pracujemy także nad nowym mechanizmem autoryzacji i wprowadzeniem optymalizacji poprzez odpowiednie mechanizmy cachujące. Aktywnie zajmujemy się także modułem i architekturą dla współpracy w modelu B2B. W naszej codziennej pracy skupiamy się również na dekompozycji monolitu i przejściu do architektury mikroserwisów.',
+			imageSrc: '/images/case-study/recast/2.png'
+		},
+		{
+			description:
+				'Mechanizm indeksowania video i livestreamów pozwala na błyskawiczne wyszukiwanie wybranych video, dlatego kładziemy duży nacisk na to, aby Recast był maksymalnie intuicyjny w swoim działaniu, szczególnie dla widzów.',
+			imageSrc: '/images/case-study/recast/2.png'
+		}
+	]
 };
 
 export default RECAST;

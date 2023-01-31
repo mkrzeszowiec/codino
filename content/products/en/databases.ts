@@ -9,7 +9,21 @@ const DATABASES: Product = {
 	color: '#ea801f',
 	date: '-',
 	scopeOfTechnology: 'databases',
-	industry: '-'
+	industry: '-',
+	solutions: [
+		{
+			title: 'Solution 1',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, aliquam cupiditate enim et exercitationem expedita fugiat illo ipsum magni nulla omnis possimus provident quibusdam quisquam saepe sed sit voluptatibus!',
+			imageSrc: '/images/case-study/databases/1.png'
+		},
+		{
+			title: 'Solution 2',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, aliquam cupiditate enim et exercitationem expedita fugiat illo ipsum magni nulla omnis possimus provident quibusdam quisquam saepe sed sit voluptatibus!',
+			imageSrc: '/images/case-study/databases/2.png'
+		}
+	]
 };
 
 export default DATABASES;

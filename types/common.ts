@@ -41,6 +41,11 @@ export interface Product {
 	};
 	goals?: string;
 	technologies?: technology[];
+	solutions?: {
+		title?: string;
+		description: string;
+		imageSrc: string;
+	}[];
 }
 
 export interface Position {

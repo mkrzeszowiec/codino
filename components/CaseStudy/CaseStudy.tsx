@@ -7,6 +7,7 @@ import UseCasesCarousel from 'components/UseCasesCarousel/UseCasesCarousel';
 import CaseStudyScopeOfWork from 'components/CaseStudy/CaseStudyScopeOfWork';
 import CaseStudyGoals from 'components/CaseStudy/CaseStudyGoals';
 import CaseStudyTechnologies from 'components/CaseStudy/CaseStudyTechnologies';
+import CaseStudySolutions from 'components/CaseStudy/CaseStudySolutions';
 
 interface CaseStudyProps {
 	product: Product;
@@ -40,6 +41,11 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ product }) => {
 			</div>
 
 			<CaseStudyTechnologies product={product} />
+
+			<div className="container">
+				<CaseStudySolutions product={product} />
+			</div>
+
 			<UseCasesCarousel />
 		</section>
 	);
