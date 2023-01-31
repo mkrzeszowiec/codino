@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import SubmitButton from 'components/SubmitButton/SubmitButton';
 import { EMAIL_JS_CONTACT_FORM_TEMPLATE_ID, EMAIL_JS_SERVICE_ID, EMAIL_JS_USER_ID, STATE } from 'utils/constants';
 import { useTranslation } from 'next-i18next';
+import FormAgreementTooltip from 'components/FormAgreementTooltip/FormAgreementTooltip';
 
 const ContactForm = () => {
 	const { t } = useTranslation();
@@ -61,11 +62,10 @@ const ContactForm = () => {
 				<div>
 					<input required id="agreement" type="checkbox" name="agreement" />
 					<label className="contactForm__checkBoxLabel" htmlFor="agreement">
-						{t('common.accept')}{' '}
-						<a className="highlighted-text" href="#">
-							jakiś regulamin todo
-						</a>
+						{t('common.agreementAccept1')}
+						<span id="form-agreement"> {t('common.agreementAccept2')}</span>
 					</label>
+					<FormAgreementTooltip targetId="form-agreement" />
 				</div>
 
 				<SubmitButton state={currentState} />

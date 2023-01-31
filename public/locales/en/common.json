@@ -14,7 +14,8 @@
 		"email": "Email",
 		"cvUrl": "Url to resume",
 		"siteUrl": "Url to site/GitHub",
-		"accept": "I accept",
+		"agreementAccept1": "I have read",
+		"agreementAccept2": "the information about the controller of personal data and data processing",
 		"subpages": {
 			"services": "Services",
 			"about": "About us",
@@ -88,6 +89,9 @@
 		"teamStats": {
 			"first": "Years in the industry",
 			"second": "Projects completed"
+		},
+		"formAgreement": {
+			"description": "I consent to the processing of my personal data in accordance with the Law on Personal Data Protection in order to respond to the submitted inquiry. I have been informed that I have the right to access my data, the possibility of correcting them, demand to stop processing them. The administrator of the data is <strong>CODINO Sp. z o.o. Ludwika Narbutta Street 53/6 02-529 Warsaw</strong>"
 		}
 	}
 }

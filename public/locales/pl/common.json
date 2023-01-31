@@ -14,7 +14,8 @@
 		"email": "Email",
 		"cvUrl": "Link do CV",
 		"siteUrl": "Link do strony/GitHuba",
-		"accept": "Akceptuje",
+		"agreementAccept1": "Zapoznałem się",
+		"agreementAccept2": "z informacją o administratorze i przetwarzaniu danych",
 		"subpages": {
 			"services": "Oferta",
 			"about": "O nas",
@@ -88,6 +89,9 @@
 		"teamStats": {
 			"first": "Lat w branży",
 			"second": "Wykonanych projektów"
+		},
+		"formAgreement": {
+			"description": "Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych w celu udzielenia odpowiedzi na przesłane zapytanie. Zostałem poinformowany, że przysługuje mi prawo dostępu do swoich danych, możliwości ich poprawiania, żądania zaprzestania ich przetwarzania. Administratorem danych jest <strong>CODINO Sp. z o.o. ul. Ludwika Narbutta 53/6 02-529 Warszawa</strong>"
 		}
 	}
 }

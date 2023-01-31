@@ -47,7 +47,12 @@
 	}
 
 	&__checkBoxLabel {
+		cursor: pointer;
 		line-height: 100%;
+
+		span {
+			text-decoration: underline;
+		}
 	}
 
 	&_formWrapper {

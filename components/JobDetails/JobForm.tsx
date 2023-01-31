@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { EMAIL_JS_JOB_FORM_TEMPLATE_ID, EMAIL_JS_SERVICE_ID, EMAIL_JS_USER_ID, STATE } from 'utils/constants';
 import SubmitButton from 'components/SubmitButton/SubmitButton';
 import { useTranslation } from 'next-i18next';
+import FormAgreementTooltip from 'components/FormAgreementTooltip/FormAgreementTooltip';
 
 interface JobFormProps {
 	position: string;
@@ -77,11 +78,10 @@ const JobForm: React.FC<JobFormProps> = ({ position }) => {
 				<div>
 					<input id="agreement" type="checkbox" required name="agreement" />
 					<label className="jobDetailsForm__checkBoxLabel" htmlFor="agreement">
-						{t('common.accept')}{' '}
-						<a className="highlighted-text" href="#">
-							jakiś regulamin todo
-						</a>
+						{t('common.agreementAccept1')}
+						<span id="form-agreement"> {t('common.agreementAccept2')}</span>
 					</label>
+					<FormAgreementTooltip targetId="form-agreement" />
 				</div>
 
 				<SubmitButton state={currentState} />
