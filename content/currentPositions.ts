@@ -8,7 +8,7 @@ export const CURRENT_POSITIONS: Position[] = [
 		shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 		slug: 'backend',
 		scope: 'Lorem ipsum, lorem ipsum, lorem ipsum',
-		technologies: ['java', 'spring', 'hibernate', 'node', 'kubernetes', 'postgresql']
+		technologies: ['java', 'spring', 'hibernate', 'node', 'kubernetes', 'postgresql', 'mongodb', 'php']
 	},
 	{
 		title: 'Devops Engineer',

@@ -2,7 +2,8 @@ import { Product } from 'types/common';
 
 const GIVEO: Product = {
 	title: 'Giveo - Mobile app',
-	description: 'Auction application to raise funds for charity. Detailed description here: https://giveo.app/',
+	description:
+		'Giveo is cashless donation fundraising and marketplace platform that supports great causes with every transaction made in the app. Detailed description here: https://giveo.app/',
 	imageSource: '/images/portfolio/giveo.png',
 	slug: 'giveo',
 	color: '#6674b6',

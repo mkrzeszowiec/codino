@@ -8,7 +8,7 @@ const NEXTBIKE: Product = {
 	color: '#0f84d0',
 	date: '2020-2022',
 	scopeOfTechnology: 'backend development, system architecture redesign',
-	industry: '-',
+	industry: 'rental, bicycle transportation, public services',
 	scopeOfWork: {
 		description: '',
 		points: [

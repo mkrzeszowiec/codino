@@ -8,9 +8,27 @@ const INSIGHTS: Product = {
 	slug: 'insights',
 	color: '#1f4cea',
 	date: '2017-2021',
-	scopeOfTechnology: '-',
+	scopeOfTechnology: 'backend, frontend',
 	industry: 'linie lotnicze, analityka',
 	technologies: ['java', 'spring', 'angular', 'elastic', 'teradata'],
+	scopeOfWork: {
+		description: '',
+		points: [
+			{
+				index: 1,
+				description: `stworzenie systemu do analizy i wizualizacji: <br/> - zachowań pasażerów w liniach lotniczych <br/>- wizualizacji danych pasazerów: lotów, biletów, rezerwacji`
+			},
+			{
+				index: 2,
+				description:
+					'stworzenie systemu do przeprowadzania audytów i analizy ryzyk na połączeniach w liniach lotniczych'
+			},
+			{
+				index: 3,
+				description: 'stworzenie systemu do identyfikacji i unifikacji danych pasażerów z wielu źródeł'
+			}
+		]
+	},
 	solutions: [
 		{
 			title: 'Rozwiązanie 1',

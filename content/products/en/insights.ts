@@ -8,9 +8,26 @@ const INSIGHTS: Product = {
 	slug: 'insights',
 	color: '#1f4cea',
 	date: '2017-2021',
-	scopeOfTechnology: '-',
+	scopeOfTechnology: 'backend, frontend',
 	industry: 'airlines, analytics',
 	technologies: ['java', 'spring', 'angular', 'elastic', 'teradata'],
+	scopeOfWork: {
+		description: '',
+		points: [
+			{
+				index: 1,
+				description: `Creating a system for analysis and visualization: <br/> - passenger behavior in airlines <br/>- visualization of passenger data: flights, tickets, reservations`
+			},
+			{
+				index: 2,
+				description: 'Creation of a system to conduct audits and risk analysis on airline routes'
+			},
+			{
+				index: 3,
+				description: 'create a system to identify and unify passenger data from multiple sources'
+			}
+		]
+	},
 	solutions: [
 		{
 			title: 'Solution 1',
