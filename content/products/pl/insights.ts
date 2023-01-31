@@ -10,7 +10,7 @@ const INSIGHTS: Product = {
 	date: '2017-2021',
 	scopeOfTechnology: '-',
 	industry: 'linie lotnicze, analityka',
-	technologies: ['angular', 'java'],
+	technologies: ['java', 'spring', 'angular', 'elastic', 'teradata'],
 	solutions: [
 		{
 			title: 'Rozwiązanie 1',

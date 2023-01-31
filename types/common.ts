@@ -19,8 +19,11 @@ export type technology =
 	| 'scala'
 	| 'mysql'
 	| 'postgresql'
+	| 'mongodb'
+	| 'php'
 	| 'aws'
-	| 'meilisearch';
+	| 'meilisearch'
+	| 'teradata';
 
 export interface Product {
 	title: string;

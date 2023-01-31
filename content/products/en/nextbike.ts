@@ -17,19 +17,19 @@ const NEXTBIKE: Product = {
 			{ index: 3, description: 'maintenance and development of existing systems' }
 		]
 	},
-	technologies: ['java', 'postgresql', 'redis'],
+	technologies: ['node', 'php', 'mongodb', 'ts'],
 	solutions: [
 		{
 			title: 'Solution 1',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, aliquam cupiditate enim et exercitationem expedita fugiat illo ipsum magni nulla omnis possimus provident quibusdam quisquam saepe sed sit voluptatibus!',
-			imageSrc: '/images/case-study/next-bike/1.png'
+			imageSrc: '/images/case-study/nextbike/1.png'
 		},
 		{
 			title: 'Solution 2',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipisicing. Ab accusantium, aliquam cupiditate enim et exercitationem expedita fugiat illo ipsum magni nulla omnis possimus provident quibusdam quisquam saepe sed sit voluptatibus!',
-			imageSrc: '/images/case-study/next-bike/2.png'
+			imageSrc: '/images/case-study/nextbike/2.png'
 		}
 	]
 };

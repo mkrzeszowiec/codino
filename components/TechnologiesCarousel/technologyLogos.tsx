@@ -22,6 +22,9 @@ import mysql from 'public/images/technologies/mysql.svg';
 import postgresql from 'public/images/technologies/postgresql.svg';
 import aws from 'public/images/technologies/aws.svg';
 import meilisearch from 'public/images/technologies/meilisearch.svg';
+import mongodb from 'public/images/technologies/mongodb.svg';
+import php from 'public/images/technologies/php.svg';
+import teradata from 'public/images/technologies/teradata.svg';
 
 export const technologyLogos: StaticImageData[] = [
 	java,
@@ -40,10 +43,13 @@ export const technologyLogos: StaticImageData[] = [
 	android,
 	ios,
 	python,
+	php,
 	kotlin,
 	scala,
 	mysql,
 	postgresql,
+	mongodb,
 	aws,
+	teradata,
 	meilisearch
 ];

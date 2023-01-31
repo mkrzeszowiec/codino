@@ -17,7 +17,7 @@ const NEXTBIKE: Product = {
 			{ index: 3, description: 'utrzymanie i rozwój istniejących systemów' }
 		]
 	},
-	technologies: ['java', 'postgresql', 'redis'],
+	technologies: ['node', 'php', 'mongodb', 'ts'],
 	solutions: [
 		{
 			title: 'Rozwiązanie 1',

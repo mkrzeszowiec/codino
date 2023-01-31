@@ -23,7 +23,7 @@ const ZIPZERO: Product = {
 			{ index: 8, description: 'Panel B2B' }
 		]
 	},
-	technologies: ['java', 'kotlin', 'android', 'ios'],
+	technologies: ['java', 'spring', 'kotlin', 'angular', 'postgresql', 'redis', 'elastic', 'android', 'kubernetes'],
 	solutions: [
 		{
 			title: 'Rozwiązanie 1',
