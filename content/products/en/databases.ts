@@ -4,7 +4,7 @@ const DATABASES: Product = {
 	title: 'Databases - Database tool development and optimization.',
 	description:
 		'Cloud client for non-relational databases. An innovative approach to managing non-relational databases.',
-	imageSource: '/images/portfolio/bazy_danych.png',
+	imageSource: '/images/case-study/databases/cover.png',
 	slug: 'databases',
 	color: '#ea801f',
 	date: '-',

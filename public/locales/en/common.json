@@ -33,8 +33,8 @@
 			"highlight2": "together with us"
 		},
 		"pageIntro": {
-			"header": "<strong>Trusted by customers</strong>, partners and the industry",
-			"subheader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+			"header": "<strong>IT solutions</strong> customized to your needs.",
+			"subheader": "We're group of professional and passionate developers based in Warsaw. We'll help you launch your product"
 		},
 		"contact": {
 			"header": "Contact",
@@ -92,6 +92,10 @@
 		},
 		"formAgreement": {
 			"description": "I consent to the processing of my personal data in accordance with the Law on Personal Data Protection in order to respond to the submitted inquiry. I have been informed that I have the right to access my data, the possibility of correcting them, demand to stop processing them. The administrator of the data is <strong>CODINO Sp. z o.o. Ludwika Narbutta Street 53/6 02-529 Warsaw</strong>"
+		},
+		"jobDetails": {
+			"firstHeader": "Your Role and Responsibilities",
+			"secondHeader": "We’re Looking for Someone Who Has"
 		}
 	}
 }

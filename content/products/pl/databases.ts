@@ -4,7 +4,7 @@ const DATABASES: Product = {
 	title: 'Bazy danych - Tworzenie narzędzi bazodanowych i optymalizacja.',
 	description:
 		'Chmurowy klient do nieralacynych baz danych. Innowacyjne podejście do zarządzania nierelacyjymi bazami danych.',
-	imageSource: '/images/portfolio/bazy_danych.png',
+	imageSource: '/images/case-study/databases/cover.png',
 	slug: 'databases',
 	color: '#ea801f',
 	date: '-',

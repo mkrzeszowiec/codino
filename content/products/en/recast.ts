@@ -4,7 +4,7 @@ const RECAST: Product = {
 	title: 'Recast app',
 	description:
 		'Recast is a platform that allows viewers to watch and stream video and live streams of sports events, concerts, etc., based on microtransactions. Most of the amount paid by the viewer goes directly to the broadcaster. Large companies like top soccer clubs Inter, Manchester City are involved in the project.',
-	imageSource: '/images/portfolio/recast.png',
+	imageSource: '/images/case-study/recast/cover.png',
 	slug: 'recast',
 	color: '#001021',
 	date: '04.2020 - now',

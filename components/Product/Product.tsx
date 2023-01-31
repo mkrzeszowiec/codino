@@ -51,7 +51,7 @@ const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
 			</div>
 
 			<div className="product__imageSection">
-				<Image className="product__image" src={imageSource} alt="" width={600} height={600} />
+				<Image className="product__image" src={imageSource} alt="" width={900} height={900} />
 			</div>
 		</div>
 	);

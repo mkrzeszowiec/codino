@@ -4,7 +4,7 @@ const INSIGHTS: Product = {
 	title: 'Insights - An analytics project for the aviation industry.',
 	description:
 		'Establish and develop a system for airline passenger analysis, create a passenger identification system.',
-	imageSource: '/images/portfolio/insights.png',
+	imageSource: '/images/case-study/insights/cover.png',
 	slug: 'insights',
 	color: '#1f4cea',
 	date: '2017-2021',

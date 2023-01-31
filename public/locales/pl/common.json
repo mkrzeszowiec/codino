@@ -29,12 +29,12 @@
 		"whatWeDo": {
 			"title": "Czym zajmujemy się w <strong>Codino</strong>?",
 			"description": "Specjalizujemy się w projektowaniu, tworzeniu i utrzymaniu aplikacji mobilnych i webowych, jak również rozwiązań sieciowych i chmurowych.",
-			"highlight1": "Rozwijaj biznesy online przy pomocy najnowszych technologii",
+			"highlight1": "Rozwijaj biznes przy pomocy najnowszych technologii",
 			"highlight2": "razem z nami"
 		},
 		"pageIntro": {
-			"header": "<strong>Jakiś slogan</strong> część dalsza sloganu",
-			"subheader": "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+			"header": "<strong>Rozwiązania IT</strong> dostosowane do Twoich potrzeb.",
+			"subheader": "Jesteśmy grupą profesjonalnych i pełnych pasji programistów. Pomożemy Ci wprowadzić Twój produkt na rynek"
 		},
 		"contact": {
 			"header": "Skontaktuj się",
@@ -77,7 +77,7 @@
 		},
 		"startWork": {
 			"header": "Rozpocznij pracę z Codino",
-			"description": "Rozwijaj biznesy online przy pomocy najnowszych technologii razem z nami."
+			"description": "Rozwijaj biznes przy pomocy najnowszych technologii razem z nami."
 		},
 		"meetCodino": {
 			"header": "Meet codino",
@@ -92,6 +92,10 @@
 		},
 		"formAgreement": {
 			"description": "Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych w celu udzielenia odpowiedzi na przesłane zapytanie. Zostałem poinformowany, że przysługuje mi prawo dostępu do swoich danych, możliwości ich poprawiania, żądania zaprzestania ich przetwarzania. Administratorem danych jest <strong>CODINO Sp. z o.o. ul. Ludwika Narbutta 53/6 02-529 Warszawa</strong>"
+		},
+		"jobDetails": {
+			"firstHeader": "Czym będziesz się zajmować?",
+			"secondHeader": "Czego od Ciebie oczekujemy?"
 		}
 	}
 }

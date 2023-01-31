@@ -3,7 +3,7 @@ import { Product } from 'types/common';
 const NEXTBIKE: Product = {
 	title: 'Nextbike - Backend works',
 	description: 'Rescue and development of a system serving urban bicycles. https://nextbike.pl',
-	imageSource: '/images/portfolio/next-bike.png',
+	imageSource: '/images/case-study/nextbike/cover.png',
 	slug: 'nextbike',
 	color: '#0f84d0',
 	date: '2020-2022',

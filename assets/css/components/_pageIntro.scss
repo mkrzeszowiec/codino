@@ -30,29 +30,29 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		max-width: 800px;
+		max-width: 900px;
 		margin-top: 50px;
 	}
 
 	&__title {
-		font-size: 36px;
-		color: #fff;
+		font-size: 3.6rem;
+		color: white;
 		font-weight: 600;
 		text-align: center;
 		line-height: 120%;
 		margin-bottom: 25px;
 		@include breakpoint(phone) {
-			font-size: 60px;
-			width: 800px;
+			font-size: 6rem;
 		}
 	}
 
 	&__subtitle {
-		font-size: 20px;
+		font-size: 2rem;
 		color: #ffffffb8;
 		font-weight: 400;
 		text-align: center;
 		margin-bottom: 45px;
 		line-height: 120%;
+		max-width: 600px;
 	}
 }

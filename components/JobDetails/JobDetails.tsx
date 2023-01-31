@@ -5,12 +5,10 @@ import WalletIcon from 'components/icons/Wallet';
 import MarkerIcon from 'components/icons/Marker';
 import StarIcon from 'components/icons/Star';
 import CheckCircleIcon from 'components/icons/CheckCircle';
+import { useTranslation } from 'next-i18next';
 
-interface JobDetailsProps {
-	job: JobOffer;
-}
-
-const JobDetails: React.FC<JobDetailsProps> = ({ job }) => {
+const JobDetails: React.FC<{ job: JobOffer }> = ({ job }) => {
+	const { t } = useTranslation();
 	const { title, description, mode, experienceLevel, payRanges, roleAndResponsibilities, requirements } = job;
 
 	return (
@@ -37,7 +35,8 @@ const JobDetails: React.FC<JobDetailsProps> = ({ job }) => {
 					</p>
 				</div>
 
-				<h3 className="jobDetails__subtitle">Your Role and Responsibilities</h3>
+				<h3 className="jobDetails__subtitle">{t('components.jobDetails.firstHeader')}</h3>
+
 				<ul className="jobDetails__list">
 					{roleAndResponsibilities.map(responsibility => (
 						<li className="jobDetails__listItem" key={responsibility}>
@@ -47,7 +46,7 @@ const JobDetails: React.FC<JobDetailsProps> = ({ job }) => {
 					))}
 				</ul>
 
-				<h3 className="jobDetails__subtitle">We’re Looking for Someone Who Has</h3>
+				<h3 className="jobDetails__subtitle">{t('components.jobDetails.secondHeader')}</h3>
 				<ul className="jobDetails__list">
 					{requirements.map(requirement => (
 						<li className="jobDetails__listItem" key={requirement}>

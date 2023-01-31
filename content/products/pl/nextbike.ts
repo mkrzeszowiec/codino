@@ -3,7 +3,7 @@ import { Product } from 'types/common';
 const NEXTBIKE: Product = {
 	title: 'Nextbike - Prace backendowe',
 	description: 'Ratunek i rozwój systemu obsługującego miejskie rowery. https://nextbike.pl',
-	imageSource: '/images/portfolio/next-bike.png',
+	imageSource: '/images/case-study/nextbike/cover.png',
 	slug: 'nextbike',
 	color: '#0f84d0',
 	date: '2020-2022',

@@ -4,7 +4,7 @@ const RECAST: Product = {
 	title: 'Aplikacja Recast',
 	description:
 		'Recast to platforma umożliwiająca oglądanie i transmisję video i live streamów z wydarzeń sportowych, koncertów itp,  oparta o mikrotraksakcje. Większość kwoty zapłaconej przez widza trafia bezpośrednio do nadawcy. W projekt zaangażowane sa duże firmy jak topowe kluby piłkarskie Inter, Manchester City.',
-	imageSource: '/images/portfolio/recast.png',
+	imageSource: '/images/case-study/recast/cover.png',
 	slug: 'recast',
 	color: '#001021',
 	date: '04.2020 - teraz',
