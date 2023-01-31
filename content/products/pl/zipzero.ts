@@ -23,7 +23,7 @@ const ZIPZERO: Product = {
 			{ index: 8, description: 'Panel B2B' }
 		]
 	},
-	technologies: ['java', 'kotlin']
+	technologies: ['java', 'kotlin', 'android', 'ios']
 };
 
 export default ZIPZERO;

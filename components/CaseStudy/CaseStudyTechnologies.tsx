@@ -1,12 +1,17 @@
 import { Product } from 'types/common';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
 import TechnologiesCarousel from 'components/TechnologiesCarousel/TechnologiesCarousel';
+import { useTranslation } from 'next-i18next';
 
-const CaseStudyTechnologies = ({ product }: { product: Product }) => (
-	<div className="caseStudyGoals">
-		<SectionTitle className="caseStudyGoals__technologies">Wykorzystane technologie</SectionTitle>
-		<TechnologiesCarousel technologies={product.technologies} />
-	</div>
-);
+const CaseStudyTechnologies = ({ product }: { product: Product }) => {
+	const { t } = useTranslation();
+
+	return (
+		<div className='caseStudyGoals'>
+			<SectionTitle className='caseStudyGoals__technologies'>{t('components.caseStudy.technologies')}</SectionTitle>
+			<TechnologiesCarousel technologies={product.technologies} />
+		</div>
+	);
+};
 
 export default CaseStudyTechnologies;

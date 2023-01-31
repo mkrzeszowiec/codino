@@ -5,6 +5,7 @@
 
 	&__point {
 		display: flex;
+		align-items: center;
 		gap: 5px;
 		margin-right: 20px;
 		font-size: 1.4rem;
@@ -12,8 +13,8 @@
 	}
 
 	svg {
-		width: 2rem;
-		height: 2rem;
+		width: 2.5rem;
+		height: 2.5rem;
 		margin-right: 5px;
 	}
 }

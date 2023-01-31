@@ -16,7 +16,8 @@ const NEXTBIKE: Product = {
 			{ index: 2, description: 'zaprojektować i stworzyć API dla nowych aplikacji mobilnych' },
 			{ index: 3, description: 'utrzymanie i rozwój istniejących systemów' }
 		]
-	}
+	},
+	technologies: ['java', 'postgresql', 'redis']
 };
 
 export default NEXTBIKE;

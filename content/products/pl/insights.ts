@@ -9,7 +9,8 @@ const INSIGHTS: Product = {
 	color: '#1f4cea',
 	date: '2017-2021',
 	scopeOfTechnology: '-',
-	industry: 'Linie lotnicze, analityka'
+	industry: 'linie lotnicze, analityka',
+	technologies: ['angular', 'java']
 };
 
 export default INSIGHTS;

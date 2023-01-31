@@ -10,7 +10,7 @@ interface ProductProps {
 	className?: string;
 }
 
-const VISIBLE_TECHNOLOGIES_NUMBER = 4;
+const VISIBLE_TECHNOLOGIES_NUMBER = 5;
 
 const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
 	const { t } = useTranslation();
@@ -35,7 +35,8 @@ const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
 							src={`/images/technologies/icons/${technology}.svg`}
 							width={50}
 							height={50}
-							alt=""
+							title={technology}
+							alt={technology}
 						/>
 					))}
 				</p>

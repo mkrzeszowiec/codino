@@ -9,7 +9,7 @@ const RECAST: Product = {
 	color: '#001021',
 	date: '04.2022 - 03.2023',
 	scopeOfTechnology: 'media',
-	industry: 'Backend & Frontend',
+	industry: 'backend, frontend',
 	scopeOfWork: {
 		description:
 			'Początki Recast, to dwuosobowy zespół od frontendu, który chce zmienić rynek streamingu PPV. W trakcie rozszerzania się projektu, do naszego zespołu dołączyły nowe osoby. Dziś jest to 9 doskonałych specjalistów pracujących nad frontendem, backendem i architekturą systemu. Nasz zakres prac to:',
@@ -37,7 +37,7 @@ const RECAST: Product = {
 		'Nieustanny rozwój aplikacji frontendu oraz backendu mają jeden cel - stale ulepszać wysokoskalowalny system do transmisji video z potencjalnym milionem widzów w piku. Odpowiednie projektowanie architektury systemu zapewnia jego skalowalność, co jest szczególnie istotne w przypadku streamingu - bursty traffic.\n\n' +
 		'Stale pracujemy nad wiarygodnymi testami wydajności systemu, aby każdy update zapewniał jeszcze wyższą jakość. Opracowujemy także rozwiązania pod hurtownie danych. Praca w międzynarodowym teamie sprawia, że każdy z członków naszego zespołu ma swoje własne spojrzenie na projekt - dzięki temu Recast nieustannie się rozwija i ewoluuje.\n\n' +
 		'Warto zaznaczyć w tym miejscu, że w projekt zaangażowane są topowe kluby piłkarskie, takie jak Manchester City, czy Inter Mediolan. Skalowalność Recast’a  pozwala obsługiwać duże piki ruchu  w trakcie topowych wydarzeń sportowych.\n',
-	technologies: ['react', 'node', 'aws', 'kubernetes', 'ts', 'postgresql', 'redis', 'meilisearch']
+	technologies: ['react', 'node', 'aws', 'kubernetes', 'postgresql', 'ts', 'redis', 'meilisearch']
 };
 
 export default RECAST;
