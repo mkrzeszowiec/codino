@@ -7,6 +7,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 import CaseStudy from 'components/CaseStudy/CaseStudy';
 import { getOurProductsTranslated } from 'content/ourProducts';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {
@@ -41,11 +43,19 @@ export const getStaticProps: GetStaticProps = async context => {
 };
 
 const CaseStudyPage = ({ product }: Props) => {
+	const router = useRouter();
+	const [translatedProduct, setTranslatedProduct] = useState(product);
+
+	useEffect(() => {
+		const currentProduct = getOurProductsTranslated(router.locale).find(p => p?.slug === product?.slug);
+		setTranslatedProduct(currentProduct);
+	}, [product, router.locale]);
+
 	if (!product) return null;
 
 	return (
 		<Main title={getPageTitle(product.title)}>
-			<CaseStudy product={product} />
+			<CaseStudy product={translatedProduct} />
 		</Main>
 	);
 };

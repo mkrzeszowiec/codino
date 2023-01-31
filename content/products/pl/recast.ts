@@ -7,9 +7,9 @@ const RECAST: Product = {
 	imageSource: '/images/portfolio/recast.png',
 	slug: 'recast',
 	color: '#001021',
-	date: '04.2022 - 03.2023',
+	date: '04.2020 - teraz',
 	scopeOfTechnology: 'media',
-	industry: 'Backend & Frontend',
+	industry: 'backend, frontend',
 	scopeOfWork: {
 		description:
 			'Początki Recast, to dwuosobowy zespół od frontendu, który chce zmienić rynek streamingu PPV. W trakcie rozszerzania się projektu, do naszego zespołu dołączyły nowe osoby. Dziś jest to 9 doskonałych specjalistów pracujących nad frontendem, backendem i architekturą systemu. Nasz zakres prac to:',
@@ -51,7 +51,7 @@ const RECAST: Product = {
 		},
 		{
 			description:
-				'Mechanizm indeksowania video i livestreamów pozwala na błyskawiczne wyszukiwanie wybranych video, dlatego kładziemy duży nacisk na to, aby Recast był maksymalnie intuicyjny w swoim działaniu, szczególnie dla widzów.',
+				'System działa na produkcji od roku i stale pracujemy nad jego doskonaleniem. Recast już teraz obsługuje duże wydarzenia sportowe, jak chociażby streaming meczu Manchester City kontra Barcelona. ',
 			imageSrc: '/images/case-study/recast/2.png'
 		}
 	]

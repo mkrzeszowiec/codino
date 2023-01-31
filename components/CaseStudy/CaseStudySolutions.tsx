@@ -5,7 +5,7 @@ import Image from 'next/image';
 const CaseStudySolutions = ({ product }: { product: Product }) => (
 	<div className="caseStudySolutionWrapper">
 		{product.solutions.map(solution => (
-			<div className="caseStudySolution" key={solution.title}>
+			<div className="caseStudySolution" key={solution.description.substring(0, 20)}>
 				<div className="caseStudySolution__infoWrapper">
 					{solution.title && <SectionTitle className="caseStudySolution__title">{solution.title}</SectionTitle>}
 					<p className="caseStudySolution__description">{solution.description}</p>
