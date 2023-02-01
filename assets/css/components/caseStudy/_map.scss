@@ -5,7 +5,9 @@
 	touch-action: none;
 
 	&__title {
-		position: relative;
-		top: 40px;
+		@include breakpoint(tablet) {
+			position: relative;
+			top: 4rem;
+		}
 	}
 }
