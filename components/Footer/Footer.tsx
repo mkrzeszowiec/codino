@@ -1,5 +1,6 @@
 import NavItem from 'components/Header/NavItem';
 import Logo from 'components/icons/Logo';
+import { Trans } from 'next-i18next';
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
@@ -12,8 +13,7 @@ const Footer = () => {
 						<Logo />
 
 						<p className="siteFooter__subtitle">
-							<span className="highlighted-text">Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. In,
-							recusandae!
+							<Trans i18nKey={'components.pageIntro.header'} />
 						</p>
 					</div>
 

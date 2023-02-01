@@ -33,7 +33,7 @@
 			"highlight2": "together with us"
 		},
 		"pageIntro": {
-			"header": "<strong>IT solutions</strong> customized to your needs.",
+			"header": "<strong>IT solutions</strong> customized to your needs",
 			"subheader": "We're group of professional and passionate developers based in Warsaw. We'll help you launch your product"
 		},
 		"contact": {
@@ -58,7 +58,7 @@
 		},
 		"career": {
 			"header": "Career",
-			"headerDescription": "At Codino, we are looking for ambitious developers who want to develop their skills and careers in the fast-growing IT industry. We offer the opportunity to work on interesting projects for various industries and using the latest technologies.",
+			"headerDescription": "In Codino we are looking for ambitious developers who want to develop their skills and careers in the fast-growing IT industry. We offer the opportunity to work on interesting projects for various industries and using the latest technologies.",
 			"jobsTitle": "Available jobs",
 			"jobsNotFoundTitle": "Don't see the right job offer for you?",
 			"jobsNotFoundTitle2": "Write to us!",

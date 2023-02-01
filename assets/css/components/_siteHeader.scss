@@ -5,12 +5,12 @@
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 999;
-	height: 65px;
+	height: var(--mobile-navbar-height);
 	color: white;
 	transition: all 0.3s ease;
 
 	@include breakpoint(tablet) {
-		height: 100px;
+		height: var(--desktop-navbar-height);
 	}
 
 	&__languageButton {

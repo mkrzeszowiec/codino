@@ -14,7 +14,7 @@ export const JOB_OFFERS: JobOffer[] = [
 	{
 		title: 'Frontend developer',
 		slug: 'frontend-developer',
-		description: 'Opis stanwiska dla frontenda ',
+		description: 'Opis stanowiska dla frontenda ',
 		mode: 'hybrid',
 		payRanges: '10000zł - 15000',
 		experienceLevel: 'senior',

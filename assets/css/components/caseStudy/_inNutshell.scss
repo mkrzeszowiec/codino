@@ -1,7 +1,12 @@
 .caseStudyInNutshell {
 	display: flex;
-	align-items: center;
+	flex-direction: column;
 	margin-bottom: 50px;
+	gap: 20px;
+
+	@include breakpoint(phone) {
+		flex-direction: row;
+	}
 
 	&__point {
 		display: flex;
@@ -9,10 +14,11 @@
 		gap: 5px;
 		margin-right: 20px;
 		font-size: 1.4rem;
-		max-width: 400px;
+		max-width: 500px;
 	}
 
 	svg {
+		display: block;
 		width: 2.5rem;
 		height: 2.5rem;
 		margin-right: 5px;

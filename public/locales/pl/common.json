@@ -33,7 +33,7 @@
 			"highlight2": "razem z nami"
 		},
 		"pageIntro": {
-			"header": "<strong>Rozwiązania IT</strong> dostosowane do Twoich potrzeb.",
+			"header": "<strong>Rozwiązania IT</strong> dostosowane do Twoich potrzeb",
 			"subheader": "Jesteśmy grupą profesjonalnych i pełnych pasji programistów. Pomożemy Ci wprowadzić Twój produkt na rynek"
 		},
 		"contact": {
@@ -80,7 +80,7 @@
 			"description": "Rozwijaj biznes przy pomocy najnowszych technologii razem z nami."
 		},
 		"meetCodino": {
-			"header": "Meet codino",
+			"header": "Poznaj codino",
 			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem facilis iusto minima sint voluptates."
 		},
 		"notFoundJobBanner": {
