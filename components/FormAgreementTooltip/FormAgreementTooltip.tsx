@@ -3,7 +3,7 @@ import { Trans } from 'next-i18next';
 
 const FormAgreementTooltip: React.FC<{ targetId: string }> = ({ targetId }) => {
 	return (
-		<Tooltip clickable={true} className="formAgreementTooltip" anchorId={targetId} place="top">
+		<Tooltip className="formAgreementTooltip" anchorId={targetId} place="top">
 			<Trans i18nKey={'components.formAgreement.description'} />
 		</Tooltip>
 	);
