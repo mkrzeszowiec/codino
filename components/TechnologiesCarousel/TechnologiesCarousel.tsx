@@ -3,7 +3,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { technology } from 'types/common';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
-import { technologyLogos } from 'components/TechnologiesCarousel/technologyLogos';
+import { allTechnologyLogos, mainTechnologyLogos } from 'components/TechnologiesCarousel/allTechnologyLogos';
 
 const autoplayOptions = {
 	delay: 1500
@@ -19,8 +19,8 @@ const TechnologiesCarousel: React.FC<TechnologiesCarouselProps> = ({ technologie
 	const visibleTechnologies = useMemo(
 		() =>
 			technologies?.length
-				? technologyLogos.filter(logo => technologies.some(technology => logo.src.includes(technology)))
-				: technologyLogos,
+				? allTechnologyLogos.filter(logo => technologies.some(technology => logo.src.includes(technology)))
+				: mainTechnologyLogos,
 		[technologies]
 	);
 

@@ -25,8 +25,10 @@ import meilisearch from 'public/images/technologies/meilisearch.svg';
 import mongodb from 'public/images/technologies/mongodb.svg';
 import php from 'public/images/technologies/php.svg';
 import teradata from 'public/images/technologies/teradata.svg';
+import snowflake from 'public/images/technologies/snowflake.svg';
+import { technology } from 'types/common';
 
-export const technologyLogos: StaticImageData[] = [
+export const allTechnologyLogos: StaticImageData[] = [
 	java,
 	docker,
 	spring,
@@ -51,5 +53,12 @@ export const technologyLogos: StaticImageData[] = [
 	mongodb,
 	aws,
 	teradata,
-	meilisearch
+	meilisearch,
+	snowflake
 ];
+
+const NOT_VISIBLE_IN_MAIN_CAROUSEL: technology[] = ['php', 'scala', 'html'];
+
+export const mainTechnologyLogos = allTechnologyLogos.filter(
+	logo => !NOT_VISIBLE_IN_MAIN_CAROUSEL.some(technology => logo.src.includes(technology))
+);
