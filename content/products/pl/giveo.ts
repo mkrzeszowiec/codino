@@ -8,6 +8,7 @@ const GIVEO: Product = {
 	slug: 'giveo',
 	color: '#6674b6',
 	date: '2020-2021',
+	countries: ['USA', 'CAN'],
 	scopeOfTechnology: 'aukcje, sprzedaż',
 	industry: 'architektura, backend, frontend',
 	scopeOfWork: {

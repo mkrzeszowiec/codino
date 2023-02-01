@@ -69,7 +69,8 @@
 			"description": "Przejrzyj efekty współpracy z naszymi klientami i przekonaj się sam, jakie korzyści możemy przynieść Twojemu biznesowi.",
 			"technologies": "Technologie",
 			"scope": "Zakres prac",
-			"goals": "Wyzwania i cele projektu"
+			"goals": "Wyzwania i cele projektu",
+			"map": "Zasięg projektu"
 		},
 		"services": {
 			"header": "Oferta",

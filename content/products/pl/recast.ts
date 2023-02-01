@@ -8,6 +8,7 @@ const RECAST: Product = {
 	slug: 'recast',
 	color: '#001021',
 	date: '04.2020 - teraz',
+	countries: ['IRL', 'GBR'],
 	scopeOfTechnology: 'media',
 	industry: 'backend, frontend',
 	scopeOfWork: {

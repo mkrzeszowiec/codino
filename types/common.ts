@@ -44,6 +44,7 @@ export interface Product {
 	};
 	goals?: string;
 	technologies?: technology[];
+	countries?: string[];
 	solutions?: {
 		title?: string;
 		description: string;

@@ -69,7 +69,8 @@
 			"description": "See the results of working with our clients and see for yourself the benefits we can bring to your business.",
 			"technologies": "Technologies",
 			"scope": "Scope of work",
-			"goals": "Challenges and goals of the project"
+			"goals": "Challenges and goals of the project",
+			"map": "Regions of operation"
 		},
 		"services": {
 			"header": "Services",

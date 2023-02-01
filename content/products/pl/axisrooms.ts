@@ -7,6 +7,7 @@ const AXISROOMS: Product = {
 	slug: 'axisrooms',
 	color: '#ea1f61',
 	date: '-',
+	countries: ['IND'],
 	scopeOfTechnology: '-',
 	industry: 'turystyka, crm',
 	solutions: [

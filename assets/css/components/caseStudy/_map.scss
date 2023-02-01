@@ -1,0 +1,11 @@
+.caseStudyMap {
+	padding: 20px 0;
+	text-align: center;
+	pointer-events: none;
+	touch-action: none;
+
+	&__title {
+		position: relative;
+		top: 40px;
+	}
+}
