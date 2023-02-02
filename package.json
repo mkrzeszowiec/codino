@@ -21,6 +21,7 @@
 		"react-countup": "6.4.1",
 		"react-dom": "18.2.0",
 		"react-i18next": "12.1.4",
+		"react-icons": "^4.7.1",
 		"react-linkify": "1.0.0-alpha",
 		"react-simple-maps": "^3.0.0",
 		"react-tooltip": "5.3.4",

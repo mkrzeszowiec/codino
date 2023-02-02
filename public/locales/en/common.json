@@ -81,8 +81,8 @@
 			"description": "Develop businesses with the latest technology together with us."
 		},
 		"meetCodino": {
-			"header": "Meet codino",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem facilis iusto minima sint voluptates."
+			"header": "Meet Codino",
+			"description": "We support the development of our employees so they can achieve their goals and develop their skills, which contributes to the success of our company."
 		},
 		"notFoundJobBanner": {
 			"header": "Didn't find an offer for you? <strong>Write to us</strong>"
@@ -97,6 +97,22 @@
 		"jobDetails": {
 			"firstHeader": "Your Role and Responsibilities",
 			"secondHeader": "We’re Looking for Someone Who Has"
+		},
+		"companyValues": {
+			"title": "Our Values",
+			"description": "Values play a key role in Codino's operations. They are the foundation of our business philosophy and define how we conduct our business.",
+			"respectTitle": "Respect",
+			"respectDescription": "Our priority is to treat each other with dignity and respect.",
+			"integrityTitle": "Integrity",
+			"integrityDescription": "We strive to conduct ourselves with integrity and transparency in all our activities.",
+			"responsibilityTitle": "Responsibility",
+			"responsibilityDescription": "We are accountable for our actions and decisions, which is key to maintaining our reputation and the trust of our customers.",
+			"innovationTitle": "Innovation",
+			"innovationDescription": "We focus on innovative solutions to meet the needs of our customers and improve their experience.",
+			"supportTitle": "Collaboration and Support",
+			"supportDescription": "We are open to collaboration and mutual support, which allows us to achieve mutual success and develop long-term relationships with customers and colleagues.",
+			"employeeDevelopmentTitle": "Employee Development",
+			"employeeDevelopmentDescription": "We support the development of our employees, which allows them to improve their skills and deliver the best possible service."
 		}
 	}
 }

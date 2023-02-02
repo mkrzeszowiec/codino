@@ -6,6 +6,7 @@ import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 import { useTranslation } from 'next-i18next';
+import CompanyValues from 'components/CompanyValues/CompanyValues';
 
 const AboutPage = () => {
 	const { t } = useTranslation();
@@ -15,6 +16,7 @@ const AboutPage = () => {
 			<div className="container">
 				<SubpageIntro title={t('components.about.header')} description={t('components.about.description')} />
 				<MeetCodino />
+				<CompanyValues />
 			</div>
 		</Main>
 	);

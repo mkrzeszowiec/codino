@@ -82,7 +82,7 @@
 		},
 		"meetCodino": {
 			"header": "Poznaj codino",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem facilis iusto minima sint voluptates."
+			"description": "Wspieramy rozwój naszych pracowników, aby mogli osiągać swoje cele i rozwijać swoje umiejętności, co przyczynia się do sukcesu naszej firmy."
 		},
 		"notFoundJobBanner": {
 			"header": "Nie znalazłeś oferty dla siebie? <strong>Napisz do nas</strong>"
@@ -97,6 +97,22 @@
 		"jobDetails": {
 			"firstHeader": "Czym będziesz się zajmować?",
 			"secondHeader": "Czego od Ciebie oczekujemy?"
+		},
+		"companyValues": {
+			"title": "Nasze wartości",
+			"description": "Wartości odgrywają kluczową rolę w działaniach Codino. Są one fundamentem naszej filozofii biznesowej i określają sposób, w jaki prowadzimy nasz biznes.",
+			"respectTitle": "Szacunek",
+			"respectDescription": "Naszym priorytetem jest wzajemne traktowanie wszystkich osób z należytą godnością i szacunkiem.",
+			"integrityTitle": "Uczciwość",
+			"integrityDescription": "Dążymy do uczciwego i przejrzystego postępowania we wszystkich swoich działaniach.",
+			"responsibilityTitle": "Odpowiedzialność",
+			"responsibilityDescription": "Ponosimy odpowiedzialność za swoje działania i decyzje, co jest kluczowe dla utrzymania dobrej reputacji i zaufania swoich klientów.",
+			"innovationTitle": "Innowacyjność",
+			"innovationDescription": "Stawiamy na innowacyjne rozwiązania, które pozwalają na zaspokojenie potrzeb swoich klientów i ulepszanie ich doświadczenia.",
+			"supportTitle": "Współpraca i wsparcie",
+			"supportDescription": "Jesteśmy otwarci na współpracę i wzajemne wsparcie, co pozwala na osiąganie wspólnych sukcesów i rozwijanie długoterminowych relacji z klientami i współpracownikami.",
+			"employeeDevelopmentTitle": "Rozwój pracowników",
+			"employeeDevelopmentDescription": "Wspieramy rozwój swoich pracowników, co pozwala im na ulepszanie swoich umiejętności i dostarczanie najlepszych możliwych usług."
 		}
 	}
 }
