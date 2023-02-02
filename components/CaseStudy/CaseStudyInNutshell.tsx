@@ -21,13 +21,13 @@ const CaseStudyInNutshell = ({ product }: { product: Product }) => (
 			<p>{product.scopeOfTechnology}</p>
 		</div>
 
-		<p className="caseStudyInNutshell__point">
+		<div className="caseStudyInNutshell__point">
 			<div className="caseStudyInNutshell__icon">
 				<CalendarIcon />
 			</div>
 
 			<p>{product.date}</p>
-		</p>
+		</div>
 	</div>
 );
 

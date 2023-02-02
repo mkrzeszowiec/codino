@@ -8,7 +8,7 @@ const CaseStudyGoals = ({ product }: { product: Product }) => {
 	if (!product.goals) return null;
 
 	return (
-		<div className="caseStudyGoals">
+		<div className="caseStudyGoals" data-aos="fade-down">
 			<SectionTitle className="caseStudyGoals__title">{t('components.caseStudy.goals')}</SectionTitle>
 			<p className="caseStudyGoals__description">{product.goals}</p>
 		</div>

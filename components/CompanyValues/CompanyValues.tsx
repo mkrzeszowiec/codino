@@ -10,7 +10,7 @@ const CompanyValues = () => {
 	const { t } = useTranslation();
 
 	return (
-		<section className="companyValues">
+		<section className="companyValues" data-aos="fade-down">
 			<div className="companyValues__top">
 				<div className="companyValues__texts">
 					<SectionTitle>{t('components.companyValues.title')}</SectionTitle>

@@ -27,7 +27,10 @@ const ServicesPage = () => {
 				</div>
 			))}
 
-			<StartWork />
+			<div className="container">
+				<StartWork />
+			</div>
+
 			<UseCasesCarousel />
 		</Main>
 	);

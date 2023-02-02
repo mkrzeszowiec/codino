@@ -10,7 +10,7 @@ const CaseStudyScopeOfWork = ({ product }: { product: Product }) => {
 	if (!scopeOfWork) return null;
 
 	return (
-		<section className="caseStudyScopeOfWork">
+		<section className="caseStudyScopeOfWork" data-aos="fade-down">
 			<SectionTitle className="caseStudyScopeOfWork__title">{t('components.caseStudy.scope')}</SectionTitle>
 			<p className="caseStudyScopeOfWork__description">{scopeOfWork.description}</p>
 
