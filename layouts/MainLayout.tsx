@@ -13,10 +13,6 @@ interface MainLayoutProps {
 }
 
 const MainLayout = ({ children, title = 'Codino', containerClassName = '' }: MainLayoutProps) => {
-	useEffect(() => {
-		AOS.init();
-	}, []);
-
 	return (
 		<div className={containerClassName}>
 			<Head>
