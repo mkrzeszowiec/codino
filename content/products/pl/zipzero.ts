@@ -28,7 +28,7 @@ const ZIPZERO: Product = {
 		{
 			title: 'Rozwiązanie 1',
 			description:
-				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, aliquam cupiditate enim et exercitationem expedita fugiat illo ipsum magni nulla omnis possimus provident quibusdam quisquam saepe sed sit voluptatibus!',
+				'1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, aliquam cupiditate enim et exercitationem expedita fugiat illo ipsum magni nulla omnis possimus provident quibusdam quisquam saepe sed sit voluptatibus!',
 			imageSrc: '/images/case-study/zipzero/1.png'
 		},
 		{

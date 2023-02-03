@@ -28,8 +28,8 @@ export const SERVICES_PL: Position[] = [
 	{
 		title: 'Frontend',
 		description:
-			'Rozwijanie frontendu jest istotne dla utrzymania satysfakcji użytkownika, ponieważ decyduje ono o tym, co widzą i jak wchodzą w interakcje z aplikacją. Aby zbudować atrakcyjną i funkcjonalną aplikację, niezbędne jest zadbanie o jakość frontendu.\n\n' +
-			'Dobieramy frameworki i narzędzia, aby spełniać wymagania biznesowe i oczekiwane standardy. ' +
+			'Rozwijanie frontendu jest istotne dla utrzymania satysfakcji użytkownika, ponieważ decyduje o tym, co widzą i jak wchodzą w interakcje z aplikacją. Aby zbudować atrakcyjną i funkcjonalną aplikację, niezbędne jest zadbanie o jakość frontendu.\n\n' +
+			'Dobieramy frameworki i narzędzia, aby spełniać wymagania biznesowe i współczesne standardy. ' +
 			'Korzystając z nowoczesnych technologii, zapewniamy, że Twoja aplikacja będzie szybka, łatwa w użyciu i przede wszystkim piękna. Potrafimy być niezależnym zespołem lub częścią zespołu developerskiego.',
 		shortDescription: '',
 		slug: 'frontend',
@@ -40,8 +40,7 @@ export const SERVICES_PL: Position[] = [
 		description:
 			'Jeśli Twoja firma potrzebuje specjalistów, możemy Ci ich zapewnić. ' +
 			'W naszej ofercie znajdują się tylko dokładnie sprawdzeni i wybrani specjaliści, którzy są kierowani do projektów odpowiednio do ich umiejętności, zainteresowań i potrzeb. \n\n' +
-			'Jeśli potrzebujesz dodatkowej pomocy, jesteśmy w stanie szybko dostarczyć Ci dodatkowe zasoby. Nasza współpraca może być skoncentrowana na doradztwie i wsparciu w wyborze ludzi, ich szkoleniu, wyborze odpowiedniej technologii, a także na wdrożeniu naszych pracowników do już trwającego projektu. \n\n' +
-			'Naszym priorytetem jest tworzenie wydajnego i kompetentnego personelu w dziedzinie frontend/backend, a także w dziedzinie testów i zarządzania projektem. ',
+			'Naszym priorytetem jest tworzenie wydajnego i kompetentnego zespołu w dziedzinie frontend/backend, a także w dziale testów i zarządzania projektem. ',
 		shortDescription: '',
 		slug: 'body-leasing',
 		icons: ['leasing']
