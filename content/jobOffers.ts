@@ -15,7 +15,7 @@ export const JOB_OFFERS: JobOffer[] = [
 			'projektowaniem i wykonywaniem nowych modułów aplikacji',
 			'pisaniem logiki biznesowej'
 		],
-		requirements: ['React', 'TypeScript', 'Node.js', 'CSS/HTML', 'GIT', 'REST']
+		requirements: ['React', 'TypeScript', 'Node.js', 'CSS/HTML', 'GIT', 'REST', 'umiejętność pisania "czystego kodu"']
 	},
 	{
 		title: 'Backend developer',
