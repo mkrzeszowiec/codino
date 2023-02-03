@@ -48,7 +48,7 @@ const Header = ({ isErrorPage }: HeaderProps) => {
 	return (
 		<header className={`site-header ${!onTop ? 'site-header--fixed' : ''}`}>
 			<div className="site-header__wrapper">
-				<Link href="/">
+				<Link href="/" aria-label="Go to the homepage">
 					<h1 className="site-logo">
 						<Logo />
 					</h1>
