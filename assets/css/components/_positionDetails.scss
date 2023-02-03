@@ -1,7 +1,11 @@
 .positionDetails {
-	padding: 70px 0 50px 0;
+	padding: 80px 0 60px 0;
 	border-top: 1px solid var(--border-color);
 	scroll-margin-top: 100px;
+
+	&--withBackground {
+		background: #f2f5f8;
+	}
 
 	&__top {
 		display: flex;
@@ -17,25 +21,25 @@
 	&__number {
 		font-weight: bold;
 		color: #eaeaeb;
-		font-size: 3.2rem;
+		font-size: 5rem;
+		left: -5px;
 		position: absolute;
 		z-index: -1;
-		top: -40px;
+		top: -6rem;
 
 		@include breakpoint(tablet) {
-			font-size: 6rem;
-			top: -40px;
-			left: -16px;
+			font-size: 8rem;
+			top: -6rem;
+			left: -6rem;
 		}
 	}
 
 	&__name {
-		font-size: 3.2rem;
-		margin-bottom: 10px;
+		font-size: 4rem;
 		position: relative;
+		z-index: 2;
 
 		@include breakpoint(tablet) {
-			font-size: 3.2rem;
 			width: 40%;
 		}
 	}
@@ -48,44 +52,15 @@
 		}
 	}
 
+	&__technologyWrapper {
+		display: block;
+		padding: 1rem 0 1rem 0;
+	}
+
 	&__technology {
 		filter: invert(1);
 		height: 30px;
 		width: auto;
 		margin-right: 2rem;
-	}
-
-	&__scopeList {
-		padding-top: 6rem;
-		display: grid;
-		align-items: stretch;
-		grid-template-columns: repeat(1, minmax(200px, 1fr));
-		grid-column-gap: 15px;
-		grid-row-gap: 15px;
-		width: 100%;
-		max-width: 100%;
-
-		@include breakpoint(phone) {
-			grid-template-columns: repeat(2, minmax(200px, 1fr));
-		}
-
-		@include breakpoint(tablet) {
-			grid-template-columns: repeat(3, minmax(200px, 1fr));
-			grid-column-gap: 32px;
-			grid-row-gap: 32px;
-		}
-	}
-
-	&__scope {
-		//todo add many
-	}
-
-	&__scopeTitle {
-		font-size: 2rem;
-	}
-
-	&__scopeDescription {
-		font-size: 1.4rem;
-		color: #50505e;
 	}
 }
