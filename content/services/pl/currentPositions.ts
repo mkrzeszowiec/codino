@@ -1,6 +1,6 @@
 import { Position } from 'types/common';
 
-export const CURRENT_POSITIONS: Position[] = [
+export const SERVICES_PL: Position[] = [
 	{
 		title: 'Backend',
 		description:
@@ -29,7 +29,8 @@ export const CURRENT_POSITIONS: Position[] = [
 		title: 'Frontend',
 		description:
 			'Rozwijanie frontendu jest istotne dla utrzymania satysfakcji użytkownika, ponieważ decyduje ono o tym, co widzą i jak wchodzą w interakcje z aplikacją. Aby zbudować atrakcyjną i funkcjonalną aplikację, niezbędne jest zadbanie o jakość frontendu.\n\n' +
-			'Korzystając z nowoczesnych technologii, zapewniamy, że Twoja aplikacja będzie szybka, łatwa w użyciu i przede wszystkim piękna.',
+			'Dobieramy frameworki i narzędzia, aby spełniać wymagania biznesowe i oczekiwane standardy. ' +
+			'Korzystając z nowoczesnych technologii, zapewniamy, że Twoja aplikacja będzie szybka, łatwa w użyciu i przede wszystkim piękna. Potrafimy być niezależnym zespołem lub częścią zespołu developerskiego.',
 		shortDescription: '',
 		slug: 'frontend',
 		icons: ['react', 'angular', 'ts', 'kotlin', 'android', 'ios', 'docker']
@@ -38,8 +39,8 @@ export const CURRENT_POSITIONS: Position[] = [
 		title: 'Body leasing',
 		description:
 			'Jeśli Twoja firma potrzebuje specjalistów, możemy Ci ich zapewnić. ' +
-			'Jesteśmy specjalistami w dostarczaniu wsparcia dla przedsiębiorstw w realizacji projektów IT. W naszej ofercie znajdują się tylko dokładnie sprawdzeni i wybrani specjaliści, którzy są kierowani do projektów odpowiednio do ich umiejętności, zainteresowań i potrzeb. \n\n' +
-			'Jeśli potrzebujesz dodatkowej pomocy, jesteśmy w stanie szybko dostarczyć Ci dodatkowe zasoby. Nasza współpraca może być skoncentrowana na doradztwie i wsparciu w wyborze personelu, ich szkoleniu i wyborze odpowiedniej technologii, a także na wdrożeniu naszych pracowników do już trwającego projektu. \n\n' +
+			'W naszej ofercie znajdują się tylko dokładnie sprawdzeni i wybrani specjaliści, którzy są kierowani do projektów odpowiednio do ich umiejętności, zainteresowań i potrzeb. \n\n' +
+			'Jeśli potrzebujesz dodatkowej pomocy, jesteśmy w stanie szybko dostarczyć Ci dodatkowe zasoby. Nasza współpraca może być skoncentrowana na doradztwie i wsparciu w wyborze ludzi, ich szkoleniu, wyborze odpowiedniej technologii, a także na wdrożeniu naszych pracowników do już trwającego projektu. \n\n' +
 			'Naszym priorytetem jest tworzenie wydajnego i kompetentnego personelu w dziedzinie frontend/backend, a także w dziedzinie testów i zarządzania projektem. ',
 		shortDescription: '',
 		slug: 'body-leasing',

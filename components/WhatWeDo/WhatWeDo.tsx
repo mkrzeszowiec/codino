@@ -1,10 +1,12 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Position from 'components/WhatWeDo/Position';
-import { CURRENT_POSITIONS } from 'content/currentPositions';
 import { Trans, useTranslation } from 'next-i18next';
+import { getServicesTranslated } from 'content/services/services';
 
 const WhatWeDo = () => {
 	const { t } = useTranslation();
+	const router = useRouter();
 
 	return (
 		<section className="whatWeDo" data-aos="fade-down">
@@ -25,7 +27,7 @@ const WhatWeDo = () => {
 			</div>
 
 			<div className="whatWeDo__positions">
-				{CURRENT_POSITIONS.map(position => (
+				{getServicesTranslated(router.locale).map(position => (
 					<Position position={position} key={position.slug} />
 				))}
 			</div>
