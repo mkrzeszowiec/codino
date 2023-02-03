@@ -41,6 +41,8 @@
 	}
 
 	&__description {
+		white-space: pre-line;
+
 		@include breakpoint(tablet) {
 			width: 60%;
 		}

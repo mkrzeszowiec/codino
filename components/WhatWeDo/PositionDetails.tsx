@@ -1,4 +1,3 @@
-import CheckCircleIcon from 'components/icons/CheckCircle';
 import { Position } from 'types/common';
 import { getNumberWithLeadingZero } from 'utils/utils';
 import Image from 'next/image';
@@ -9,7 +8,7 @@ interface PositionDetailsProps {
 }
 
 const PositionDetails: React.FC<PositionDetailsProps> = ({ position, index }) => {
-	const { title, description, slug, scope, technologies } = position;
+	const { title, description, slug, icons } = position;
 
 	return (
 		<div className="positionDetails" id={slug}>
@@ -18,12 +17,10 @@ const PositionDetails: React.FC<PositionDetailsProps> = ({ position, index }) =>
 					<h4 className="positionDetails__name">
 						<span className="positionDetails__number">{getNumberWithLeadingZero(index)}</span>
 						{title}
-					</h4>
 
-					<p className="positionDetails__description">
-						{description}
-						<br /> <br />
-						{technologies?.map(technology => (
+						<br />
+						<br />
+						{icons?.map(technology => (
 							<Image
 								key={technology}
 								className="positionDetails__technology"
@@ -34,15 +31,9 @@ const PositionDetails: React.FC<PositionDetailsProps> = ({ position, index }) =>
 								alt={technology}
 							/>
 						))}
-					</p>
-				</div>
+					</h4>
 
-				<div className="positionDetails__scope">
-					<span className="positionDetails__scopeIcon">
-						<CheckCircleIcon />
-					</span>
-					<h5 className="positionDetails__scopeTitle">Zakres</h5>
-					<p className="positionDetails__scopeDescription">{scope}</p>
+					<p className="positionDetails__description">{description}</p>
 				</div>
 			</div>
 		</div>

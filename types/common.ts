@@ -23,7 +23,8 @@ export type technology =
 	| 'php'
 	| 'aws'
 	| 'meilisearch'
-	| 'teradata';
+	| 'teradata'
+	| 'leasing';
 
 export interface Product {
 	title: string;
@@ -56,9 +57,8 @@ export interface Position {
 	title: string;
 	description: string;
 	shortDescription: string;
-	scope: string;
 	slug: string;
-	technologies?: technology[];
+	icons?: technology[];
 }
 
 export interface JobOffer {
