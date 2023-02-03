@@ -68,6 +68,6 @@ export interface JobOffer {
 	slug: string;
 	roleAndResponsibilities: string[];
 	requirements: string[];
-	experienceLevel: 'junior' | 'mid' | 'senior';
-	mode: 'remote' | 'office' | 'hybrid';
+	experienceLevel: string;
+	mode: string;
 }

@@ -9,7 +9,9 @@ const CareerHeader = () => {
 		<section className="careerHeader">
 			<div className="careerHeader__texts">
 				<SectionTitle className="careerHeader__title">{t('components.career.header')}</SectionTitle>
-				<p className="careerHeader__description">{t('components.career.headerDescription')}</p>
+				<p className="careerHeader__description">
+					{t('components.career.headerDescription')}
+				</p>
 			</div>
 
 			<div className="careerHeader__imageWrapper">

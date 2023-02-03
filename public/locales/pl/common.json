@@ -58,7 +58,7 @@
 		},
 		"career": {
 			"header": "Kariera",
-			"headerDescription": "W Codino szukamy ambitnych programistów, którzy chcą rozwijać swoje umiejętności i karierę w dynamicznie rozwijającej się branży IT. Oferujemy możliwość pracy przy interesujących projektach dla różnych branż oraz przy wykorzystaniu najnowszych technologii.",
+			"headerDescription": "W Codino szukamy ambitnych programistów, którzy chcą rozwijać swoje umiejętności i karierę w dynamicznie rozwijającej się branży IT. Oferujemy możliwość pracy przy interesujących projektach dla różnych branż oraz przy wykorzystaniu najnowszych technologii. \n\nStaramy się tworzyć nieformalną atmosferę sprzyjającą pracy. Oferujemy bardzo elastyczne warunki pracy, a zarobki dostosowujemy do umiejętności i zaangażowania. W tej chwili pracujemy na Mokotowie (bardzo blisko stacji metra Pole Mokotowskie), ale część prac wykonujemy zdalnie.",
 			"jobsTitle": "Dostępne oferty pracy",
 			"jobsNotFoundTitle": "Nie widzisz odpowiedniej oferty dla siebie?",
 			"jobsNotFoundTitle2": "Napisz do nas!",
@@ -82,7 +82,7 @@
 		},
 		"meetCodino": {
 			"header": "Poznaj codino",
-			"description": "Wspieramy rozwój naszych pracowników, aby mogli osiągać swoje cele i rozwijać swoje umiejętności, co przyczynia się do sukcesu naszej firmy."
+			"description": "Jesteśmy zainteresowani zatrudnieniem zarówno osób z doświadczeniem jak i rozpoczynających swoją karierę i otwartych na naukę nowych technologii, wzorców i dobrych praktyk programistycznych."
 		},
 		"notFoundJobBanner": {
 			"header": "Nie znalazłeś oferty dla siebie? <strong>Napisz do nas</strong>"
