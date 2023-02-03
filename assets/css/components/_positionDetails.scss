@@ -23,7 +23,7 @@
 		top: -40px;
 
 		@include breakpoint(tablet) {
-			font-size: 5.6rem;
+			font-size: 6rem;
 			top: -40px;
 			left: -16px;
 		}
@@ -35,6 +35,7 @@
 		position: relative;
 
 		@include breakpoint(tablet) {
+			font-size: 3.2rem;
 			width: 40%;
 		}
 	}
@@ -47,18 +48,42 @@
 
 	&__technology {
 		filter: invert(1);
-		height: 40px;
+		height: 30px;
 		width: auto;
 		margin-right: 2rem;
 	}
 
+	&__scopeList {
+		padding-top: 6rem;
+		display: grid;
+		align-items: stretch;
+		grid-template-columns: repeat(1, minmax(200px, 1fr));
+		grid-column-gap: 15px;
+		grid-row-gap: 15px;
+		width: 100%;
+		max-width: 100%;
+
+		@include breakpoint(phone) {
+			grid-template-columns: repeat(2, minmax(200px, 1fr));
+		}
+
+		@include breakpoint(tablet) {
+			grid-template-columns: repeat(3, minmax(200px, 1fr));
+			grid-column-gap: 32px;
+			grid-row-gap: 32px;
+		}
+	}
+
 	&__scope {
+		//todo add many
 	}
 
 	&__scopeTitle {
-		font-size: 24px;
+		font-size: 2rem;
 	}
 
 	&__scopeDescription {
+		font-size: 1.4rem;
+		color: #50505e;
 	}
 }

@@ -4,6 +4,11 @@
 	pointer-events: none;
 	touch-action: none;
 
+	svg {
+		pointer-events: none;
+		touch-action: none;
+	}
+
 	&__title {
 		@include breakpoint(tablet) {
 			position: relative;
