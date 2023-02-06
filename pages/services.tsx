@@ -31,7 +31,7 @@ const ServicesPage = () => {
 				<StartWork />
 			</div>
 
-			<UseCasesCarousel />
+			<UseCasesCarousel title={t('common.subpages.caseStudy')} />
 		</Main>
 	);
 };

@@ -1,5 +1,6 @@
 import Button from 'components/Button/Button';
 import { useTranslation } from 'next-i18next';
+import { IoMdBriefcase } from 'react-icons/io';
 
 const JoinUs = () => {
 	const { t } = useTranslation();
@@ -10,7 +11,7 @@ const JoinUs = () => {
 
 			<p className="joinUs__description">{t('components.joinUs.description')}</p>
 
-			<Button className="joinUs__button" label={t('common.getHired')} href="/career" />
+			<Button className="joinUs__button" label={t('common.getHired')} href="/career" icon={<IoMdBriefcase />} />
 		</section>
 	);
 };

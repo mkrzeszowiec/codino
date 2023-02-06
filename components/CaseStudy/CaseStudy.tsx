@@ -10,47 +10,55 @@ import CaseStudyTechnologies from 'components/CaseStudy/CaseStudyTechnologies';
 import CaseStudySolutions from 'components/CaseStudy/CaseStudySolutions';
 import CaseStudyMap from 'components/CaseStudy/CaseStudyMap';
 import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import { useTranslation } from 'next-i18next';
 
 interface CaseStudyProps {
 	product: Product;
 }
 
-const CaseStudy: React.FC<CaseStudyProps> = ({ product }) => (
-	<section className="caseStudy">
-		<div className="container">
-			<Breadcrumbs currentPage={product.title} type="caseStudy" />
+const CaseStudy: React.FC<CaseStudyProps> = ({ product }) => {
+	const { t } = useTranslation();
 
-			<SectionTitle className="caseStudy__title">{product.title}</SectionTitle>
+	return (
+		<section className="caseStudy">
+			<div className="container">
+				<Breadcrumbs currentPage={product.title} type="caseStudy" />
 
-			<p className="caseStudy__description">
-				<Linkify>{product.description}</Linkify>
-			</p>
+				<SectionTitle className="caseStudy__title">{product.title}</SectionTitle>
 
-			<CaseStudyInNutshell product={product} />
-		</div>
+				<p className="caseStudy__description">
+					<Linkify>{product.description}</Linkify>
+				</p>
 
-		<Image
-			src={`/images/case-study/${product.slug}/banner.jpg`}
-			className="caseStudy__banner"
-			alt=""
-			width={4000}
-			height={500}
-		/>
+				<CaseStudyInNutshell product={product} />
+			</div>
 
-		<div className="container">
-			<CaseStudyScopeOfWork product={product} />
-			<CaseStudyGoals product={product} />
-		</div>
+			<Image
+				src={`/images/case-study/${product.slug}/banner.jpg`}
+				className="caseStudy__banner"
+				alt=""
+				width={4000}
+				height={500}
+			/>
 
-		<CaseStudyTechnologies product={product} />
+			<div className="container">
+				<CaseStudyScopeOfWork product={product} />
+				<CaseStudyGoals product={product} />
+			</div>
 
-		<div className="container">
-			<CaseStudyMap selectedCountry={product.countries} />
-			<CaseStudySolutions product={product} />
-		</div>
+			<div className="container">
+				<CaseStudyMap selectedCountry={product.countries} />
+			</div>
 
-		<UseCasesCarousel />
-	</section>
-);
+			<CaseStudyTechnologies product={product} />
+
+			<div className="container">
+				<CaseStudySolutions product={product} />
+			</div>
+
+			<UseCasesCarousel title={t('components.caseStudy.showOther')} />
+		</section>
+	);
+};
 
 export default CaseStudy;

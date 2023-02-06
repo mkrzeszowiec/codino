@@ -1,12 +1,12 @@
 .useCasesCarousel {
 	--slide-spacing: 4rem;
-	--slide-size: 80vw;
+	--slide-size: 95vw;
 	--slide-height: 70rem;
 	padding: 2rem 0 4rem;
 	position: relative;
 
 	@include breakpoint(tablet) {
-		--slide-size: 45vw;
+		--slide-size: 60vw;
 		--slide-height: 50rem;
 	}
 

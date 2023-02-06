@@ -7,7 +7,7 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { getOurProductsTranslated } from 'content/ourProducts';
 
-const UseCasesCarousel: React.FC = () => {
+const UseCasesCarousel: React.FC<{ title: string }> = ({ title }) => {
 	const { t } = useTranslation();
 	const router = useRouter();
 
@@ -36,7 +36,7 @@ const UseCasesCarousel: React.FC = () => {
 	return (
 		<>
 			<div className="container position-relative">
-				<h3 className="useCasesCarousel__title">{t('components.caseStudy.header')}</h3>
+				<h3 className="useCasesCarousel__title">{title}</h3>
 				<Button
 					className="useCasesCarousel__allButton"
 					type="border-black"

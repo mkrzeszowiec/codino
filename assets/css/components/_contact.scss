@@ -28,13 +28,17 @@
 	&__recruitmentContact {
 		font-size: 1.2rem;
 		margin-top: 25px;
+		color: var(--color-primary);
 		text-transform: uppercase;
 		font-weight: 600;
 	}
 
 	&__url {
-		color: var(--color-primary);
 		display: block;
 		font-size: 1.8rem;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }

@@ -38,12 +38,12 @@
 			"subheader": "We're group of professional and passionate developers based in Warsaw. We'll help you launch your product"
 		},
 		"contact": {
-			"header": "Contact",
+			"header": "Contact our team",
 			"description": "Contact us to find out how we can help with your project",
 			"urlTitle1": "Join us",
 			"urlTitle2": "Cooperation",
 			"formHeader": "How can we help you?",
-			"mapHeader": "Contact our team"
+			"mapHeader": "Visit us in Warsaw"
 		},
 		"joinUs": {
 			"header": "Join us",
@@ -68,10 +68,11 @@
 		"caseStudy": {
 			"header": "Case study",
 			"description": "See the results of working with our clients and see for yourself the benefits we can bring to your business.",
-			"technologies": "Technologies",
+			"technologies": "Technologies used",
 			"scope": "Scope of work",
 			"goals": "Challenges and goals of the project",
-			"map": "Regions of operation"
+			"map": "Regions of operation",
+			"showOther": "See other projects"
 		},
 		"services": {
 			"header": "Services",

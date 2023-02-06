@@ -56,8 +56,8 @@
 
 	&__technology {
 		display: flex;
-		justify-content: center;
 		align-items: center;
+		flex-wrap: wrap;
 		font-size: 1.4rem;
 	}
 

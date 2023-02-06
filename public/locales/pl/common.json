@@ -38,12 +38,12 @@
 			"subheader": "Jesteśmy grupą profesjonalnych i pełnych pasji programistów. Pomożemy Ci wprowadzić Twój produkt na rynek"
 		},
 		"contact": {
-			"header": "Skontaktuj się",
+			"header": "Skontaktuj się z naszym zespołem",
 			"description": "Skontaktuj się z nami i dowiedz się jak możemy pomóc w realizacji Twojego projektu",
 			"urlTitle1": "Dołącz do nas",
 			"urlTitle2": "Współpraca",
 			"formHeader": "Jak możemy Ci pomóc?",
-			"mapHeader": "Skontaktuj się z naszym zespołem"
+			"mapHeader": "Odwiedź nas w Warszawie"
 		},
 		"joinUs": {
 			"header": "Dołącz do nas",
@@ -68,10 +68,11 @@
 		"caseStudy": {
 			"header": "Case study",
 			"description": "Zapoznaj się z case studies wybranych projektów, nad którymi pracowaliśmy.",
-			"technologies": "Technologie",
+			"technologies": "Wykorzystane technologie",
 			"scope": "Zakres prac",
 			"goals": "Wyzwania i cele projektu",
-			"map": "Zasięg projektu"
+			"map": "Zasięg projektu",
+			"showOther": "Zobacz inne projekty"
 		},
 		"services": {
 			"header": "Oferta",

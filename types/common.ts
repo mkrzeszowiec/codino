@@ -45,6 +45,7 @@ export interface Product {
 	};
 	goals?: string;
 	technologies?: technology[];
+	//3 characters, check in content/worldMap.json
 	countries?: string[];
 	solutions?: {
 		title?: string;
