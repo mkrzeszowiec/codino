@@ -6,6 +6,7 @@ import MarkerIcon from 'components/icons/Marker';
 import StarIcon from 'components/icons/Star';
 import CheckCircleIcon from 'components/icons/CheckCircle';
 import { useTranslation } from 'next-i18next';
+import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
 
 const JobDetails: React.FC<{ job: JobOffer }> = ({ job }) => {
 	const { t } = useTranslation();
@@ -14,6 +15,8 @@ const JobDetails: React.FC<{ job: JobOffer }> = ({ job }) => {
 	return (
 		<section className="jobDetails">
 			<div className="jobDetails__infoWrapper">
+				<Breadcrumbs currentPage={job.title} type="carrer" />
+
 				<SectionTitle>{title}</SectionTitle>
 
 				<p className="jobDetails__description">{description}</p>

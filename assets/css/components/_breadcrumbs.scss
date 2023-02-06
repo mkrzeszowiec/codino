@@ -1,0 +1,14 @@
+.breadcrumbs {
+	font-size: 1.4rem;
+	position: relative;
+	bottom: 30px;
+	padding: 10px 0;
+
+	&__url {
+		color: var(--color-primary);
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

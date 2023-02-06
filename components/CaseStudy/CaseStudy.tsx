@@ -9,6 +9,7 @@ import CaseStudyGoals from 'components/CaseStudy/CaseStudyGoals';
 import CaseStudyTechnologies from 'components/CaseStudy/CaseStudyTechnologies';
 import CaseStudySolutions from 'components/CaseStudy/CaseStudySolutions';
 import CaseStudyMap from 'components/CaseStudy/CaseStudyMap';
+import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
 
 interface CaseStudyProps {
 	product: Product;
@@ -17,6 +18,8 @@ interface CaseStudyProps {
 const CaseStudy: React.FC<CaseStudyProps> = ({ product }) => (
 	<section className="caseStudy">
 		<div className="container">
+			<Breadcrumbs currentPage={product.title} type="caseStudy" />
+
 			<SectionTitle className="caseStudy__title">{product.title}</SectionTitle>
 
 			<p className="caseStudy__description">
