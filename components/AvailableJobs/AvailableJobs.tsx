@@ -1,10 +1,12 @@
 import Link from 'next/link';
-import { JOB_OFFERS } from 'content/jobOffers';
 import Job from 'components/AvailableJobs/Job';
 import { useTranslation } from 'next-i18next';
+import { getJobsOfferTranslated } from 'content/jobs/jobs';
+import { useRouter } from 'next/router';
 
 const AvailableJobs = () => {
 	const { t } = useTranslation();
+	const router = useRouter();
 
 	return (
 		<section className="availableJobs" data-aos="fade-down">
@@ -20,7 +22,7 @@ const AvailableJobs = () => {
 			</div>
 
 			<div className="availableJobs__list">
-				{JOB_OFFERS.map(job => (
+				{getJobsOfferTranslated(router.locale).map(job => (
 					<Job job={job} key={job.slug} />
 				))}
 			</div>

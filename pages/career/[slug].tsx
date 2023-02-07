@@ -2,11 +2,11 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import { JobOffer } from 'types/common';
 import JobDetails from 'components/JobDetails/JobDetails';
-import { JOB_OFFERS } from 'content/jobOffers';
 import Main from 'layouts/MainLayout';
 import { getPageTitle } from 'utils/utils';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
+import { getJobsOfferTranslated } from 'content/jobs/jobs';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {
@@ -30,7 +30,7 @@ export const getStaticProps: GetStaticProps = async context => {
 		throw Error('Job not found');
 	}
 
-	const job = JOB_OFFERS.find(job => job.slug === slug);
+	const job = getJobsOfferTranslated(DEFAULT_LOCALE).find(job => job.slug === slug);
 
 	return {
 		props: {

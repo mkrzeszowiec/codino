@@ -5,7 +5,7 @@ import Product from 'components/Product/Product';
 import Button from 'components/Button/Button';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import { getOurProductsTranslated } from 'content/ourProducts';
+import { getOurProductsTranslated } from 'content/products/products';
 
 const UseCasesCarousel: React.FC<{ title: string }> = ({ title }) => {
 	const { t } = useTranslation();

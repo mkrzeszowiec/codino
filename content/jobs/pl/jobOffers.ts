@@ -1,6 +1,6 @@
 import { JobOffer } from 'types/common';
 
-export const JOB_OFFERS: JobOffer[] = [
+export const JOB_OFFERS_PL: JobOffer[] = [
 	{
 		title: 'Full-stack developer',
 		slug: 'fullstack-developer',
