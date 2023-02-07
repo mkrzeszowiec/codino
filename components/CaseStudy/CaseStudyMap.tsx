@@ -1,5 +1,5 @@
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
-import map from 'content/worldMap.json';
+import map from 'public/maps/worldMap.json';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';

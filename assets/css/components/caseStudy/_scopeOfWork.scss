@@ -34,6 +34,13 @@
 		}
 	}
 
+	&__listIcon {
+		background: var(--color-primary);
+		border-radius: 50%;
+		padding: 7px;
+		@include flex-center;
+	}
+
 	&__listItem {
 		@include flex-center;
 		flex-direction: column;

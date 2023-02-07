@@ -40,12 +40,13 @@ export interface Product {
 		points: {
 			index: number;
 			title?: string;
+			icon?: 'partnership' | 'scope' | 'integration';
 			description: string;
 		}[];
 	};
 	goals?: string;
 	technologies?: technology[];
-	//3 characters - check in content/worldMap.json or use static values
+	//3 characters - check in maps/worldMap.json or use static values
 	countries?: string[] | 'europe' | 'pl' | 'uk';
 	solutions?: {
 		title?: string;

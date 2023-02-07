@@ -18,18 +18,21 @@ const RECAST: Product = {
 			{
 				index: 1,
 				title: 'Praca drużynowa',
+				icon: 'partnership',
 				description:
 					'Współpraca z zespołem klienta. Porozumienie i odpowiedni przepływ informacji to fundament każdego projektu.'
 			},
 			{
 				index: 2,
 				title: 'Praca drużynowa',
+				icon: 'scope',
 				description:
 					'Rozwój aplikacji frontendowych, a także rozwój backendu w architekturze mikroserwisów. Projektowanie architektury systemu i jednoczesne testy wydajnościowe.'
 			},
 			{
 				index: 3,
 				title: 'Praca drużynowa',
+				icon: 'integration',
 				description: 'Integracja z zewnętrznymi systemami, takimi jak np. Stripe.'
 			}
 		]
