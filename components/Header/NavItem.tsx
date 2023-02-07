@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { getCamelCased } from 'utils/utils';
 
-const ROUTES = ['services', 'about', 'case-study', 'team', 'career', 'contact'];
+const ROUTES = ['services', 'about', 'case-study', 'career', 'contact'];
 
 const NavItem = () => {
 	const router = useRouter();

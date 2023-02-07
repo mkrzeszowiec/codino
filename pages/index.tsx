@@ -4,7 +4,6 @@ import Products from 'components/Products/Products';
 import WhatWeDo from 'components/WhatWeDo/WhatWeDo';
 import TechnologiesCarousel from 'components/TechnologiesCarousel/TechnologiesCarousel';
 import StartWork from 'components/StartWork/StartWork';
-import MeetCodino from 'components/MeetCodino/MeetCodino';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
@@ -22,7 +21,6 @@ const IndexPage = () => {
 
 			<div className="container" data-aos="fade-down">
 				<StartWork />
-				<MeetCodino />
 			</div>
 		</MainLayout>
 	);

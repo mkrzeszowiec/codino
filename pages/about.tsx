@@ -1,12 +1,14 @@
 import Main from 'layouts/MainLayout';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
 import MeetCodino from 'components/MeetCodino/MeetCodino';
+import CompanyValues from 'components/CompanyValues/CompanyValues';
+import TeamStats from 'components/TeamStats/TeamStats';
+import TeamHeader from 'components/TeamHeader/TeamHeader';
 import { getPageTitle } from 'utils/utils';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 import { useTranslation } from 'next-i18next';
-import CompanyValues from 'components/CompanyValues/CompanyValues';
 
 const AboutPage = () => {
 	const { t } = useTranslation();
@@ -17,7 +19,10 @@ const AboutPage = () => {
 				<SubpageIntro title={t('components.about.header')} description={t('components.about.description')} />
 				<MeetCodino />
 				<CompanyValues />
+				<TeamHeader />
 			</div>
+
+			<TeamStats />
 		</Main>
 	);
 };
