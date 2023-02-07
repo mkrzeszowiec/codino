@@ -27,7 +27,7 @@ const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
 				</p>
 
 				<p className="product__technology">
-					{t('components.caseStudy.technologies')}:
+					<span>{t('components.caseStudy.technologies')}:</span>
 					{visibleTechnologies?.map(technology => (
 						<Image
 							key={technology}

@@ -7,7 +7,7 @@ export const JOB_OFFERS: JobOffer[] = [
 		description:
 			'Nasze podstawowe wymaganie to umiejętność tworzenia aplikacji w REACT + znajomość Node.js oraz chęć nauki nowych rzeczy.',
 		mode: 'hybrydowa',
-		payRanges: 'widełki todo (B2B)',
+		payRanges: 'todo (B2B)',
 		experienceLevel: 'mid',
 		roleAndResponsibilities: [
 			'tworzeniem rozbudowanej aplikacji frontendowej opartej o React',
@@ -23,7 +23,7 @@ export const JOB_OFFERS: JobOffer[] = [
 		description:
 			'Nasze podstawowe wymaganie to bardzo dobra znajomość TypeScript oraz Node.js a także otwartość na nowe rzeczy (przede wszystkim architekturę mikroserwisów).',
 		mode: 'hybrydowa',
-		payRanges: 'widełki todo (B2B)',
+		payRanges: 'todo (B2B)',
 		experienceLevel: 'mid, senior',
 		roleAndResponsibilities: [
 			'tworzeniem rozbudowanej aplikacji backendowej opartej na Node.js w architekturze mikroserwisów',

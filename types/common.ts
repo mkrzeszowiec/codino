@@ -32,9 +32,9 @@ export interface Product {
 	imageSource: string;
 	slug: string;
 	color: string;
-	date: string;
+	date?: string;
 	scopeOfTechnology?: string;
-	industry: string;
+	industry?: string;
 	scopeOfWork?: {
 		description: string;
 		points: {
