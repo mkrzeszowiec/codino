@@ -10,6 +10,7 @@ const INSIGHTS: Product = {
 	date: '2017-2021',
 	scopeOfTechnology: 'backend, frontend',
 	industry: 'airlines, analytics',
+	countries: ['USA', 'PAN'],
 	technologies: ['java', 'spring', 'angular', 'elastic', 'teradata'],
 	scopeOfWork: {
 		description: '',

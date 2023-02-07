@@ -15,4 +15,11 @@
 			top: 4rem;
 		}
 	}
+
+	&__image {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		padding-top: 5rem;
+	}
 }

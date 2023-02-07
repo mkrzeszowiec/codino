@@ -45,8 +45,8 @@ export interface Product {
 	};
 	goals?: string;
 	technologies?: technology[];
-	//3 characters, check in content/worldMap.json
-	countries?: string[];
+	//3 characters - check in content/worldMap.json or use static values
+	countries?: string[] | 'europe' | 'pl' | 'uk';
 	solutions?: {
 		title?: string;
 		description: string;

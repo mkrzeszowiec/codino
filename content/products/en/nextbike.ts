@@ -7,7 +7,7 @@ const NEXTBIKE: Product = {
 	slug: 'nextbike',
 	color: '#0f84d0',
 	date: '2020-2022',
-	countries: ['POL', 'DEU'],
+	countries: 'pl',
 	scopeOfTechnology: 'backend development, system architecture redesign',
 	industry: 'rental, bicycle transportation, public services',
 	scopeOfWork: {

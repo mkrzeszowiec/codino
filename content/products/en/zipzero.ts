@@ -7,7 +7,7 @@ const ZIPZERO: Product = {
 	slug: 'zipzero',
 	color: '#2c368a',
 	date: '2019 - now',
-	countries: ['GBR'],
+	countries: 'uk',
 	scopeOfTechnology: 'achitecture, backend, mobile app, ML for fraud detection, backoffice panel',
 	industry: 'cashback, shopping',
 	scopeOfWork: {
