@@ -3,12 +3,14 @@ import map from 'content/worldMap.json';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
+import { Product } from 'types/common';
 
 const PRIMARY_COUNTRY_COLOR = '#15a99b';
 const DEFAULT_COUNTRY_COLOR = '#dcdcdc';
 
-const CaseStudyMap: React.FC<{ selectedCountry?: string[] }> = ({ selectedCountry }) => {
+const CaseStudyMap: React.FC<{ product?: Product }> = ({ product }) => {
 	const { t } = useTranslation();
+	const selectedCountry = product.countries;
 	const getFillColor = (id: string): string =>
 		selectedCountry?.includes(id) ? PRIMARY_COUNTRY_COLOR : DEFAULT_COUNTRY_COLOR;
 

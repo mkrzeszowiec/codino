@@ -2,10 +2,8 @@ import Linkify from 'react-linkify';
 import { Product } from 'types/common';
 import Image from 'next/image';
 import SectionTitle from 'components/SectionTitle/SectionTitle';
-import CaseStudyInNutshell from 'components/CaseStudy/CaseStudyInNutshell';
 import UseCasesCarousel from 'components/UseCasesCarousel/UseCasesCarousel';
 import CaseStudyScopeOfWork from 'components/CaseStudy/CaseStudyScopeOfWork';
-import CaseStudyGoals from 'components/CaseStudy/CaseStudyGoals';
 import CaseStudyTechnologies from 'components/CaseStudy/CaseStudyTechnologies';
 import CaseStudySolutions from 'components/CaseStudy/CaseStudySolutions';
 import CaseStudyMap from 'components/CaseStudy/CaseStudyMap';
@@ -29,8 +27,6 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ product }) => {
 				<p className="caseStudy__description">
 					<Linkify>{product.description}</Linkify>
 				</p>
-
-				<CaseStudyInNutshell product={product} />
 			</div>
 
 			<Image
@@ -43,11 +39,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ product }) => {
 
 			<div className="container">
 				<CaseStudyScopeOfWork product={product} />
-				<CaseStudyGoals product={product} />
-			</div>
-
-			<div className="container">
-				<CaseStudyMap selectedCountry={product.countries} />
+				<CaseStudyMap product={product} />
 			</div>
 
 			<CaseStudyTechnologies product={product} />
