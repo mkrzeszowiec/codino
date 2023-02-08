@@ -6,7 +6,7 @@ const TeamHeader = () => {
 	const { t } = useTranslation();
 
 	return (
-		<section className="teamHeader" data-aos="fade-up">
+		<section className="teamHeader" data-aos="fade-down">
 			<div className="teamHeader__texts">
 				<SectionTitle className="teamHeader__title">{t('components.team.header')}</SectionTitle>
 				<p className="teamHeader__description">{t('components.team.headerDescription')}</p>
