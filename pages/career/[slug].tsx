@@ -1,4 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { ParsedUrlQuery } from 'querystring';
 import { JobOffer } from 'types/common';
 import JobDetails from 'components/JobDetails/JobDetails';
@@ -41,12 +43,20 @@ export const getStaticProps: GetStaticProps = async context => {
 };
 
 const JobPage = ({ job }: Props) => {
+	const router = useRouter();
+	const [translatedJob, setTranslatedJob] = useState(job);
+
+	useEffect(() => {
+		const currentJob = getJobsOfferTranslated(router.locale).find(j => j?.slug === job?.slug);
+		setTranslatedJob(currentJob);
+	}, [job, router.locale]);
+
 	if (!job) return null;
 
 	return (
-		<Main title={getPageTitle(job.title)}>
+		<Main title={getPageTitle(translatedJob.title)}>
 			<div className="container">
-				<JobDetails job={job} />
+				<JobDetails job={translatedJob} />
 			</div>
 		</Main>
 	);
