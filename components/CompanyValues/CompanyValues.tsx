@@ -18,7 +18,7 @@ const CompanyValues = () => {
 				</div>
 
 				<div className="companyValues__imageWrapper">
-					<Image className="companyValues__image" src="/images/team2.png" alt="" width={600} height={600} />
+					<Image className="companyValues__image" src="/images/values.jpg" alt="" width={600} height={600} />
 				</div>
 			</div>
 

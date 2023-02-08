@@ -13,7 +13,7 @@ const TeamHeader = () => {
 			</div>
 
 			<div className="teamHeader__imageWrapper">
-				<Image className="teamHeader__image" src={'/images/team.png'} width={400} height={450} alt="" />
+				<Image className="teamHeader__image" src={'/images/team.jpg'} width={600} height={400} alt="" />
 			</div>
 		</section>
 	);

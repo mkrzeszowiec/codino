@@ -15,7 +15,7 @@ const CareerHeader = () => {
 			</div>
 
 			<div className="careerHeader__imageWrapper">
-				<Image className="careerHeader__image" src={'/images/career-header.png'} width={400} height={500} alt="" />
+				<Image className="careerHeader__image" src={'/images/career-header.jpg'} width={800} height={500} alt="" />
 			</div>
 		</section>
 	);

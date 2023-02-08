@@ -15,7 +15,7 @@ const ServicesIntro = () => {
 			</div>
 
 			<div className="servicesIntro__imageWrapper">
-				<Image className="servicesIntro__image" src="/images/services-header.png" width={600} height={600} alt="" />
+				<Image className="servicesIntro__image" src="/images/services.jpg" width={600} height={600} alt="" />
 			</div>
 		</section>
 	);

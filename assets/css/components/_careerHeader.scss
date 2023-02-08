@@ -6,7 +6,7 @@
 	background: var(--background-gradient);
 
 	@include breakpoint(tablet) {
-		padding: 20px 0 40px 0;
+		padding: 90px 0 40px 0;
 		flex-direction: row;
 		@include flex-center;
 	}
@@ -34,8 +34,9 @@
 	}
 
 	&__image {
-		max-height: 100%;
-		width: auto;
-		object-fit: contain;
+		max-height: 300px;
+		width: 80%;
+		object-fit: cover;
+		border-radius: 10px;
 	}
 }

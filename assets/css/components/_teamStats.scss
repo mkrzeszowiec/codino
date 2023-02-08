@@ -22,12 +22,13 @@
 		padding: 0 var(--container-horizontal-padding);
 		margin: 0 auto;
 		position: relative;
+		max-height: 500px;
 		top: 40px;
 		border-radius: var(--border-radius);
 		max-width: 1000px;
 		width: 100%;
 		height: auto;
-		object-fit: contain;
+		object-fit: cover;
 	}
 
 	&__header {
