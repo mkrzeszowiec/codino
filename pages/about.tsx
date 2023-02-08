@@ -1,6 +1,5 @@
 import Main from 'layouts/MainLayout';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
-import MeetCodino from 'components/MeetCodino/MeetCodino';
 import CompanyValues from 'components/CompanyValues/CompanyValues';
 import TeamStats from 'components/TeamStats/TeamStats';
 import TeamHeader from 'components/TeamHeader/TeamHeader';
@@ -17,12 +16,14 @@ const AboutPage = () => {
 		<Main title={getPageTitle(t('common.subpages.about'))}>
 			<div className="container">
 				<SubpageIntro title={t('components.about.header')} description={t('components.about.description')} />
-				<MeetCodino />
-				<CompanyValues />
-				<TeamHeader />
 			</div>
 
 			<TeamStats />
+
+			<div className="container">
+				<CompanyValues />
+				<TeamHeader />
+			</div>
 		</Main>
 	);
 };

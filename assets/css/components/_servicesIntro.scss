@@ -13,6 +13,18 @@
 		align-items: flex-start;
 		flex-direction: column;
 		gap: 20px;
+
+		@include breakpoint(tablet) {
+			width: 50%;
+		}
+	}
+
+	&__imageWrapper {
+		text-align: center;
+
+		@include breakpoint(tablet) {
+			width: 50%;
+		}
 	}
 
 	&__title {
@@ -22,12 +34,10 @@
 
 	&__image {
 		height: 100%;
-		width: auto;
+		max-height: 450px;
+		width: 100%;
 		max-width: 100%;
-
-		@include breakpoint(tablet) {
-			max-width: initial;
-		}
+		object-fit: contain;
 	}
 
 	@include breakpoint(tablet) {

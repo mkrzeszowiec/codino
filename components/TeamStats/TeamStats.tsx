@@ -7,7 +7,7 @@ const TeamStats = () => {
 
 	return (
 		<section className="teamStats">
-			<Image className="teamStats__image" src={'/images/team2.png'} width={1000} height={1000} alt="" />
+			<Image className="teamStats__image" src={'/images/stats.png'} width={1500} height={1500} alt="" />
 
 			<div className="teamStats__wrapper">
 				<div className="teamStats__info">

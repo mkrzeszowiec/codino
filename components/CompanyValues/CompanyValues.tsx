@@ -10,7 +10,7 @@ const CompanyValues = () => {
 	const { t } = useTranslation();
 
 	return (
-		<section className="companyValues" data-aos="fade-down">
+		<section className="companyValues" data-aos="fade-up">
 			<div className="companyValues__top">
 				<div className="companyValues__texts">
 					<SectionTitle>{t('components.companyValues.title')}</SectionTitle>
@@ -18,7 +18,7 @@ const CompanyValues = () => {
 				</div>
 
 				<div className="companyValues__imageWrapper">
-					<Image className="companyValues__image" src="/images/team2.png" alt="" width={600} height={600} />
+					<Image className="companyValues__image" src="/images/values.png" alt="" width={1500} height={1500} />
 				</div>
 			</div>
 
