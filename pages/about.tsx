@@ -1,8 +1,8 @@
 import Main from 'layouts/MainLayout';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
-import CompanyValues from 'components/CompanyValues/CompanyValues';
-import TeamStats from 'components/TeamStats/TeamStats';
-import TeamHeader from 'components/TeamHeader/TeamHeader';
+import CompanyValues from 'components/aboutUs/CompanyValues';
+import TeamHeader from 'components/aboutUs/TeamHeader';
+import TeamStats from 'components/aboutUs/TeamStats';
 import { getPageTitle } from 'utils/utils';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
