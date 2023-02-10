@@ -5,7 +5,7 @@ import {
   calculateMagnitude,
   calculateVector,
 } from './utils';
-import colours from './colours';
+import { colors } from 'utils/colors';
 
 const createAsteroidGeometry = radius => {
   const numOfPoints = Math.round(getRandomNum(6, 10));
@@ -30,6 +30,9 @@ const createAsteroidGeometry = radius => {
 };
 
 class Asteroid {
+  //todo
+  [x: string]: any;
+
   constructor({ position, radius, velocity, add, addToScore }) {
     this.position = position;
     this.radius = radius || 100;
@@ -78,7 +81,7 @@ class Asteroid {
       context.save();
       context.translate(this.position.x, this.position.y);
       context.rotate(degreesToRadians(this.direction));
-      context.strokeStyle = colours.fg;
+      context.strokeStyle = colors.background;
       context.lineWidth = 1;
       context.beginPath();
       this.points.forEach((point, index) => {

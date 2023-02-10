@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Game from './Game';
+import Game from 'components/game/Game';
 
 const GameMain = () => {
 	const [playing, setPlaying] = useState(false);
