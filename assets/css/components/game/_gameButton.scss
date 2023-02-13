@@ -38,13 +38,18 @@
 .gameButtonWrapper {
 	position: absolute;
 	top: 0;
-	width: 7rem;
-	height: 7rem;
-	z-index: 9999999;
+	width: 5rem;
+	height: 5rem;
+	z-index: 999;
 	right: 0;
+	display: none;
 
 	&:hover .gameButton {
 		opacity: 1;
+	}
+
+	@include breakpoint(tablet) {
+		display: block;
 	}
 }
 
