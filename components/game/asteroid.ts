@@ -30,7 +30,7 @@ class Asteroid {
 	add: any;
 	addToScore: any;
 	direction: number;
-	rotationSpeed: any;
+	rotationSpeed: number;
 	points: any[];
 	markedForDeletion: boolean;
 

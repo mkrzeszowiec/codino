@@ -7,10 +7,11 @@ import StartWork from 'components/StartWork/StartWork';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
-import GameButton from 'components/GameButton/GameButton';
 import { useState } from 'react';
 import GameMain from 'components/game/GameMain';
 import NoSsr from 'components/NoSsr/NoSsr';
+import GameButton2 from 'components/GameButton/GameButton2';
+import GameButton from 'components/GameButton/GameButton';
 
 const IndexPage = () => {
 	const [isGameOpening, setIsGameOpening] = useState(false);
@@ -31,7 +32,11 @@ const IndexPage = () => {
 
 	return (
 		<MainLayout containerClassName={`homepagePage ${isGameOpening ? 'gameMode' : ''}`}>
-			<GameButton isGameMode={isGameMode} onClick={onClickGame} />
+			{isGameMode ? (
+				<GameButton isGameMode={isGameMode} onClick={onClickGame} />
+			) : (
+				<GameButton2 isGameMode={isGameMode} onClick={onClickGame} />
+			)}
 
 			<NoSsr>
 				{isGameMode ? (
