@@ -83,7 +83,7 @@ class Asteroid {
 			context.translate(this.position.x, this.position.y);
 			context.rotate(degreesToRadians(this.direction));
 			context.strokeStyle = colors.white;
-			context.lineWidth = 1;
+			context.lineWidth = 2;
 			context.beginPath();
 			this.points.forEach((point, index) => {
 				if (index === 0) {

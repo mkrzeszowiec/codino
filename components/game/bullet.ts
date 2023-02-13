@@ -12,7 +12,7 @@ class Bullet {
 	constructor({ position, direction, shipSpeed }) {
 		const speed = shipSpeed + 8;
 
-		this.radius = 3;
+		this.radius = 4;
 		this.position = position;
 		this.direction = direction;
 		this.velocity = calculateVector(speed, this.direction);

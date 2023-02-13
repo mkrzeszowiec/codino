@@ -76,10 +76,10 @@ class Ship {
 		context.lineWidth = 1;
 		context.beginPath();
 		context.moveTo(15, 0);
-		context.lineTo(-15, -12);
+		context.lineTo(-15, -17);
 		context.lineTo(-10, -10);
 		context.lineTo(-10, 10);
-		context.lineTo(-15, 12);
+		context.lineTo(-15, 17);
 		context.closePath();
 		context.fill();
 		context.stroke();
@@ -97,7 +97,7 @@ class Ship {
 		this.velocity = limitMagnitude(this.velocity, 10);
 	}
 
-	updateDirection(keys) {
+	updateDirection(keys): void {
 		if (keys.left) {
 			this.direction -= this.rotationSpeed;
 		}
@@ -112,7 +112,7 @@ class Ship {
 		}
 	}
 
-	updatePosition(viewport) {
+	updatePosition(viewport): void {
 		const { width, height } = viewport;
 
 		this.position.x += this.velocity.x;
@@ -166,7 +166,7 @@ class Ship {
 		const particle = new Particle({
 			position: particlePosition,
 			velocity: particleVelocity,
-			radius: getRandomNum(1, 3),
+			radius: getRandomNum(3, 5),
 			timeToLive: getRandomNum(20, 40)
 		});
 
