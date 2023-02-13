@@ -1,0 +1,59 @@
+.folder-corner {
+	display: inline-block;
+	position: relative;
+	transform: translateZ(0) rotate(90deg);
+	background-position: -20px -20px;
+	background-size: 200% 200%;
+	transition-duration: 0.3s;
+	transition-property: background-position;
+
+	&:before {
+		pointer-events: none;
+		position: absolute;
+		content: '';
+		height: 0;
+		width: 0;
+		top: 0;
+		left: 0;
+		background: linear-gradient(135deg, white 45%, #aaaaaa 50%, #cccccc 56%, white 80%);
+		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+		transition-duration: inherit;
+		transition-property: width, height;
+	}
+
+	&:hover:before,
+	&:focus:before,
+	&:active:before {
+		width: 40px;
+		height: 40px;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-position: 0 0;
+	}
+}
+
+.gameButtonWrapper {
+	position: absolute;
+	top: 0;
+	width: 7rem;
+	height: 7rem;
+	z-index: 9999999;
+	right: 0;
+
+	&:hover .gameButton {
+		opacity: 1;
+	}
+}
+
+.gameButton {
+	position: absolute;
+	opacity: 0;
+	left: 3px;
+	top: 3px;
+	color: black;
+	transform: rotate(-90deg);
+	transition: opacity 300ms;
+}

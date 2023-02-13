@@ -114,6 +114,11 @@
 			"supportDescription": "Jesteśmy otwarci na współpracę i wzajemne wsparcie, co pozwala na osiąganie wspólnych sukcesów i rozwijanie długoterminowych relacji z klientami i współpracownikami.",
 			"employeeDevelopmentTitle": "Rozwój pracowników",
 			"employeeDevelopmentDescription": "Wspieramy rozwój swoich pracowników, co pozwala im na ulepszanie swoich umiejętności i dostarczanie najlepszych możliwych usług."
+		},
+		"game": {
+			"pressToPlay": "Wciśnij spację by zagrać",
+			"pressToPlayAgain": "Wciśnij spację by zagrać ponownie",
+			"gameOver": "Porażka"
 		}
 	}
 }

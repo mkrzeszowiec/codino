@@ -114,6 +114,11 @@
 			"supportDescription": "We are open to collaboration and mutual support, which allows us to achieve mutual success and develop long-term relationships with customers and colleagues.",
 			"employeeDevelopmentTitle": "Employee Development",
 			"employeeDevelopmentDescription": "We support the development of our employees, which allows them to improve their skills and deliver the best possible service."
+		},
+		"game": {
+			"pressToPlay": "Press space to play",
+			"pressToPlayAgain": "Press space to play again",
+			"gameOver": "Game over"
 		}
 	}
 }

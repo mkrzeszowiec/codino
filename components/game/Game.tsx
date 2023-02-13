@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Ship from './ship';
 import Asteroid from 'components/game/asteroid';
 import { getRandomNum, calculateMagnitude } from 'components/game/utils';
-import TitleScreen from './TitleScreen';
+import TitleScreen from 'components/game/TitleScreen';
 import { colors } from 'utils/colors';
 
 const collision = (object1, object2) => {
@@ -249,7 +249,7 @@ class Game extends Component {
 			viewport: { width, height }
 		} = this.state;
 
-		if (context) {
+		if (context) { 
 			context.fillStyle = colors.background;
 			context.fillRect(0, 0, width, height);
 		}

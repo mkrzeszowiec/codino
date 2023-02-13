@@ -12,26 +12,27 @@ import { useState } from 'react';
 import GameMain from 'components/game/GameMain';
 
 const IndexPage = () => {
+	const [isGameOpening, setIsGameOpening] = useState(false);
 	const [isGameMode, setIsGameMode] = useState(false);
-	const [isGame, setIsGame] = useState(false);
 
 	const onClickGame = () => {
-		if (isGameMode) {
-			setIsGame(false);
-			return setIsGameMode(false);
+		if (isGameOpening) {
+			setIsGameMode(false);
+			return setIsGameOpening(false);
 		}
 
-		setIsGameMode(true);
+		setIsGameOpening(true);
 
 		setTimeout(() => {
-			setIsGame(true);
+			setIsGameMode(true);
 		}, 500);
 	};
 
 	return (
-		<MainLayout containerClassName={`homepagePage ${isGameMode ? 'gameMode' : ''}`}>
-			<GameButton onClick={onClickGame} />
-			{isGame ? (
+		<MainLayout containerClassName={`homepagePage ${isGameOpening ? 'gameMode' : ''}`}>
+			<GameButton isGameMode={isGameMode} onClick={onClickGame} />
+
+			{isGameMode ? (
 				<section className="pageIntro">
 					<GameMain />
 				</section>
