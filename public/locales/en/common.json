@@ -117,8 +117,11 @@
 		},
 		"game": {
 			"pressToPlay": "Press space to play",
+			"control": "Use arrows and spacebar to control",
 			"pressToPlayAgain": "Press space to play again",
-			"gameOver": "Game over"
+			"gameOver": "Game over",
+			"play": "Play",
+			"close": "Close"
 		}
 	}
 }

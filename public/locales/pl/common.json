@@ -117,8 +117,11 @@
 		},
 		"game": {
 			"pressToPlay": "Wciśnij spację by zagrać",
+			"control": "Użyj strzałek i spacji do sterowania",
 			"pressToPlayAgain": "Wciśnij spację by zagrać ponownie",
-			"gameOver": "Porażka"
+			"gameOver": "Porażka",
+			"play": "Zagraj",
+			"close": "Powrót do strony głównej"
 		}
 	}
 }

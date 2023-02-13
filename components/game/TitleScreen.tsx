@@ -9,12 +9,17 @@ const GameTitleScreen: React.FC<GameTitleScreenProps> = ({ type = 'game-start' }
 
 	return (
 		<div className="gameTitleScreen">
-			{type === 'game-start' && <p className="gameTitleScreen-message">{t('components.game.pressToPlay')}</p>}
+			{type === 'game-start' && (
+				<>
+					<h1 className="gameTitleScreen__title">{t('components.game.pressToPlay')}</h1>
+					<p>{t('components.game.control')}</p>
+				</>
+			)}
 
 			{type === 'game-over' && (
 				<>
-					<h1 className="gameTitleScreen-title gameTitleScreen-game-over">{t('components.game.gameOver')}</h1>
-					<p className="gameTitleScreen-message">{t('components.game.pressToPlayAgain')}</p>
+					<h1 className="gameTitleScreen__title">{t('components.game.gameOver')}</h1>
+					<p>{t('components.game.pressToPlayAgain')}</p>
 				</>
 			)}
 		</div>

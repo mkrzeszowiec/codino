@@ -61,8 +61,8 @@ class Ship {
 		context.save();
 		context.translate(this.position.x, this.position.y);
 		context.rotate(degreesToRadians(this.direction));
-		context.strokeStyle = colors.primary;
-		context.fillStyle = colors.primary;
+		context.strokeStyle = colors.primaryLight;
+		context.fillStyle = colors.primaryLight;
 		context.lineWidth = 1;
 		context.beginPath();
 		context.moveTo(15, 0);

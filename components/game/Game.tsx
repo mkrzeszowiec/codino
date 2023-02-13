@@ -1,9 +1,8 @@
-import React, { Component, createRef } from 'react';
-import PropTypes from 'prop-types';
-import Ship from './ship';
+import React, { useEffect, useRef, useState } from 'react';
 import Asteroid from 'components/game/asteroid';
-import { getRandomNum, calculateMagnitude } from 'components/game/utils';
+import Ship from 'components/game/ship';
 import TitleScreen from 'components/game/TitleScreen';
+import { getRandomNum, calculateMagnitude } from 'components/game/utils';
 import { colors } from 'utils/colors';
 
 const collision = (object1, object2) => {
@@ -21,80 +20,92 @@ const collision = (object1, object2) => {
 	return distance < radiusSum;
 };
 
-class Game extends Component {
-	[x: string]: any;
+interface GameProps {
+	setPlaying: (isPlaying) => void;
+	playing: boolean;
+}
 
-	constructor() {
-		super();
+const Game: React.FC<GameProps> = props => {
+	const { playing, setPlaying } = props;
 
-		this.state = {
-			keys: { up: false, down: false, left: false, right: false, space: false },
-			viewport: {
-				width: window.innerWidth,
-				height: window.innerHeight,
-				pixelRatio: window.devicePixelRatio || 1
-			},
-			score: 0,
-			gameOver: false,
-			context: undefined
-		};
+	const [state, setState] = useState({
+		keys: { up: false, down: false, left: false, right: false, space: false },
+		viewport: {
+			width: window.innerWidth,
+			height: window.innerHeight,
+			pixelRatio: window.devicePixelRatio || 1
+		},
+		score: 0,
+		gameOver: false,
+		context: undefined
+	});
 
-		this.groups = {
-			playerShip: [],
-			bullets: [],
-			asteroids: [],
-			particles: []
-		};
+	const { viewport, score, gameOver } = state;
 
-		this.canvasRef = createRef();
-	}
+	const groups = {
+		playerShip: [],
+		bullets: [],
+		asteroids: [],
+		particles: []
+	};
 
-	componentDidMount() {
-		const context = this.canvasRef.current.getContext('2d');
+	const canvasRef = useRef();
+	const requestId = useRef<any>();
+
+	useEffect(() => {
+		// @ts-ignore
+		const context = canvasRef?.current?.getContext('2d');
 		const {
 			viewport: { pixelRatio }
-		} = this.state;
+		} = state;
 
 		context.scale(pixelRatio, pixelRatio);
-		this.setState({ context });
+		setState(prevState => ({ ...prevState, context }));
 
-		this.createInitialAsteroids(5);
-		this.update();
+		createInitialAsteroids(5);
+		update();
 
-		this.addEventListeners();
-	}
+		addEventListeners();
 
-	componentDidUpdate(prevProps) {
-		if (!prevProps.playing && this.props.playing) {
-			this.startGame();
+		return () => {
+			removeEventListeners();
+		};
+	}, []);
+
+	React.useEffect(() => {
+		//todo check
+		// if (!prevProps.playing && playing) {
+		if (playing) {
+			startGame();
 		}
-	}
+	}, [playing]);
 
-	onResize() {
-		const { context } = this.state;
+	const onResize = () => {
+		const { context } = state;
 		const pixelRatio = window.devicePixelRatio || 1;
 
-		this.setState({
+		setState(prevState => ({
+			...prevState,
 			viewport: {
 				width: window.innerWidth,
 				height: window.innerHeight,
 				pixelRatio
 			}
-		});
+		}));
 
 		context.scale(pixelRatio, pixelRatio);
-	}
+	};
 
-	onKeyDown(event) {
-		this.onKeyChange(true, event);
-	}
+	const onKeyDown = event => {
+		onKeyChange(true, event);
+	};
 
-	onKeyUp(event) {
-		this.onKeyChange(false, event);
-	}
+	const onKeyUp = event => {
+		onKeyChange(false, event);
+	};
 
-	onKeyChange(isBeingPressed, event) {
-		const { keys } = this.state;
+	const onKeyChange = (isBeingPressed, event) => {
+		const { keys } = state;
 		const { keyCode } = event;
 
 		const keyCodes = {
@@ -113,36 +124,49 @@ class Game extends Component {
 			keys[keyCodes[keyCode]] = isBeingPressed;
 		}
 
-		this.setState({ keys });
-	}
+		setState(prevState => ({ ...prevState, keys }));
+	};
 
-	addEventListeners() {
-		window.addEventListener('keydown', this.onKeyDown.bind(this));
-		window.addEventListener('keyup', this.onKeyUp.bind(this));
-		window.addEventListener('resize', this.onResize.bind(this));
-	}
+	const addEventListeners = () => {
+		window.addEventListener('keydown', onKeyDown);
+		window.addEventListener('keyup', onKeyUp);
+		window.addEventListener('resize', onResize);
+	};
 
-	startGame() {
-		if (this.requestId) cancelAnimationFrame(this.requestId);
-		this.clearAllGroups();
-		this.createShip();
-		this.createInitialAsteroids(4);
-		this.setState({
+	const removeEventListeners = () => {
+		window.removeEventListener('keydown', onKeyDown);
+		window.removeEventListener('keyup', onKeyUp);
+		window.removeEventListener('resize', onResize);
+	};
+
+	const startGame = () => {
+		if (requestId.current) {
+			cancelAnimationFrame(requestId.current);
+		}
+
+		clearAllGroups();
+		createShip();
+		createInitialAsteroids(4);
+		console.log('startGame');
+
+		setState(prevState => ({
+			...prevState,
 			score: 0,
 			gameOver: false
-		});
-		this.requestId = requestAnimationFrame(this.update.bind(this));
-	}
+		}));
 
-	endGame() {
-		this.props.setPlaying(false);
-		this.setState({ gameOver: true });
-	}
+		requestId.current = requestAnimationFrame(update);
+	};
 
-	createShip() {
+	const endGame = () => {
+		setPlaying(false);
+		setState(prevState => ({ ...prevState, gameOver: true }));
+	};
+
+	const createShip = () => {
 		const {
 			viewport: { width, height }
-		} = this.state;
+		} = state;
 
 		const position = {
 			x: width / 2,
@@ -151,17 +175,17 @@ class Game extends Component {
 
 		const ship = new Ship({
 			position,
-			add: this.add.bind(this),
-			die: this.endGame.bind(this)
+			add: add,
+			die: endGame
 		});
 
-		this.add(ship).to('playerShip');
-	}
+		add(ship).to('playerShip');
+	};
 
-	createAsteroid() {
+	const createAsteroid = () => {
 		const {
 			viewport: { width, height }
-		} = this.state;
+		} = state;
 
 		const position = {
 			x: getRandomNum(0, width),
@@ -169,71 +193,74 @@ class Game extends Component {
 		};
 		const radius = getRandomNum(80, 100);
 
+		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+		// @ts-ignore
 		return new Asteroid({
 			position,
 			radius,
-			add: this.add.bind(this),
-			addToScore: this.addToScore.bind(this)
+			add: add,
+			addToScore: addToScore
 		});
-	}
+	};
 
-	createInitialAsteroids(numOfAsteroids) {
+	const createInitialAsteroids = numOfAsteroids => {
 		const addNewAsteroid = () => {
-			const asteroid = this.createAsteroid();
-			if (collision(this.groups.playerShip[0], asteroid)) {
+			const asteroid = createAsteroid();
+			if (collision(groups.playerShip[0], asteroid)) {
 				addNewAsteroid();
 			} else {
-				this.add(asteroid).to('asteroids');
+				add(asteroid).to('asteroids');
 			}
 		};
 
 		[...Array(numOfAsteroids)].forEach(addNewAsteroid);
-	}
+	};
 
-	add(object) {
+	const add = object => {
 		return {
 			to: groupName => {
-				this.groups[groupName].push(object);
+				groups[groupName].push(object);
 			}
 		};
-	}
+	};
 
-	addToScore(value) {
-		if (this.groups.playerShip.length > 0) {
-			this.setState(prevState => ({
+	const addToScore = value => {
+		if (groups.playerShip.length > 0) {
+			setState(prevState => ({
+				...prevState,
 				score: prevState.score + value
 			}));
 		}
-	}
+	};
 
-	updateAllObjects() {
-		Object.keys(this.groups).forEach(groupName => {
-			this.updateGroup(this.groups[groupName]);
+	const updateAllObjects = () => {
+		Object.keys(groups).forEach(groupName => {
+			updateGroup(groups[groupName]);
 		});
-	}
+	};
 
-	clearAllGroups() {
-		Object.keys(this.groups).forEach(groupName => {
-			this.groups[groupName].length = 0;
+	const clearAllGroups = () => {
+		Object.keys(groups).forEach(groupName => {
+			groups[groupName].length = 0;
 		});
-	}
+	};
 
-	updateGroup(group) {
+	const updateGroup = group => {
 		group.forEach((object, index) => {
-			this.checkCollisions(object);
+			checkCollisions(object);
 
 			if (object.markedForDeletion) {
 				group.splice(index, 1);
 			} else {
-				object.update(this.state);
+				object.update(state);
 			}
 		});
-	}
+	};
 
-	checkCollisions(object) {
+	const checkCollisions = object => {
 		if (object.collidesWith && object.collidesWith.length) {
 			object.collidesWith.forEach(groupName => {
-				this.groups[groupName].forEach(object2 => {
+				groups[groupName].forEach(object2 => {
 					if (collision(object, object2)) {
 						object.delete();
 						object2.delete();
@@ -241,46 +268,38 @@ class Game extends Component {
 				});
 			});
 		}
-	}
+	};
 
-	update() {
+	const update = () => {
 		const {
 			context,
 			viewport: { width, height }
-		} = this.state;
+		} = state;
 
-		if (context) { 
+		if (context) {
 			context.fillStyle = colors.background;
 			context.fillRect(0, 0, width, height);
 		}
 
-		this.updateAllObjects();
+		updateAllObjects();
 
-		this.requestId = requestAnimationFrame(this.update.bind(this));
-	}
+		requestId.current = requestAnimationFrame(update);
+	};
 
-	render() {
-		const {
-			viewport: { width, height, pixelRatio },
-			score,
-			gameOver
-		} = this.state;
-		const { playing } = this.props;
+	return (
+		<div className="game">
+			{!playing && !gameOver && <TitleScreen />}
+			{(playing || gameOver) && <div className="game__score">{score}</div>}
+			{gameOver && <TitleScreen type="game-over" />}
 
-		return (
-			<div className="Game">
-				{!playing && !gameOver && <TitleScreen />}
-				{(playing || gameOver) && <div className="Game-score">{score}</div>}
-				{gameOver && <TitleScreen type="game-over" />}
-				<canvas className="Game-canvas" ref={this.canvasRef} width={width * pixelRatio} height={height * pixelRatio} />
-			</div>
-		);
-	}
-}
-
-Game.propTypes = {
-	playing: PropTypes.bool.isRequired,
-	setPlaying: PropTypes.func.isRequired
+			<canvas
+				className="game__canvas"
+				ref={canvasRef}
+				width={viewport?.width * viewport?.pixelRatio}
+				height={viewport?.height * viewport?.pixelRatio}
+			/>
+		</div>
+	);
 };
 
 export default Game;
