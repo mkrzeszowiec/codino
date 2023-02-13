@@ -15,7 +15,7 @@
 		width: 0;
 		top: 0;
 		left: 0;
-		background: linear-gradient(135deg, white 45%, #aaaaaa 50%, #cccccc 56%, white 80%);
+		background: linear-gradient(135deg, white 45%, #aaaaaa 50%, white 56%, white 80%);
 		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 		transition-duration: inherit;
 		transition-property: width, height;
@@ -26,11 +26,6 @@
 	&:active:before {
 		width: 40px;
 		height: 40px;
-	}
-
-	&:hover,
-	&:focus,
-	&:active {
 		background-position: 0 0;
 	}
 }

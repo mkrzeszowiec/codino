@@ -3,7 +3,7 @@ import Asteroid from 'components/game/asteroid';
 import Ship from 'components/game/ship';
 import TitleScreen from 'components/game/TitleScreen';
 import { getRandomNum, calculateMagnitude } from 'components/game/utils';
-import { colors } from 'utils/colors';
+import GameBackground from 'components/game/GameBackground';
 
 const collision = (object1, object2) => {
 	if (!object1 || !object2) {
@@ -59,7 +59,7 @@ const Game: React.FC<GameProps> = props => {
 			viewport: { pixelRatio }
 		} = state;
 
-		context.scale(pixelRatio, pixelRatio);
+		context?.scale(pixelRatio, pixelRatio);
 		setState(prevState => ({ ...prevState, context }));
 
 		createInitialAsteroids(5);
@@ -93,7 +93,7 @@ const Game: React.FC<GameProps> = props => {
 			}
 		}));
 
-		context.scale(pixelRatio, pixelRatio);
+		context?.scale(pixelRatio, pixelRatio);
 	};
 
 	const onKeyDown = event => {
@@ -277,7 +277,15 @@ const Game: React.FC<GameProps> = props => {
 		} = state;
 
 		if (context) {
-			context.fillStyle = colors.background;
+			// context.fillStyle = colors.background;
+
+			// background-image: radial-gradient(ellipse at top, #18013f 0%, #0d0025 60%);
+
+			const grd = context.createLinearGradient(0, 0, 0, height);
+			grd.addColorStop(0, '#18013f');
+			grd.addColorStop(1, '#0d0025');
+
+			context.fillStyle = grd;
 			context.fillRect(0, 0, width, height);
 		}
 
@@ -288,9 +296,12 @@ const Game: React.FC<GameProps> = props => {
 
 	return (
 		<div className="game">
+			<GameBackground />
+
 			{!playing && !gameOver && <TitleScreen />}
-			{(playing || gameOver) && <div className="game__score">{score}</div>}
 			{gameOver && <TitleScreen type="game-over" />}
+
+			{(playing || gameOver) && <div className="game__score">{score}</div>}
 
 			<canvas
 				className="game__canvas"
