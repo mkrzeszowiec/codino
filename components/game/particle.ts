@@ -1,15 +1,19 @@
 import { colors } from 'utils/colors';
 
 class Particle {
-	//todo
-	[x: string]: any;
+	inertia = 0.98;
+
+	private position: { x: number; y: number };
+	private velocity: { x: number; y: number };
+	private radius: number;
+	private timeToLive: number;
+	private markedForDeletion: boolean;
 
 	constructor({ position, velocity, radius, timeToLive }) {
 		this.position = position;
 		this.velocity = velocity;
 		this.radius = radius;
 		this.timeToLive = timeToLive;
-		this.inertia = 0.98;
 		this.markedForDeletion = false;
 	}
 

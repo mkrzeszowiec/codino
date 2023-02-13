@@ -1,10 +1,10 @@
 import { useTranslation } from 'next-i18next';
 
 interface GameTitleScreenProps {
-	type?: 'game-start' | 'game-over';
+	type: 'game-start' | 'game-over';
 }
 
-const GameTitleScreen: React.FC<GameTitleScreenProps> = ({ type = 'game-start' }) => {
+const GameTitleScreen: React.FC<GameTitleScreenProps> = ({ type }) => {
 	const { t } = useTranslation();
 
 	return (

@@ -1,8 +1,13 @@
-import { calculateVector } from './utils';
+import { calculateVector } from 'components/game/utils';
 import { colors } from 'utils/colors';
 
 class Bullet {
-	[x: string]: any;
+	radius: number;
+	position: { x: number; y: number };
+	direction: any;
+	velocity: { x: number; y: number };
+	markedForDeletion: boolean;
+	collidesWith: string[];
 
 	constructor({ position, direction, shipSpeed }) {
 		const speed = shipSpeed + 8;

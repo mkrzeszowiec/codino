@@ -1,5 +1,5 @@
 import Bullet from 'components/game/bullet';
-import Particle from './particle';
+import Particle from 'components/game/particle';
 import {
 	createExplosion,
 	degreesToRadians,
@@ -12,8 +12,18 @@ import {
 import { colors } from 'utils/colors';
 
 class Ship {
-	//todo
-	[x: string]: any;
+	position: { x: number; y: number };
+	velocity: { x: number; y: number };
+	direction: number;
+	acceleration: number;
+	rotationSpeed: number;
+	radius: number;
+	inertia: number;
+	add: any;
+	die: any;
+	markedForDeletion: boolean;
+	collidesWith: string[];
+	private lastBullet: number;
 
 	constructor({ position, add, die }) {
 		this.position = position || { x: 0, y: 0 };

@@ -2,23 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import Asteroid from 'components/game/asteroid';
 import Ship from 'components/game/ship';
 import TitleScreen from 'components/game/TitleScreen';
-import { getRandomNum, calculateMagnitude } from 'components/game/utils';
+import { getRandomNum, isCollision } from 'components/game/utils';
 import GameBackground from 'components/game/GameBackground';
-
-const collision = (object1, object2) => {
-	if (!object1 || !object2) {
-		return false;
-	}
-
-	const distanceVector = {
-		x: object1.position.x - object2.position.x,
-		y: object1.position.y - object2.position.y
-	};
-	const distance = calculateMagnitude(distanceVector);
-	const radiusSum = object1.radius + object2.radius;
-
-	return distance < radiusSum;
-};
 
 interface GameProps {
 	setPlaying: (isPlaying) => void;
@@ -50,7 +35,7 @@ const Game: React.FC<GameProps> = props => {
 	};
 
 	const canvasRef = useRef();
-	const requestId = useRef<any>();
+	const requestId = useRef<number | undefined>();
 
 	useEffect(() => {
 		// @ts-ignore
@@ -72,12 +57,8 @@ const Game: React.FC<GameProps> = props => {
 		};
 	}, []);
 
-	React.useEffect(() => {
-		//todo check
-		// if (!prevProps.playing && playing) {
-		if (playing) {
-			startGame();
-		}
+	useEffect(() => {
+		playing && startGame();
 	}, [playing]);
 
 	const onResize = () => {
@@ -147,7 +128,6 @@ const Game: React.FC<GameProps> = props => {
 		clearAllGroups();
 		createShip();
 		createInitialAsteroids(4);
-		console.log('startGame');
 
 		setState(prevState => ({
 			...prevState,
@@ -206,7 +186,7 @@ const Game: React.FC<GameProps> = props => {
 	const createInitialAsteroids = numOfAsteroids => {
 		const addNewAsteroid = () => {
 			const asteroid = createAsteroid();
-			if (collision(groups.playerShip[0], asteroid)) {
+			if (isCollision(groups.playerShip[0], asteroid)) {
 				addNewAsteroid();
 			} else {
 				add(asteroid).to('asteroids');
@@ -261,7 +241,7 @@ const Game: React.FC<GameProps> = props => {
 		if (object.collidesWith && object.collidesWith.length) {
 			object.collidesWith.forEach(groupName => {
 				groups[groupName].forEach(object2 => {
-					if (collision(object, object2)) {
+					if (isCollision(object, object2)) {
 						object.delete();
 						object2.delete();
 					}
@@ -277,10 +257,6 @@ const Game: React.FC<GameProps> = props => {
 		} = state;
 
 		if (context) {
-			// context.fillStyle = colors.background;
-
-			// background-image: radial-gradient(ellipse at top, #18013f 0%, #0d0025 60%);
-
 			const grd = context.createLinearGradient(0, 0, 0, height);
 			grd.addColorStop(0, '#18013f');
 			grd.addColorStop(1, '#0d0025');
@@ -298,7 +274,7 @@ const Game: React.FC<GameProps> = props => {
 		<div className="game">
 			<GameBackground />
 
-			{!playing && !gameOver && <TitleScreen />}
+			{!playing && !gameOver && <TitleScreen type="game-start" />}
 			{gameOver && <TitleScreen type="game-over" />}
 
 			{(playing || gameOver) && <div className="game__score">{score}</div>}

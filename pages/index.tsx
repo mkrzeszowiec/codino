@@ -10,6 +10,7 @@ import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 import GameButton from 'components/GameButton/GameButton';
 import { useState } from 'react';
 import GameMain from 'components/game/GameMain';
+import NoSsr from 'components/NoSsr/NoSsr';
 
 const IndexPage = () => {
 	const [isGameOpening, setIsGameOpening] = useState(false);
@@ -32,13 +33,15 @@ const IndexPage = () => {
 		<MainLayout containerClassName={`homepagePage ${isGameOpening ? 'gameMode' : ''}`}>
 			<GameButton isGameMode={isGameMode} onClick={onClickGame} />
 
-			{isGameMode ? (
-				<section className="pageIntro">
-					<GameMain />
-				</section>
-			) : (
-				<PageIntro />
-			)}
+			<NoSsr>
+				{isGameMode ? (
+					<section className="pageIntro">
+						<GameMain />
+					</section>
+				) : (
+					<PageIntro />
+				)}
+			</NoSsr>
 
 			<div className="container">
 				<WhatWeDo />
