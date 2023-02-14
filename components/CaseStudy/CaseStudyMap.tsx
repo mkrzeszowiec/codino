@@ -19,7 +19,7 @@ const CaseStudyMap: React.FC<{ product?: Product }> = ({ product }) => {
 			<SectionTitle className="caseStudyMap__title">{t('components.caseStudy.map')}</SectionTitle>
 
 			{Array.isArray(selectedCountry) ? (
-				<ComposableMap>
+				<ComposableMap className="caseStudyMap__genericMap">
 					<Geographies geography={map}>
 						{({ geographies }) =>
 							geographies.map(geo => {

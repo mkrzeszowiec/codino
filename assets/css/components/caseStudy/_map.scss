@@ -1,8 +1,10 @@
 .caseStudyMap {
-	padding: 2rem 0 6rem 0;
+	padding: 2rem 0 10rem 0;
 	text-align: center;
 	pointer-events: none;
 	touch-action: none;
+	max-width: 1000px;
+	margin: 0 auto;
 
 	svg {
 		pointer-events: none;
@@ -17,5 +19,9 @@
 		display: block;
 		max-width: 100%;
 		height: auto;
+	}
+
+	&__genericMap {
+		margin-top: -5rem;
 	}
 }
