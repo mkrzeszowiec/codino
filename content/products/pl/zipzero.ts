@@ -1,7 +1,7 @@
 import { Product } from 'types/common';
 
 const ZIPZERO: Product = {
-	title: 'Aplikacja mobilna ZipZero',
+	title: 'ZipZero',
 	shortDescription:
 		'ZipZero to aplikacja zakupowa z pozwalająca na zbieranie środków z zakupów do opłacania miesięcznych domowych rachunków.',
 	description:
@@ -16,28 +16,16 @@ const ZIPZERO: Product = {
 	industry: 'system cashback',
 	scopeOfWork: {
 		description:
-			'The beginning of the project was many hours of planning and analysis sessions on the domain and architecture of the new system we were tasked with creating.' +
-			' The main objectives of the system were to be able to process thousands of transactions a day, an easy-to-use and transparent mobile application and an administration panel that allows easy management of the entire system.',
+			'Początki projektu to wielogodzinne sesje planowania i analizowania domeny i architektury nowego systemu który został nam powierzony do stworzenia.' +
+			' Głównymi założeniami systemu była możliwość przetwarzanie tysięcy transakcji dziennie,  łatwa w użyciu i przejrzysta aplikacja mobilna i panel administracyjny umożliwiający łatwe zarządzanie cały system',
 		points: [
-			{
-				index: 1,
-				description:
-					'Preparing a roadmap and initial architecture under the MVP which was to be implemented after a few months of work'
-			},
-			{
-				index: 2,
-				description:
-					'Design the system architecture based on microservices architecture to ensure scalability and the ability for independent teams of dgrammers to work on multiple parts of the system'
-			},
-			{
-				index: 3,
-				description:
-					'Design a database and warehouse that will be able to store millions of transactions, products and purchases'
-			},
-			{ index: 4, description: 'Integrations with external affiliate networks' },
-			{ index: 5, description: 'Mobile application for android' },
-			{ index: 6, description: 'Administration panel for system management' },
-			{ index: 7, description: 'Fraud and abuse protection system based on machine learning' }
+			{ index: 1, description: 'Przygotowanie planu działania i wstępnej architektury pod MVP który miał zostać wdrożony po kilku miesiącach pracy' },
+			{ index: 2, description: 'Zaprojektowanie architektury systemu w oparciu o architekturę mikroserwisów, aby zapewnić skalowalność i możliwość pracy nad wieloma częściami systemu przez niezależne zespoły programistów' },
+			{ index: 3, description: 'Zaprojektowanie bazy danych oraz hurtowni które będą w stanie przechowywać miliony transakcji, produktów i zakupów' },
+			{ index: 4, description: 'Integracje z zewnętrznymi sieciami afiliacyjnymi' },
+			{ index: 5, description: 'Aplikacja mobilna na system android' },
+			{ index: 6, description: 'Panel administracyjny do zarządzania systemem' },
+			{ index: 7, description: 'System chroniący przed nadużyciami i oszustwami w oparciu o machine learning' }
 		]
 	},
 	technologies: ['java', 'spring', 'kotlin', 'angular', 'postgresql', 'redis', 'elastic', 'android', 'kubernetes'],

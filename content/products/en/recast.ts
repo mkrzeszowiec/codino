@@ -1,7 +1,7 @@
 import { Product } from 'types/common';
 
 const RECAST: Product = {
-	title: 'Recast app',
+	title: 'Recast',
 	description:
 		'Recast is a platform that allows viewers to watch, video and live stream sporting events, concerts, etc., based on microtransactions. Most of the amount paid by the viewer goes directly to the broadcaster, and viewers have a transparent way to support athletes. Big companies like top soccer clubs Inter, Manchester City are involved in the project. ' +
 		'\n\nThe ecosystem consists of an app for fans to browse available video, select live events, follow and support their sports idols. The second component of the ecosystem is an app for content creators to manage content, publish videos and compile broadcasts. ',

@@ -1,7 +1,7 @@
 import { Product } from 'types/common';
 
 const RECAST: Product = {
-	title: 'Aplikacja Recast',
+	title: 'Recast',
 	description:
 		'Recast to platforma umożliwiająca oglądanie, transmisję video i live streamów z wydarzeń sportowych, koncertów itp, oparta o mikrotransakcje. Większość kwoty zapłaconej przez widza trafia bezpośrednio do nadawcy, a widzowie mają przejrzysty sposób na wspieranie sportowców. W projekt zaangażowane są duże firmy jak topowe kluby piłkarskie Inter, Manchester City. ' +
 		'\n\nSystem składa się z aplikacji dla fanów umożliwiającej przeglądanie dostępne video, wybieranie wydarzeń odbywających się na żywo, śledzenie i wspieranie swoich sportowych idoli. Drugim elementem ekosystemu jest aplikacja dla osób tworzących treści, która umożliwia zarządzanie treściami, publikowanie wideo oraz zestawienia transmisji. ',

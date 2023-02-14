@@ -1,7 +1,7 @@
 import { Product } from 'types/common';
 
 const ZIPZERO: Product = {
-	title: 'ZipZero mobile app',
+	title: 'ZipZero',
 	shortDescription:
 		'ZipZero is a shopping app with allows you to collect funds from purchases to pay monthly household bills.',
 	description:
@@ -16,15 +16,28 @@ const ZIPZERO: Product = {
 	industry: 'cashback, shopping',
 	scopeOfWork: {
 		description:
-			'The system was built from scratch in 100% by our team. Creating a backend, a mobile application, ML for fraud detection, a backoffice panel',
+			'The beginning of the project was many hours of planning and analysis sessions on the domain and architecture of the new system we were tasked with creating.' +
+			' The main objectives of the system were to be able to process thousands of transactions a day, an easy-to-use and transparent mobile application and an administration panel that allows easy management of the entire system.',
 		points: [
-			{ index: 1, description: 'Creating an entire system from scratch' },
-			{ index: 2, description: 'Designing the system architecture' },
-			{ index: 3, description: 'Integrations with external affiliate networks' },
-			{ index: 4, description: 'Backend in microservices architecture' },
-			{ index: 5, description: 'Mobile app for android' },
-			{ index: 6, description: 'Administration panel to manage the system' },
-			{ index: 7, description: 'B2B Panel' }
+			{
+				index: 1,
+				description:
+					'Preparing a roadmap and initial architecture under the MVP which was to be implemented after a few months of work'
+			},
+			{
+				index: 2,
+				description:
+					'Design the system architecture based on microservices architecture to ensure scalability and the ability for independent teams of dgrammers to work on multiple parts of the system'
+			},
+			{
+				index: 3,
+				description:
+					'Design a database and warehouse that will be able to store millions of transactions, products and purchases'
+			},
+			{ index: 4, description: 'Integrations with external affiliate networks' },
+			{ index: 5, description: 'Mobile application for android' },
+			{ index: 6, description: 'Administration panel for system management' },
+			{ index: 7, description: 'Fraud and abuse protection system based on machine learning' }
 		]
 	},
 	technologies: ['java', 'spring', 'kotlin', 'angular', 'postgresql', 'redis', 'elastic', 'android', 'kubernetes'],

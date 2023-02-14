@@ -1,8 +1,27 @@
 .caseStudyTechnologies {
 	text-align: center;
+	padding: 3rem 0 9rem;
 
 	&__title {
-		position: relative;
-		top: 2rem;
+		margin-bottom: 4rem;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 4rem;
+	}
+
+	&__listItem {
+		@include flex-center;
+		padding: 3rem;
+		background: var(--background-gradient);
+	}
+
+	&__logo {
+		max-height: 50px;
+		object-fit: contain;
 	}
 }

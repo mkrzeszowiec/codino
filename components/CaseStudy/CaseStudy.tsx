@@ -38,10 +38,9 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ product }) => {
 
 			<div className="container">
 				<CaseStudyScopeOfWork product={product} />
+				<CaseStudyTechnologies product={product} />
 				<CaseStudyMap product={product} />
 			</div>
-
-			<CaseStudyTechnologies product={product} />
 
 			<UseCasesCarousel title={t('components.caseStudy.showOther')} />
 		</section>
