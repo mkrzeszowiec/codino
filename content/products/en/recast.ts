@@ -16,31 +16,31 @@ const RECAST: Product = {
 	industry: 'backend, frontend',
 	scopeOfWork: {
 		description:
-			'Started working with Recast, it was a two-person team from the frontend that evolved as the platform grew to a nine-person team of specialists working on the frontend, backend and system architecture.',
+			'Started working with Recast, it was a two-person team from the frontend that evolved as the platform grew to a nine-person team of specialists working on the frontend, backend and system architecture',
 		points: [
 			{
 				index: 1,
 				description:
-					'Continuous collaboration with client teams on ongoing development of frontend applications as well as backend written in microservices.'
+					'Continuous collaboration with client teams on ongoing development of frontend applications as well as backend written in microservices'
 			},
 			{
 				index: 2,
-				description: 'Development and influence on system architecture in microservices architecture.'
+				description: 'Development and influence on system architecture in microservices architecture'
 			},
 			{
 				index: 3,
 				description:
-					'Decomposition of the monolith into new small services, facilitating development and scaling of the entire system.'
+					'Decomposition of the monolith into new small services, facilitating development and scaling of the entire system'
 			},
 			{
 				index: 4,
 				description:
-					'Creation of a separate front-end application for publishers to manage video content, view statistics, compile live streams for thousands of users, and quickly compile testimonials directly from the device.'
+					'Creation of a separate front-end application for publishers to manage video content, view statistics, compile live streams for thousands of users, and quickly compile testimonials directly from the device'
 			},
 			{
 				index: 5,
 				description:
-					'Create a video indexing mechanism to provide scalable, fast search and content categorization capabilities.'
+					'Create a video indexing mechanism to provide scalable, fast search and content categorization capabilities'
 			},
 			{
 				index: 6,

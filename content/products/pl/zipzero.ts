@@ -17,7 +17,7 @@ const ZIPZERO: Product = {
 	scopeOfWork: {
 		description:
 			'Początki projektu to wielogodzinne sesje planowania i analizowania domeny i architektury nowego systemu który został nam powierzony do stworzenia.' +
-			' Głównymi założeniami systemu była możliwość przetwarzanie tysięcy transakcji dziennie,  łatwa w użyciu i przejrzysta aplikacja mobilna i panel administracyjny umożliwiający łatwe zarządzanie cały system',
+			' Głównymi założeniami systemu była możliwość przetwarzanie tysięcy transakcji dziennie,  łatwa w użyciu i przejrzysta aplikacja mobilna i panel administracyjny umożliwiający łatwe zarządzanie cały system.',
 		points: [
 			{ index: 1, description: 'Przygotowanie planu działania i wstępnej architektury pod MVP który miał zostać wdrożony po kilku miesiącach pracy' },
 			{ index: 2, description: 'Zaprojektowanie architektury systemu w oparciu o architekturę mikroserwisów, aby zapewnić skalowalność i możliwość pracy nad wieloma częściami systemu przez niezależne zespoły programistów' },

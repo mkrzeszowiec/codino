@@ -21,11 +21,11 @@ const RECAST: Product = {
 			{
 				index: 1,
 				description:
-					'Nieustanna współpraca z zespołami klienta nad bieżącym rozwojem aplikacji frontendowych jak i  backendu napisanego w mikroserwiach.'
+					'Nieustanna współpraca z zespołami klienta nad bieżącym rozwojem aplikacji frontendowych jak i  backendu napisanego w mikroserwiach'
 			},
 			{
 				index: 2,
-				description: 'Rozwój i wpływ na architekturę systemu w architekturze mikroserwisów.'
+				description: 'Rozwój i wpływ na architekturę systemu w architekturze mikroserwisów'
 			},
 			{
 				index: 3,
@@ -34,12 +34,12 @@ const RECAST: Product = {
 			{
 				index: 4,
 				description:
-					'Stworzenie oddzielnej aplikacji frontendowej dla publisherów, umożliwiającej zarządzanie treściami wideo, przeglądanie statystyk,  zestawianie live stremingów dla tysięcy użytkowników oraz szybkie zestawianie relacji bezpośrednio z urządzenia.'
+					'Stworzenie oddzielnej aplikacji frontendowej dla publisherów, umożliwiającej zarządzanie treściami wideo, przeglądanie statystyk,  zestawianie live stremingów dla tysięcy użytkowników oraz szybkie zestawianie relacji bezpośrednio z urządzenia'
 			},
 			{
 				index: 5,
 				description:
-					'Stworzenie mechanizmu indeksacji wideo w celu zapewnienia możliwości skalowalnego, szybkiego wyszukiwania i kategoryzowania treści.'
+					'Stworzenie mechanizmu indeksacji wideo w celu zapewnienia możliwości skalowalnego, szybkiego wyszukiwania i kategoryzowania treści'
 			},
 			{
 				index: 6,
