@@ -121,7 +121,8 @@
 		"game": {
 			"pressToPlay": "Press space to play",
 			"control": "Use arrows and spacebar to control",
-			"pressToPlayAgain": "Press space to play again",
+			"pressSpaceToPlayAgain": "Press space to play again",
+			"pressEscToClose": "Press escape to close",
 			"gameOver": "Game over",
 			"play": "Play",
 			"close": "Close"

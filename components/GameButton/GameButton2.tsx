@@ -35,7 +35,7 @@ const GameButton2: React.FC<GameButtonProps> = ({ onClick }) => {
 					<clipPath id="clip">
 						<circle cx="42.3" cy="42.3" r="41.6" />
 					</clipPath>
-					<g clip-path="url(#clip)">
+					<g clipPath="url(#clip)">
 						<path className="background" d="M0 0h84.6v84.6H0z" />
 						<g className="exhaust">
 							<g className="filteredGroup">

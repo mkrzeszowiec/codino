@@ -30,6 +30,11 @@ const IndexPage = () => {
 		}, 500);
 	};
 
+	const onCloseGame = () => {
+		setIsGameOpening(false);
+		setIsGameMode(false);
+	};
+
 	return (
 		<MainLayout containerClassName={`homepagePage ${isGameOpening ? 'gameMode' : ''}`}>
 			{isGameMode ? (
@@ -41,7 +46,7 @@ const IndexPage = () => {
 			<NoSsr>
 				{isGameMode ? (
 					<section className="pageIntro">
-						<GameMain />
+						<GameMain onClose={onCloseGame} />
 					</section>
 				) : (
 					<PageIntro />

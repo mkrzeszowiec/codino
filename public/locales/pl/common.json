@@ -121,8 +121,9 @@
 		"game": {
 			"pressToPlay": "Wciśnij spację by zagrać",
 			"control": "Użyj strzałek i spacji do sterowania",
-			"pressToPlayAgain": "Wciśnij spację by zagrać ponownie",
-			"gameOver": "Porażka",
+			"pressSpaceToPlayAgain": "Naciśnij spację by zagrać ponownie",
+			"pressEscToClose": "Naciśnij escape by wyjść",
+			"gameOver": "Zostałeś zniszczony",
 			"play": "Zagraj",
 			"close": "Powrót do strony głównej"
 		}
