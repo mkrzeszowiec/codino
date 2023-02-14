@@ -16,11 +16,9 @@
 	&__languageButton {
 		text-transform: uppercase;
 		padding: 12px;
-		position: absolute;
 		color: white;
 		font-size: 1.6rem;
 		overflow: hidden;
-		right: 40px;
 		transition: color 0.3s ease;
 
 		&:hover {
@@ -38,8 +36,6 @@
 
 		@include breakpoint(tablet) {
 			display: block;
-			position: absolute;
-			right: 5rem;
 		}
 	}
 
@@ -76,6 +72,10 @@
 	.site-header__actions {
 		margin-left: auto;
 		@include flex-center;
+
+		@include breakpoint(tablet) {
+			margin-left: 0;
+		}
 	}
 
 	.site-nav {
@@ -127,6 +127,12 @@
 	&.site-header--fixed {
 		border-bottom: 1px solid #e5e5e5;
 		background-color: white;
+
+		.gameStartButton {
+			pointer-events: none;
+			touch-action: none;
+			opacity: 0;
+		}
 
 		.btn-hamburger {
 			&:before,

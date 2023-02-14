@@ -1,52 +1,62 @@
+import { useState } from 'react';
+import { GetStaticProps } from 'next';
 import MainLayout from 'layouts/MainLayout';
 import PageIntro from 'components/PageIntro/PageIntro';
 import Products from 'components/Products/Products';
 import WhatWeDo from 'components/WhatWeDo/WhatWeDo';
 import TechnologiesCarousel from 'components/TechnologiesCarousel/TechnologiesCarousel';
 import StartWork from 'components/StartWork/StartWork';
-import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
-import { useState } from 'react';
 import GameMain from 'components/game/GameMain';
 import NoSsr from 'components/NoSsr/NoSsr';
-import GameButton2 from 'components/GameButton/GameButton2';
-import GameButton from 'components/GameButton/GameButton';
+import GameStartButton from 'components/GameButton/GameStartButton';
+import GameCloseButton from 'components/GameButton/GameCloseButton';
+import usePortal from 'hooks/usePortal';
+import { getIsServerSide } from 'utils/utils';
+import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 
 const IndexPage = () => {
+	//todo refactor states
 	const [isGameOpening, setIsGameOpening] = useState(false);
+	const [isAnimating, setIsAnimating] = useState(false);
 	const [isGameMode, setIsGameMode] = useState(false);
+	const Portal = usePortal(getIsServerSide() ? '' : document.querySelector('.site-header__actions'));
 
 	const onClickGame = () => {
 		if (isGameOpening) {
-			setIsGameMode(false);
-			return setIsGameOpening(false);
+			return closeGame();
 		}
+		setIsAnimating(true);
 
-		setIsGameOpening(true);
+		setTimeout(() => {
+			setIsGameOpening(true);
+		}, 1200);
 
 		setTimeout(() => {
 			setIsGameMode(true);
-		}, 500);
+		}, 1800);
 	};
 
-	const onCloseGame = () => {
+	const closeGame = () => {
 		setIsGameOpening(false);
 		setIsGameMode(false);
+		setIsAnimating(false);
 	};
 
 	return (
 		<MainLayout containerClassName={`homepagePage ${isGameOpening ? 'gameMode' : ''}`}>
 			{isGameMode ? (
-				<GameButton isGameMode={isGameMode} onClick={onClickGame} />
+				<GameCloseButton isGameMode={isGameMode} onClick={closeGame} />
 			) : (
-				<GameButton2 isGameMode={isGameMode} onClick={onClickGame} />
+				<Portal>
+					<GameStartButton isGameOpening={isAnimating} onClick={onClickGame} />
+				</Portal>
 			)}
 
 			<NoSsr>
 				{isGameMode ? (
 					<section className="pageIntro">
-						<GameMain onClose={onCloseGame} />
+						<GameMain onClose={closeGame} />
 					</section>
 				) : (
 					<PageIntro />

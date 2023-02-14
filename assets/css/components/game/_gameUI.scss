@@ -1,8 +1,8 @@
 .gameMode {
 	.pageIntro__content,
 	.site-header__wrapper {
-		animation: slideIn 2s forwards;
-		animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+		transition: 400ms opacity;
+		opacity: 0;
 	}
 }
 
@@ -25,6 +25,7 @@
 }
 
 .gameTitleScreen {
+	@include flex-center;
 	font-family: 'Bungee Hairline', Menlo, Consolas, monospace;
 	position: absolute;
 	top: 0;
@@ -32,7 +33,6 @@
 	z-index: 1;
 	width: 100%;
 	min-height: 100vh;
-	@include flex-center;
 	flex-direction: column;
 	gap: 20px;
 	color: var(--color-text-gray);

@@ -6,7 +6,7 @@ interface GameButtonProps {
 	onClick: () => void;
 }
 
-const GameButton: React.FC<GameButtonProps> = ({ isGameMode, onClick }) => {
+const GameCloseButton: React.FC<GameButtonProps> = ({ isGameMode, onClick }) => {
 	const { t } = useTranslation();
 
 	return (
@@ -22,4 +22,4 @@ const GameButton: React.FC<GameButtonProps> = ({ isGameMode, onClick }) => {
 	);
 };
 
-export default GameButton;
+export default GameCloseButton;

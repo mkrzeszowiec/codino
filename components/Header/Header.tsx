@@ -58,14 +58,13 @@ const Header = ({ isErrorPage }: HeaderProps) => {
 					<NavItem />
 				</nav>
 
-				<Button className="site-header__hire-button" label={t('common.getHired')} href={'/career'} />
-
-				<LanguageButton className="site-header__languageButton" />
-
 				<div className="site-header__actions">
+					<Button className="site-header__hire-button" label={t('common.getHired')} href={'/career'} />
+					<LanguageButton className="site-header__languageButton" />
+
 					<button onClick={onClickHamburgerButton} className="site-header__btn-menu" aria-label="Open the menu">
 						<i className="btn-hamburger" aria-hidden="true">
-							<span></span>
+							<span />
 						</i>
 					</button>
 				</div>
