@@ -5,6 +5,8 @@ import { useEffect } from 'react';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import JoinUs from 'components/JoinUs/JoinUs';
+import { useTranslation } from 'next-i18next';
+import { colors } from 'utils/colors';
 
 interface MainLayoutProps {
 	title?: string;
@@ -13,6 +15,8 @@ interface MainLayoutProps {
 }
 
 const MainLayout = ({ children, title = 'Codino', containerClassName = '' }: MainLayoutProps) => {
+	const { t } = useTranslation();
+
 	useEffect(() => {
 		AOS.init();
 	}, []);
@@ -23,8 +27,8 @@ const MainLayout = ({ children, title = 'Codino', containerClassName = '' }: Mai
 				<title>{title}</title>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				<meta name="description" content="Codino" />
-				<meta name="theme-color" content="#317EFB" />
+				<meta name="description" content={t('common.metadata.description')} />
+				<meta name="theme-color" content={colors.primary} />
 				<link rel="manifest" href="/manifest.json" />
 				<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
 				<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />

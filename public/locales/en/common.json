@@ -23,6 +23,9 @@
 			"caseStudy": "Case study",
 			"career": "Career",
 			"contact": "Contact"
+		},
+		"metadata": {
+			"description": "We specialize in the design, development and maintenance of mobile and web applications, as well as network and cloud solutions."
 		}
 	},
 	"components": {
