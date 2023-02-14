@@ -3,7 +3,10 @@ import { Product } from 'types/common';
 const RECAST: Product = {
 	title: 'Recast app',
 	description:
-		'Recast is a platform that allows viewers to watch and stream video and live streams of sports events, concerts, etc., based on microtransactions. Most of the amount paid by the viewer goes directly to the broadcaster. Large companies like top soccer clubs Inter, Manchester City are involved in the project.',
+		'Recast is a platform that allows viewers to watch, video and live stream sporting events, concerts, etc., based on microtransactions. Most of the amount paid by the viewer goes directly to the broadcaster, and viewers have a transparent way to support athletes. Big companies like top soccer clubs Inter, Manchester City are involved in the project. ' +
+		'\n\nThe ecosystem consists of an app for fans to browse available video, select live events, follow and support their sports idols. The second component of the ecosystem is an app for content creators to manage content, publish videos and compile broadcasts. ',
+	shortDescription:
+		'Recast is a platform for watching, video and live streams of sports events, concerts, etc., based on microtransactions. Big companies like top soccer clubs Inter, Manchester City are involved in the project.',
 	imageSource: '/images/case-study/recast/cover.png',
 	slug: 'recast',
 	color: '#001021',
@@ -13,27 +16,36 @@ const RECAST: Product = {
 	industry: 'backend, frontend',
 	scopeOfWork: {
 		description:
-			'Początki Recast, to dwuosobowy zespół od frontendu, który chce zmienić rynek streamingu PPV. W trakcie rozszerzania się projektu, do naszego zespołu dołączyły nowe osoby. Dziś jest to 9 doskonałych specjalistów pracujących nad frontendem, backendem i architekturą systemu. Nasz zakres prac to:',
+			'Started working with Recast, it was a two-person team from the frontend that evolved as the platform grew to a nine-person team of specialists working on the frontend, backend and system architecture.',
 		points: [
 			{
 				index: 1,
-				title: 'Praca drużynowa',
-				icon: 'partnership',
 				description:
-					'Współpraca z zespołem klienta. Porozumienie i odpowiedni przepływ informacji to fundament każdego projektu.'
+					'Continuous collaboration with client teams on ongoing development of frontend applications as well as backend written in microservices.'
 			},
 			{
 				index: 2,
-				title: 'Praca drużynowa',
-				icon: 'scope',
-				description:
-					'Rozwój aplikacji frontendowych, a także rozwój backendu w architekturze mikroserwisów. Projektowanie architektury systemu i jednoczesne testy wydajnościowe.'
+				description: 'Development and influence on system architecture in microservices architecture.'
 			},
 			{
 				index: 3,
-				title: 'Praca drużynowa',
-				icon: 'integration',
-				description: 'Integracja z zewnętrznymi systemami, takimi jak np. Stripe.'
+				description:
+					'Decomposition of the monolith into new small services, facilitating development and scaling of the entire system.'
+			},
+			{
+				index: 4,
+				description:
+					'Creation of a separate front-end application for publishers to manage video content, view statistics, compile live streams for thousands of users, and quickly compile testimonials directly from the device.'
+			},
+			{
+				index: 5,
+				description:
+					'Create a video indexing mechanism to provide scalable, fast search and content categorization capabilities.'
+			},
+			{
+				index: 6,
+				description:
+					'Implementation of performance testing and modeling of user influx behavior for major sporting events'
 			}
 		]
 	},

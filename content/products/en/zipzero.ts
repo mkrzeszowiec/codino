@@ -1,8 +1,12 @@
 import { Product } from 'types/common';
 
 const ZIPZERO: Product = {
-	title: 'Zipzero mobile app',
-	description: 'Cashback app to pay household bills',
+	title: 'ZipZero mobile app',
+	shortDescription:
+		'ZipZero is a shopping app with allows you to collect funds from purchases to pay monthly household bills.',
+	description:
+		'ZipZero is a shopping app z allowing users to collect funds from purchases to pay monthly household bills. Users get rewards by sharing their shopping receipts, or online shopping details. The platform rewards users for every purchase, with special premium offers for even more savings. ' +
+		'\n\nThe app has been on the UK market for 4 years and is used by hundreds of thousands of users daily. ',
 	imageSource: '/images/case-study/zipzero/cover.png',
 	slug: 'zipzero',
 	color: '#2c368a',

@@ -17,7 +17,7 @@ const INSIGHTS: Product = {
 		points: [
 			{
 				index: 1,
-				description: `Creating a system for analysis and visualization: <br/> - passenger behavior in airlines <br/>- visualization of passenger data: flights, tickets, reservations`
+				description: `Creating a system for analysis and visualization passenger behavior in airlines and visualization of passenger data: flights, tickets, reservations`
 			},
 			{
 				index: 2,

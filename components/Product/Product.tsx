@@ -14,7 +14,7 @@ const VISIBLE_TECHNOLOGIES_NUMBER = 5;
 
 const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
 	const { t } = useTranslation();
-	const { description, imageSource, title, slug, color, technologies } = product;
+	const { description, shortDescription, imageSource, title, slug, color, technologies } = product;
 	const visibleTechnologies = technologies?.slice(0, VISIBLE_TECHNOLOGIES_NUMBER);
 
 	return (
@@ -23,7 +23,7 @@ const Product: React.FC<ProductProps> = ({ product, className = '' }) => {
 				<h3 className="product__title">{title}</h3>
 
 				<p className="product__description">
-					<Linkify>{description}</Linkify>
+					<Linkify>{shortDescription ?? description}</Linkify>
 				</p>
 
 				<p className="product__technology">

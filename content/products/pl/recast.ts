@@ -3,7 +3,10 @@ import { Product } from 'types/common';
 const RECAST: Product = {
 	title: 'Aplikacja Recast',
 	description:
-		'Recast to platforma umożliwiająca oglądanie i transmisję video i live streamów z wydarzeń sportowych, koncertów itp,  oparta o mikrotraksakcje. Większość kwoty zapłaconej przez widza trafia bezpośrednio do nadawcy. W projekt zaangażowane sa duże firmy jak topowe kluby piłkarskie Inter, Manchester City.',
+		'Recast to platforma umożliwiająca oglądanie, transmisję video i live streamów z wydarzeń sportowych, koncertów itp, oparta o mikrotransakcje. Większość kwoty zapłaconej przez widza trafia bezpośrednio do nadawcy, a widzowie mają przejrzysty sposób na wspieranie sportowców. W projekt zaangażowane są duże firmy jak topowe kluby piłkarskie Inter, Manchester City. ' +
+		'\n\nSystem składa się z aplikacji dla fanów umożliwiającej przeglądanie dostępne video, wybieranie wydarzeń odbywających się na żywo, śledzenie i wspieranie swoich sportowych idoli. Drugim elementem ekosystemu jest aplikacja dla osób tworzących treści, która umożliwia zarządzanie treściami, publikowanie wideo oraz zestawienia transmisji. ',
+	shortDescription:
+		'Recast to platforma umożliwiająca oglądanie, transmisję video i live streamów z wydarzeń sportowych, koncertów itp, oparta o mikrotransakcje. W projekt zaangażowane są duże firmy jak topowe kluby piłkarskie Inter, Manchester City.',
 	imageSource: '/images/case-study/recast/cover.png',
 	slug: 'recast',
 	color: '#001021',
@@ -13,27 +16,35 @@ const RECAST: Product = {
 	industry: 'backend, frontend',
 	scopeOfWork: {
 		description:
-			'Początki Recast, to dwuosobowy zespół od frontendu, który chce zmienić rynek streamingu PPV. W trakcie rozszerzania się projektu, do naszego zespołu dołączyły nowe osoby. Dziś jest to 9 doskonałych specjalistów pracujących nad frontendem, backendem i architekturą systemu. Nasz zakres prac to:',
+			'Początki współpracy z Recast, to dwuosobowy zespół od frontendu, który wyewoluował wraz z rozwojem platformy do dziewięcioosobowego zespołu specjalistów pracujących nad frontendem, backendem i architekturą systemu.',
 		points: [
 			{
 				index: 1,
-				title: 'Współpraca',
-				icon: 'partnership',
 				description:
-					'Współpraca z zespołem klienta. Porozumienie i odpowiedni przepływ informacji to fundament każdego projektu.'
+					'Nieustanna współpraca z zespołami klienta nad bieżącym rozwojem aplikacji frontendowych jak i  backendu napisanego w mikroserwiach.'
 			},
 			{
 				index: 2,
-				title: 'Zakres',
-				icon: 'scope',
-				description:
-					'Rozwój aplikacji frontendowych, a także rozwój backendu w architekturze mikroserwisów. Projektowanie architektury systemu i jednoczesne testy wydajnościowe.'
+				description: 'Rozwój i wpływ na architekturę systemu w architekturze mikroserwisów.'
 			},
 			{
 				index: 3,
-				title: 'Integracje',
-				icon: 'integration',
-				description: 'Integracja z zewnętrznymi systemami, takimi jak np. Stripe.'
+				description: 'Dekompozycja monolitu do nowych małych serwisów, ułatwiających rozwój i skalowanie całego systemu'
+			},
+			{
+				index: 4,
+				description:
+					'Stworzenie oddzielnej aplikacji frontendowej dla publisherów, umożliwiającej zarządzanie treściami wideo, przeglądanie statystyk,  zestawianie live stremingów dla tysięcy użytkowników oraz szybkie zestawianie relacji bezpośrednio z urządzenia.'
+			},
+			{
+				index: 5,
+				description:
+					'Stworzenie mechanizmu indeksacji wideo w celu zapewnienia możliwości skalowalnego, szybkiego wyszukiwania i kategoryzowania treści.'
+			},
+			{
+				index: 6,
+				description:
+					'Implementacja testów wydajnościowych oraz modelowanie zachowania napływu użytkowników przy okazji dużych wydarzeń sportowych'
 			}
 		]
 	},

@@ -17,8 +17,8 @@ import AXISROOMS_EN from 'content/products/en/axisrooms';
 import ZIPZERO_EN from 'content/products/en/zipzero';
 
 const OUR_PRODUCTS_PL: Product[] = [
-	ZIPZERO_PL,
 	RECAST_PL,
+	ZIPZERO_PL,
 	NEXTBIKE_PL,
 	AXISROOMS_PL,
 	INSIGHTS_PL,
@@ -27,8 +27,8 @@ const OUR_PRODUCTS_PL: Product[] = [
 ];
 
 const OUR_PRODUCTS_EN: Product[] = [
-	ZIPZERO_EN,
 	RECAST_EN,
+	ZIPZERO_EN,
 	NEXTBIKE_EN,
 	AXISROOMS_EN,
 	INSIGHTS_EN,

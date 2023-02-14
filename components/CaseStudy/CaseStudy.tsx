@@ -5,7 +5,6 @@ import SectionTitle from 'components/SectionTitle/SectionTitle';
 import UseCasesCarousel from 'components/UseCasesCarousel/UseCasesCarousel';
 import CaseStudyScopeOfWork from 'components/CaseStudy/CaseStudyScopeOfWork';
 import CaseStudyTechnologies from 'components/CaseStudy/CaseStudyTechnologies';
-import CaseStudySolutions from 'components/CaseStudy/CaseStudySolutions';
 import CaseStudyMap from 'components/CaseStudy/CaseStudyMap';
 import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
 import { useTranslation } from 'next-i18next';
@@ -43,10 +42,6 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ product }) => {
 			</div>
 
 			<CaseStudyTechnologies product={product} />
-
-			<div className="container">
-				<CaseStudySolutions product={product} />
-			</div>
 
 			<UseCasesCarousel title={t('components.caseStudy.showOther')} />
 		</section>

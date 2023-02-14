@@ -17,7 +17,7 @@ const INSIGHTS: Product = {
 		points: [
 			{
 				index: 1,
-				description: `stworzenie systemu do analizy i wizualizacji: <br/> - zachowań pasażerów w liniach lotniczych <br/>- wizualizacji danych pasazerów: lotów, biletów, rezerwacji`
+				description: `stworzenie systemu do analizy i wizualizacji zachowań pasażerów w liniach lotniczych i danych pasazerów: lotów, biletów, rezerwacji`
 			},
 			{
 				index: 2,

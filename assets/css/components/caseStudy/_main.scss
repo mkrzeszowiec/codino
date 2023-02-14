@@ -2,6 +2,7 @@
 	padding-top: var(--container-vertical-padding);
 
 	&__description {
+		white-space: pre-line;
 		margin: 20px 0 60px 0;
 
 		a:hover {

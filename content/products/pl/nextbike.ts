@@ -2,7 +2,11 @@ import { Product } from 'types/common';
 
 const NEXTBIKE: Product = {
 	title: 'Nextbike - Prace backendowe',
-	description: 'Ratunek i rozwój systemu obsługującego miejskie rowery. https://nextbike.pl',
+	shortDescription:
+		'Nextbike to najpopularniejsza platforma do wypożyczania rowerów w Polsce, działająca w większości dużych miast w Polsce.',
+	description:
+		'Nextbike to najpopularniejsza platforma do wypożyczania rowerów w Polsce, działająca w większości dużych miast w Polsce. ' +
+		'\n\nUżytkownicy przy pomocy aplikacji mobilnej, za niewielką opłatą mogą wypożyczyć rower dostępny na jednej z setek stacji rozlokowanych w strategicznych punktach w każdym mieście. Projekt jest bardzo interesujący ze względu na skalę operacji, wymagania gwarancję niezawodności oraz chęć klienta do usprawnienia i modernizacji obecnej architektury.',
 	imageSource: '/images/case-study/nextbike/cover.png',
 	slug: 'nextbike',
 	color: '#0f84d0',
@@ -11,11 +15,13 @@ const NEXTBIKE: Product = {
 	scopeOfTechnology: 'rozwój backendu, redesign architektury systemu',
 	industry: 'wypożyczalnia, transport rowerowy, usługi publiczne',
 	scopeOfWork: {
-		description: '',
+		description:
+			'Głównym celem naszego działania w nextbike polska było utrzymanie i rozwój istniejących systemów, porządkowanie architektury oraz stopniowe wprowadzanie nowych serwisów i funkcjonalności',
 		points: [
-			{ index: 1, description: 'stworzyć nowe serwisy które zdejmą obciążenie z istniejącego serwisu' },
-			{ index: 2, description: 'zaprojektować i stworzyć API dla nowych aplikacji mobilnych' },
-			{ index: 3, description: 'utrzymanie i rozwój istniejących systemów' }
+			{ index: 1, description: 'Rozwój systemów do raportowania i monitoringu rowerów i stacji rowerowych' },
+			{ index: 2, description: 'Zaprojektowanie i implementacja przejrzystego API dla nowych aplikacji mobilnych' },
+			{ index: 3, description: 'Zaprojektowanie i implementacja nowego systemu autoryzacji i uwierzytelnienia' },
+			{ index: 4, description: 'Implementacja nowego sposobu pobierania danych ze stacji bazowych' }
 		]
 	},
 	technologies: ['node', 'php', 'mongodb', 'ts'],

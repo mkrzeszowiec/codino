@@ -29,6 +29,7 @@ export type technology =
 export interface Product {
 	title: string;
 	description: string;
+	shortDescription?: string;
 	imageSource: string;
 	slug: string;
 	color: string;
@@ -38,7 +39,7 @@ export interface Product {
 	scopeOfWork?: {
 		description: string;
 		points: {
-			index: number;
+			index?: number;
 			title?: string;
 			icon?: 'partnership' | 'scope' | 'integration';
 			description: string;

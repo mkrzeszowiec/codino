@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useState } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { DotButton, NextButton, PrevButton } from 'components/UseCasesCarousel/UseCasesArrowsAndDots';
 import Product from 'components/Product/Product';
