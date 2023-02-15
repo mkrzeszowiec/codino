@@ -4,37 +4,19 @@ $launchLength: 1s;
 	display: none;
 	z-index: 9;
 	position: absolute;
-	top: 33px;
-	right: -1.5rem;
-	animation: shake 3s ease infinite;
+	right: -50px;
+	top: 5px;
 	cursor: pointer;
 
 	@include breakpoint(tablet) {
 		display: block;
 	}
 
-	&__tooltip {
-		background: white;
-		color: black;
-	}
-
 	&--launch {
 		animation: flight 1.5s ease infinite;
-
-		.loading {
-			.line {
-				display: block;
-			}
-		}
 	}
 
 	&:hover {
-		.loading {
-			.line {
-				display: block;
-			}
-		}
-
 		.rumble {
 			animation: rumble 1s infinite ($launchLength / 3) reverse;
 		}
@@ -42,7 +24,7 @@ $launchLength: 1s;
 }
 
 .loading {
-	transform: rotate(-46deg) scale(0.9);
+	transform: rotate(-46deg);
 	max-width: 4rem;
 	width: 100%;
 
@@ -74,7 +56,6 @@ $launchLength: 1s;
 	}
 
 	.line {
-		display: none;
 		animation-iteration-count: infinite;
 		stroke: var(--color-primary);
 	}

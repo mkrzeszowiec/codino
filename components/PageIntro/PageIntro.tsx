@@ -3,8 +3,14 @@ import Button from 'components/Button/Button';
 import HeroAnimation from 'components/HeroAnimation/HeroAnimation';
 import { getIsServerSide } from 'utils/utils';
 import { Trans, useTranslation } from 'next-i18next';
+import GameStartButton from 'components/GameButton/GameStartButton';
 
-const PageIntro = () => {
+interface PageIntroProps {
+	onClickStartGame: () => void;
+	isLaunchGameAnimating: boolean;
+}
+
+const PageIntro: React.FC<PageIntroProps> = ({ onClickStartGame, isLaunchGameAnimating }) => {
 	const { t } = useTranslation();
 	const [showing, setShowing] = useState(false);
 
@@ -26,7 +32,11 @@ const PageIntro = () => {
 						<Trans i18nKey={'components.pageIntro.header'} />
 					</h2>
 					<h3 className="pageIntro__subtitle">{t('components.pageIntro.subheader')}</h3>
-					<Button label={t('common.contact')} href="/contact" type="border-white" />
+
+					<div className="pageIntro__buttonContainer">
+						<Button label={t('common.contact')} href="/contact" type="border-white" />
+						<GameStartButton isGameOpening={isLaunchGameAnimating} onClick={onClickStartGame} />
+					</div>
 				</div>
 			</div>
 		</section>

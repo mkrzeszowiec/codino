@@ -1,4 +1,6 @@
 .gameMode {
+	--gameFont: 'Bungee Hairline', Menlo, Consolas, monospace;
+
 	#hero-animation,
 	.pageIntro__content,
 	.site-header__wrapper {
@@ -13,7 +15,7 @@
 	}
 
 	&__score {
-		font-family: 'Bungee Hairline', Menlo, Consolas, monospace;
+		font-family: var(--gameFont);
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -27,7 +29,7 @@
 
 .gameTitleScreen {
 	@include flex-center;
-	font-family: 'Bungee Hairline', Menlo, Consolas, monospace;
+	font-family: var(--gameFont);
 	position: absolute;
 	top: 0;
 	left: 0;

@@ -9,10 +9,8 @@ import StartWork from 'components/StartWork/StartWork';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import GameMain from 'components/game/GameMain';
 import NoSsr from 'components/NoSsr/NoSsr';
-import GameStartButton from 'components/GameButton/GameStartButton';
 import GameCloseButton from 'components/GameButton/GameCloseButton';
-import Portal from 'components/Portal/Portal';
-import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE, GAME_BUTTON_PORTAL_CLASS } from 'utils/constants';
+import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 
 const IndexPage = () => {
 	//todo refactor states
@@ -43,13 +41,7 @@ const IndexPage = () => {
 
 	return (
 		<MainLayout containerClassName={`homepagePage ${isGameOpening ? 'gameMode' : ''}`}>
-			{isGameMode ? (
-				<GameCloseButton isGameMode={isGameMode} onClick={closeGame} />
-			) : (
-				<Portal selector={`.${GAME_BUTTON_PORTAL_CLASS}`}>
-					<GameStartButton isGameOpening={isAnimating} onClick={onClickGame} />
-				</Portal>
-			)}
+			{isGameMode && <GameCloseButton isGameMode={isGameMode} onClick={closeGame} />}
 
 			<NoSsr>
 				{isGameMode ? (
@@ -57,7 +49,7 @@ const IndexPage = () => {
 						<GameMain onClose={closeGame} />
 					</section>
 				) : (
-					<PageIntro />
+					<PageIntro isLaunchGameAnimating={isAnimating} onClickStartGame={onClickGame} />
 				)}
 			</NoSsr>
 
