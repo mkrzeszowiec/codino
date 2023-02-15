@@ -13,6 +13,11 @@ $launchLength: 1s;
 		display: block;
 	}
 
+	&__tooltip {
+		background: white;
+		color: black;
+	}
+
 	&--launch {
 		animation: flight 1.5s ease infinite;
 
