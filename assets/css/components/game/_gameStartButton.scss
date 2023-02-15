@@ -6,7 +6,7 @@ $launchLength: 1s;
 	position: absolute;
 	top: 33px;
 	right: -1.5rem;
-	animation: shake 4.72s ease infinite;
+	animation: shake 3s ease infinite;
 	cursor: pointer;
 
 	@include breakpoint(tablet) {
