@@ -7,6 +7,7 @@ import NavItem from 'components/Header/NavItem';
 import Logo from 'components/icons/Logo';
 import { useTranslation } from 'next-i18next';
 import LanguageButton from 'components/LanguageButton/LanguageButton';
+import { GAME_BUTTON_PORTAL_CLASS } from 'utils/constants';
 
 interface HeaderProps {
 	isErrorPage?: boolean;
@@ -58,7 +59,7 @@ const Header = ({ isErrorPage }: HeaderProps) => {
 					<NavItem />
 				</nav>
 
-				<div className="site-header__actions">
+				<div className={`site-header__actions ${GAME_BUTTON_PORTAL_CLASS}`}>
 					<Button className="site-header__hire-button" label={t('common.getHired')} href={'/career'} />
 					<LanguageButton className="site-header__languageButton" />
 

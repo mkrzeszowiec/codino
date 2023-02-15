@@ -11,16 +11,14 @@ import GameMain from 'components/game/GameMain';
 import NoSsr from 'components/NoSsr/NoSsr';
 import GameStartButton from 'components/GameButton/GameStartButton';
 import GameCloseButton from 'components/GameButton/GameCloseButton';
-import usePortal from 'hooks/usePortal';
-import { getIsServerSide } from 'utils/utils';
-import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
+import Portal from 'components/Portal/Portal';
+import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE, GAME_BUTTON_PORTAL_CLASS } from 'utils/constants';
 
 const IndexPage = () => {
 	//todo refactor states
 	const [isGameOpening, setIsGameOpening] = useState(false);
 	const [isAnimating, setIsAnimating] = useState(false);
 	const [isGameMode, setIsGameMode] = useState(false);
-	const Portal = usePortal(getIsServerSide() ? '' : document.querySelector('.site-header__actions'));
 
 	const onClickGame = () => {
 		if (isGameOpening) {
@@ -48,7 +46,7 @@ const IndexPage = () => {
 			{isGameMode ? (
 				<GameCloseButton isGameMode={isGameMode} onClick={closeGame} />
 			) : (
-				<Portal>
+				<Portal selector={`.${GAME_BUTTON_PORTAL_CLASS}`}>
 					<GameStartButton isGameOpening={isAnimating} onClick={onClickGame} />
 				</Portal>
 			)}

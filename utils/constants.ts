@@ -16,3 +16,5 @@ export enum STATE {
 	ERROR = 'error',
 	NOTHING = ''
 }
+
+export const GAME_BUTTON_PORTAL_CLASS = 'game-button-portal';
