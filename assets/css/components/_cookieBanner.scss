@@ -1,0 +1,56 @@
+.cookieBanner {
+	@include flex-center;
+	min-height: 11rem;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color-primary);
+	color: white;
+	padding: 1.8rem 1rem;
+	z-index: 99;
+	animation-name: slideUp;
+	animation-duration: 2s;
+	animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+
+	&__content {
+		display: flex;
+		width: 100%;
+		gap: 2rem;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__buttonWrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-direction: row;
+	}
+
+	&__button {
+		@include flex-center;
+		flex-direction: column;
+		color: white;
+		font-weight: bold;
+		font-size: 1.6rem;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__text {
+		max-width: 600px;
+		font-size: 1.4rem;
+	}
+
+	&__url {
+		display: block;
+		margin-top: 0.5rem;
+		text-decoration: underline;
+		font-size: 1.4rem;
+	}
+}

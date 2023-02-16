@@ -1,12 +1,13 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Head from 'next/head';
 import { useEffect } from 'react';
+import AOS from 'aos';
+import { useTranslation } from 'next-i18next';
+import Head from 'next/head';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import JoinUs from 'components/JoinUs/JoinUs';
-import { useTranslation } from 'next-i18next';
+import CookieBanner from 'components/CookieBanner/CookieBanner';
 import { colors } from 'utils/colors';
+import 'aos/dist/aos.css';
 
 interface MainLayoutProps {
 	title?: string;
@@ -40,6 +41,7 @@ const MainLayout = ({ children, title = 'Codino', containerClassName = '' }: Mai
 
 			<JoinUs />
 			<Footer />
+			<CookieBanner />
 		</div>
 	);
 };

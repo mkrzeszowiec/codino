@@ -126,6 +126,11 @@
 			"gameOver": "Game over",
 			"play": "Play",
 			"close": "Close"
+		},
+		"cookie": {
+			"description": "This site uses cookies. By using it you agree to their use, according to your current browser settings.",
+			"moreDetailsUrl": "Read more about our Cookies Policy",
+			"button": "Yes, I accept"
 		}
 	}
 }

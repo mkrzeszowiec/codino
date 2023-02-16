@@ -126,6 +126,11 @@
 			"gameOver": "Zostałeś zniszczony",
 			"play": "Zagraj",
 			"close": "Powrót do strony głównej"
+		},
+		"cookie": {
+			"description": "Ta strona używa plików cookie. Korzystając z niej wyrażasz zgodę na ich używanie, zgodnie z aktualnymi ustawieniami przeglądarki.",
+			"moreDetailsUrl": "Więcej o naszej Polityce Cookies",
+			"button": "Tak, akceptuję"
 		}
 	}
 }
