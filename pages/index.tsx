@@ -11,12 +11,15 @@ import GameMain from 'components/game/GameMain';
 import NoSsr from 'components/NoSsr/NoSsr';
 import GameCloseButton from 'components/GameButton/GameCloseButton';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
+import useLockedBody from 'hooks/useLockBodyScroll';
 
 const IndexPage = () => {
 	//todo refactor states
 	const [isGameOpening, setIsGameOpening] = useState(false);
 	const [isAnimating, setIsAnimating] = useState(false);
 	const [isGameMode, setIsGameMode] = useState(false);
+
+	useLockedBody(isGameMode);
 
 	const onClickGame = () => {
 		if (isGameOpening) {
