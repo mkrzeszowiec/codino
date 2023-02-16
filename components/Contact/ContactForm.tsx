@@ -4,6 +4,7 @@ import SubmitButton from 'components/SubmitButton/SubmitButton';
 import { EMAIL_JS_CONTACT_FORM_TEMPLATE_ID, EMAIL_JS_SERVICE_ID, EMAIL_JS_USER_ID, STATE } from 'utils/constants';
 import { useTranslation } from 'next-i18next';
 import FormAgreementTooltip from 'components/FormAgreementTooltip/FormAgreementTooltip';
+import { event as googleEvent } from 'nextjs-google-analytics';
 
 const ContactForm = () => {
 	const { t } = useTranslation();
@@ -17,8 +18,17 @@ const ContactForm = () => {
 			setState(STATE.LOADING);
 			await emailjs.sendForm(EMAIL_JS_SERVICE_ID, EMAIL_JS_CONTACT_FORM_TEMPLATE_ID, form.current, EMAIL_JS_USER_ID);
 			setState(STATE.SUCCESS);
-		} catch {
+
+			googleEvent('success_submit_contact_form', {
+				category: 'Contact'
+			});
+		} catch (error) {
 			setState(STATE.ERROR);
+
+			googleEvent('error_submit_contact_form', {
+				category: 'Contact',
+				value: error
+			});
 		}
 	};
 

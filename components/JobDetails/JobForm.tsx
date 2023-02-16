@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
-import { EMAIL_JS_JOB_FORM_TEMPLATE_ID, EMAIL_JS_SERVICE_ID, EMAIL_JS_USER_ID, STATE } from 'utils/constants';
+import { EMAIL_JS_JOB_FORM_TEMPLATE_ID, EMAIL_JS_SERVICE_ID, STATE } from 'utils/constants';
 import SubmitButton from 'components/SubmitButton/SubmitButton';
 import { useTranslation } from 'next-i18next';
 import FormAgreementTooltip from 'components/FormAgreementTooltip/FormAgreementTooltip';
+import { event as googleEvent } from 'nextjs-google-analytics/dist/interactions/event';
 
 interface JobFormProps {
 	position: string;
@@ -19,10 +20,21 @@ const JobForm: React.FC<JobFormProps> = ({ position }) => {
 
 		try {
 			setState(STATE.LOADING);
-			await emailjs.sendForm(EMAIL_JS_SERVICE_ID, EMAIL_JS_JOB_FORM_TEMPLATE_ID, form.current, EMAIL_JS_USER_ID);
+
+			//todo
+			await emailjs.sendForm(EMAIL_JS_SERVICE_ID, EMAIL_JS_JOB_FORM_TEMPLATE_ID, form.current, 'ds');
 			setState(STATE.SUCCESS);
-		} catch {
+
+			googleEvent('success_submit_job_form', {
+				category: 'Career'
+			});
+		} catch (error) {
 			setState(STATE.ERROR);
+
+			googleEvent('error_submit_job_form', {
+				category: 'Career',
+				value: error
+			});
 		}
 	};
 

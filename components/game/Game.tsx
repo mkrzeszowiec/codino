@@ -4,6 +4,7 @@ import Ship from 'components/game/ship';
 import TitleScreen from 'components/game/TitleScreen';
 import { getRandomNum, isCollision } from 'components/game/utils';
 import GameBackground from 'components/game/GameBackground';
+import { event } from 'nextjs-google-analytics';
 
 interface GameProps {
 	setPlaying: (isPlaying) => void;
@@ -140,6 +141,12 @@ const Game: React.FC<GameProps> = props => {
 
 	const endGame = () => {
 		setPlaying(false);
+
+		event('game_over', {
+			category: 'Game',
+			value: score
+		});
+
 		setState(prevState => ({ ...prevState, gameOver: true }));
 	};
 

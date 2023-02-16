@@ -5,7 +5,6 @@ import Head from 'next/head';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import JoinUs from 'components/JoinUs/JoinUs';
-import CookieBanner from 'components/CookieBanner/CookieBanner';
 import { colors } from 'utils/colors';
 import 'aos/dist/aos.css';
 
@@ -41,7 +40,6 @@ const MainLayout = ({ children, title = 'Codino', containerClassName = '' }: Mai
 
 			<JoinUs />
 			<Footer />
-			<CookieBanner />
 		</div>
 	);
 };

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Game from 'components/game/Game';
+import { event as googleEvent } from 'nextjs-google-analytics';
 
 interface GameMainProps {
 	onClose: () => void;
@@ -17,6 +18,10 @@ const GameMain: React.FC<GameMainProps> = ({ onClose }) => {
 		if (event.key === 'Escape') {
 			event.preventDefault();
 			onClose?.();
+
+			googleEvent('press_escape_to_close_game', {
+				category: 'Game'
+			});
 		}
 	};
 
