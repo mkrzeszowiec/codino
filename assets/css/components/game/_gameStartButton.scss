@@ -16,6 +16,11 @@ $launchLength: 1s;
 		animation: flight 1.5s ease infinite;
 	}
 
+	&__tooltip {
+		background-color: var(--color-primary);
+		margin-top: -1rem;
+	}
+
 	&:hover {
 		.rumble {
 			animation: rumble 1s infinite ($launchLength / 3) reverse;
