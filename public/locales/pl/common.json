@@ -119,6 +119,14 @@
 			"employeeDevelopmentTitle": "Rozwój pracowników",
 			"employeeDevelopmentDescription": "Wspieramy rozwój swoich pracowników, co pozwala im na ulepszanie swoich umiejętności i dostarczanie najlepszych możliwych usług."
 		},
+		"howWeWork": {
+			"title": "Jak działamy?",
+			"description": "Pomożemy ci przetransformować Twoje pomysły w gotowy produkt dopasowany do potrzeb twoich użytkowników.\n\n Wymagania biznesowe ulegają ciągłym zmianom, dlatego tworzymy oprogramowanie które pozwala na łatwe modyfikacje i zapewnia wysoką jakość działania. Nasze zespoły organizują pracę używając metodologii Kanban i Scrum.\n\nNasz doświadczony zespół posiada różnorodne umiejętności które pomogą rozwiązać każdy problem. Zaczynając od analizy i planowania rozwiązania poprzez pisanie wysokiej jakości, skalowanego oprogramowania, automatycznego testowania oraz dostarczania dokumentacji.",
+			"firstStep": "Analiza i planowane",
+			"secondStep": "Development",
+			"thirdStep": "Testowanie",
+			"fourthStep": "Feedback i dalszy rozwój"
+		},
 		"game": {
 			"pressToPlay": "Naciśnij spację by zagrać",
 			"control": "Użyj strzałek i spacji do sterowania",

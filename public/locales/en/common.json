@@ -119,6 +119,14 @@
 			"employeeDevelopmentTitle": "Employee Development",
 			"employeeDevelopmentDescription": "We support the development of our employees, which allows them to improve their skills and deliver the best possible service."
 		},
+		"howWeWork": {
+			"title": "How we work?",
+			"description": "We will help you transform your ideas into a finished product tailored to the needs of your users.\n\nBusiness requirements are constantly changing, so we create software that allows for easy modifications and ensures high quality performance. \n\nOur teams organize work using Kanban and Scrum methodologies.Our experienced team has a variety of skills to help solve any problem. Starting from analyzing and planning a solution through writing high-quality, scalable software, automated testing and providing documentation.",
+			"firstStep": "Analysis and planned",
+			"secondStep": "Development",
+			"thirdStep": "Testing",
+			"fourthStep": "Feedback and further development"
+		},
 		"game": {
 			"pressToPlay": "Press space to play",
 			"control": "Use arrows and spacebar to control",

@@ -1,6 +1,6 @@
 import Main from 'layouts/MainLayout';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
-import CompanyValues from 'components/aboutUs/CompanyValues';
+import HowWeWork from 'components/aboutUs/HowWeWork';
 import TeamHeader from 'components/aboutUs/TeamHeader';
 import TeamStats from 'components/aboutUs/TeamStats';
 import { getPageTitle } from 'utils/utils';
@@ -21,7 +21,7 @@ const AboutPage = () => {
 			<TeamStats />
 
 			<div className="container">
-				<CompanyValues />
+				<HowWeWork />
 				<TeamHeader />
 			</div>
 		</Main>
