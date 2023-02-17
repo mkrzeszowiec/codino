@@ -92,7 +92,6 @@
 
 	&.success {
 		& .submitButton__button {
-			touch-action: none;
 			pointer-events: none;
 			cursor: not-allowed;
 
