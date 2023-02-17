@@ -37,7 +37,7 @@ const CookieBanner = () => {
 				<div className="cookieBanner__infoWrapper">
 					<p className="cookieBanner__text">{t('components.cookie.description')}</p>
 
-					<Link href="/#" className="cookieBanner__url">
+					<Link href="/cookies-policy" className="cookieBanner__url">
 						{t('components.cookie.moreDetailsUrl')}
 					</Link>
 				</div>
