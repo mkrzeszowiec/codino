@@ -12,7 +12,7 @@ const TeamStats = () => {
 			<div className="teamStats__wrapper">
 				<div className="teamStats__info">
 					<h3 className="teamStats__header">
-						<CountUp end={4} duration={1.5} enableScrollSpy />+
+						<CountUp end={8} duration={1.5} enableScrollSpy />+
 					</h3>
 					<p className="teamStats__description">{t('components.teamStats.first')}</p>
 				</div>

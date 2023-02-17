@@ -36,13 +36,13 @@ export const SERVICES_PL: Position[] = [
 		icons: ['react', 'angular', 'ts', 'kotlin', 'android', 'ios', 'docker']
 	},
 	{
-		title: 'Body leasing',
+		title: 'Team leasing',
 		description:
 			'Jeśli Twoja firma potrzebuje specjalistów, możemy Ci ich zapewnić. ' +
 			'W naszej ofercie znajdują się tylko dokładnie sprawdzeni i wybrani specjaliści, którzy są kierowani do projektów odpowiednio do ich umiejętności, zainteresowań i potrzeb. \n\n' +
 			'Naszym priorytetem jest tworzenie wydajnego i kompetentnego zespołu w dziedzinie frontend/backend, a także w dziale testów i zarządzania projektem. ',
 		shortDescription: '',
-		slug: 'body-leasing',
+		slug: 'team-leasing',
 		icons: ['leasing']
 	}
 ];

@@ -35,12 +35,12 @@ export const SERVICES_EN: Position[] = [
 		icons: ['react', 'angular', 'ts', 'kotlin', 'android', 'ios', 'docker']
 	},
 	{
-		title: 'Body leasing',
+		title: 'Team leasing',
 		description:
 			'If your company needs specialists, we can provide you with them. We offer only carefully screened and selected specialists who are directed to projects according to their skills, interests and needs.\n\n' +
 			'Our priority is to create efficient and competent personnel in the front-end/back-end field, as well as in testing and project management.',
 		shortDescription: '',
-		slug: 'body-leasing',
+		slug: 'team-leasing',
 		icons: ['leasing']
 	}
 ];
