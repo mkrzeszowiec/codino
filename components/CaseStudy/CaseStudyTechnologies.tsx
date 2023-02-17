@@ -10,7 +10,7 @@ const CaseStudyTechnologies = ({ product }: { product: Product }) => {
 	const { technologies } = product;
 
 	const visibleTechnologies = useMemo(
-		() => allTechnologyLogos.filter(logo => technologies.some(technology => logo.src.includes(technology))),
+		() => allTechnologyLogos.filter(logo => technologies?.some(technology => logo.src.includes(technology))),
 		[technologies]
 	);
 

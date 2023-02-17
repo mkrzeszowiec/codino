@@ -19,7 +19,7 @@ const TechnologiesCarousel: React.FC<TechnologiesCarouselProps> = ({ technologie
 	const visibleTechnologies = useMemo(
 		() =>
 			technologies?.length
-				? allTechnologyLogos.filter(logo => technologies.some(technology => logo.src.includes(technology)))
+				? allTechnologyLogos.filter(logo => technologies?.some(technology => logo.src.includes(technology)))
 				: mainTechnologyLogos,
 		[technologies]
 	);
