@@ -4,15 +4,12 @@ import SectionTitle from 'components/SectionTitle/SectionTitle';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import { Product } from 'types/common';
-
-const PRIMARY_COUNTRY_COLOR = '#15a99b';
-const DEFAULT_COUNTRY_COLOR = '#dcdcdc';
+import { colors } from 'utils/colors';
 
 const CaseStudyMap: React.FC<{ product?: Product }> = ({ product }) => {
 	const { t } = useTranslation();
 	const selectedCountry = product.countries;
-	const getFillColor = (id: string): string =>
-		selectedCountry?.includes(id) ? PRIMARY_COUNTRY_COLOR : DEFAULT_COUNTRY_COLOR;
+	const getFillColor = (id: string): string => (selectedCountry?.includes(id) ? colors.primary : colors.gray);
 
 	return (
 		<div className="caseStudyMap" data-aos="fade-down">
