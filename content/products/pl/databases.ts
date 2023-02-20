@@ -36,7 +36,7 @@ const DATABASES: Product = {
 		]
 	},
 	technologies: ['java', 'spring', 'react'],
-	countries: ['']
+	countries: 'europe_usa'
 };
 
 export default DATABASES;

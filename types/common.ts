@@ -52,7 +52,7 @@ export interface Product {
 	goals?: string;
 	technologies?: technology[];
 	//3 characters - check in maps/worldMap.json or use static values
-	countries?: string[] | 'europe' | 'pl' | 'uk';
+	countries?: string[] | 'europe' | 'pl' | 'uk' | 'europe_usa';
 	solutions?: {
 		title?: string;
 		description: string;
