@@ -2,8 +2,10 @@ import { Product } from 'types/common';
 
 const GIVEO: Product = {
 	title: 'Giveo - Mobile app',
-	description:
+	shortDescription:
 		'Giveo is cashless donation fundraising and marketplace platform that supports great causes with every transaction made in the app. https://giveo.app',
+	description:
+		'Our software architects and developers have been working on a powerful and scalable online auction platform. The platform allows charity auctions to be held for selected causes. The user can add an item that is auctioned off and the proceeds from the sale go entirely to charity. Great emphasis was placed not only on the scalability of the system, but also on intuitiveness and end-user friendliness.',
 	imageSource: '/images/case-study/giveo/cover.png',
 	slug: 'giveo',
 	color: '#6674b6',
@@ -12,38 +14,23 @@ const GIVEO: Product = {
 	scopeOfTechnology: 'auctions, sales',
 	industry: 'architecture, backend, frontend',
 	scopeOfWork: {
-		description: '',
+		description: `A software architect from our team prepared a backend design in a microservices architecture. Due to the planned high load on the system, the architecture had to be highly scalable. The backend was designed by people from our team and the execution was handled by the client's internal team. Our team was also responsible for the design and execution of an extensive frontend application, optimized for mobile devices.`,
 		points: [
 			{
 				index: 1,
-				description: 'Preparation of the system architecture - backend microservices'
+				description: 'designing a backend in microservices architecture'
 			},
 			{
 				index: 2,
-				description: "Implementation of backend services, together with the client's internal team"
+				description: 'frontend application architecture design'
 			},
 			{
 				index: 3,
-				description: 'Supervision and assistance in implementing a frontend application in react native'
+				description: 'microservices frontend application development'
 			}
 		]
 	},
-	goals: '',
-	technologies: ['react', 'java', 'spring', 'postgresql', 'elastic', 'android', 'ios'],
-	solutions: [
-		{
-			title: 'Solution 1',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, aliquam cupiditate enim et exercitationem expedita fugiat illo ipsum magni nulla omnis possimus provident quibusdam quisquam saepe sed sit voluptatibus!',
-			imageSrc: '/images/case-study/giveo/1.png'
-		},
-		{
-			title: 'Solution 2',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, aliquam cupiditate enim et exercitationem expedita fugiat illo ipsum magni nulla omnis possimus provident quibusdam quisquam saepe sed sit voluptatibus!',
-			imageSrc: '/images/case-study/giveo/2.png'
-		}
-	]
+	technologies: ['react', 'java', 'spring', 'postgresql', 'elastic', 'android', 'ios']
 };
 
 export default GIVEO;
