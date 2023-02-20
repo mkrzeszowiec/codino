@@ -2,8 +2,10 @@ import { Product } from 'types/common';
 
 const INSIGHTS: Product = {
 	title: 'Insights - Projekt analityczny dla branży lotniczej.',
+	shortDescription:
+		'Insights to narzędzie webowe, które upraszcza i przyspiesza działania związane z badaniami i analizami w liniach lotniczych.',
 	description:
-		'Stworzenie i rozwój systemu do analizy pasażerów linii lotniczych, stworzenie systemu identyfikacji pasażerów.',
+		'Zespół naszych programistów tworzył projekt Insights. Jest to narzędzie webowe, które upraszcza i przyspiesza działania związane z badaniami i analizami w liniach lotniczych. Umożliwia łatwe wyszukiwanie i nawigację bez pisania skomplikowanych zapytań SQL. Dodatkowo, narzędzie to pozwala na detekcję oraz śledzenia ryzyk, ułatwia zarządzanie ryzykami oraz ich audytowanie, co pozwala na wygenerowanie dodatkowej wartości dla linii lotniczych. System działa od kilku lat i jest regularnie używany przez analityków.',
 	imageSource: '/images/case-study/insights/cover.png',
 	slug: 'insights',
 	color: '#1f4cea',
@@ -13,37 +15,34 @@ const INSIGHTS: Product = {
 	countries: ['USA', 'PAN'],
 	technologies: ['java', 'spring', 'angular', 'elastic', 'teradata'],
 	scopeOfWork: {
-		description: '',
+		description:
+			'Nasz zespół zaprojektował a następnie wykonał cały system. Backend został wykonany w technologii Java/Spring w oparciu o architekturę mikroserwisów. Głównym celem systemu było umożliwienie przetwarzania dużych zbiorów danych z baz danych linii lotniczych. Wyniki działania systemu są przedstawiane w formie wykresów i różnego rodzaju statystyk.',
 		points: [
 			{
 				index: 1,
-				description: `stworzenie systemu do analizy i wizualizacji zachowań pasażerów w liniach lotniczych i danych pasazerów: lotów, biletów, rezerwacji`
+				description: `projekt backendu w oparciu o architekturę mikroserwisów`
 			},
 			{
 				index: 2,
 				description:
-					'stworzenie systemu do przeprowadzania audytów i analizy ryzyk na połączeniach w liniach lotniczych'
+					'projekt aplikacji frontendowej do wizualizacji danych analitycznych związanych z pasażerami, lotami, audytami, ryzykami'
 			},
 			{
 				index: 3,
-				description: 'stworzenie systemu do identyfikacji i unifikacji danych pasażerów z wielu źródeł'
+				description:
+					'wykonanie skomplikowanej aplikacji frontendowej do przedstawiania wyników operacji backendowych oraz zarządzania m.in. ryzykami linii lotniczych'
+			},
+			{
+				index: 4,
+				description: 'nieustanne ulepszanie systemu zgodnie z potrzebami analityków'
+			},
+			{
+				index: 5,
+				description:
+					'opracowanie algorytmu identyfikacji i unifikacji pasażerów na podstawie szczątkowych danych z różnych systemów'
 			}
 		]
-	},
-	solutions: [
-		{
-			title: 'Rozwiązanie 1',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, aliquam cupiditate enim et exercitationem expedita fugiat illo ipsum magni nulla omnis possimus provident quibusdam quisquam saepe sed sit voluptatibus!',
-			imageSrc: '/images/case-study/insights/1.png'
-		},
-		{
-			title: 'Rozwiązanie 2',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, aliquam cupiditate enim et exercitationem expedita fugiat illo ipsum magni nulla omnis possimus provident quibusdam quisquam saepe sed sit voluptatibus!',
-			imageSrc: '/images/case-study/insights/2.png'
-		}
-	]
+	}
 };
 
 export default INSIGHTS;
