@@ -5,22 +5,9 @@ const DATABASES: Product = {
 	shortDescription:
 		'Chmurowy klient do nieralacynych baz danych. Innowacyjne podejście do zarządzania nierelacyjymi bazami danych.',
 	description:
-		'Nasz zespół brał udział w tworzeniu narzędzia webowego do zarządzania nierelacyjnymi bazami danych. Klient bazy danych jest uruchamiany w chmurze, dzięki czemu nie obciąża maszyny użytkownika i ma bardzo szybki dostęp do danych. Narzędzie pozwala na obsługę i wykonywanie skomplikowanych operacji na nierelacyjnych bazach.',
-	expandedDescription: {
-		description: 'Niektóre z opcji dostępnych w chmurowej wersji klienta bazy danych: ',
-		points: [
-			'przeglądarka bazy',
-			'edytor dokumentów w różnych trybach (json, tabelka, drzewko)',
-			'zarządzanie bazami/kontenerami',
-			'wizualizacja danych',
-			'analiza struktury dokumentów',
-			'analiza wydajności zapytań',
-			'automatyzacja zadań (kopiowanie kontenerów, masowa edycja dokumentów)',
-			'import/eksport z pliku i bazy sql',
-			'analizator do indeksów',
-			'klikany kreator do zapytań'
-		]
-	},
+		'Nasz zespół brał udział w tworzeniu narzędzia webowego do zarządzania nierelacyjnymi bazami danych. Klient bazy danych jest uruchamiany w chmurze, dzięki czemu nie obciąża maszyny użytkownika i ma bardzo szybki dostęp do danych. Narzędzie pozwala na obsługę i wykonywanie skomplikowanych operacji na nierelacyjnych bazach.' +
+		'\n\nNiektóre z opcji dostępnych w chmurowej wersji klienta bazy danych: ' +
+		'przeglądarka bazy, edytor dokumentów w różnych trybach (json, tabelka, drzewko), zarządzanie bazami/kontenerami, wizualizacja danych, analiza struktury dokumentów, analiza wydajności zapytań, automatyzacja zadań (kopiowanie kontenerów, masowa edycja dokumentów), import/eksport z pliku i bazy sql, analizator do indeksów, klikany kreator do zapytań.',
 	imageSource: '/images/case-study/databases/cover.png',
 	slug: 'databases',
 	color: '#ea801f',

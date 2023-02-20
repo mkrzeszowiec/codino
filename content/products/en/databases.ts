@@ -4,22 +4,10 @@ const DATABASES: Product = {
 	title: 'Databases - Database tool development and optimization',
 	shortDescription:
 		'Cloud client for non-relational databases. An innovative approach to managing non-relational databases.',
-	description: `Our team participated in the development of a web tool for managing non-relational databases. The database client is run in the cloud, so it does not burden the user's machine and has very fast access to data. The tool allows users to handle and perform complex operations on non-relational databases.`,
-	expandedDescription: {
-		description: 'Some of the options available in the cloud version of the database client: ',
-		points: [
-			'database viewer',
-			'document editor in different modes (json, table, tree)',
-			'database/container management',
-			'data visualization',
-			'document structure analysis',
-			'query performance analysis',
-			'task automation (container copying, mass document editing)',
-			'import/export from file and sql database',
-			'analyzer for indexes',
-			'clickable query builder'
-		]
-	},
+	description:
+		`Our team participated in the development of a web tool for managing non-relational databases. The database client is run in the cloud, so it does not burden the user's machine and has very fast access to data. The tool allows you to handle and perform complex operations on non-relational databases.` +
+		'\n\nSome of the options available in the cloud version of the database client: ' +
+		'database viewer, document editor in different modes (json, table, tree), database/container management, data visualization, document structure analysis, query performance analysis, task automation (copy containers, bulk document editing), import/export from file and sql database, analyzer for indexes, clickable wizard for queries.',
 	imageSource: '/images/case-study/databases/cover.png',
 	slug: 'databases',
 	color: '#ea801f',

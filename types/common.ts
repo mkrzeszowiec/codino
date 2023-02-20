@@ -30,10 +30,6 @@ export type technology =
 export interface Product {
 	title: string;
 	description: string;
-	expandedDescription?: {
-		description: string;
-		points: string[];
-	};
 	shortDescription?: string;
 	imageSource: string;
 	slug: string;

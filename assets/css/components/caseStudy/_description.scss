@@ -5,34 +5,4 @@
 	a:hover {
 		text-decoration: underline;
 	}
-
-	&__expanded {
-		padding-top: 3rem;
-	}
-
-	&__list {
-		margin-top: 1rem;
-		width: 100%;
-		max-width: var(--max-container-width);
-		line-height: 1.8;
-	}
-
-	&__listItem {
-		text-align: left;
-		position: relative;
-		padding: 1rem;
-		margin-left: 4rem;
-
-		&:before {
-			content: '';
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			left: -2rem;
-			background: var(--color-primary);
-			height: 3px;
-			width: 15px;
-			border-radius: 2px;
-		}
-	}
 }
