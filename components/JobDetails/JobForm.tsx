@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
-import { EMAIL_JS_JOB_FORM_TEMPLATE_ID, EMAIL_JS_SERVICE_ID, STATE } from 'utils/constants';
+import { STATE } from 'utils/constants';
 import SubmitButton from 'components/SubmitButton/SubmitButton';
 import { useTranslation } from 'next-i18next';
 import FormAgreementTooltip from 'components/FormAgreementTooltip/FormAgreementTooltip';
@@ -21,8 +21,12 @@ const JobForm: React.FC<JobFormProps> = ({ position }) => {
 		try {
 			setState(STATE.LOADING);
 
-			//todo
-			await emailjs.sendForm(EMAIL_JS_SERVICE_ID, EMAIL_JS_JOB_FORM_TEMPLATE_ID, form.current, 'ds');
+			await emailjs.sendForm(
+				process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID,
+				process.env.NEXT_PUBLIC_EMAIL_JS_JOB_FORM_TEMPLATE_ID,
+				form.current,
+				process.env.NEXT_PUBLIC_EMAIL_JS_USER_ID
+			);
 			setState(STATE.SUCCESS);
 
 			googleEvent('success_submit_job_form', {
