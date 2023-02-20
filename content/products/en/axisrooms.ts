@@ -42,7 +42,8 @@ const AXISROOMS: Product = {
 			}
 		]
 	},
-	industry: 'tourism, crm'
+	industry: 'tourism, crm',
+	technologies: ['java', 'docker', 'angular', 'postgresql', 'spring', 'postgresql', 'redis', 'rabbitmq']
 };
 
 export default AXISROOMS;

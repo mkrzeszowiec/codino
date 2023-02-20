@@ -24,6 +24,7 @@ export type technology =
 	| 'aws'
 	| 'meilisearch'
 	| 'teradata'
+	| 'rabbitmq'
 	| 'leasing';
 
 export interface Product {

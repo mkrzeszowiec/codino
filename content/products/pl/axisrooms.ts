@@ -39,12 +39,12 @@ const AXISROOMS: Product = {
 			},
 			{
 				index: 5,
-				description:
-					'Integracje z systemami klienta dostarczającymi informacje o rezerwacjach z zewnętrznych systemów'
+				description: 'Integracje z systemami klienta dostarczającymi informacje o rezerwacjach z zewnętrznych systemów'
 			}
 		]
 	},
 	industry: 'turystyka, crm',
+	technologies: ['java', 'docker', 'angular', 'postgresql', 'spring', 'postgresql', 'redis', 'rabbitmq']
 };
 
 export default AXISROOMS;

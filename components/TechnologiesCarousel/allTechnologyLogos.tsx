@@ -26,6 +26,7 @@ import mongodb from 'public/images/technologies/mongodb.svg';
 import php from 'public/images/technologies/php.svg';
 import teradata from 'public/images/technologies/teradata.svg';
 import snowflake from 'public/images/technologies/snowflake.svg';
+import rabbitmq from 'public/images/technologies/rabbitmq.svg';
 import { technology } from 'types/common';
 
 export const allTechnologyLogos: StaticImageData[] = [
@@ -54,7 +55,8 @@ export const allTechnologyLogos: StaticImageData[] = [
 	aws,
 	teradata,
 	meilisearch,
-	snowflake
+	snowflake,
+	rabbitmq
 ];
 
 const NOT_VISIBLE_IN_MAIN_CAROUSEL: technology[] = ['php', 'scala', 'html'];
