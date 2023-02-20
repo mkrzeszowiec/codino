@@ -54,7 +54,7 @@ const CaseStudyPage = ({ product }: Props) => {
 	if (!product) return null;
 
 	return (
-		<Main title={getPageTitle(product.title)}>
+		<Main title={getPageTitle(translatedProduct.title)}>
 			<CaseStudy product={translatedProduct} />
 		</Main>
 	);
