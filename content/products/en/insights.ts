@@ -1,7 +1,7 @@
 import { Product } from 'types/common';
 
 const INSIGHTS: Product = {
-	title: 'Insights - An analytics project for the aviation industry.',
+	title: 'Insights - An analytics project for the aviation industry',
 	shortDescription:
 		'Insights is a web-based tool that simplifies and accelerates airline research and analysis activities.',
 	description:

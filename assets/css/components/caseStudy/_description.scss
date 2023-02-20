@@ -1,29 +1,25 @@
-.caseStudyScopeOfWork {
-	--max-container-width: 900px;
+.caseStudyDescription {
+	white-space: pre-line;
+	margin: 20px 0 60px 0;
 
-	margin-bottom: 6rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	&__title {
-		margin-bottom: 3rem;
+	a:hover {
+		text-decoration: underline;
 	}
 
-	&__description {
-		max-width: var(--max-container-width);
+	&__expanded {
+		padding-top: 3rem;
 	}
 
 	&__list {
-		margin-top: 2rem;
+		margin-top: 1rem;
 		width: 100%;
 		max-width: var(--max-container-width);
 		line-height: 1.8;
 	}
 
 	&__listItem {
-		position: relative;
 		text-align: left;
+		position: relative;
 		padding: 1rem;
 		margin-left: 4rem;
 

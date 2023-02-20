@@ -22,9 +22,7 @@ const CaseStudyMap: React.FC<{ product?: Product }> = ({ product }) => {
 				<ComposableMap className="caseStudyMap__genericMap">
 					<Geographies geography={map}>
 						{({ geographies }) =>
-							geographies.map(geo => {
-								return <Geography fill={getFillColor(geo.id)} key={geo.rsmKey} geography={geo} />;
-							})
+							geographies.map(geo => <Geography fill={getFillColor(geo.id)} key={geo.rsmKey} geography={geo} />)
 						}
 					</Geographies>
 				</ComposableMap>

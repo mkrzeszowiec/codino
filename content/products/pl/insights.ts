@@ -1,7 +1,7 @@
 import { Product } from 'types/common';
 
 const INSIGHTS: Product = {
-	title: 'Insights - Projekt analityczny dla branży lotniczej.',
+	title: 'Insights - Projekt analityczny dla branży lotniczej',
 	shortDescription:
 		'Insights to narzędzie webowe, które upraszcza i przyspiesza działania związane z badaniami i analizami w liniach lotniczych.',
 	description:
