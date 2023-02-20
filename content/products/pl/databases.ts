@@ -27,7 +27,8 @@ const DATABASES: Product = {
 	date: '-',
 	scopeOfWork: {
 		description:
-			'Nasz zespół odpowiadał za development backendu oraz aplikacji frontendowej. Cały system jest hostowany i uruchamiany w chmurze a klient może uruchamiać klienta bazy danych w przeglądarce internetowej. ',
+			'Nasz zespół odpowiadał za development backendu oraz aplikacji frontendowej. Cały system jest hostowany i uruchamiany w chmurze a klient może uruchamiać klienta bazy danych w przeglądarce internetowej. ' +
+			'\n\n Nasz zakres prac: ',
 		points: [
 			{ index: 1, description: 'wykonanie backendu w technologii Java/Spring' },
 			{ index: 2, description: 'wykonanie aplikacji frontendowej na bazie frameworka React' },

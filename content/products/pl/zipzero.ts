@@ -17,32 +17,31 @@ const ZIPZERO: Product = {
 	scopeOfWork: {
 		description:
 			'Początki projektu to wielogodzinne sesje planowania i analizowania domeny i architektury nowego systemu który został nam powierzony do stworzenia.' +
-			' Głównymi założeniami systemu była możliwość przetwarzanie tysięcy transakcji dziennie,  łatwa w użyciu i przejrzysta aplikacja mobilna i panel administracyjny umożliwiający łatwe zarządzanie cały system.',
+			' Głównymi założeniami systemu była możliwość przetwarzanie tysięcy transakcji dziennie,  łatwa w użyciu i przejrzysta aplikacja mobilna i panel administracyjny umożliwiający łatwe zarządzanie cały system.' +
+			'\n\n Nasz zakres prac: ',
 		points: [
-			{ index: 1, description: 'Przygotowanie planu działania i wstępnej architektury pod MVP który miał zostać wdrożony po kilku miesiącach pracy' },
-			{ index: 2, description: 'Zaprojektowanie architektury systemu w oparciu o architekturę mikroserwisów, aby zapewnić skalowalność i możliwość pracy nad wieloma częściami systemu przez niezależne zespoły programistów' },
-			{ index: 3, description: 'Zaprojektowanie bazy danych oraz hurtowni które będą w stanie przechowywać miliony transakcji, produktów i zakupów' },
+			{
+				index: 1,
+				description:
+					'Przygotowanie planu działania i wstępnej architektury pod MVP który miał zostać wdrożony po kilku miesiącach pracy'
+			},
+			{
+				index: 2,
+				description:
+					'Zaprojektowanie architektury systemu w oparciu o architekturę mikroserwisów, aby zapewnić skalowalność i możliwość pracy nad wieloma częściami systemu przez niezależne zespoły programistów'
+			},
+			{
+				index: 3,
+				description:
+					'Zaprojektowanie bazy danych oraz hurtowni które będą w stanie przechowywać miliony transakcji, produktów i zakupów'
+			},
 			{ index: 4, description: 'Integracje z zewnętrznymi sieciami afiliacyjnymi' },
 			{ index: 5, description: 'Aplikacja mobilna na system android' },
 			{ index: 6, description: 'Panel administracyjny do zarządzania systemem' },
 			{ index: 7, description: 'System chroniący przed nadużyciami i oszustwami w oparciu o machine learning' }
 		]
 	},
-	technologies: ['java', 'spring', 'kotlin', 'angular', 'postgresql', 'redis', 'elastic', 'android', 'kubernetes'],
-	solutions: [
-		{
-			title: 'Rozwiązanie 1',
-			description:
-				'1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, aliquam cupiditate enim et exercitationem expedita fugiat illo ipsum magni nulla omnis possimus provident quibusdam quisquam saepe sed sit voluptatibus!',
-			imageSrc: '/images/case-study/zipzero/1.png'
-		},
-		{
-			title: 'Rozwiązanie 2',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium, aliquam cupiditate enim et exercitationem expedita fugiat illo ipsum magni nulla omnis possimus provident quibusdam quisquam saepe sed sit voluptatibus!',
-			imageSrc: '/images/case-study/zipzero/2.png'
-		}
-	]
+	technologies: ['java', 'spring', 'kotlin', 'angular', 'postgresql', 'redis', 'elastic', 'android', 'kubernetes']
 };
 
 export default ZIPZERO;

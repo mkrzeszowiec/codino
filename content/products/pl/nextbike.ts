@@ -16,7 +16,8 @@ const NEXTBIKE: Product = {
 	industry: 'wypożyczalnia, transport rowerowy, usługi publiczne',
 	scopeOfWork: {
 		description:
-			'Głównym celem naszego działania w nextbike polska było utrzymanie i rozwój istniejących systemów, porządkowanie architektury oraz stopniowe wprowadzanie nowych serwisów i funkcjonalności',
+			'Głównym celem naszego działania w nextbike polska było utrzymanie i rozwój istniejących systemów, porządkowanie architektury oraz stopniowe wprowadzanie nowych serwisów i funkcjonalności.' +
+			'\n\n Nasz zakres prac: ',
 		points: [
 			{ index: 1, description: 'Rozwój systemów do raportowania i monitoringu rowerów i stacji rowerowych' },
 			{ index: 2, description: 'Zaprojektowanie i implementacja przejrzystego API dla nowych aplikacji mobilnych' },

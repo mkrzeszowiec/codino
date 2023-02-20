@@ -16,7 +16,8 @@ const RECAST: Product = {
 	industry: 'backend, frontend',
 	scopeOfWork: {
 		description:
-			'Started working with Recast, it was a two-person team from the frontend that evolved as the platform grew to a nine-person team of specialists working on the frontend, backend and system architecture',
+			'Started working with Recast, it was a two-person team from the frontend that evolved as the platform grew to a nine-person team of specialists working on the frontend, backend and system architecture.' +
+			'\n\n Our scope of work:',
 		points: [
 			{
 				index: 1,

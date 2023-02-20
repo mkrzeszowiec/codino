@@ -14,7 +14,8 @@ const GIVEO: Product = {
 	scopeOfTechnology: 'auctions, sales',
 	industry: 'architecture, backend, frontend',
 	scopeOfWork: {
-		description: `A software architect from our team prepared a backend design in a microservices architecture. Due to the planned high load on the system, the architecture had to be highly scalable. The backend was designed by people from our team and the execution was handled by the client's internal team. Our team was also responsible for the design and execution of an extensive frontend application, optimized for mobile devices.`,
+		description: `A software architect from our team prepared a backend design in a microservices architecture. Due to the planned high load on the system, the architecture had to be highly scalable. The backend was designed by people from our team and the execution was handled by the client's internal team. Our team was also responsible for the design and execution of an extensive frontend application, optimized for mobile devices.
+		\n\n Our scope of work:`,
 		points: [
 			{
 				index: 1,

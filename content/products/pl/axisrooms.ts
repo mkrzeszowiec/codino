@@ -14,7 +14,8 @@ const AXISROOMS: Product = {
 	scopeOfTechnology: '-',
 	scopeOfWork: {
 		description:
-			'Celem naszego zespołu było przygotowanie całego backendu i frontendu od początku wg dostarczonej nam dokumentacji. Praca nad projektem to 3 lata developmentu i nieustannej komunikacji z analitykami i testerami klienta w celu dostarczenia najwyższej jakości produktu',
+			'Celem naszego zespołu było przygotowanie całego backendu i frontendu od początku wg dostarczonej nam dokumentacji. Praca nad projektem to 3 lata developmentu i nieustannej komunikacji z analitykami i testerami klienta w celu dostarczenia najwyższej jakości produktu.' +
+			'\n\n Nasz zakres prac: ',
 		points: [
 			{
 				index: 1,

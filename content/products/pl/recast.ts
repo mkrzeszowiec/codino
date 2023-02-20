@@ -16,7 +16,8 @@ const RECAST: Product = {
 	industry: 'backend, frontend',
 	scopeOfWork: {
 		description:
-			'Początki współpracy z Recast, to dwuosobowy zespół od frontendu, który wyewoluował wraz z rozwojem platformy do dziewięcioosobowego zespołu specjalistów pracujących nad frontendem, backendem i architekturą systemu.',
+			'Początki współpracy z Recast, to dwuosobowy zespół od frontendu, który wyewoluował wraz z rozwojem platformy do dziewięcioosobowego zespołu specjalistów pracujących nad frontendem, backendem i architekturą systemu.' +
+			'\n\n Nasz zakres prac: ',
 		points: [
 			{
 				index: 1,

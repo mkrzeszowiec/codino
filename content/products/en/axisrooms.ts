@@ -13,7 +13,8 @@ const AXISROOMS: Product = {
 	countries: ['IND'],
 	scopeOfTechnology: '-',
 	scopeOfWork: {
-		description: `The goal of our team was to prepare the entire backend and frontend from scratch according to the documentation provided to us. Working on the project was 3 years of development and constant communication with the client's analysts and testers to deliver the highest quality product`,
+		description: `The goal of our team was to prepare the entire backend and frontend from scratch according to the documentation provided to us. Working on the project was 3 years of development and constant communication with the client's analysts and testers to deliver the highest quality product.
+		\n\n Our scope of work: `,
 		points: [
 			{
 				index: 1,
@@ -28,7 +29,7 @@ const AXISROOMS: Product = {
 			{
 				index: 3,
 				description:
-				'Design and implementation of a scalable backend allowing to handle thousands of hotels and their reservations'
+					'Design and implementation of a scalable backend allowing to handle thousands of hotels and their reservations'
 			},
 			{
 				index: 4,
@@ -37,12 +38,11 @@ const AXISROOMS: Product = {
 			},
 			{
 				index: 5,
-				description:
-				'Integrations with customer systems providing booking information from external systems'
+				description: 'Integrations with customer systems providing booking information from external systems'
 			}
 		]
 	},
-	industry: 'tourism, crm',
+	industry: 'tourism, crm'
 };
 
 export default AXISROOMS;

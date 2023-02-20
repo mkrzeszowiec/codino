@@ -15,7 +15,8 @@ const GIVEO: Product = {
 	industry: 'architektura, backend, frontend',
 	scopeOfWork: {
 		description:
-			'Architekt oprogramowania z naszego zespołu przygotował projekt backendu w architekturze mikroserwisów. Ze względu na planowane duże obciążenie systemu, architektura musiała być wysoce skalowalna. Backend został zaprojektowany przez osoby z naszego zespołu a wykonaniem zajął się wewnętrzny team klienta. Nasz zespół odpowiadał również za zaprojektowanie oraz wykonanie rozbudowanej aplikacji frontendowej, zoptymalizowanej na urządzenia mobilne.',
+			'Architekt oprogramowania z naszego zespołu przygotował projekt backendu w architekturze mikroserwisów. Ze względu na planowane duże obciążenie systemu, architektura musiała być wysoce skalowalna. Backend został zaprojektowany przez osoby z naszego zespołu a wykonaniem zajął się wewnętrzny team klienta. Nasz zespół odpowiadał również za zaprojektowanie oraz wykonanie rozbudowanej aplikacji frontendowej, zoptymalizowanej na urządzenia mobilne.' +
+			'\n\n Nasz zakres prac: ',
 		points: [
 			{
 				index: 1,

@@ -16,7 +16,8 @@ const INSIGHTS: Product = {
 	technologies: ['java', 'spring', 'angular', 'elastic', 'teradata'],
 	scopeOfWork: {
 		description:
-			'Nasz zespół zaprojektował a następnie wykonał cały system. Backend został wykonany w technologii Java/Spring w oparciu o architekturę mikroserwisów. Głównym celem systemu było umożliwienie przetwarzania dużych zbiorów danych z baz danych linii lotniczych. Wyniki działania systemu są przedstawiane w formie wykresów i różnego rodzaju statystyk.',
+			'Nasz zespół zaprojektował a następnie wykonał cały system. Backend został wykonany w technologii Java/Spring w oparciu o architekturę mikroserwisów. Głównym celem systemu było umożliwienie przetwarzania dużych zbiorów danych z baz danych linii lotniczych. Wyniki działania systemu są przedstawiane w formie wykresów i różnego rodzaju statystyk.' +
+			'\n\n Nasz zakres prac: ',
 		points: [
 			{
 				index: 1,

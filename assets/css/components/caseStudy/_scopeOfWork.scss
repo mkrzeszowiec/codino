@@ -11,11 +11,12 @@
 	}
 
 	&__description {
+		white-space: pre-line;
 		max-width: var(--max-container-width);
 	}
 
 	&__list {
-		margin-top: 2rem;
+		margin-top: 0.5rem;
 		width: 100%;
 		max-width: var(--max-container-width);
 		line-height: 1.8;

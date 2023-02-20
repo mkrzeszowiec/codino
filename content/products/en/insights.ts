@@ -16,7 +16,8 @@ const INSIGHTS: Product = {
 	technologies: ['java', 'spring', 'angular', 'elastic', 'teradata'],
 	scopeOfWork: {
 		description:
-			'Our team designed and then executed the entire system. The backend was made in Java/Spring technology based on microservices architecture. The main purpose of the system was to enable processing of large data sets from airline databases. The results of the system are presented in the form of graphs and various types of statistics.',
+			'Our team designed and then executed the entire system. The backend was made in Java/Spring technology based on microservices architecture. The main purpose of the system was to enable processing of large data sets from airline databases. The results of the system are presented in the form of graphs and various types of statistics.' +
+			'\n\n Our scope of work:',
 		points: [
 			{
 				index: 1,

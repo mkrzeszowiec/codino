@@ -16,7 +16,8 @@ const NEXTBIKE: Product = {
 	industry: 'rental, bicycle transportation, public services',
 	scopeOfWork: {
 		description:
-			'The main objective of our work at nextbike polska was to maintain and develop existing systems, organize the architecture and gradually introduce new services and functionalities',
+			'The main objective of our work at nextbike polska was to maintain and develop existing systems, organize the architecture and gradually introduce new services and functionalities.' +
+			'\n\nOur scope of work:',
 		points: [
 			{ index: 1, description: 'Development of systems for reporting and monitoring of bicycles and bicycle stations' },
 			{ index: 2, description: 'Design and implementation of a clear API for new mobile applications' },

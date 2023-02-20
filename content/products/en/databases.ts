@@ -26,7 +26,8 @@ const DATABASES: Product = {
 	date: '-',
 	scopeOfWork: {
 		description:
-			'Our team was responsible for the development of the backend and frontend application. The entire system is hosted and run in the cloud and the client can run the database client in a web browser. ',
+			'Our team was responsible for the development of the backend and frontend application. The entire system is hosted and run in the cloud and the client can run the database client in a web browser. ' +
+			'\n\nOur scope of work: ',
 		points: [
 			{ index: 1, description: 'Java/Spring backend development' },
 			{ index: 2, description: 'making a frontend application based on React framework' },
