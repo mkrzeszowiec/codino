@@ -26,95 +26,95 @@ $launchLength: 1s;
 			animation: rumble 1s infinite ($launchLength / 3) reverse;
 		}
 	}
-}
 
-.loading {
-	transform: rotate(-46deg);
-	max-width: 4rem;
-	width: 100%;
+	.loading {
+		transform: rotate(-46deg);
+		max-width: 4rem;
+		width: 100%;
 
-	.background {
-		fill: transparent;
-	}
-
-	.arrow {
-		fill: var(--color-primary);
-	}
-
-	.gradient {
-		stop {
-			stop-color: #fff;
-			stop-opacity: 0.2;
+		.background {
+			fill: transparent;
 		}
 
-		stop:last-child {
-			stop-opacity: 0;
+		.arrow {
+			fill: var(--color-primary);
 		}
-	}
 
-	.gradientBox {
-		fill: url('#gradient');
-	}
+		.gradient {
+			stop {
+				stop-color: #fff;
+				stop-opacity: 0.2;
+			}
 
-	.filteredGroup {
-		filter: url('#stickyFilter');
-	}
+			stop:last-child {
+				stop-opacity: 0;
+			}
+		}
 
-	.line {
-		animation-iteration-count: infinite;
-		stroke: var(--color-primary);
-	}
+		.gradientBox {
+			fill: url('#gradient');
+		}
 
-	.lineThick {
-		animation-name: drawThick;
-		animation-timing-function: linear;
-	}
+		.filteredGroup {
+			filter: url('#stickyFilter');
+		}
 
-	.lineDots {
-		animation-name: drawDots;
-		animation-timing-function: linear;
-		stroke-dasharray: 0, 30;
-		stroke-width: 5.5;
-	}
+		.line {
+			animation-iteration-count: infinite;
+			stroke: var(--color-primary);
+		}
 
-	.lineStatic {
-		animation-name: drawStatic;
-		animation-timing-function: ease;
-		stroke-dasharray: 22;
-		stroke-width: 8;
-	}
+		.lineThick {
+			animation-name: drawThick;
+			animation-timing-function: linear;
+		}
 
-	.line1 {
-		animation-duration: 1.6s;
-		stroke-dasharray: 8, 22, 3, 27, 16, 14;
-		stroke-width: 4;
-	}
+		.lineDots {
+			animation-name: drawDots;
+			animation-timing-function: linear;
+			stroke-dasharray: 0, 30;
+			stroke-width: 5.5;
+		}
 
-	.line2 {
-		animation-duration: 1.3s;
-		stroke-dasharray: 18, 12, 10, 20, 3, 27;
-		stroke-width: 6;
-	}
+		.lineStatic {
+			animation-name: drawStatic;
+			animation-timing-function: ease;
+			stroke-dasharray: 22;
+			stroke-width: 8;
+		}
 
-	.line3 {
-		animation-duration: 1.4s;
-		stroke-dasharray: 3, 27, 10, 20, 20, 10;
-		stroke-width: 4;
-	}
+		.line1 {
+			animation-duration: 1.6s;
+			stroke-dasharray: 8, 22, 3, 27, 16, 14;
+			stroke-width: 4;
+		}
 
-	.line4 {
-		animation-duration: 0.4s;
-	}
+		.line2 {
+			animation-duration: 1.3s;
+			stroke-dasharray: 18, 12, 10, 20, 3, 27;
+			stroke-width: 6;
+		}
 
-	.line5 {
-		animation-duration: 0.7s;
-	}
+		.line3 {
+			animation-duration: 1.4s;
+			stroke-dasharray: 3, 27, 10, 20, 20, 10;
+			stroke-width: 4;
+		}
 
-	.line6 {
-		animation-duration: 0.8s;
-	}
+		.line4 {
+			animation-duration: 0.4s;
+		}
 
-	.line7 {
-		animation-duration: 0.6s;
+		.line5 {
+			animation-duration: 0.7s;
+		}
+
+		.line6 {
+			animation-duration: 0.8s;
+		}
+
+		.line7 {
+			animation-duration: 0.6s;
+		}
 	}
 }
