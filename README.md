@@ -1,47 +1,47 @@
-# TypeScript Next.js example
+# Codino
+Codino site based on [Next.js](https://nextjs.org) with TypeScript
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+## Features
+- SSR or static build with Next.js, prefetch, preload, image optimization
+- prettier, tslint, eslint
+- i18n
+- SEO
+- content in json (no CMS)
+- forms handled by [EmailJS](https://www.emailjs.com)
+- hidden game :) 
 
-## Deploy your own
+## Features
+- `/pages` next.js pages, by default `/` and `/career/:slug`, `/case-study/:slug`
+- `/components` react components
+- `/layouts` components are used for sections of your site that you want to share across multiple pages
+- `/assets` styles based on sass
+- `/content` content for jobs, products and services section
+- `/public` resources - translated texts, icons, svg and images that will be optimized (compression + responsive)
+- `/utils` and `/hooks` - as in the name :]
+- `/types` type definitions in TS
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript)
+## Configuring
+just copy `.env.local.example` over to `.env.local` and update values
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
-
-## How to use it?
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript with-typescript-app
+## Running locally in development mode
+```
+npm install
+npm run dev
 ```
 
-```bash
-yarn create next-app --example with-typescript with-typescript-app
+## Building and deploying in production
+```
+npm install
+npm run build
+npm start
 ```
 
-```bash
-pnpm create next-app --example with-typescript with-typescript-app
+## Static HTML Export
 ```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
+next export
 ```
-npm install --save-dev typescript
-```
+this allows you to export your app to static HTML, which can render without the need of a Node.js server
 
-To enable TypeScript's features, we install the type declarations for React and Node.
+## Deploying to Vercel
 
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+Once merged to `main` branch, your changes will then be served to your visitors on https://codino.vercel.app/
