@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { GetStaticProps } from 'next';
 import MainLayout from 'layouts/MainLayout';
 import PageIntro from 'components/PageIntro/PageIntro';
@@ -11,36 +10,10 @@ import GameMain from 'components/game/GameMain';
 import NoSsr from 'components/NoSsr/NoSsr';
 import GameCloseButton from 'components/GameButton/GameCloseButton';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
-import useLockedBody from 'hooks/useLockBodyScroll';
+import useGame from 'hooks/useGame';
 
 const IndexPage = () => {
-	//todo refactor states
-	const [isGameOpening, setIsGameOpening] = useState(false);
-	const [isAnimating, setIsAnimating] = useState(false);
-	const [isGameMode, setIsGameMode] = useState(false);
-
-	useLockedBody(isGameMode);
-
-	const onClickGame = () => {
-		if (isGameOpening) {
-			return closeGame();
-		}
-		setIsAnimating(true);
-
-		setTimeout(() => {
-			setIsGameOpening(true);
-		}, 1200);
-
-		setTimeout(() => {
-			setIsGameMode(true);
-		}, 1800);
-	};
-
-	const closeGame = () => {
-		setIsGameOpening(false);
-		setIsGameMode(false);
-		setIsAnimating(false);
-	};
+	const { isGameOpening, isAnimating, isGameMode, onClickGame, closeGame } = useGame();
 
 	return (
 		<MainLayout containerClassName={`homepagePage ${isGameOpening ? 'gameMode' : ''}`}>
