@@ -76,10 +76,10 @@ class Ship {
 		context.lineWidth = 1;
 		context.beginPath();
 		context.moveTo(15, 0);
-		context.lineTo(-15, -17);
+		context.lineTo(-15, -14);
 		context.lineTo(-10, -10);
 		context.lineTo(-10, 10);
-		context.lineTo(-15, 17);
+		context.lineTo(-15, 14);
 		context.closePath();
 		context.fill();
 		context.stroke();
