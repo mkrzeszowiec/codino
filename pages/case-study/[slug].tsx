@@ -1,7 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import { Product } from 'types/common';
-import Main from 'layouts/MainLayout';
 import { getPageTitle } from 'utils/utils';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
@@ -9,6 +8,7 @@ import CaseStudy from 'components/CaseStudy/CaseStudy';
 import { getOurProductsTranslated } from 'content/products/products';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import MainLayout from '../../components/layout/MainLayout';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {
@@ -54,9 +54,9 @@ const CaseStudyPage = ({ product }: Props) => {
 	if (!product) return null;
 
 	return (
-		<Main title={getPageTitle(translatedProduct.title)}>
+		<MainLayout title={getPageTitle(translatedProduct.title)}>
 			<CaseStudy product={translatedProduct} />
-		</Main>
+		</MainLayout>
 	);
 };
 

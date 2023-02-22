@@ -1,4 +1,4 @@
-import Main from 'layouts/MainLayout';
+import Main from 'components/layout/MainLayout';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
 import HowWeWork from 'components/aboutUs/HowWeWork';
 import TeamHeader from 'components/aboutUs/TeamHeader';

@@ -1,4 +1,4 @@
-import Main from 'layouts/MainLayout';
+import MainLayout from 'components/layout/MainLayout';
 import { useTranslation } from 'next-i18next';
 import ServicesIntro from 'components/ServicesIntro/ServicesIntro';
 import WhatWeDo from 'components/WhatWeDo/WhatWeDo';
@@ -17,7 +17,7 @@ const ServicesPage = () => {
 	const router = useRouter();
 
 	return (
-		<Main title={getPageTitle(t('common.subpages.services'))}>
+		<MainLayout title={getPageTitle(t('common.subpages.services'))}>
 			<div className="container">
 				<ServicesIntro />
 				<WhatWeDo />
@@ -32,7 +32,7 @@ const ServicesPage = () => {
 			</div>
 
 			<UseCasesCarousel title={t('common.subpages.caseStudy')} />
-		</Main>
+		</MainLayout>
 	);
 };
 

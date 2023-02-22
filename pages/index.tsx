@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import MainLayout from 'layouts/MainLayout';
+import MainLayout from 'components/layout/MainLayout';
 import PageIntro from 'components/PageIntro/PageIntro';
 import Products from 'components/Products/Products';
 import WhatWeDo from 'components/WhatWeDo/WhatWeDo';

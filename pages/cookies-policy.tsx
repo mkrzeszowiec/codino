@@ -1,4 +1,4 @@
-import Main from 'layouts/MainLayout';
+import MainLayout from 'components/layout/MainLayout';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
 import { getPageTitle } from 'utils/utils';
 import { GetStaticProps } from 'next';
@@ -11,7 +11,7 @@ const CookiesPolicyPage = () => {
 	const { t } = useTranslation();
 
 	return (
-		<Main title={getPageTitle(t('common.subpages.cookies-policy'))}>
+		<MainLayout title={getPageTitle(t('common.subpages.cookies-policy'))}>
 			<div className="container">
 				<SubpageIntro
 					title="Polityka cookies"
@@ -19,7 +19,7 @@ const CookiesPolicyPage = () => {
 				/>
 				<CookiesInfo />
 			</div>
-		</Main>
+		</MainLayout>
 	);
 };
 

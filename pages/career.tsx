@@ -1,4 +1,4 @@
-import Main from 'layouts/MainLayout';
+import Main from 'components/layout/MainLayout';
 import TechnologiesCarousel from 'components/TechnologiesCarousel/TechnologiesCarousel';
 import CareerHeader from 'components/CareerHeader/CareerHeader';
 import AvailableJobs from 'components/AvailableJobs/AvailableJobs';

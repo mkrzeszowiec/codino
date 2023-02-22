@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { ParsedUrlQuery } from 'querystring';
 import { JobOffer } from 'types/common';
 import JobDetails from 'components/JobDetails/JobDetails';
-import Main from 'layouts/MainLayout';
+import MainLayout from 'components/layout/MainLayout';
 import { getPageTitle } from 'utils/utils';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
@@ -54,11 +54,11 @@ const JobPage = ({ job }: Props) => {
 	if (!job) return null;
 
 	return (
-		<Main title={getPageTitle(translatedJob.title)}>
+		<MainLayout title={getPageTitle(translatedJob.title)}>
 			<div className="container">
 				<JobDetails job={translatedJob} />
 			</div>
-		</Main>
+		</MainLayout>
 	);
 };
 

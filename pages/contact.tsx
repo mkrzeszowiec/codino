@@ -1,4 +1,4 @@
-import Main from 'layouts/MainLayout';
+import MainLayout from 'components/layout/MainLayout';
 import Map from 'components/Map/Map';
 import Contact from 'components/Contact/Contact';
 import { GetStaticProps } from 'next';
@@ -11,13 +11,13 @@ const ContactPage = () => {
 	const { t } = useTranslation();
 
 	return (
-		<Main containerClassName="contactPage" title={getPageTitle(t('common.subpages.contact'))}>
+		<MainLayout containerClassName="contactPage" title={getPageTitle(t('common.subpages.contact'))}>
 			<div className="container">
 				<Contact />
 			</div>
 
 			<Map />
-		</Main>
+		</MainLayout>
 	);
 };
 

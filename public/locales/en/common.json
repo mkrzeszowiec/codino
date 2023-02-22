@@ -140,6 +140,13 @@
 			"description": "This site uses cookies. By using it you agree to their use, according to your current browser settings.",
 			"moreDetailsUrl": "Read more about our Cookies Policy",
 			"button": "Yes, I accept"
+		},
+		"errorPage": {
+			"notFoundTitle": "404 error",
+			"notFoundSubtitle": "Page not found",
+			"serverErrorTitle": "500 error",
+			"serverErrorSubtitle": "Server error",
+			"button": "Back to homepage"
 		}
 	}
 }

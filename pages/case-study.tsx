@@ -1,4 +1,4 @@
-import Main from 'layouts/MainLayout';
+import MainLayout from 'components/layout/MainLayout';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
 import { getOurProductsTranslated } from 'content/products/products';
 import { getIsEven, getPageTitle } from 'utils/utils';
@@ -14,7 +14,7 @@ const CaseStudyPage = () => {
 	const router = useRouter();
 
 	return (
-		<Main title={getPageTitle('Case study')}>
+		<MainLayout title={getPageTitle('Case study')}>
 			<div className="container">
 				<SubpageIntro title={t('components.caseStudy.header')} description={t('components.caseStudy.description')} />
 
@@ -24,7 +24,7 @@ const CaseStudyPage = () => {
 					</div>
 				))}
 			</div>
-		</Main>
+		</MainLayout>
 	);
 };
 
