@@ -3,7 +3,8 @@ import {
 	degreesToRadians,
 	createExplosion,
 	calculateMagnitude,
-	calculateVector
+	calculateVector,
+	TypeOfGameObject
 } from 'components/game/utils';
 import { colors } from 'utils/colors';
 
@@ -63,7 +64,7 @@ class Asteroid {
 		if (this.radius > 10) {
 			[...Array(2)].forEach(() => {
 				const child = this.createChildAsteroid();
-				this.add(child).to('asteroids');
+				this.add(child).to(TypeOfGameObject.asteroids);
 			});
 		}
 	}

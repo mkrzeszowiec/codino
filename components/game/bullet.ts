@@ -1,4 +1,4 @@
-import { calculateVector } from 'components/game/utils';
+import { calculateVector, TypeOfGameObject } from 'components/game/utils';
 import { colors } from 'utils/colors';
 
 class Bullet {
@@ -17,7 +17,7 @@ class Bullet {
 		this.direction = direction;
 		this.velocity = calculateVector(speed, this.direction);
 		this.markedForDeletion = false;
-		this.collidesWith = ['asteroids'];
+		this.collidesWith = [TypeOfGameObject.asteroids];
 	}
 
 	delete() {

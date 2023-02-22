@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Asteroid from 'components/game/asteroid';
 import Ship from 'components/game/ship';
 import TitleScreen from 'components/game/TitleScreen';
-import { getRandomNum, isCollision } from 'components/game/utils';
+import { getRandomNum, isCollision, TypeOfGameObject } from 'components/game/utils';
 import GameBackground from 'components/game/GameBackground';
 import { event } from 'nextjs-google-analytics';
 
@@ -166,7 +166,7 @@ const Game: React.FC<GameProps> = props => {
 			die: endGame
 		});
 
-		add(ship).to('playerShip');
+		add(ship).to(TypeOfGameObject.playerShip);
 	};
 
 	const createAsteroid = () => {
@@ -196,7 +196,7 @@ const Game: React.FC<GameProps> = props => {
 			if (isCollision(groups.playerShip[0], asteroid)) {
 				addNewAsteroid();
 			} else {
-				add(asteroid).to('asteroids');
+				add(asteroid).to(TypeOfGameObject.asteroids);
 			}
 		};
 

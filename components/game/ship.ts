@@ -7,7 +7,8 @@ import {
 	rotatePoint,
 	calculateMagnitude,
 	getRandomNum,
-	calculateVector
+	calculateVector,
+	TypeOfGameObject
 } from 'components/game/utils';
 import { colors } from 'utils/colors';
 
@@ -36,7 +37,7 @@ class Ship {
 		this.add = add;
 		this.die = die;
 		this.markedForDeletion = false;
-		this.collidesWith = ['asteroids'];
+		this.collidesWith = [TypeOfGameObject.asteroids];
 	}
 
 	delete() {
@@ -149,7 +150,7 @@ class Ship {
 				shipSpeed
 			});
 
-			this.add(bullet).to('bullets');
+			this.add(bullet).to(TypeOfGameObject.bullets);
 			this.lastBullet = Date.now();
 		}
 	}

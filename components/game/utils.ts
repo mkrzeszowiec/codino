@@ -1,4 +1,11 @@
-import Particle from './particle';
+import Particle from 'components/game/particle';
+
+enum TypeOfGameObject {
+	playerShip = 'playerShip',
+	asteroids = 'asteroids',
+	bullets = 'bullets',
+	particles = 'particles'
+}
 
 const calculateMagnitude = (vector): number => {
 	const { x, y } = vector;
@@ -88,5 +95,6 @@ export {
 	calculateVector,
 	getRandomNum,
 	createExplosion,
-	isCollision
+	isCollision,
+	TypeOfGameObject
 };
