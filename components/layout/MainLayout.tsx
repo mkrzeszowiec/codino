@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Header from 'components/header/Header';
+import Header from 'components/Header/Header';
 import JoinUs from 'components/JoinUs/JoinUs';
 import PageHead from 'components/layout/PageHead';
 import Footer from 'components/layout/Footer';

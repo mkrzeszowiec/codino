@@ -1,6 +1,6 @@
 import { Trans } from 'next-i18next';
 import Logo from 'components/icons/Logo';
-import NavItem from 'components/header/NavItem';
+import NavItem from 'components/Header/NavItem';
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();

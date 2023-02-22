@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Header from 'components/header/Header';
+import Header from 'components/Header/Header';
 import PageHead from 'components/layout/PageHead';
 import Button from 'components/Button/Button';
 import { useTranslation } from 'next-i18next';

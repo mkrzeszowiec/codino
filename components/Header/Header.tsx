@@ -3,7 +3,7 @@ import useOnClickOutside from 'use-onclickoutside';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Button from 'components/Button/Button';
-import NavItem from 'components/header/NavItem';
+import NavItem from 'components/Header/NavItem';
 import Logo from 'components/icons/Logo';
 import { useTranslation } from 'next-i18next';
 import LanguageButton from 'components/LanguageButton/LanguageButton';
