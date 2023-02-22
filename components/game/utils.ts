@@ -68,7 +68,7 @@ const createExplosion = ({ numParticles, position, radius, add }) => {
 			timeToLive: getRandomNum(20, 60)
 		});
 
-		add(particle).to('particles');
+		add(particle).to(TypeOfGameObject.particles);
 	});
 };
 

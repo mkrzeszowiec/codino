@@ -171,7 +171,7 @@ class Ship {
 			timeToLive: getRandomNum(20, 40)
 		});
 
-		this.add(particle).to('particles');
+		this.add(particle).to(TypeOfGameObject.particles);
 	}
 }
 
