@@ -9,7 +9,7 @@ import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
 
 const JobDetails: React.FC<{ job: JobOffer }> = ({ job }) => {
 	const { t } = useTranslation();
-	const { title, description, mode, experienceLevel, payRanges, roleAndResponsibilities, requirements } = job;
+	const { title, description, mode, experienceLevel, roleAndResponsibilities, requirements } = job;
 
 	return (
 		<section className="jobDetails">

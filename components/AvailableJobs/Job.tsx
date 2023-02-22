@@ -8,7 +8,7 @@ interface JobProps {
 }
 
 const Job: React.FC<JobProps> = ({ job }) => {
-	const { title, slug, payRanges, mode, experienceLevel } = job;
+	const { title, slug, mode, experienceLevel } = job;
 
 	return (
 		<Link className="job" href={`/career/${slug}`}>
