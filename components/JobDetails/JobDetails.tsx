@@ -1,7 +1,6 @@
 import SectionTitle from 'components/SectionTitle/SectionTitle';
 import { JobOffer } from 'types/common';
 import JobForm from 'components/JobDetails/JobForm';
-import WalletIcon from 'components/icons/Wallet';
 import MarkerIcon from 'components/icons/Marker';
 import StarIcon from 'components/icons/Star';
 import CheckCircleIcon from 'components/icons/CheckCircle';
@@ -22,11 +21,6 @@ const JobDetails: React.FC<{ job: JobOffer }> = ({ job }) => {
 				<p className="jobDetails__description">{description}</p>
 
 				<div className="jobDetails__inNutshell">
-					<p className="jobDetails__inNutshellPoint">
-						<WalletIcon />
-						{payRanges}
-					</p>
-
 					<p className="jobDetails__inNutshellPoint">
 						<MarkerIcon />
 						{mode}
