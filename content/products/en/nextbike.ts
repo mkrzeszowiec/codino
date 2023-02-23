@@ -1,7 +1,7 @@
 import { Product } from 'types/common';
 
 const NEXTBIKE: Product = {
-	title: 'Nextbike - Backend works',
+	title: 'Nextbike - Backend',
 	shortDescription:
 		'Nextbike is the most popular bicycle rental platform in Poland, operating in most major cities in Poland.',
 	description:
