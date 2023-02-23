@@ -41,6 +41,6 @@ next export
 ```
 this allows you to export your app to static HTML, which can render without the need of a Node.js server
 
-## Deploying to Vercel
+## Releasing
+Run `./release.sh` to deploy to https://codino.pl/
 
-Once merged to `main` branch, your changes will then be served to your visitors on https://codino.vercel.app/
