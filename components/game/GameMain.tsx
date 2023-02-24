@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Game from 'components/game/Game';
 import { event as googleEvent } from 'nextjs-google-analytics';
 import { useIsomorphicLayoutEffect } from 'utils/utils';
+import { GameContext } from './context';
 
 interface GameMainProps {
 	onClose: () => void;
@@ -10,15 +11,18 @@ interface GameMainProps {
 const GameMain: React.FC<GameMainProps> = ({ onClose }) => {
 	const [playing, setPlaying] = useState(false);
 	const [showTable, setShowTable] = useState(false);
+	const [isInputFocus, setIsInputFocus] = useState(false);
 
 	const onKeyDown = event => {
 		if (event.key === ' ') {
+			if (isInputFocus) return;
 			event.preventDefault();
 			setPlaying(true);
 			setShowTable(false);
 		}
 
 		if (event.key === 't') {
+			if (isInputFocus) return;
 			event.preventDefault();
 			setShowTable(!showTable);
 		}
@@ -42,7 +46,9 @@ const GameMain: React.FC<GameMainProps> = ({ onClose }) => {
 	});
 
 	return (
-		<Game playing={playing} setPlaying={setPlaying} showTable={showTable} gameOverClose={() => setShowTable(true)} />
+		<GameContext.Provider value={{ isInputFocus, setIsInputFocus }}>
+			<Game playing={playing} setPlaying={setPlaying} showTable={showTable} gameOverClose={() => setShowTable(true)} />
+		</GameContext.Provider>
 	);
 };
 

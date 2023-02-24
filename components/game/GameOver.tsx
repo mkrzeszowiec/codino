@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { post } from 'utils/api';
 import { generateHashCode, getFormattedCurrentDate } from 'utils/utils';
+import { GameContext } from './context';
 
 interface GameOverProps {
 	score: number;
@@ -10,6 +11,7 @@ interface GameOverProps {
 
 export const GameOver: React.FC<GameOverProps> = ({ score, onScoreSend }) => {
 	const { t } = useTranslation();
+	const { setIsInputFocus, isInputFocus } = useContext(GameContext);
 	const [nick, setNick] = useState('');
 
 	const onFormSubmit = async event => {
@@ -22,12 +24,16 @@ export const GameOver: React.FC<GameOverProps> = ({ score, onScoreSend }) => {
 			date: getFormattedCurrentDate()
 		});
 
+		setIsInputFocus(false);
 		onScoreSend(nick, score);
 	};
 
 	const handleInputChange = event => {
 		setNick(event.target.value);
 	};
+
+	const onFocus = () => setIsInputFocus(true);
+	const onBlur = () => setIsInputFocus(false);
 
 	return (
 		<>
@@ -40,9 +46,12 @@ export const GameOver: React.FC<GameOverProps> = ({ score, onScoreSend }) => {
 			<form onSubmit={onFormSubmit} className="gameTitleScreen__form">
 				<label htmlFor="gameTitleScreen__inputLabel">Podaj swój nick</label>
 				<input
+					required
 					id="scoreInput"
 					placeholder=""
 					onChange={handleInputChange}
+					onFocus={onFocus}
+					onBlur={onBlur}
 					type="text"
 					className="gameTitleScreen__input"
 					autoFocus
@@ -53,8 +62,12 @@ export const GameOver: React.FC<GameOverProps> = ({ score, onScoreSend }) => {
 				</button>
 			</form>
 
-			<p>Naciśnij t by zobaczyć tabelę wyników</p>
-			<p>{t('components.game.pressSpaceToPlayAgain')}</p>
+			<p className={`gameTitleScreen__tip ${isInputFocus ? 'gameTitleScreen__tip--disabled' : ''}`}>
+				Naciśnij t by zobaczyć tabelę wyników
+			</p>
+			<p className={`gameTitleScreen__tip ${isInputFocus ? 'gameTitleScreen__tip--disabled' : ''}`}>
+				{t('components.game.pressSpaceToPlayAgain')}
+			</p>
 			<p>{t('components.game.pressEscToClose')}</p>
 		</>
 	);
