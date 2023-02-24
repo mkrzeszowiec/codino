@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Game from 'components/game/Game';
 import { event as googleEvent } from 'nextjs-google-analytics';
+import { useIsomorphicLayoutEffect } from 'utils/utils';
 
 interface GameMainProps {
 	onClose: () => void;
@@ -8,11 +9,18 @@ interface GameMainProps {
 
 const GameMain: React.FC<GameMainProps> = ({ onClose }) => {
 	const [playing, setPlaying] = useState(false);
+	const [showTable, setShowTable] = useState(false);
 
 	const onKeyDown = event => {
 		if (event.key === ' ') {
 			event.preventDefault();
 			setPlaying(true);
+			setShowTable(false);
+		}
+
+		if (event.key === 't') {
+			event.preventDefault();
+			setShowTable(!showTable);
 		}
 
 		if (event.key === 'Escape') {
@@ -25,7 +33,7 @@ const GameMain: React.FC<GameMainProps> = ({ onClose }) => {
 		}
 	};
 
-	useEffect(() => {
+	useIsomorphicLayoutEffect(() => {
 		window.addEventListener('keydown', onKeyDown);
 
 		return function cleanup() {
@@ -33,7 +41,9 @@ const GameMain: React.FC<GameMainProps> = ({ onClose }) => {
 		};
 	});
 
-	return <Game playing={playing} setPlaying={setPlaying} />;
+	return (
+		<Game playing={playing} setPlaying={setPlaying} showTable={showTable} gameOverClose={() => setShowTable(true)} />
+	);
 };
 
 export default GameMain;

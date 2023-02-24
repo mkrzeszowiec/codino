@@ -3,16 +3,19 @@ import Asteroid from 'components/game/asteroid';
 import Ship from 'components/game/ship';
 import TitleScreen from 'components/game/TitleScreen';
 import { getRandomNum, isCollision, TypeOfGameObject } from 'components/game/utils';
-import GameBackground from 'components/game/GameBackground';
 import { event } from 'nextjs-google-analytics';
+import GameHighScores from 'components/game/GameHighScores';
+import GameBackground from './GameBackground';
 
 interface GameProps {
 	setPlaying: (isPlaying) => void;
 	playing: boolean;
+	showTable: boolean;
+	gameOverClose: () => void;
 }
 
 const Game: React.FC<GameProps> = props => {
-	const { playing, setPlaying } = props;
+	const { playing, showTable, setPlaying, gameOverClose } = props;
 
 	const [state, setState] = useState({
 		keys: { up: false, down: false, left: false, right: false, space: false },
@@ -22,6 +25,8 @@ const Game: React.FC<GameProps> = props => {
 			pixelRatio: window.devicePixelRatio || 1
 		},
 		score: 0,
+		lastScore: 0,
+		lastNick: '',
 		gameOver: false,
 		context: undefined
 	});
@@ -139,7 +144,7 @@ const Game: React.FC<GameProps> = props => {
 		requestId.current = requestAnimationFrame(update);
 	};
 
-	const endGame = () => {
+	const endGame = async () => {
 		setPlaying(false);
 
 		event('game_over', {
@@ -277,14 +282,23 @@ const Game: React.FC<GameProps> = props => {
 		requestId.current = requestAnimationFrame(update);
 	};
 
+	const onScoreSend = (nick, score) => {
+		setState(prevState => ({ ...prevState, gameOver: false, score: 0, lastScore: score, lastNick: nick }));
+		gameOverClose();
+	};
+
+	const isGameStart = !playing && !gameOver;
+
 	return (
 		<div className="game">
 			<GameBackground />
 
-			{!playing && !gameOver && <TitleScreen type="game-start" />}
-			{gameOver && <TitleScreen type="game-over" />}
+			{showTable && <GameHighScores lastScore={state.lastScore} lastNick={state.lastNick} isInputVisible={gameOver} />}
 
-			{(playing || gameOver) && <div className="game__score">{score}</div>}
+			{!showTable && isGameStart && <TitleScreen onScoreSend={onScoreSend} type="game-start" />}
+			{!showTable && gameOver && <TitleScreen onScoreSend={onScoreSend} score={score} type="game-over" />}
+
+			{playing && <div className="game__score">{score}</div>}
 
 			<canvas
 				className="game__canvas"
