@@ -46,6 +46,7 @@ export const GameOver: React.FC<GameOverProps> = ({ score, onScoreSend }) => {
 			<form onSubmit={onFormSubmit} className="gameTitleScreen__form">
 				<label htmlFor="gameTitleScreen__inputLabel">Podaj swoją nazwę</label>
 				<input
+					onKeyDown={e => e.stopPropagation()}
 					required
 					id="scoreInput"
 					placeholder=""
