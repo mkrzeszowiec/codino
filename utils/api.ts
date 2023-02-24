@@ -16,13 +16,11 @@ export const post = (url, body) => {
 
 function handleResponse(response) {
 	return response.text().then(text => {
-		const data = JSON.parse(text);
-
 		if (!response.ok) {
-			const error = (data && data.message) || response.statusText;
+			const error = response.statusText;
 			return Promise.reject(error);
 		}
 
-		return data;
+		return JSON.parse(text);
 	});
 }

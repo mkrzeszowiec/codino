@@ -47,8 +47,13 @@ const getNewScores = async (body): Promise<Score[]> => {
 };
 
 const readCurrentScoresFromFile = async (): Promise<Score[]> => {
-	const currentScores = await fs.readFile(GAME_SCORES_FILE_NAME, 'utf8');
-	return currentScores ? JSON.parse(currentScores) : [];
+	try {
+		const currentScores = await fs.readFile(GAME_SCORES_FILE_NAME, 'utf8');
+		return currentScores ? JSON.parse(currentScores) : [];
+	} catch (error) {
+		await fs.writeFile(GAME_SCORES_FILE_NAME, '');
+		return [];
+	}
 };
 
 const getTopScores = async (): Promise<Score[]> => {
