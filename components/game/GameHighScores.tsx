@@ -25,9 +25,9 @@ export const GameHighScores: React.FC<GameHighScoresProps> = ({ lastScore, lastN
 				<tbody>
 					<tr className="gameHighScores__item gameHighScores__item--header">
 						<th className="gameHighScores__position" />
-						<th className="gameHighScores__value">Score</th>
-						<th className="gameHighScores__name">Name</th>
-						<th className="gameHighScores__date">Date</th>
+						<th className="gameHighScores__value">Wynik</th>
+						<th className="gameHighScores__name">Nazwa</th>
+						<th className="gameHighScores__date">Data</th>
 					</tr>
 
 					{data?.map((score, index) => (
