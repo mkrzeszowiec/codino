@@ -3,56 +3,60 @@ import { promises as fs } from 'fs';
 import { generateHashCode } from 'utils/utils';
 
 const GAME_SCORES_FILE_NAME = 'scores.json';
+const TOP_GAME_SCORES_LIMIT = 10;
 
 export interface Score {
 	id: number;
 	name: string;
-	value: string;
+	value: number;
 	key: string;
 	date: string;
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse<Score[]>) {
-	const { method, body } = req;
+export default async function handler(request: NextApiRequest, response: NextApiResponse<Score[]>) {
+	const { method, body } = request;
 
 	switch (method) {
 		case 'GET':
-			res.status(200).json(await readCurrentScores());
+			response.status(200).json(await getTopScores());
 			break;
 
 		case 'POST':
-			if (isCorrectKey(body)) {
-				res.status(200).json(await handlePost(body));
-			} else {
-				res.status(403).end(`Incorrect key`);
-			}
+			isCorrectKey(body)
+				? response.status(200).json(await handlePost(body))
+				: response.status(403).end(`Incorrect key`);
 			break;
 
 		default:
-			res.setHeader('Allow', ['POST', 'GET']);
-			res.status(405).end(`Method ${method} Not Allowed`);
+			response.setHeader('Allow', ['POST', 'GET']);
+			response.status(405).end(`Method ${method} Not Allowed`);
 	}
 }
 
 const handlePost = async (body): Promise<Score[]> => {
 	const newScores = await getNewScores(body);
-	await writeCurrentScores(newScores);
-	return newScores;
+	await saveScoresToFile(newScores);
+	return getTopScores();
 };
 
 const getNewScores = async (body): Promise<Score[]> => {
-	const currentScores = await readCurrentScores();
+	const currentScores = await readCurrentScoresFromFile();
 	const newScore = { ...body, id: currentScores.length + 1 } as Score;
 	delete newScore.key;
 	return [...currentScores, newScore] as Score[];
 };
 
-const readCurrentScores = async (): Promise<Score[]> => {
+const readCurrentScoresFromFile = async (): Promise<Score[]> => {
 	const currentScores = await fs.readFile(GAME_SCORES_FILE_NAME, 'utf8');
 	return currentScores ? JSON.parse(currentScores) : [];
 };
 
-const writeCurrentScores = async (scores: Score[]): Promise<void> =>
+const getTopScores = async (): Promise<Score[]> => {
+	const scores = await readCurrentScoresFromFile();
+	return scores.sort((a, b) => b.value - a.value).slice(0, TOP_GAME_SCORES_LIMIT);
+};
+
+const saveScoresToFile = async (scores: Score[]): Promise<void> =>
 	await fs.writeFile(GAME_SCORES_FILE_NAME, JSON.stringify(scores));
 
 const isCorrectKey = (body): boolean => generateHashCode(body.value) === body.key;
