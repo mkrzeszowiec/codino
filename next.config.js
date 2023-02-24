@@ -7,9 +7,17 @@ const withPWA = require('next-pwa')({
 	disable: process.env.NODE_ENV === 'development'
 });
 
-module.exports = withPWA({
+const nextConfig = withPWA({
+	webpack: (config, { isServer }) => {
+		if (!isServer) {
+			config.resolve.fallback.fs = false;
+		}
+		return config;
+	},
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'styles')]
 	},
 	i18n
 });
+
+module.exports = nextConfig;
