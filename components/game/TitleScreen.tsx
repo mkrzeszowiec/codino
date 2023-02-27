@@ -16,7 +16,7 @@ const GameTitleScreen: React.FC<GameTitleScreenProps> = ({ type, score, onScoreS
 				<>
 					<h1 className="gameTitleScreen__title">{t('components.game.pressToPlay')}</h1>
 					<p>{t('components.game.control')}</p>
-					<p>{t('components.game.pressToShowHighScore')}</p>
+					<p>{t('components.game.pressToShowScoreBoard')}</p>
 					<p>{t('components.game.pressEscToClose')}</p>
 				</>
 			)}

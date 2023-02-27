@@ -39,12 +39,12 @@ export const GameOver: React.FC<GameOverProps> = ({ score, onScoreSend }) => {
 		<>
 			<h1 className="gameTitleScreen__title">{t('components.game.gameOver')}</h1>
 			<h2 className="gameTitleScreen__score">
-				Twój wynik
+				{t('components.game.yourScore')}
 				<span className="gameTitleScreen__scoreValue">{score}</span>
 			</h2>
 
 			<form onSubmit={onFormSubmit} className="gameTitleScreen__form">
-				<label htmlFor="gameTitleScreen__inputLabel">Podaj swoją nazwę</label>
+				<label htmlFor="gameTitleScreen__inputLabel">{t('components.game.addYourName')}</label>
 				<input
 					onKeyDown={e => e.stopPropagation()}
 					required
@@ -60,12 +60,12 @@ export const GameOver: React.FC<GameOverProps> = ({ score, onScoreSend }) => {
 				/>
 
 				<button type="submit" className="gameHighScores__button button button--border-white">
-					Dodaj
+					{t('components.game.add')}
 				</button>
 			</form>
 
 			<p className={`gameTitleScreen__tip ${isInputFocus ? 'gameTitleScreen__tip--disabled' : ''}`}>
-				Naciśnij t by zobaczyć tabelę wyników
+				{t('components.game.pressToShowScoreBoard')}
 			</p>
 
 			<p className={`gameTitleScreen__tip ${isInputFocus ? 'gameTitleScreen__tip--disabled' : ''}`}>

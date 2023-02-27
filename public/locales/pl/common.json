@@ -132,10 +132,17 @@
 			"control": "Użyj strzałek i spacji do sterowania",
 			"pressSpaceToPlayAgain": "Naciśnij spację by zagrać ponownie",
 			"pressEscToClose": "Naciśnij escape by wyjść",
-			"pressToShowHighScore": "Naciśnij t by zobaczyć tabelę wyników",
+			"pressToShowScoreBoard": "Naciśnij t by zobaczyć tabelę wyników",
 			"gameOver": "Koniec gry",
 			"play": "Zagraj",
-			"close": "Powrót do strony głównej"
+			"add": "Dodaj",
+			"addYourName": "Podaj swoją nazwę",
+			"close": "Powrót do strony głównej",
+			"yourScore": "Twój wynik",
+			"scoreBoard": "Tabela wyników",
+			"scoreBoardValue": "Wynik",
+			"scoreBoardName": "Nazwa",
+			"scoreBoardDate": "Data"
 		},
 		"cookie": {
 			"description": "Ta strona używa plików cookie. Korzystając z niej wyrażasz zgodę na ich używanie, zgodnie z aktualnymi ustawieniami przeglądarki.",

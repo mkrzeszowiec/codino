@@ -132,10 +132,17 @@
 			"control": "Use arrows and spacebar to control",
 			"pressSpaceToPlayAgain": "Press space to play again",
 			"pressEscToClose": "Press escape to close",
-			"pressToShowHighScore": "Press t to show high score",
+			"pressToShowScoreBoard": "Press t to show scoreboard",
 			"gameOver": "Game over",
 			"play": "Play",
-			"close": "Close"
+			"add": "Add",
+			"addYourName": "Enter your name",
+			"close": "Back to Home Page",
+			"yourScore": "Your score",
+			"scoreBoard": "Scoreboard",
+			"scoreBoardValue": "Value",
+			"scoreBoardName": "Name",
+			"scoreBoardDate": "Date"
 		},
 		"cookie": {
 			"description": "This site uses cookies. By using it you agree to their use, according to your current browser settings.",

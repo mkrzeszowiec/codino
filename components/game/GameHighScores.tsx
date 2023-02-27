@@ -21,13 +21,13 @@ export const GameHighScores: React.FC<GameHighScoresProps> = ({ lastScore, lastN
 	return (
 		<div className="gameHighScores">
 			<table className="gameHighScores__table">
-				<caption className="gameHighScores__title">Tabela wyników</caption>
+				<caption className="gameHighScores__title">{t('components.game.scoreBoard')}</caption>
 				<tbody>
 					<tr className="gameHighScores__item gameHighScores__item--header">
 						<th className="gameHighScores__position" />
-						<th className="gameHighScores__value">Wynik</th>
-						<th className="gameHighScores__name">Nazwa</th>
-						<th className="gameHighScores__date">Data</th>
+						<th className="gameHighScores__value">{t('components.game.scoreBoardValue')}</th>
+						<th className="gameHighScores__name">{t('components.game.scoreBoardName')}</th>
+						<th className="gameHighScores__date">{t('components.game.scoreBoardDate')}</th>
 					</tr>
 
 					{data?.map((score, index) => (
