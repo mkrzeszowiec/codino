@@ -137,6 +137,8 @@ const Game: React.FC<GameProps> = props => {
 
 		setState(prevState => ({
 			...prevState,
+			lastScore: 0,
+			lastNick: '',
 			score: 0,
 			gameOver: false
 		}));
@@ -190,8 +192,8 @@ const Game: React.FC<GameProps> = props => {
 		return new Asteroid({
 			position,
 			radius,
-			add: add,
-			addToScore: addToScore
+			add,
+			addToScore
 		});
 	};
 
