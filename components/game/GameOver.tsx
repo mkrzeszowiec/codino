@@ -55,6 +55,7 @@ export const GameOver: React.FC<GameOverProps> = ({ score, onScoreSend }) => {
 					onBlur={onBlur}
 					type="text"
 					className="gameTitleScreen__input"
+					autoComplete="off"
 					autoFocus
 				/>
 
@@ -66,6 +67,7 @@ export const GameOver: React.FC<GameOverProps> = ({ score, onScoreSend }) => {
 			<p className={`gameTitleScreen__tip ${isInputFocus ? 'gameTitleScreen__tip--disabled' : ''}`}>
 				Naciśnij t by zobaczyć tabelę wyników
 			</p>
+
 			<p className={`gameTitleScreen__tip ${isInputFocus ? 'gameTitleScreen__tip--disabled' : ''}`}>
 				{t('components.game.pressSpaceToPlayAgain')}
 			</p>
