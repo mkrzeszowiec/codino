@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import useOnClickOutside from 'use-onclickoutside';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Button from 'components/Button/Button';
@@ -13,27 +14,24 @@ interface HeaderProps {
 }
 
 const Header = ({ isErrorPage }: HeaderProps) => {
-	const { t } = useTranslation();
-
-	const router = useRouter();
 	const arrayPaths = ['/'];
+	const { t } = useTranslation();
+	const router = useRouter();
 
-	const [onTop, setOnTop] = useState(!(!arrayPaths.includes(router.pathname) || isErrorPage));
+	const shouldHaveFixedHeader = !arrayPaths.includes(router.pathname) || isErrorPage;
+	const [onTop, setOnTop] = useState(!shouldHaveFixedHeader);
 	const [menuOpen, setMenuOpen] = useState(false);
 	const navRef = useRef(null);
 
-	const headerClass = () => {
-		setOnTop(window.pageYOffset === 0);
-	};
-
-	useEffect(() => {
-		if (!arrayPaths.includes(router.pathname) || isErrorPage) {
-			return;
-		}
-
-		headerClass();
-		window.onscroll = () => headerClass();
-	}, []);
+	useScrollPosition(
+		({ currPos }) => {
+			if (shouldHaveFixedHeader) {
+				return;
+			}
+			setOnTop(currPos.y === 0);
+		},
+		[router.pathname]
+	);
 
 	const closeMenu = () => {
 		setMenuOpen(false);
