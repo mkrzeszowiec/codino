@@ -1,4 +1,4 @@
-import { getOurProductsTranslated } from 'content/products/products';
+import { getOurProductsTranslated } from 'public/content/products/products';
 import Product from 'components/Product/Product';
 import { getIsEven } from 'utils/utils';
 import { useTranslation } from 'next-i18next';

@@ -10,7 +10,7 @@ import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 import { getPageTitle } from 'utils/utils';
 import UseCasesCarousel from 'components/UseCasesCarousel/UseCasesCarousel';
 import { useRouter } from 'next/router';
-import { getServicesTranslated } from 'content/services/services';
+import { getServicesTranslated } from 'public/content/services/services';
 
 const ServicesPage = () => {
 	const { t } = useTranslation();

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Position from 'components/WhatWeDo/Position';
 import { Trans, useTranslation } from 'next-i18next';
-import { getServicesTranslated } from 'content/services/services';
+import { getServicesTranslated } from 'public/content/services/services';
 
 const WhatWeDo = () => {
 	const { t } = useTranslation();

@@ -1,7 +1,7 @@
 import ErrorPageLayout from 'components/layout/ErrorPageLayout';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from '../utils/constants';
+import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 import { useTranslation } from 'next-i18next';
 
 const NotFoundPage = () => {

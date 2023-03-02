@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Job from 'components/AvailableJobs/Job';
 import { useTranslation } from 'next-i18next';
-import { getJobsOfferTranslated } from 'content/jobs/jobs';
+import { getJobsOfferTranslated } from 'public/content/jobs/jobs';
 import { useRouter } from 'next/router';
 
 const AvailableJobs = () => {

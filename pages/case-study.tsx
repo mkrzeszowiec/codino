@@ -1,6 +1,6 @@
 import MainLayout from 'components/layout/MainLayout';
 import SubpageIntro from 'components/SubpageIntro/SubpageIntro';
-import { getOurProductsTranslated } from 'content/products/products';
+import { getOurProductsTranslated } from 'public/content/products/products';
 import { getIsEven, getPageTitle } from 'utils/utils';
 import Product from 'components/Product/Product';
 import { GetStaticProps } from 'next';

@@ -8,7 +8,7 @@ import MainLayout from 'components/layout/MainLayout';
 import { getPageTitle } from 'utils/utils';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
-import { getJobsOfferTranslated } from 'content/jobs/jobs';
+import { getJobsOfferTranslated } from 'public/content/jobs/jobs';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {
