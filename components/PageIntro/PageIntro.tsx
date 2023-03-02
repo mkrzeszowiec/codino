@@ -3,7 +3,7 @@ import Button from 'components/Button/Button';
 import HeroAnimation from 'components/HeroAnimation/HeroAnimation';
 import { getIsServerSide } from 'utils/utils';
 import { Trans, useTranslation } from 'next-i18next';
-import GameStartButton from 'components/GameButton/GameStartButton';
+import GameStartButton from 'components/game/GameStartButton';
 
 interface PageIntroProps {
 	onClickStartGame: () => void;

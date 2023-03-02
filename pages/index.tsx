@@ -1,4 +1,7 @@
+import { useState } from 'react';
 import { GetStaticProps } from 'next';
+import useGame from 'hooks/useGame';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import MainLayout from 'components/layout/MainLayout';
 import PageIntro from 'components/PageIntro/PageIntro';
 import Products from 'components/Products/Products';
@@ -8,12 +11,15 @@ import StartWork from 'components/StartWork/StartWork';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import GameMain from 'components/game/GameMain';
 import NoSsr from 'components/NoSsr/NoSsr';
-import GameCloseButton from 'components/GameButton/GameCloseButton';
+import GameCloseButton from 'components/game/GameCloseButton';
+import GameFloatingButton from 'components/game/GameFloatingButton';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
-import useGame from 'hooks/useGame';
 
 const IndexPage = () => {
 	const { isGameOpening, isAnimating, isGameMode, onClickGame, closeGame } = useGame();
+	const [isVisibleBottomGameButton, setIsVisibleBottomGameButton] = useState(false);
+
+	useScrollPosition(({ currPos }) => setIsVisibleBottomGameButton(currPos.y < -200), []);
 
 	return (
 		<MainLayout containerClassName={`homepagePage ${isGameOpening ? 'gameMode' : ''}`}>
@@ -25,7 +31,14 @@ const IndexPage = () => {
 						<GameMain onClose={closeGame} />
 					</section>
 				) : (
-					<PageIntro isLaunchGameAnimating={isAnimating} onClickStartGame={onClickGame} />
+					<>
+						<PageIntro isLaunchGameAnimating={isAnimating} onClickStartGame={onClickGame} />
+						<GameFloatingButton
+							isVisible={isVisibleBottomGameButton}
+							isLaunchGameAnimating={isAnimating}
+							onClickStartGame={onClickGame}
+						/>
+					</>
 				)}
 			</NoSsr>
 

@@ -1,0 +1,76 @@
+.gameStartRocketIcon {
+	transform: rotate(-46deg);
+	max-width: 4rem;
+	width: 100%;
+	--rocket-color: var(--color-primary);
+
+	&--white {
+		--rocket-color: var(--color-white);
+	}
+
+	.background {
+		fill: transparent;
+	}
+
+	.arrow {
+		fill: var(--rocket-color);
+	}
+
+	.line {
+		animation-iteration-count: infinite;
+		stroke: var(--rocket-color);
+	}
+
+	.lineThick {
+		animation-name: drawThick;
+		animation-timing-function: linear;
+	}
+
+	.lineDots {
+		animation-name: drawDots;
+		animation-timing-function: linear;
+		stroke-dasharray: 0, 30;
+		stroke-width: 5.5;
+	}
+
+	.lineStatic {
+		animation-name: drawStatic;
+		animation-timing-function: ease;
+		stroke-dasharray: 22;
+		stroke-width: 8;
+	}
+
+	.line1 {
+		animation-duration: 1.6s;
+		stroke-dasharray: 8, 22, 3, 27, 16, 14;
+		stroke-width: 4;
+	}
+
+	.line2 {
+		animation-duration: 1.3s;
+		stroke-dasharray: 18, 12, 10, 20, 3, 27;
+		stroke-width: 6;
+	}
+
+	.line3 {
+		animation-duration: 1.4s;
+		stroke-dasharray: 3, 27, 10, 20, 20, 10;
+		stroke-width: 4;
+	}
+
+	.line4 {
+		animation-duration: 0.4s;
+	}
+
+	.line5 {
+		animation-duration: 0.7s;
+	}
+
+	.line6 {
+		animation-duration: 0.8s;
+	}
+
+	.line7 {
+		animation-duration: 0.6s;
+	}
+}
