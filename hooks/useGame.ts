@@ -10,8 +10,8 @@ interface UseGameOutput {
 }
 
 const ESCAPE_KEY_CODE = 27;
-const ANIMATION_TIME_MS = 1200;
-const GAME_START_DELAY_TIME_MS = 1800;
+const ANIMATION_TIME_MS = 1000;
+const GAME_START_DELAY_TIME_MS = 1500;
 
 const useGame = (): UseGameOutput => {
 	const [isGameOpening, setIsGameOpening] = useState(false);

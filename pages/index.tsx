@@ -15,11 +15,13 @@ import GameCloseButton from 'components/game/GameCloseButton';
 import GameFloatingButton from 'components/game/GameFloatingButton';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 
+const GAME_BOTTOM_BUTTON_VISIBLE_OFFSET = -600;
+
 const IndexPage = () => {
 	const { isGameOpening, isAnimating, isGameMode, onClickGame, closeGame } = useGame();
 	const [isVisibleBottomGameButton, setIsVisibleBottomGameButton] = useState(false);
 
-	useScrollPosition(({ currPos }) => setIsVisibleBottomGameButton(currPos.y < -200), []);
+	useScrollPosition(({ currPos }) => setIsVisibleBottomGameButton(currPos.y < GAME_BOTTOM_BUTTON_VISIBLE_OFFSET), []);
 
 	return (
 		<MainLayout containerClassName={`homepagePage ${isGameOpening ? 'gameMode' : ''}`}>
