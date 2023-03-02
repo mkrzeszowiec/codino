@@ -13,7 +13,7 @@ import { getJobsOfferTranslated } from 'content/jobs/jobs';
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {
 		paths: [],
-		fallback: true
+		fallback: false
 	};
 };
 
@@ -29,7 +29,9 @@ export const getStaticProps: GetStaticProps = async context => {
 	const { slug } = context.params as Params;
 
 	if (!slug) {
-		throw Error('Job not found');
+		return {
+			notFound: true
+		};
 	}
 
 	const job = getJobsOfferTranslated(DEFAULT_LOCALE).find(job => job.slug === slug);
