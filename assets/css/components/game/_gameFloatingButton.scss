@@ -54,18 +54,7 @@
 		}
 	}
 
-	@keyframes flightBottomButton {
-		0% {
-			top: 50%;
-		}
-		10% {
-			top: 45%;
-		}
-		20% {
-			top: 50%;
-		}
-		100% {
-			top: -500%;
-		}
+	.rumble {
+		animation: rumbleRepeat 7s infinite forwards;
 	}
 }
