@@ -11,7 +11,7 @@
 	}
 
 	&--launch {
-		animation: flight 1.5s ease infinite;
+		animation: flight 1.5s ease forwards;
 	}
 
 	&__tooltip {

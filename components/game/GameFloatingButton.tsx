@@ -35,8 +35,10 @@ const GameFloatingButton: React.FC<GameFloatingButtonProps> = ({
 				{t('components.game.play')}
 			</Tooltip>
 
-			<div id={GAME_BUTTON_ID} className={containerClasses} onClick={onClickStartButton}>
-				<GameStartRocketIcon isWhite />
+			<div className="gameFloatingButton__iconWrapper">
+				<div id={GAME_BUTTON_ID} className={containerClasses} onClick={onClickStartButton}>
+					<GameStartRocketIcon isWhite />
+				</div>
 			</div>
 		</div>
 	);

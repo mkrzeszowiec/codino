@@ -17,6 +17,16 @@
 		display: block;
 	}
 
+	&__iconWrapper {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		overflow: hidden;
+		transform: rotate(45deg);
+	}
+
 	&--show {
 		visibility: visible;
 		opacity: 1;
@@ -29,9 +39,33 @@
 		right: auto;
 		transform: translate(-50%, -50%);
 		z-index: 99999999;
+		overflow: hidden;
+
+		.background {
+			overflow: hidden;
+		}
+
+		&--launch {
+			animation: flightBottomButton 2s ease;
+		}
 
 		svg {
 			width: 5rem;
+		}
+	}
+
+	@keyframes flightBottomButton {
+		0% {
+			top: 50%;
+		}
+		10% {
+			top: 45%;
+		}
+		20% {
+			top: 50%;
+		}
+		100% {
+			top: -500%;
 		}
 	}
 }
