@@ -18,7 +18,7 @@ const StartWork = () => {
 
 				<h3 className="startWork__title">{t('components.startWork.header')}</h3>
 				<p className="startWork__description">{t('components.startWork.description')}</p>
-				<Button label={t('common.contact')} href="/contact" type="border-white" />
+				<Button className="startWork__button" label={t('common.contact')} href="/contact" type="border-white" />
 			</section>
 		</div>
 	);
