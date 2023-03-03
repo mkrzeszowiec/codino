@@ -2,8 +2,8 @@
 	position: fixed;
 	width: 100%;
 	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
+	left: 0;
+	right: 0;
 	z-index: 999;
 	height: var(--mobile-navbar-height);
 	color: white;
@@ -90,6 +90,7 @@
 		background-color: #fff;
 		transition: all 0.3s ease;
 		border-left: 1px solid #e5e5e5;
+
 		@include breakpoint(tablet) {
 			position: relative;
 			height: auto;

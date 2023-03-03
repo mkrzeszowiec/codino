@@ -2,13 +2,28 @@
 	background-color: var(--color-dark-background);
 	padding: 50px 0 50px 0;
 	color: white;
-	background-image: url('/images/footer-background.svg');
-	background-size: auto auto;
-	background-repeat: no-repeat;
-	background-position: 100% 160px;
+	position: relative;
+	overflow: hidden;
 
 	@include breakpoint(phone) {
 		padding-top: 90px;
+	}
+
+	&__image {
+		width: 60vw;
+		height: 100%;
+		object-fit: contain;
+		position: absolute;
+		left: auto;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+
+		@include breakpoint(tablet) {
+			width: 40vw;
+			right: -100px;
+		}
 	}
 
 	&__top {

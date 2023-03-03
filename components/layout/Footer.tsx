@@ -1,12 +1,15 @@
 import { Trans } from 'next-i18next';
 import Logo from 'components/icons/Logo';
 import NavItem from 'components/Header/NavItem';
+import Image from "next/image";
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
 	return (
 		<footer className="siteFooter">
+			<Image src={`/images/footer-background.svg`} className="siteFooter__image" alt="" width={4000} height={500} />
+
 			<div className="container">
 				<div className="siteFooter__top">
 					<div className="siteFooter__description">
