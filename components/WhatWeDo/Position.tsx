@@ -10,7 +10,7 @@ const Position: React.FC<PositionProps> = ({ position }) => {
 	const { title, shortDescription, slug } = position;
 	return (
 		<Link className="position" href={`/services#${slug}`}>
-			<h4 className="position__title">{title}</h4>
+			<h3 className="position__title">{title}</h3>
 			<p className="position__description">{shortDescription}</p>
 			<div className="position__button">
 				<ArrowRightIcon />

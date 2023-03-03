@@ -14,7 +14,7 @@ const PositionDetails: React.FC<PositionDetailsProps> = ({ position, index }) =>
 		<div  className={`positionDetails ${getIsEven(index) ? '' : 'positionDetails--withBackground'}`} id={slug}>
 			<div className="container" data-aos={`${getIsEven(index) ? 'fade-left' : 'fade-right'}`}>
 				<div className="positionDetails__top">
-					<h4 className="positionDetails__name">
+					<h3 className="positionDetails__name">
 						{title}
 						<span className="positionDetails__number">{getNumberWithLeadingZero(index)}</span>
 
@@ -31,7 +31,7 @@ const PositionDetails: React.FC<PositionDetailsProps> = ({ position, index }) =>
 								/>
 							))}
 						</span>
-					</h4>
+					</h3>
 
 					<p className="positionDetails__description">{description}</p>
 				</div>

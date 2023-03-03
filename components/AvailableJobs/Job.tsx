@@ -12,7 +12,7 @@ const Job: React.FC<JobProps> = ({ job }) => {
 
 	return (
 		<Link className="job" href={`/career/${slug}`}>
-			<h4 className="job__title">{title}</h4>
+			<h3 className="job__title">{title}</h3>
 
 			<div className="job__description">
 				<p className="job__experience">{experienceLevel}</p>
