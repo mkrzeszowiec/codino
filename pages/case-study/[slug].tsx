@@ -5,10 +5,10 @@ import { getPageTitle } from 'utils/utils';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 import CaseStudy from 'components/CaseStudy/CaseStudy';
+import MainLayout from 'components/layout/MainLayout';
 import { getOurProductsTranslated } from 'public/content/products/products';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import MainLayout from '../../components/layout/MainLayout';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {

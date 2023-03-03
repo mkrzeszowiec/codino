@@ -14,7 +14,7 @@ Codino site based on [Next.js](https://nextjs.org) with TypeScript
 - `/pages` next.js pages, by default `/` and `/career/:slug`, `/case-study/:slug`
 - `/components` react components
 - `/assets` styles based on sass
-- `/content` content for jobs, products and services section
+- `/public/content` content for jobs, products and services section
 - `/public` resources - translated texts, icons, svg and images that will be optimized (compression + responsive)
 - `/utils` and `/hooks` - as in the name :]
 - `/types` type definitions in TS
