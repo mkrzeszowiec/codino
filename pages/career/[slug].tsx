@@ -13,7 +13,7 @@ import { getJobsOfferTranslated } from 'public/content/jobs/jobs';
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {
 		paths: [],
-		fallback: false
+		fallback: true
 	};
 };
 
