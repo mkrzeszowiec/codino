@@ -98,6 +98,11 @@
 		left: 0;
 		right: 0;
 		@include flex-center;
+		pointer-events: none;
+
+		@include breakpoint(tablet) {
+			pointer-events: auto;
+		}
 	}
 
 	&__dot {

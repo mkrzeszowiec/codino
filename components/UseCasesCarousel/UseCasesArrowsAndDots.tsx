@@ -7,13 +7,13 @@ type PrevNextButtonPropType = {
 };
 
 export const PrevButton: React.FC<PrevNextButtonPropType> = ({ onClick }) => (
-	<button className="useCasesCarousel__button useCasesCarousel__button--prev" onClick={onClick}>
+	<button className="useCasesCarousel__button useCasesCarousel__button--prev" aria-label="prev" onClick={onClick}>
 		<ArrowLeftIcon />
 	</button>
 );
 
 export const NextButton: React.FC<PrevNextButtonPropType> = ({ onClick }) => (
-	<button className="useCasesCarousel__button useCasesCarousel__button--next" onClick={onClick}>
+	<button className="useCasesCarousel__button useCasesCarousel__button--next" aria-label="next" onClick={onClick}>
 		<ArrowRightIcon />
 	</button>
 );
@@ -25,6 +25,7 @@ type DotButtonPropType = {
 
 export const DotButton: React.FC<DotButtonPropType> = ({ selected, onClick }) => (
 	<button
+		aria-label="dot"
 		className={`useCasesCarousel__dot ${selected ? ' useCasesCarousel__dot--selected' : ''}`}
 		type="button"
 		onClick={onClick}
