@@ -15,7 +15,7 @@ const ErrorPageLayout = ({ title, subtitle }: NotFoundLayoutProps) => {
 	return (
 		<div className="errorPage container">
 			<PageHead title={title} />
-			<Header isErrorPage />
+			<Header />
 
 			<Image className="errorPage__image" src="/images/error.png" width={1500} height={1500} alt="" />
 

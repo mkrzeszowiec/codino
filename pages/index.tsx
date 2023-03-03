@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import { GetStaticProps } from 'next';
-import useGame from 'hooks/useGame';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import classNames from 'classnames';
 import MainLayout from 'components/layout/MainLayout';
 import PageIntro from 'components/PageIntro/PageIntro';
 import Products from 'components/Products/Products';
@@ -13,18 +11,21 @@ import GameMain from 'components/game/GameMain';
 import NoSsr from 'components/NoSsr/NoSsr';
 import GameCloseButton from 'components/game/GameCloseButton';
 import GameFloatingButton from 'components/game/GameFloatingButton';
+import useGame from 'hooks/useGame';
+import useHomePageLayout from 'hooks/useHomePageLayout';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
-
-const GAME_BOTTOM_BUTTON_VISIBLE_OFFSET = -600;
 
 const IndexPage = () => {
 	const { isGameOpening, isAnimating, isGameMode, onClickGame, closeGame } = useGame();
-	const [isVisibleBottomGameButton, setIsVisibleBottomGameButton] = useState(false);
-
-	useScrollPosition(({ currPos }) => setIsVisibleBottomGameButton(currPos.y < GAME_BOTTOM_BUTTON_VISIBLE_OFFSET), []);
+	const { isHeaderOnHero, isVisibleBottomGameButton } = useHomePageLayout();
 
 	return (
-		<MainLayout containerClassName={`homepagePage ${isGameOpening ? 'gameMode' : ''}`}>
+		<MainLayout
+			containerClassName={classNames('homepagePage', {
+				gameMode: isGameOpening,
+				'transparent-header': isHeaderOnHero
+			})}
+		>
 			{isGameMode && <GameCloseButton isGameMode={isGameMode} onClick={closeGame} />}
 
 			<NoSsr>

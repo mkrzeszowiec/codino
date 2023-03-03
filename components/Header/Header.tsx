@@ -1,37 +1,17 @@
 import { useState, useRef } from 'react';
 import useOnClickOutside from 'use-onclickoutside';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import Button from 'components/Button/Button';
 import NavItem from 'components/Header/NavItem';
 import Logo from 'components/icons/Logo';
 import { useTranslation } from 'next-i18next';
 import LanguageButton from 'components/LanguageButton/LanguageButton';
 
-interface HeaderProps {
-	isErrorPage?: boolean;
-}
-
-const Header = ({ isErrorPage }: HeaderProps) => {
-	const arrayPaths = ['/'];
+const Header = () => {
 	const { t } = useTranslation();
-	const router = useRouter();
 
-	const shouldHaveFixedHeader = !arrayPaths.includes(router.pathname) || isErrorPage;
-	const [onTop, setOnTop] = useState(!shouldHaveFixedHeader);
 	const [menuOpen, setMenuOpen] = useState(false);
 	const navRef = useRef(null);
-
-	useScrollPosition(
-		({ currPos }) => {
-			if (shouldHaveFixedHeader) {
-				return;
-			}
-			setOnTop(currPos.y === 0);
-		},
-		[router.pathname]
-	);
 
 	const closeMenu = () => {
 		setMenuOpen(false);
@@ -44,7 +24,7 @@ const Header = ({ isErrorPage }: HeaderProps) => {
 	useOnClickOutside(navRef, closeMenu);
 
 	return (
-		<header className={`site-header ${!onTop ? 'site-header--fixed' : ''}`}>
+		<header className="site-header">
 			<div className="site-header__wrapper">
 				<Link href="/" aria-label="Go to the homepage">
 					<h1 className="site-logo">

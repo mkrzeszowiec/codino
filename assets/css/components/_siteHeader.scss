@@ -6,8 +6,10 @@
 	right: 0;
 	z-index: 999;
 	height: var(--mobile-navbar-height);
+	background-color: white;
 	color: white;
 	transition: all 0.3s ease;
+	border-bottom: 1px solid #e5e5e5;
 
 	@include breakpoint(tablet) {
 		height: var(--desktop-navbar-height);
@@ -16,7 +18,7 @@
 	&__languageButton {
 		text-transform: uppercase;
 		padding: 12px;
-		color: white;
+		color: var(--color-text);
 		font-size: 1.6rem;
 		overflow: hidden;
 		transition: color 0.3s ease;
@@ -43,7 +45,7 @@
 		&:before,
 		&:after,
 		span {
-			background-color: white;
+			background-color: var(--color-text);
 		}
 	}
 
@@ -60,7 +62,7 @@
 	}
 
 	.site-logo path {
-		fill: #fff;
+		fill: var(--color-text);
 	}
 
 	.site-header__btn-menu {
@@ -87,7 +89,7 @@
 		margin-left: auto;
 		margin-right: auto;
 		position: fixed;
-		background-color: #fff;
+		background-color: white;
 		transition: all 0.3s ease;
 		border-left: 1px solid #e5e5e5;
 
@@ -106,7 +108,7 @@
 
 		a {
 			width: 100%;
-			color: black;
+			color: var(--color-text);
 			display: block;
 			text-align: left;
 			padding: 15px 18px;
@@ -114,7 +116,6 @@
 			@include breakpoint(tablet) {
 				width: auto;
 				padding: 0;
-				color: #fff;
 				margin-right: 50px;
 				display: inline-block;
 
@@ -122,36 +123,6 @@
 					margin-right: 0;
 				}
 			}
-		}
-	}
-
-	&.site-header--fixed {
-		border-bottom: 1px solid #e5e5e5;
-		background-color: white;
-
-		.btn-hamburger {
-			&:before,
-			&:after,
-			span {
-				background-color: black;
-			}
-		}
-
-		a,
-		i {
-			color: black;
-		}
-
-		button {
-			color: black;
-
-			i {
-				color: black;
-			}
-		}
-
-		.site-logo path {
-			fill: black;
 		}
 	}
 }
