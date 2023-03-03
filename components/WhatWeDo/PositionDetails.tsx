@@ -11,8 +11,8 @@ const PositionDetails: React.FC<PositionDetailsProps> = ({ position, index }) =>
 	const { title, description, slug, icons } = position;
 
 	return (
-		<div  className={`positionDetails ${getIsEven(index) ? '' : 'positionDetails--withBackground'}`} id={slug}>
-			<div className="container" data-aos={`${getIsEven(index) ? 'fade-left' : 'fade-right'}`}>
+		<div className={`positionDetails ${getIsEven(index) ? '' : 'positionDetails--withBackground'}`} id={slug}>
+			<div className="container" data-aos={`${getIsEven(index) ? 'fade-left' : 'fade-right'}`} data-aos-offset={-50}>
 				<div className="positionDetails__top">
 					<h3 className="positionDetails__name">
 						{title}

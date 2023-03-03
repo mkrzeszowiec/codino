@@ -9,7 +9,7 @@ const HowWeWork = () => {
 	const { t } = useTranslation();
 
 	return (
-		<section className="howWeWork" data-aos="fade-up">
+		<section className="howWeWork" data-aos="fade-up" data-aos-offset={-200}>
 			<div className="howWeWork__top">
 				<div className="howWeWork__texts">
 					<SectionTitle>{t('components.howWeWork.title')}</SectionTitle>
