@@ -5,6 +5,7 @@ import PageIntro from 'components/PageIntro/PageIntro';
 import Products from 'components/Products/Products';
 import WhatWeDo from 'components/WhatWeDo/WhatWeDo';
 import TechnologiesCarousel from 'components/TechnologiesCarousel/TechnologiesCarousel';
+import TestimonialsCarousel from "../components/TestimonailsCarousel/TestimonialsCarousel";
 import StartWork from 'components/StartWork/StartWork';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import GameMain from 'components/game/GameMain';
@@ -51,6 +52,7 @@ const IndexPage = () => {
 
 			<TechnologiesCarousel />
 			<Products />
+      <TestimonialsCarousel title={"Referencje"} />
 
 			<div className="container" data-aos="fade-down">
 				<StartWork />
