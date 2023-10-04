@@ -66,4 +66,43 @@ export const ARTICLES: Article[] = [
 		shortDescription: 'Krótki opis praktycznych zastosowań Lorem Ipsum.',
 		date: '04 Paź 23',
 	},
+	{
+		title: 'Rola Sztucznej Inteligencji w Przyszłości Przemysłu',
+		slug: 'rola-sztucznej-inteligencji-w-przyszlosci-przemyslu',
+		content:
+			'Sztuczna inteligencja (SI) odgrywa kluczową rolę w przemysłach na całym świecie, rewolucjonizując sposób, w jaki produkowane są produkty i usługi. SI umożliwia automatyzację procesów, przewidywanie awarii, optymalizację produkcji i wiele innych zastosowań. Wraz z rozwojem technologii SI przewiduje się, że jej rola w przemyśle będzie stale rosnąć, prowadząc do bardziej efektywnych i inteligentnych operacji przemysłowych.',
+		author: {
+			name: 'Anna Nowak',
+			imageUrl: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png',
+		},
+		mainPhotoUrl: 'https://fastly.picsum.photos/id/198/800/900.jpg?hmac=n5zqh33bJitE6helhRQjwkNswmBNZKIjALSQA13fz_8',
+		shortDescription: 'Wpływ Sztucznej Inteligencji na przemysł.',
+		date: '04 Paź 23',
+	},
+	{
+		title: 'Przyszłość Edukacji: Nauczanie Online czy Tradycyjne Lekcje?',
+		slug: 'przyszlosc-edukacji-nauczanie-online-czy-tradycyjne-lekcje',
+		content:
+			'W dzisiejszym dynamicznym świecie edukacja przechodzi poważne zmiany. Z jednej strony mamy tradycyjne nauczanie, które istnieje od wieków i obejmuje regularne lekcje w klasach szkolnych. Z drugiej strony mamy nauczanie online, które wykorzystuje technologię internetową do przekazywania wiedzy. Oba podejścia mają swoje zalety i wady. W artykule tym zastanowimy się, które z tych podejść jest bardziej efektywne i odpowiednie dla przyszłości edukacji.',
+		author: {
+			name: 'Jan Nowak',
+			imageUrl: 'https://cdn-images-1.medium.com/v2/resize:fit:500/1*28phnQtCgyCSTL4nPeclrg.gif',
+		},
+		mainPhotoUrl: 'https://cdn-images-1.medium.com/v2/resize:fit:500/1*28phnQtCgyCSTL4nPeclrg.gif',
+		shortDescription: 'Debata na temat nauczania online i tradycyjnych lekcji.',
+		date: '05 Paź 23',
+	},
+	{
+		title: 'Energia Przyszłości: Odnawialne Źródła Energii',
+		slug: 'energia-przyszlosci-odnawialne-zrodla-energii',
+		content:
+			'W obliczu zmian klimatycznych i wyczerpywania się zasobów paliw kopalnych, odnawialne źródła energii stają się kluczowym obszarem badań i rozwoju. Energia słoneczna, wiatrowa, geotermalna i inne odnawialne źródła energii oferują ekologiczne i zrównoważone alternatywy dla tradycyjnych źródeł. W tym artykule przyjrzymy się różnym rodzajom odnawialnych źródeł energii i ich potencjalnemu wpływowi na przyszłość energetyki światowej.',
+		author: {
+			name: 'Katarzyna Kowalska',
+			imageUrl: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-3.jpg',
+		},
+		mainPhotoUrl: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-3.jpg',
+		shortDescription: 'Przyszłość energetyki: odnawialne źródła energii.',
+		date: '06 Paź 23',
+	},
 ];

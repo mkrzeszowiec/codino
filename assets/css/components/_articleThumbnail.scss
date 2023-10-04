@@ -19,6 +19,7 @@
   &__infoWrapper {
     padding: 20px;
     flex: 1;
+    gap: 15px;
 
     display: flex;
     flex-direction: column;
@@ -37,7 +38,7 @@
 
   &__shortDescription {
     flex: 1;
-    line-height: 1.4;
+    font-weight: normal;
   }
 
   &__author {
