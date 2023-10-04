@@ -156,6 +156,9 @@
 			"serverErrorTitle": "Błąd 500",
 			"serverErrorSubtitle": "Problem po stronie serwera",
 			"button": "Powrót do strony głównej"
+		},
+		"blog": {
+			"header": "Blog"
 		}
 	}
 }

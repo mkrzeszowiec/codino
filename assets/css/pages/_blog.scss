@@ -1,0 +1,21 @@
+.articles {
+  padding-bottom: 10rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+
+  @include breakpoint(phone-sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint(tablet) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__item--1 {
+    @include breakpoint(tablet) {
+      grid-column: 1 / span 2;
+    }
+  }
+}
