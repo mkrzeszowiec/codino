@@ -17,6 +17,14 @@ const nextConfig = withPWA({
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'styles')]
 	},
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'picsum.photos'
+			}
+		]
+	},
 	i18n
 });
 
