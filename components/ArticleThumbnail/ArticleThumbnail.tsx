@@ -10,7 +10,7 @@ const ArticleThumbnail: React.FC<ArticleThumbnailProps> = ({ article, className 
 
 	return (
 		<div className={`articleThumbnail ${className}`}>
-			<a href={`/${slug}`} className="card">
+			<a href={`/blog/${slug}`} className="articleThumbnail__url">
 				<div className="articleThumbnail__cover" style={{ backgroundImage: `url(${mainPhotoUrl})` }} />
 
 				<article className="articleThumbnail__infoWrapper">
