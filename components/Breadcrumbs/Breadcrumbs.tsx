@@ -18,13 +18,13 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ currentPage, type, className 
 				{t('common.homepage')}
 			</Link>
 
-			<span className="breadcrumbs__separator"> → </span>
+			<span className="breadcrumbs__separator"> / </span>
 
 			<Link aria-label={`Go to ${type}`} className="breadcrumbs__url" href={`/${getHref()}`}>
 				{t(`common.subpages.${type}`)}
 			</Link>
 
-			<span className="breadcrumbs__separator"> → </span>
+			<span className="breadcrumbs__separator"> / </span>
 
 			<span className="breadcrumbs__currentPage">{currentPage}</span>
 		</nav>
