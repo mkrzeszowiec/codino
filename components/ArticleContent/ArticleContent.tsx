@@ -14,18 +14,6 @@ const ArticleContent = ({ article }: Props) => {
 		<article className="articleContent">
 			<ReactMarkdown
 				components={{
-					p: ({ node, children }) => {
-						if ((node as any).children[0].tagName === 'img') {
-							const image: any = node.children[0];
-							return (
-								<div className="image">
-									<Image src={`/images/${image.properties.src}`} alt={image.properties.alt} width="600" height="300" />
-								</div>
-							);
-						}
-
-						return <p>{children}</p>;
-					},
 					code({ className, children }) {
 						const language = className.replace('language-', '');
 						return <SyntaxHighlighter style={materialDark} language={language} children={children} />;

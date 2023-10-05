@@ -8,7 +8,7 @@
   transition: all .1s ease-in;
 
   &:hover {
-    top: -2px;
+    top: -4px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   }
 
@@ -18,12 +18,16 @@
   }
 
   &__infoWrapper {
-    padding: 20px;
+    padding: 1.5rem;
     flex: 1;
-    gap: 15px;
+    gap: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      padding: 1.5rem 2rem;
+    }
   }
 
   &__title {
@@ -36,9 +40,17 @@
   }
 
   &__shortDescription {
-    @include line-clamp(5);
+    @include line-clamp(3);
     flex: 1;
-    font-weight: normal;
+    color: rgba(0, 0, 0, .7);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+
+
+    @include breakpoint(tablet) {
+      @include line-clamp(5);
+    }
   }
 
   &__cover {

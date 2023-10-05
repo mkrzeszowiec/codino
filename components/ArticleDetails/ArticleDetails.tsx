@@ -1,5 +1,4 @@
 import { Article } from 'types/common';
-import Image from 'next/image';
 
 interface ArticleThumbnailProps {
 	article: Article;
@@ -13,7 +12,7 @@ const ArticleDetails: React.FC<ArticleThumbnailProps> = ({ article, className = 
 		<div className={`articleDetails ${className}`}>
 			{authorImageUrl && (
 				<div className="articleDetails__authorImageWrapper">
-					<Image className="articleDetails__authorImage" src={authorImageUrl} alt="" width={36} height={36} />
+					<img className="articleDetails__authorImage" src={authorImageUrl} alt="" width={36} height={36} />
 				</div>
 			)}
 

@@ -41,7 +41,7 @@ const BlogPage = ({ articles }) => {
 	return (
 		<Main title={getPageTitle(t('common.subpages.blog'))}>
 			<div className="container">
-				<SubpageIntro title={t('components.blog.header')} description={''} className="articlesHeader" />
+				<SubpageIntro title={t('components.blog.header')} className="articlesHeader" />
 
 				<div className="articles">
 					{articles.map((article, index) => (

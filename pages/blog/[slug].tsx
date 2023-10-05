@@ -57,6 +57,7 @@ const ArticlePage = ({ article }: Props) => {
 		<MainLayout title={getPageTitle(article.title)}>
 			<article className="article">
 				<ReadingProgress target={progressBarTarget} />
+
 				<div className="container" ref={progressBarTarget}>
 					<Breadcrumbs className="article__breadcrumbs" currentPage={title} type={'blog'} />
 
@@ -65,7 +66,7 @@ const ArticlePage = ({ article }: Props) => {
 					<ArticleDetails article={article} />
 
 					<div className="article__coverWrapper">
-						<Image className="article__cover" src={mainPhotoUrl} width={1500} height={1500} alt="" />
+						<img className="article__cover" src={mainPhotoUrl} alt="" />
 					</div>
 
 					<div className="article__content">

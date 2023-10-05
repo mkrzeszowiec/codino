@@ -10,8 +10,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-gap: 20px;
-  padding-bottom: 10rem;
+  grid-gap: 2.5rem;
+  padding-bottom: 5rem;
 
   @include breakpoint(phone-sm) {
     grid-template-columns: 1fr 1fr;

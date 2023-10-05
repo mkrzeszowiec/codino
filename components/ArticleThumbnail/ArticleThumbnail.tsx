@@ -1,5 +1,5 @@
 import { Article } from 'types/common';
-import ArticleDetails from '../ArticleDetails/ArticleDetails';
+import ArticleDetails from 'components/ArticleDetails/ArticleDetails';
 
 interface ArticleThumbnailProps {
 	article: Article;

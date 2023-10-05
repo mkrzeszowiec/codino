@@ -24,15 +24,15 @@
 
   &__timeWrapper {
     color: var(--color-gray-opacity);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     display: flex;
     position: relative;
   }
 
   &__divider {
     content: '';
-    width: 2px;
-    height: 2px;
+    width: 4px;
+    height: 4px;
     background: var(--color-gray-opacity);
     border-radius: 50%;
     position: relative;
