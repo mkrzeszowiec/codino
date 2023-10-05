@@ -7,23 +7,23 @@ interface ArticleThumbnailProps {
 }
 
 const ArticleDetails: React.FC<ArticleThumbnailProps> = ({ article, className = '' }) => {
-	const { author } = article;
+	const { authorImageUrl, authorName, date, readTime } = article;
 
 	return (
 		<div className={`articleDetails ${className}`}>
-			{author.imageUrl && (
+			{authorImageUrl && (
 				<div className="articleDetails__authorImageWrapper">
-					<Image className="articleDetails__authorImage" src={author.imageUrl} alt="" width={36} height={36} />
+					<Image className="articleDetails__authorImage" src={authorImageUrl} alt="" width={36} height={36} />
 				</div>
 			)}
 
 			<div className="articleDetails__otherInfo">
-				<p className="articleDetails__authorName">{author.name}</p>
+				<p className="articleDetails__authorName">{authorName}</p>
 
 				<div className="articleDetails__timeWrapper">
-					<p className="articleDetails__date">Jun 14</p>
+					<p className="articleDetails__date">{date}</p>
 					<span className="articleDetails__divider" />
-					<p className="articleDetails__readTime">8 min read</p>
+					<p className="articleDetails__readTime">{readTime}</p>
 				</div>
 			</div>
 		</div>

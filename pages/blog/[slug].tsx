@@ -7,8 +7,9 @@ import { getPageTitle } from 'utils/utils';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import ArticleDetails from "components/ArticleDetails/ArticleDetails";
-import { ARTICLES } from 'assets/mock';
+import ArticleDetails from 'components/ArticleDetails/ArticleDetails';
+import ArticleContent from 'components/ArticleContent/ArticleContent';
+import { getPostData } from 'utils/article-utils';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {
@@ -34,7 +35,7 @@ export const getStaticProps: GetStaticProps = async context => {
 		};
 	}
 
-	const article = ARTICLES.find(article => article.slug.toLowerCase() === slug.toLowerCase());
+	const article = getPostData(slug);
 
 	return {
 		props: {
@@ -62,7 +63,9 @@ const ArticlePage = ({ article }: Props) => {
 						<Image className="article__cover" src={mainPhotoUrl} width={1500} height={1500} alt="" />
 					</div>
 
-					<div className="article__content">{content}</div>
+					<div className="article__content">
+						<ArticleContent article={article} />
+					</div>
 				</div>
 			</article>
 		</MainLayout>
