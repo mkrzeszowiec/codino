@@ -1,0 +1,9 @@
+.readingProgress {
+  position: fixed;
+  height: 3px;
+  border-radius: 2px;
+  top: 100px;
+  background-color: var(--color-primary);
+  transition: width 300ms;
+  z-index: 999;
+}

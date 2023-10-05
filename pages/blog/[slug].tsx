@@ -1,3 +1,4 @@
+import { createRef, LegacyRef } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Image from 'next/image';
 import { ParsedUrlQuery } from 'querystring';
@@ -5,11 +6,12 @@ import { Article } from 'types/common';
 import MainLayout from 'components/layout/MainLayout';
 import { getPageTitle } from 'utils/utils';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
 import ArticleDetails from 'components/ArticleDetails/ArticleDetails';
 import ArticleContent from 'components/ArticleContent/ArticleContent';
+import ReadingProgress from 'components/ReadingProgress/ReadingProgress';
 import { getPostData } from 'utils/article-utils';
+import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {
@@ -46,13 +48,16 @@ export const getStaticProps: GetStaticProps = async context => {
 };
 
 const ArticlePage = ({ article }: Props) => {
+	const progressBarTarget: LegacyRef<HTMLDivElement> = createRef();
+
 	if (!article) return null;
 	const { title, mainPhotoUrl, content } = article;
 
 	return (
 		<MainLayout title={getPageTitle(article.title)}>
 			<article className="article">
-				<div className="container">
+				<ReadingProgress target={progressBarTarget} />
+				<div className="container" ref={progressBarTarget}>
 					<Breadcrumbs className="article__breadcrumbs" currentPage={title} type={'blog'} />
 
 					<h1 className="article__title">{title}</h1>
