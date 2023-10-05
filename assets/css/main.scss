@@ -1,43 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 html {
-	overflow-x: hidden;
-	font-size: 62.5%;
+  overflow-x: hidden;
+  font-size: 62.5%;
 }
 
 body {
-	font-size: 1.6rem;
-	overflow-x: hidden;
-	box-sizing: border-box;
-	background-color: white;
-	font-family: var(--main-font);
-	color: var(--color-text);
-	line-height: 1.4;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: var(--main-font);
+  color: var(--color-text);
+  line-height: 1.4;
 }
 
 *,
 *:after,
 *:before {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 input[type='number'] {
-	-moz-appearance: textfield; /* Firefox */
+  -moz-appearance: textfield; /* Firefox */
 }
 
 input,
 textarea,
 button,
 select {
-	border: none;
-	background: none;
-	outline: none;
-	border-radius: 0;
-	font-family: var(--main-font);
+  border: none;
+  background: none;
+  outline: none;
+  border-radius: 0;
+  font-family: var(--main-font);
 }
 
 button {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 h1,
@@ -45,5 +45,5 @@ h2,
 h3,
 h4,
 h5 {
-	color: var(--color-gray);
+  color: var(--color-gray);
 }

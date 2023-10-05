@@ -1,5 +1,5 @@
 .articlesHeader {
-  --container-vertical-padding: 55px;
+  --container-vertical-padding: 5rem;
 
   .subpageIntro__title {
     margin-bottom: 0;
@@ -7,11 +7,11 @@
 }
 
 .articles {
-  padding-bottom: 10rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: 20px;
+  padding-bottom: 10rem;
 
   @include breakpoint(phone-sm) {
     grid-template-columns: 1fr 1fr;
