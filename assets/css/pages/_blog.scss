@@ -13,7 +13,7 @@
   grid-gap: 2.5rem;
   padding-bottom: 5rem;
 
-  @include breakpoint(phone-sm) {
+  @include breakpoint(phone) {
     grid-template-columns: 1fr 1fr;
   }
 
