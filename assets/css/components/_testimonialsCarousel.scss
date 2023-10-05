@@ -1,42 +1,19 @@
 .testimonialsCarousel {
   --slide-spacing: 4rem;
-  --slide-size: 95vw;
-  --slide-height: 70rem;
+  --slide-size: 100vw;
+  --slide-height: 50rem;
   padding: 2rem 0 4rem;
   position: relative;
 
   @include breakpoint(tablet) {
-    --slide-size: 60vw;
     --slide-height: 50rem;
-  }
-
-  @include breakpoint(desktop-large) {
-    --slide-size: 40vw;
   }
 
   &__title {
     text-align: center;
     font-size: 3.2rem;
-    margin-bottom: 2.5rem;
   }
 
-  &__allButton {
-    display: inline-block;
-  }
-
-  .product {
-    height: var(--slide-height);
-    position: relative;
-
-    &__imageSection {
-      position: absolute;
-      bottom: 0;
-
-      @include breakpoint(tablet) {
-        position: static;
-      }
-    }
-  }
 
   &__container {
     display: flex;
@@ -81,30 +58,13 @@
     }
   }
 
-  &__button--prev {
-    right: 7.6rem;
-  }
-
-  &__button--next {
-    right: 1.6rem;
-  }
-
-  &__button__svg {
-    width: 65%;
-    height: 65%;
-  }
-
   &__dots {
     bottom: 1.2rem;
     position: absolute;
     left: 0;
     right: 0;
+    z-index: 99;
     @include flex-center;
-    pointer-events: none;
-
-    @include breakpoint(tablet) {
-      pointer-events: auto;
-    }
   }
 
   &__dot {

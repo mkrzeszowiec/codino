@@ -1,6 +1,6 @@
 ---
 title: Mastering JS
-slug: matering-ts
+slug: mastering-js
 shortDescription: Lorem ipsum dolor sit amet
 mainPhotoUrl: https://csweb.rice.edu/sites/g/files/bxs4941/files/2021-10/Programming-Hero_Web_0.jpg
 authorName: Adam Małysz

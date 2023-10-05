@@ -2,7 +2,7 @@ import React, { useEffect, useCallback, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useRouter } from 'next/router';
 import { getOurProductsTranslated } from 'public/content/products/products';
-import CaseStudyTestimonial from '../CaseStudy/CaseStudyTestimonial';
+import CaseStudyTestimonial from 'components/CaseStudy/CaseStudyTestimonial';
 
 const TestimonialsCarousel: React.FC = () => {
 	const router = useRouter();
@@ -32,7 +32,7 @@ const TestimonialsCarousel: React.FC = () => {
 
 	return (
 		<section className="testimonialsCarousel">
-			<h3 className="testimonialsCarousel__title">Refencje todo</h3>
+			<h3 className="testimonialsCarousel__title">Referencje</h3>
 			<div className="testimonialsCarousel__viewport" ref={emblaRef}>
 				<div className="testimonialsCarousel__container">
 					{getOurProductsTranslated(router.locale).map((product, index) => (
