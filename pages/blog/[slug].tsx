@@ -6,8 +6,9 @@ import MainLayout from 'components/layout/MainLayout';
 import { getPageTitle } from 'utils/utils';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { DEFAULT_LOCALE, DEFAULT_TRANSLATE_NAMESPACE } from 'utils/constants';
-import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
-import { ARTICLES } from '../../assets/mock';
+import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import ArticleDetails from "components/ArticleDetails/ArticleDetails";
+import { ARTICLES } from 'assets/mock';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	return {
@@ -45,7 +46,7 @@ export const getStaticProps: GetStaticProps = async context => {
 
 const ArticlePage = ({ article }: Props) => {
 	if (!article) return null;
-	const { title, author, mainPhotoUrl, content } = article;
+	const { title, mainPhotoUrl, content } = article;
 
 	return (
 		<MainLayout title={getPageTitle(article.title)}>
@@ -55,23 +56,7 @@ const ArticlePage = ({ article }: Props) => {
 
 					<h1 className="article__title">{title}</h1>
 
-					<div className="article__bottomInfoWrapper">
-						{author.imageUrl && (
-							<div className="article__authorImageWrapper">
-								<Image className="article__authorImage" src={author.imageUrl} alt="" width={36} height={36} />
-							</div>
-						)}
-
-						<div className="article__otherInfo">
-							<p className="article__authorName">{author.name}</p>
-
-							<div className="article__timeWrapper">
-								<p className="article__date">Jun 14</p>
-								<span className="article__divider" />
-								<p className="article__readTime">8 min read</p>
-							</div>
-						</div>
-					</div>
+					<ArticleDetails article={article} />
 
 					<div className="article__coverWrapper">
 						<Image className="article__cover" src={mainPhotoUrl} width={1500} height={1500} alt="" />

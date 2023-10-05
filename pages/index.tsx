@@ -5,7 +5,7 @@ import PageIntro from 'components/PageIntro/PageIntro';
 import Products from 'components/Products/Products';
 import WhatWeDo from 'components/WhatWeDo/WhatWeDo';
 import TechnologiesCarousel from 'components/TechnologiesCarousel/TechnologiesCarousel';
-import TestimonialsCarousel from "../components/TestimonailsCarousel/TestimonialsCarousel";
+import TestimonialsCarousel from 'components/TestimonailsCarousel/TestimonialsCarousel';
 import StartWork from 'components/StartWork/StartWork';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import GameMain from 'components/game/GameMain';
@@ -24,7 +24,7 @@ const IndexPage = () => {
 		<MainLayout
 			containerClassName={classNames('homepagePage', {
 				gameMode: isGameOpening,
-				'transparent-header': isHeaderOnHero
+				'transparent-header': isHeaderOnHero,
 			})}
 		>
 			{isGameMode && <GameCloseButton isGameMode={isGameMode} onClick={closeGame} />}
@@ -52,7 +52,7 @@ const IndexPage = () => {
 
 			<TechnologiesCarousel />
 			<Products />
-      <TestimonialsCarousel title={"Referencje"} />
+			<TestimonialsCarousel />
 
 			<div className="container" data-aos="fade-down">
 				<StartWork />
@@ -63,8 +63,8 @@ const IndexPage = () => {
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
 	props: {
-		...(await serverSideTranslations(locale ?? DEFAULT_LOCALE, [DEFAULT_TRANSLATE_NAMESPACE]))
-	}
+		...(await serverSideTranslations(locale ?? DEFAULT_LOCALE, [DEFAULT_TRANSLATE_NAMESPACE])),
+	},
 });
 
 export default IndexPage;

@@ -4,12 +4,12 @@ import { useRouter } from 'next/router';
 import { getOurProductsTranslated } from 'public/content/products/products';
 import CaseStudyTestimonial from '../CaseStudy/CaseStudyTestimonial';
 
-const TestimonialsCarousel: React.FC<{ title: string }> = ({ title }) => {
+const TestimonialsCarousel: React.FC = () => {
 	const router = useRouter();
 
 	const [emblaRef, emblaApi] = useEmblaCarousel({
 		loop: true,
-		align: 'center'
+		align: 'center',
 	});
 
 	const [selectedIndex, setSelectedIndex] = useState(0);
@@ -32,7 +32,7 @@ const TestimonialsCarousel: React.FC<{ title: string }> = ({ title }) => {
 
 	return (
 		<section className="testimonialsCarousel">
-			<h3 className="testimonialsCarousel__title">{title}</h3>
+			<h3 className="testimonialsCarousel__title">Refencje todo</h3>
 			<div className="testimonialsCarousel__viewport" ref={emblaRef}>
 				<div className="testimonialsCarousel__container">
 					{getOurProductsTranslated(router.locale).map((product, index) => (

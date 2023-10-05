@@ -1,10 +1,11 @@
 .article {
   padding: 0 0 var(--container-vertical-padding) 0;
   --max-container-width: 800px;
+  --vertical-padding: 2rem;
 
   .container {
     max-width: var(--max-container-width);
-    padding-top: 2rem;
+    padding-top: var(--vertical-padding);
 
     &:after {
       content: '';
@@ -13,16 +14,9 @@
       right: 0;
       top: 0;
       background: var(--background-gradient);
-      height: 40vh;
+      height: 50vh;
       z-index: -1;
     }
-  }
-
-
-  &__authorImage {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
   }
 
   &__author {
@@ -31,25 +25,20 @@
     margin-bottom: 0;
   }
 
-  &__bottomInfoWrapper {
-    display: flex;
-  }
-
   &__breadcrumbs {
     bottom: 0;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto var(--vertical-padding) auto;
   }
 
   &__title {
     font-size: 2.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: var(--vertical-padding);
   }
 
   &__coverWrapper {
     display: block;
-    margin-bottom: 3rem;
+    margin: var(--vertical-padding) 0;
     width: 100%;
-    height: 40vh;
   }
 
   &__cover {
@@ -57,41 +46,5 @@
     display: block;
     height: 40vh;
     object-fit: cover;
-  }
-
-
-  &__otherInfo {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.3rem;
-    margin-bottom: 3rem;
-  }
-
-  &__authorImageWrapper {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    overflow: hidden;
-    margin-right: 1rem;
-  }
-
-  &__timeWrapper {
-    color: var(--color-gray-opacity);
-    font-size: 1.2rem;
-    display: flex;
-    position: relative;
-  }
-
-  &__divider {
-    content: '';
-    width: 2px;
-    height: 2px;
-    background: var(--color-gray-opacity);
-    border-radius: 50%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0 5px;
   }
 }
