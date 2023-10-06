@@ -1,7 +1,7 @@
 ---
 title: Mastering Java
 slug: mastering-java
-shortDescription: Krótki opis
+shortDescription: Cum distinctio eos ex facere illum iste iusto minima, minus natus omnis optio perspiciatis provident,  minus natus omnis optio perspiciatis provident
 mainPhotoUrl: https://fastly.picsum.photos/id/1008/1200/900.jpg?hmac=elRw0BWtyNcmnOIBrthEQEXAmOYRuCYSZXBeuq0edTo
 authorName: Monika Ratownika
 authorImageUrl: https://picsum.photos/300/300
@@ -23,11 +23,10 @@ Cum distinctio eos ex facere illum iste iusto minima, minus natus omnis optio pe
 ### JS code test
 
 ```js
-const basics = 'Okay, that should not be too difficult actually';
+const basics = 'Hello world';
 
 function printBasics() {
   console.log(basics);
-:
 }
 
 printBasics();

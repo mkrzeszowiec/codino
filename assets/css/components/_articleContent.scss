@@ -29,9 +29,13 @@
     max-width: 100%;
     height: auto;
     margin: var(--vertical-padding) 0;
-    max-height: 50rem;
+    max-height: 30rem;
     width: 100%;
     object-fit: cover;
+
+    @include breakpoint(tablet) {
+      height: 40rem;
+    }
   }
 
   p {
@@ -45,6 +49,7 @@
   }
 
   pre {
+    font-size: 1.4rem;
     margin: var(--vertical-padding) 0;
   }
 }

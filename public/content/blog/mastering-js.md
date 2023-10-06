@@ -1,7 +1,7 @@
 ---
 title: Mastering JS
 slug: mastering-js
-shortDescription: Lorem ipsum dolor sit amet
+shortDescription: Cum distinctio eos ex facere illum iste iusto minima, minus natus omnis optio perspiciatis provident
 mainPhotoUrl: https://csweb.rice.edu/sites/g/files/bxs4941/files/2021-10/Programming-Hero_Web_0.jpg
 authorName: Adam Małysz
 authorImageUrl: https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-3.jpg
@@ -23,11 +23,10 @@ Cum distinctio eos ex facere illum iste iusto minima, minus natus omnis optio pe
 ### JS code test
 
 ```js
-const basics = 'Okay, that should not be too difficult actually';
+const basics = 'Hello world';
 
 function printBasics() {
   console.log(basics);
-:
 }
 
 printBasics();

@@ -23,11 +23,10 @@ Cum distinctio eos ex facere illum iste iusto minima, minus natus omnis optio pe
 ### JS code test
 
 ```js
-const basics = 'Okay, that should not be too difficult actually';
+const basics = 'Hello world';
 
 function printBasics() {
   console.log(basics);
-:
 }
 
 printBasics();
