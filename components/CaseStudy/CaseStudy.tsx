@@ -5,6 +5,7 @@ import UseCasesCarousel from 'components/UseCasesCarousel/UseCasesCarousel';
 import CaseStudyScopeOfWork from 'components/CaseStudy/CaseStudyScopeOfWork';
 import CaseStudyTechnologies from 'components/CaseStudy/CaseStudyTechnologies';
 import CaseStudyDescription from 'components/CaseStudy/CaseStudyDescription';
+import CaseStudyTestimonial from 'components/CaseStudy/CaseStudyTestimonial';
 import CaseStudyMap from 'components/CaseStudy/CaseStudyMap';
 import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
 import { useTranslation } from 'next-i18next';
@@ -35,6 +36,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ product }) => {
 			<div className="container">
 				<CaseStudyScopeOfWork product={product} />
 				<CaseStudyTechnologies product={product} />
+				<CaseStudyTestimonial withTitle />
 				<CaseStudyMap product={product} />
 			</div>
 

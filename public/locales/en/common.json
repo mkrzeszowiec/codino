@@ -21,6 +21,7 @@
 			"services": "Services",
 			"about": "About us",
 			"caseStudy": "Case study",
+			"blog": "Blog",
 			"career": "Career",
 			"contact": "Contact",
 			"cookies-policy": "Cookies policy"
@@ -155,6 +156,9 @@
 			"serverErrorTitle": "500 error",
 			"serverErrorSubtitle": "Server error",
 			"button": "Back to homepage"
+		},
+		"blog": {
+			"header": "Blog"
 		}
 	}
 }

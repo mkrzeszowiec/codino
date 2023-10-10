@@ -75,3 +75,15 @@ export interface JobOffer {
 	experienceLevel: string;
 	mode: string;
 }
+
+export interface Article {
+	title: string;
+	slug: string;
+	shortDescription: string;
+	content: string;
+	mainPhotoUrl: string;
+	authorName: string;
+	authorImageUrl: string;
+	date: string;
+	readTime: string;
+}

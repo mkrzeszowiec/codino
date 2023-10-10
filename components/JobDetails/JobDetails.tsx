@@ -14,7 +14,7 @@ const JobDetails: React.FC<{ job: JobOffer }> = ({ job }) => {
 	return (
 		<section className="jobDetails">
 			<div className="jobDetails__infoWrapper">
-				<Breadcrumbs currentPage={job.title} type="carrer" />
+				<Breadcrumbs currentPage={job.title} type="career" />
 
 				<SectionTitle>{title}</SectionTitle>
 

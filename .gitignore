@@ -39,3 +39,5 @@ next-env.d.ts
 .idea
 
 scores.json
+!/public/workbox-588899ac.js
+!/public/sw.js

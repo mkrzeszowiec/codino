@@ -1,0 +1,13 @@
+.readingProgress {
+  position: fixed;
+  height: 3px;
+  border-radius: 2px;
+  top: var(--mobile-navbar-height);
+  background-color: var(--color-primary);
+  transition: width 300ms;
+  z-index: 999;
+
+  @include breakpoint(tablet) {
+    top: var(--desktop-navbar-height);
+  }
+}
